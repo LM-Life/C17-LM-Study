@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "category": "Life Support / Egress",
+    "question": "How many exits are provided for ground evacuation on the C-17?",
+    "answer": "8",
+    "reference": "TO 1C-17A-1, Emergency Exits"
+  },
+  {
+    "id": 2,
+    "category": "Life Support / Egress",
+    "question": "How many total exits does the C-17 have?",
+    "answer": "12",
+    "reference": "TO 1C-17A-1, Emergency Exits"
+  },
+  {
+    "id": 3,
+    "category": "Life Support / Egress",
+    "question": "Which exits do not have escape ropes?",
+    "answer": "The crew entry door and the cargo door/ramp",
+    "reference": "TO 1C-17A-1, Escape Rope Locations"
+  },
+  {
+    "id": 4,
+    "category": "Life Support / Egress",
+    "question": "Which exit is the primary exit for in-flight bailout?",
+    "answer": "The aft left troop door",
+    "reference": "TO 1C-17A-1, Controlled Bailout Procedures"
+  },
+  {
+    "id": 5,
+    "category": "Life Support / Egress",
+    "question": "What warning bell alarm signal is used for brace for impact?",
+    "answer": "One long sustained ring of the warning bell",
+    "reference": "TO 1C-17A-1, Emergency Signals"
+  },
+  {
+    "id": 6,
+    "category": "Life Support / Egress",
+    "question": "How many smoke detectors are on the C-17?",
+    "answer": "22 smoke detectors total",
+    "reference": "TO 1C-17A-1, Smoke Detection System"
+  },
+  {
+    "id": 7,
+    "category": "Life Support / Egress",
+    "question": "What is the overload capacity of a 46-man life raft?",
+    "answer": "69 personnel",
+    "reference": "TO 1C-17A-1, Life Rafts"
+  },
+  {
+    "id": 8,
+    "category": "Life Support / Egress",
+    "question": "Which FEDS hatch does not have a 46-man life raft installed?",
+    "answer": "The aft-right FEDS hatch",
+    "reference": "TO 1C-17A-1, FEDS Description"
+  },
+  {
+    "id": 9,
+    "category": "Fire Protection",
+    "question": "Portable handheld Halon fire extinguishers are highly effective on which classes of fires?",
+    "answer": "Class B and Class C fires",
+    "reference": "TO 1C-17A-1, Fire Extinguishing Equipment"
+  },
+  {
+    "id": 10,
+    "category": "Cargo Door & Ramp",
+    "question": "What is the maximum in-flight ramp load capability?",
+    "answer": "40,000 lb",
+    "reference": "TO 1C-17A-9, Section 4A, Ramp In-Flight Load Capability"
+  },
+  {
+    "id": 11,
+    "category": "Winching",
+    "question": "The cargo winch will stall at a cable load between what weights?",
+    "answer": "Between 9,000 and 10,000 lb cable load",
+    "reference": "TO 1C-17A-9, Winch Description"
+  },
+  {
+    "id": 12,
+    "category": "Hydraulics",
+    "question": "How many hydraulic systems does the C-17 have and what is their normal operating pressure?",
+    "answer": "Four independent hydraulic systems, each normally operating at 4,000 psi",
+    "reference": "TO 1C-17A-1, Hydraulic System Description"
+  }
+]

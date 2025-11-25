@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>C-17 Loadmaster Study App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="app-title">
+      <h1>C-17 Loadmaster Study</h1>
+      <p class="subtitle">Question Bank • Flashcards • Quizzes</p>
+    </div>
+    <button id="installBtn" class="btn secondary" hidden>Install App</button>
+  </header>
+
+  <main class="app-main">
+    <section class="controls">
+      <div class="control-group">
+        <label for="categorySelect">Category</label>
+        <select id="categorySelect">
+          <option value="all">All Categories</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="modeSelect">Mode</label>
+        <select id="modeSelect">
+          <option value="flashcard">Flashcard</option>
+          <option value="multiple-choice">Multiple Choice</option>
+          <option value="short-answer">Short Answer</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="shuffleToggle">
+          <input type="checkbox" id="shuffleToggle" checked />
+          Shuffle Questions
+        </label>
+      </div>
+
+      <div class="control-group">
+        <label for="showRefToggle">
+          <input type="checkbox" id="showRefToggle" checked />
+          Show References
+        </label>
+      </div>
+
+      <div class="control-group inline-buttons">
+        <button id="prevBtn" class="btn ghost">&larr; Prev</button>
+        <button id="nextBtn" class="btn primary">Next &rarr;</button>
+      </div>
+    </section>
+
+    <section class="card-area">
+      <div id="card" class="card">
+        <div class="card-inner">
+          <div class="card-face card-question">
+            <h2 id="questionText">Loading questions...</h2>
+            <div id="modeHint" class="mode-hint"></div>
+
+            <div id="shortAnswerArea" class="short-answer-area hidden">
+              <label for="shortAnswerInput">Your Answer</label>
+              <textarea id="shortAnswerInput" rows="3" placeholder="Type your answer here..."></textarea>
+              <button id="checkShortAnswerBtn" class="btn secondary">Check Answer</button>
+            </div>
+
+            <div id="mcArea" class="mc-area hidden">
+              <div id="mcOptions"></div>
+            </div>
+
+            <div class="meta-row">
+              <span id="categoryLabel" class="pill">Category</span>
+              <span id="counterLabel" class="counter">0 / 0</span>
+            </div>
+          </div>
+
+          <div class="card-face card-answer">
+            <h3>Answer</h3>
+            <p id="answerText"></p>
+            <p id="referenceText" class="reference"></p>
+            <button id="flipBackBtn" class="btn ghost small">Back to Question</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="help-text">
+        <p><strong>Flashcard:</strong> Tap/click the card to flip between question and answer.</p>
+        <p><strong>Multiple Choice:</strong> Pick an answer, then flip the card to confirm.</p>
+        <p><strong>Short Answer:</strong> Type your answer, hit “Check Answer”, then flip to see the official answer + reference.</p>
+      </div>
+    </section>
+
+    <section class="progress">
+      <div class="progress-row">
+        <div>
+          <strong>Correct (MC / Short):</strong> <span id="correctCount">0</span>
+        </div>
+        <div>
+          <strong>Attempts:</strong> <span id="attemptCount">0</span>
+        </div>
+      </div>
+      <div class="progress-bar-wrap">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <span>C-17 LM Study • Offline-capable PWA • Question bank powered by your MQF</span>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
