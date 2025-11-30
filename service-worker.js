@@ -1,5 +1,5 @@
 // Bump this when you want to force all clients to update
-const CACHE_VERSION = 'v3';
+const CACHE_VERSION = 'v3';  // <-- change this to a new value on each major update
 const CACHE_NAME = `c17-study-cache-${CACHE_VERSION}`;
 
 const ASSETS = [
@@ -35,22 +35,20 @@ self.addEventListener('activate', (event) => {
   self.clients.claim(); // start controlling existing pages right away
 });
 
-// Fetch: cache-first for static assets, but network-first for questions.json
+// Fetch: cache-first for most assets, but network-first for questions.json
 self.addEventListener('fetch', (event) => {
   const req = event.request;
-
-  // Only handle GET
   if (req.method !== 'GET') return;
 
   const url = new URL(req.url);
 
-  // Always bypass cache for the service worker file itself
+  // Always bypass cache for the SW file itself
   if (url.pathname.endsWith('service-worker.js')) {
     event.respondWith(fetch(req));
     return;
   }
 
-  // For questions.json, try network first so question bank updates propagate
+  // Network-first for questions.json so your MQF updates propagate
   if (url.pathname.endsWith('questions.json')) {
     event.respondWith(
       fetch(req)
@@ -59,18 +57,17 @@ self.addEventListener('fetch', (event) => {
           caches.open(CACHE_NAME).then((cache) => cache.put(req, clone));
           return networkRes;
         })
-        .catch(() => caches.match(req)) // fallback to cache if offline
+        .catch(() => caches.match(req)) // if offline, fall back to cached
     );
     return;
   }
 
-  // Default: cache-first for other assets
+  // Default: cache-first
   event.respondWith(
     caches.match(req).then((cacheRes) => {
       return (
         cacheRes ||
         fetch(req).then((networkRes) => {
-          // Optionally cache new GET responses for same-origin only
           if (networkRes.ok && url.origin === location.origin) {
             const clone = networkRes.clone();
             caches.open(CACHE_NAME).then((cache) => cache.put(req, clone));
