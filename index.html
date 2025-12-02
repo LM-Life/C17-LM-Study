@@ -81,32 +81,30 @@
               <span id="counterLabel" class="counter">0 / 0</span>
             </div>
 
-
             <div class="flag-row">
               <button id="flagToggleBtn" class="btn small ghost" type="button">
                 🚩 Flag this question
               </button>
               <span id="flagStatus" class="flag-status"></span>
             </div>
-          
+
             <div id="flagPanel" class="flag-panel hidden">
               <label for="flagText">Why are you flagging this question?</label>
               <textarea
-              id="flagText"
-              rows="2"
-              placeholder="Type what seems wrong or unclear..."
-            ></textarea>
-            <div class="flag-actions">
-              <button id="saveFlagBtn" class="btn small secondary" type="button">
-                Save flag
-              </button>
-              <button id="clearFlagBtn" class="btn small ghost" type="button">
-                Clear flag
-              </button>
+                id="flagText"
+                rows="2"
+                placeholder="Type what seems wrong or unclear..."
+              ></textarea>
+              <div class="flag-actions">
+                <button id="saveFlagBtn" class="btn small secondary" type="button">
+                  Save flag
+                </button>
+                <button id="clearFlagBtn" class="btn small ghost" type="button">
+                  Clear flag
+                </button>
+              </div>
             </div>
-          </div>
-            
-        <div>    
+          </div> <!-- end card-question -->
 
           <div class="card-face card-answer">
             <h3>Answer</h3>
@@ -114,8 +112,8 @@
             <p id="referenceText" class="reference"></p>
             <button id="flipBackBtn" class="btn ghost small">Back to Question</button>
           </div>
-        </div>
-      </div>
+        </div> <!-- end card-inner -->
+      </div>   <!-- end card -->
 
       <div class="help-text">
         <p><strong>Flashcard:</strong> Tap/click the card to flip between question and answer.</p>
@@ -140,7 +138,7 @@
   </main>
 
   <footer class="app-footer">
-    <span>C-17 LM Study • Offline-capable PWA • Question bank powered by your MQF</span>
+    <span>C-17 LM Study • Offline-capable PWA •</span>
   </footer>
 
   <script src="app.js" defer></script>
