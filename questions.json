@@ -30,7 +30,7 @@
   {
     "id": 5,
     "category": "MQF Oct 2025",
-    "question": "W hen starting the APU, _ _ starts may be attempted per rolling __ hour cycle with a minimum delay of __ minutes between attempts.",
+    "question": "When starting the APU, _____ starts may be attempted per rolling ___ hour cycle with a minimum delay of ___ minutes between attempts.",
     "answer": "3, 1, 5",
     "reference": "TO1C -17A- 1 [Para. 5-34]"
   },
@@ -2681,6 +2681,7 @@
     "reference": "" 
   }
 ]
+
 
 
 
