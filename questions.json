@@ -950,1729 +950,1737 @@
     "question": "Whose responsibility is it to ensure airdrop kits contain enough equipment to satisfy load or mission requirements?",
     "answer": "Loadmaster",
     "reference": 
+   },
+  {
+    "id": 136,
+    "category": "Airdrop",
+    "question": "Whose responsibility is it to ensure airdrop kits contain enough equipment to satisfy load or mission requirements?",
+    "answer": "Loadmaster",
+    "reference": "" 
   },
   {
     "id": 137,
     "category": "Airdrop",
     "question": "If a troop door is open, the aircraft is below 800' AGL and the Loadmaster is performing duties, he/she must wear ...",
     "answer": "Restraint Harness",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 138,
     "category": "Airdrop",
     "question": "During Low-level and/or airdrop operations, what gear must personnel wear if mission requires personnel mobility in the cargo compartment?",
     "answer": "Protective Headgear",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 139,
     "category": "Airdrop",
     "question": "The Loadmaster will advise the pilot when an emergency or malfunction exists in the cargo compartment, complete the required checklist and...",
     "answer": "Report status",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 140,
     "category": "Airdrop",
     "question": "The Loadmaster completes the Joint Airdrop Inspection Form before takeoff and ... and troop document.",
     "answer": "Verify the accuracy of the cargo",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 141,
     "category": "Airdrop",
     "question": "An airdrop method that requires either qualified Army or Air Force jumpmasters or trainees under supervision of qualified personnel to conduct airdrop is known as...",
     "answer": "Jumpmaster directed airdrop",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 142,
     "category": "Airdrop",
     "question": "For airdrop missions, particular attention is placed on briefings for geographical locations and...",
     "answer": "Time coordination",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 143,
     "category": "Airdrop",
     "question": "The aft anchor cable support provides",
     "answer": "the attachment point for the long anchor cable",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 144,
     "category": "Airdrop",
     "question": "The tiedown ring pan covers provide a smooth floor surface adjacent to",
     "answer": "the troop doors",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 145,
     "category": "Airdrop",
     "question": "What shall be used as the primary control for the static line retrieval winches?",
     "answer": "The Remote Winch Controller (RWC)",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 146,
     "category": "Airdrop",
     "question": "The green jump signal light is activated by the ... switch light being manually operated.",
     "answer": "Jump/Release",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 147,
     "category": "Airdrop",
     "question": "The ADS ARM annunciator indicates that the Loadmaster has completed the proper sequence of events and the ADSC has completed the required logic for the specific airdrop.",
     "answer": "T/FTRUE",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 148,
     "category": "Airdrop",
     "question": "The ______ annunciator blinks while the air de\ufb02ector is in transit.",
     "answer": "DFTR DEPLOYED",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 149,
     "category": "Airdrop",
     "question": "There are",
     "answer": "______ static lines anchor cable assemblies on the C-174",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 150,
     "category": "Airdrop",
     "question": "When removing the pulley and choker hook from the stowage locations, the Loadmaster should exercise care when pulling retrieval equipment from",
     "answer": "the stowage locations",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 151,
     "category": "Airdrop",
     "question": "Which switch controls the intensity of the jump platform lights?",
     "answer": "Jump Platform",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 152,
     "category": "Airdrop",
     "question": "Which of the following jump signal lights indicate",
     "answer": "the preparatory signalAmber",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 153,
     "category": "Airdrop",
     "question": "The actuation of which switch-light alerts personnel in the cargo compartment that an airdrop is",
     "answer": "imminentRed Lt",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 154,
     "category": "Airdrop",
     "question": "The _______ switchlight enables the Loadmaster control panels.",
     "answer": "LM PNL PWR",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 155,
     "category": "Airdrop",
     "question": "Which one of the following is not a functional task of the ADSC?",
     "answer": "Hydraulic System Controller (HSC)",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 156,
     "category": "Airdrop",
     "question": "Which personnel airdrop cargo compartment configuration provides",
     "answer": "a maximum of 54 seatADP-1",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 157,
     "category": "Airdrop",
     "question": "The retriever winch cable can have up to ____ broken wires per inch.",
     "answer": "3",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 158,
     "category": "Airdrop",
     "question": "Control of the jump signal light intensity at the AFT LM PNL must be enabled from the FWD LM STATION. t/f?",
     "answer": "TRUE",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 159,
     "category": "Airdrop",
     "question": "The anchor cable can have up to ____ broken wires per inch.",
     "answer": "6",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 160,
     "category": "Airdrop",
     "question": "When the Red LT switch on the pilot's ADS PNL is",
     "answer": "depressed twice, the jump signal lightsAre extinguished",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 161,
     "category": "Airdrop",
     "question": "After completing the SLOWDOWN CHECK, the Loadmaster gives theJumpmaster control of",
     "answer": "the troop door",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 162,
     "category": "Airdrop",
     "question": "Jumpers exiting on subsequent passes may stand and hook up with doors open if they are",
     "answer": "forward ofFS1027",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 163,
     "category": "Airdrop",
     "question": "G 14 parachutes used for door bundle airdrops can support a minimum weight of ______ pounds and a maximum weight of ______ pounds.",
     "answer": "200; 500",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 164,
     "category": "Airdrop",
     "question": "What side of the door bundle should the parachute be on when the bundle is positioned in the door?",
     "answer": "Top or Inboard",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 165,
     "category": "Airdrop",
     "question": "What is the maximum weight of a door bundle excluding the weight of the parachute?",
     "answer": "500 pounds",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 166,
     "category": "Airdrop",
     "question": "What are the maximum dimensions of a door bundle?",
     "answer": "48\" x 30\" x 66\"",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 167,
     "category": "Airdrop",
     "question": "When are",
     "answer": "door bundles positioned in the paratroop doors prior to completion of the Slowdown Checklist",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 168,
     "category": "Airdrop",
     "question": "visual and verbal signals During the jumpmaster briefing, the loadmaster and the jumpmaster will",
     "answer": "coordinate",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 169,
     "category": "Airdrop",
     "question": "You must",
     "answer": "report malfunctions occurring during an airdrop mission by Identifying the malfunction which affected the mission and debrief the reporting agency",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 170,
     "category": "Airdrop",
     "question": "When retrieving the fouled paratrooper , you should be careful not to position your hand(s) between the static lines and the fuselage. T/F?",
     "answer": "True",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 171,
     "category": "Airdrop",
     "question": "After beginning the malfunction checklist, ensure the red jump light is ON and the ORIDE switch is",
     "answer": "set, and then check the towed trooper's condition by looking for him/her to maintain a tight body position with both hands on his/her reserve parachute",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 172,
     "category": "Airdrop",
     "question": "During post mission debriefing, it would not be necessary for the aircrew to notify Command Post when an ______ occurs",
     "answer": "improper paratrooper exit",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 173,
     "category": "Airdrop",
     "question": "During a personnel airdrop, with twenty troopers remaining, you notice one of the paratroopers is being towed.",
     "answer": "You should use prearranged hand signals to alert the jumpmaster",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 174,
     "category": "Airdrop",
     "question": "During paratroop retrieval, personnel should",
     "answer": "remain clear of the Static line retriever cable ______ until the parachutist has been retrieved to the door area.",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 175,
     "category": "Airdrop",
     "question": "When retrieving a towed paratrooper , do not attempt to pull the D-bags",
     "answer": "through the spool assembly",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 176,
     "category": "Airdrop",
     "question": "A DD-Form 1748-2 is not required to be submitted for failure of airdrop equipment, unless a towed paratrooper is involved. T/F?",
     "answer": "False",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 177,
     "category": "Airdrop",
     "question": "Which of the following best defines a High Altitude Low Opening (HALO) airdropThe parachutist exits the aircraft and opens the parachute at",
     "answer": "a low altitude",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 178,
     "category": "Airdrop",
     "question": "Oxygen pre-breathing is",
     "answer": "necessary to reduce the risk of decompression sickness",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 179,
     "category": "Airdrop",
     "question": "Ensure any paratrooper remaining onboard the aircraft after a high altitude drop de-arm their parachute before cabin altitude descends belowSet",
     "answer": "parachute activation altitude",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 180,
     "category": "Airdrop",
     "question": "For unpressurized operations above 13,000 feet MSL all personnel must",
     "answer": "use supplemental oxygen in all instances",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 181,
     "category": "Airdrop",
     "question": "If a high altitude airdrop emergency occurs involving a physiological incident abort the mission and proceed to the nearest base with",
     "answer": "qualified medical assistance.",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 182,
     "category": "Airdrop",
     "question": "Turn on the Red Light After the Loadmaster notifies the pilot of a high altitude airdrop malfunction, the PM will",
     "answer": "immediately",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 183,
     "category": "Airdrop",
     "question": "For high altitude personnel airdrop, complete the Slowdown and configure no later than ...",
     "answer": "minutes prior to scheduled drop time for jumpmaster directed airdrops3",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 184,
     "category": "Airdrop",
     "question": "Airdrops conducted above ...",
     "answer": "feet AGL are considered high altitude airdrops3,000",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 185,
     "category": "Airdrop",
     "question": "When cabin altitude exceeds a minimum of ... feet MSL, all crewmembers will continuously breathe 100% Oxygen.",
     "answer": "10,000",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 186,
     "category": "Airdrop",
     "question": "The altitude wind restriction for a high altitude",
     "answer": "personnel airdrop is none",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 187,
     "category": "Airdrop",
     "question": "The physiological technician's duties do not include",
     "answer": "controlling the cabin pressure",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 188,
     "category": "Airdrop",
     "question": "What size skidboard is not used for Container Delivery System airdrop on the C-17 aircraft?",
     "answer": "48\" X",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 189,
     "category": "Airdrop",
     "question": "5\"",
     "answer": "",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 190,
     "category": "Airdrop",
     "question": "What is",
     "answer": "the minimum suspended weight requirement for a CDS container501 pounds",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 191,
     "category": "Airdrop",
     "question": "Van Zelm ratchets, wishbone \ufb01tting, nylon webbing Which of the following are the correct rigging materials needed to construct a forward restraint gate on the ramp for CDS?",
     "answer": "",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 192,
     "category": "Airdrop",
     "question": "Which low-velocity cargo parachute is normally used for CDS airdrops?",
     "answer": "G-12E",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 193,
     "category": "Airdrop",
     "question": "The 12 foot and 26 foot",
     "answer": "parachutes are high velocity",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 194,
     "category": "Airdrop",
     "question": "The function of a high velocity parachute is to stabilize the load. T/F?",
     "answer": "True",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 195,
     "category": "Airdrop",
     "question": "Low velocity and high velocity CDS dropped at 10,000 MSL or above are",
     "answer": "rigged with Breakaway Static Line",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 196,
     "category": "Airdrop",
     "question": "Which of the following shows the correct sequence for cargo load buildup?",
     "answer": "Skidboards, honeycomb, sling assembly, cover",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 197,
     "category": "Airdrop",
     "question": "Containers with damaged or warped skidboards may cause delayed release",
     "answer": "or load malfunction",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 198,
     "category": "Airdrop",
     "question": "What is the maximum suspended weight capacity of a CDS container?",
     "answer": "2,200 pounds",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 199,
     "category": "Airdrop",
     "question": "The tiedown ring pan covers provide",
     "answer": "A smooth floor surface adjacent to the troop door",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 200,
     "category": "Airdrop",
     "question": "What shall be used as the primary control for the static line retrieval winches?",
     "answer": "The Remote Winch Controller (RWC)",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 202,
     "category": "Airdrop",
     "question": "The green jump signal light is",
     "answer": "activated by the _______ switch light being manually operated Jump/release",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 203,
     "category": "Airdrop",
     "question": "The ADS ARM annunciator indicates that the Loadmaster has completed the proper sequence of events and the ADSC has completed the required logic for the specific airdrop.",
     "answer": "True",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 204,
     "category": "Airdrop",
     "question": "The ______ annunciator blinks while the air de\ufb02ector is in transit.",
     "answer": "DFTR DEPLOYED",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 205,
     "category": "Airdrop",
     "question": "There are",
     "answer": "______ static lines anchor cable assemblies on the C17 - 4",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 206,
     "category": "Airdrop",
     "question": "When removing the pulley and choker hook from the stowage locations, the Loadmaster Should",
     "answer": "exercise care when pulling retrieval equipment from the stowage locations",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 207,
     "category": "Airdrop",
     "question": "Which switch controls the intensity of the jump platform lights?",
     "answer": "Jump Platform",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 208,
     "category": "Airdrop",
     "question": "Which of the following jump signal lights indicate the preparatory signal?",
     "answer": "Amber",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 209,
     "category": "Airdrop",
     "question": "The actuation of which switch light alerts personnel in the cargo compartment that an airdrop is imminent?",
     "answer": "-Red LT",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 210,
     "category": "Airdrop",
     "question": "The _______ switch light enables the Loadmaster control panels.",
     "answer": "LM PNL PWR",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 211,
     "category": "Airdrop",
     "question": "Which one of the following is not a functional task of the ADSC?",
     "answer": "Hydraulic System Controller (HSC)",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 212,
     "category": "Airdrop",
     "question": "Which personnel airdrop cargo compartment configuration provides a maximum of 54 seats?",
     "answer": "ADP-1",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 213,
     "category": "Airdrop",
     "question": "The retriever winch cable can have up to ____ broken wires per inch.",
     "answer": "3",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 214,
     "category": "Airdrop",
     "question": "Control of the jump signal light intensity at the AFT LM PNL must be enabled from the FWD LM STATION.",
     "answer": "True",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 215,
     "category": "Airdrop",
     "question": "The anchor cable can have up to ____ broken wires per inch.",
     "answer": "6",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 216,
     "category": "Airdrop",
     "question": "When the Red LT switch on the pilot's ADS PNL is",
     "answer": "depressed twice, the jump signal lights Are extinguished",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 217,
     "category": "Airdrop",
     "question": "After completing the SLOWDOWN CHECK, the Loadmaster gives the Jumpmaster control of",
     "answer": "the troop door(s)",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 218,
     "category": "Airdrop",
     "question": "Jumpers exiting on subsequent passes may stand and hook up FS 1027 with doors open if they are",
     "answer": "forward of",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 219,
     "category": "Airdrop",
     "question": "G 14 parachutes used for door bundle airdrops can support a minimum weight of ______ pounds and a maximum weight of ______ pounds.",
     "answer": "200; 500",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 220,
     "category": "Airdrop",
     "question": "What side of the door bundle should the parachute be on when the bundle is positioned in the door?",
     "answer": "Top or inboard",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 221,
     "category": "Airdrop",
     "question": "What is the maximum weight of a door bundle excluding the weight of the parachute?",
     "answer": "500 pounds",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 222,
     "category": "Airdrop",
     "question": "What are the maximum dimensions of a door bundle?",
     "answer": "48\" x 30\" x 66\"",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 223,
     "category": "Airdrop",
     "question": "When are door bundles positioned in the paratroop doors?",
     "answer": "Prior to completion of the Slowdown Checklist",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 224,
     "category": "Airdrop",
     "question": "During the jumpmaster briefing, the Loadmaster and the jumpmaster will",
     "answer": "coordinate Visual and verbal signals",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 225,
     "category": "Airdrop",
     "question": "You must",
     "answer": "report malfunctions occurring during an airdrop mission by Identifying the malfunction which affected the mission and debrie\ufb01ng the reporting agency When retrieving the fouled paratrooper, you should be careful not to position your hand(s) between the static lines and the fuselage - True",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 226,
     "category": "Airdrop",
     "question": "After beginning the malfunction checklist, ensure the red jump light is ON and the ORIDE switch is",
     "answer": "set, and then check the towed trooper's condition by looking for him/her to Maintain a tight body position with both hands on his/her reserve parachute",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 227,
     "category": "Airdrop",
     "question": "During post mission debriefing, it would not be necessary for the aircrew to notify Command Post when ______ occurs.",
     "answer": "An improper paratrooper exit",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 228,
     "category": "Airdrop",
     "question": "During a personnel airdrop, with twenty troopers remaining, you notice one of the paratroopers is being towed.",
     "answer": "You should Use prearranged hand signals to alert the jumpmaster",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 229,
     "category": "Airdrop",
     "question": "During paratroop retrieval, personnel should remain clear of the ______ until the parachutist has been retrieved to the door area.",
     "answer": "Static line retriever cable",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 230,
     "category": "Airdrop",
     "question": "A DD-Form 1748-2 is not required to be submitted for failure of airdrop equipment, unless a towed paratrooper is involved.",
     "answer": "False",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 231,
     "category": "Airdrop",
     "question": "Which of the following best defines a High Altitude Low Opening (HALO) airdrop?",
     "answer": "The parachutist exits the aircraft and opens the parachute at a low altitude",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 232,
     "category": "Airdrop",
     "question": "Ensure any paratrooper remaining onboard the aircraft after a high al-Set parachute activation altitude titude drop de-arm their parachute before cabin",
     "answer": "altitude descends below",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 233,
     "category": "Airdrop",
     "question": "For unpressurized operations above 13,000 feet MSL All personnel must",
     "answer": "use supplemental oxygen in all instances",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 234,
     "category": "Airdrop",
     "question": "If a high altitude airdrop emergency occurs involving a physiological incident Abort the mission and proceed to the nearest base with",
     "answer": "qualified medical assistance",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 235,
     "category": "Airdrop",
     "question": "After the Loadmaster notifies the pilot of a high altitude airdrop malfunction, the PM will",
     "answer": "immediately Turn on the red light",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 236,
     "category": "Airdrop",
     "question": "For high altitude personnel airdrop, complete the Slowdown and configure no later than ____ minutes prior to scheduled drop time for jumpmaster directed airdrops.",
     "answer": "3",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 237,
     "category": "Airdrop",
     "question": "Airdrops conducted above ______ feet AGL are considered high altitude airdrops.",
     "answer": "3,000",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 238,
     "category": "Airdrop",
     "question": "When cabin altitude exceeds a minimum of ______ feet MSL, all crewmembers will continuously breathe 100% Oxygen.",
     "answer": "10,000",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 239,
     "category": "Airdrop",
     "question": "The altitude wind restriction for a high altitude personnel airdrop is",
     "answer": "None",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 240,
     "category": "Airdrop",
     "question": "Controlling the cabin pressure The physiological technician's duties",
     "answer": "do not include",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 241,
     "category": "Airdrop",
     "question": "What size skidboard is not used for Container Delivery System airdrop on the C-17 aircraft?",
     "answer": "48\" x",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 242,
     "category": "Airdrop",
     "question": "5\"",
     "answer": "",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 243,
     "category": "Airdrop",
     "question": "What is the minimum suspended weight requirement for a CDS container?",
     "answer": "501 pounds",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 244,
     "category": "Airdrop",
     "question": "Which of the following are the correct rigging materials needed to construct a forward restraint gate on the ramp for CDS?",
     "answer": "Van Zelm ratchets, wishbone \ufb01tting, nylon webbing",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 245,
     "category": "Airdrop",
     "question": "Which Low Velocity cargo parachute is normally used for CDS airdrops?",
     "answer": "G-12E",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 246,
     "category": "Airdrop",
     "question": "The 12 foot and 26 foot parachutes are ________ parachutes.",
     "answer": "High Velocity",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 247,
     "category": "Airdrop",
     "question": "The function of a high velocity parachute is to stabilized the load.",
     "answer": "True",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 248,
     "category": "Airdrop",
     "question": "Low velocity and high velocity CDS dropped at 10,000 MSL or above are",
     "answer": "rigged with Breakaway Static Line",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 249,
     "category": "Airdrop",
     "question": "Which of the following shows the correct sequence for cargo load buildup?",
     "answer": "Skidboards, honeycomb, sling assembly, cover",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 250,
     "category": "Airdrop",
     "question": "Containers with damaged or warped skidboards may Cause delayed release",
     "answer": "or load malfunction",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 251,
     "category": "Airdrop",
     "question": "What is the maximum suspended weight capacity of a CDS container?",
     "answer": "2,200 pounds",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 252,
     "category": "Airdrop",
     "question": "Who signs the DD Form 1748 1 at completion of the Before Loading Inspection?",
     "answer": "- Airdrop Support Unit TFI and AF JAI",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 253,
     "category": "Airdrop",
     "question": "The types of low velocity cargo parachute used with A22 cargo loads are",
     "answer": "the G-12E and - G14",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 254,
     "category": "Airdrop",
     "question": "When performing the load inspection, ensure Type XXVI webbing is properly routed through container webbing.",
     "answer": "Check to ensure webbing is routed through the container at or near the vertical CG",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 255,
     "category": "Airdrop",
     "question": "Who signs DD Form 1748 1 at completion of the After-Loading Inspection?",
     "answer": "- Loadmaster, AFJAI and Airdrop Support Unit TFI",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 256,
     "category": "Airdrop",
     "question": "The function of the Enhanced Container Vertical Restraint system (ECVR) is",
     "answer": "to Provide vertical restraint for the CDS containers aft of FS 1100",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 257,
     "category": "Airdrop",
     "question": "If the GATE SELECT rotary switch is set as shown (3), which gate(s) will be release?",
     "answer": "3, 4, 5",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 258,
     "category": "Airdrop",
     "question": "The function of the Buffer Stop Assembly (BSA) is",
     "answer": "to Provide fwd restraint for CDS containers",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 259,
     "category": "Airdrop",
     "question": "Where is the Buffer Stop Assembly stowed when not assembled?",
     "answer": "On the left and right sidewall, adjacent to the cargo door (FS 1421)",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 260,
     "category": "Airdrop",
     "question": "Using the CDS/BSA requirements figure in TO 117A-1-4, how many beams and what size tiedown chains would you use to restrain a single side of containers weighing 2,328 pounds each and less than 60 inches high?",
     "answer": "- 3 beams; 10,000 pound chains",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 261,
     "category": "Airdrop",
     "question": "What is the function of the Gate Release Mechanism (GRM)?",
     "answer": "Provides \ufb01nal aft restraint and release capacity",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 262,
     "category": "Airdrop",
     "question": "How can you tell that all CDS Airdrop logic is satisfied?",
     "answer": "ADS ARMED/CDS ARMED annunciator illuminated",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 263,
     "category": "Airdrop",
     "question": "A single crewmember should",
     "answer": "remove or stow the Buffer Stop Assembly horizontal beams False",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 264,
     "category": "Airdrop",
     "question": "During the Pre Slowdown Checklist, when using the Con\ufb01ned Ballistic System (CBS) to airdrop containers, the loadmaster - Removes",
     "answer": "the safety pins",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 265,
     "category": "Airdrop",
     "question": "The maximum gate weight on the C17 aircraft for CDS airdrop is",
     "answer": "______ pounds.",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 266,
     "category": "Airdrop",
     "question": "18,800",
     "answer": "",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 267,
     "category": "Airdrop",
     "question": "Configuration CD 1 is",
     "answer": "used to perform - Container airdrop or a combination of containers and personnel",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 268,
     "category": "Airdrop",
     "question": "Failure to ensure that the GRM actuator release pin returns to fully extended unassisted may result in an airdrop malfunction and",
     "answer": "aircraft damage True",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 269,
     "category": "Airdrop",
     "question": "When removing or stowing the BSA horizontal beams safely You need",
     "answer": "at least two",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 270,
     "category": "Airdrop",
     "question": "What is the maximum bundle load weight for configuration CD1?",
     "answer": "- 93,120",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 271,
     "category": "Airdrop",
     "question": "CDS 1 con\ufb01guration offers a maximum of 102 troop",
     "answer": "seats - False",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 272,
     "category": "Airdrop",
     "question": "Gloves should",
     "answer": "not be used when configuring logistic rails to prevent hand injury False",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 273,
     "category": "Airdrop",
     "question": "On DD Form 365 4, Form F, you subtract reference 22 from reference 21 to obtain the - Corrected zero fuel",
     "answer": "weight and moments",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 274,
     "category": "Airdrop",
     "question": "If the GRM fails to release, you must",
     "answer": "first Activate the ADS Backup CDS Switch",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 275,
     "category": "Airdrop",
     "question": "The loadmaster will make a visual inspection of the cargo compartment prior to the initiation of the _________ to ensure nothing has fallen between or aft the airdrop loads as a result of takeoff or evasive maneuver .",
     "answer": "Pre-Slowdown Checklist",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 276,
     "category": "Airdrop",
     "question": "If the GRM has released and container(s) has/have shifted, _________ using aircraft tiedown equipment.",
     "answer": "Apply fwd and aft emergency restraint",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 277,
     "category": "Airdrop",
     "question": "During a CDS airdrop, 4 of 12 bundles jammed, when must the static line be retrieved?",
     "answer": "After notifying the pilot of the malfunction and ensuring that the red light is on",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 278,
     "category": "Airdrop",
     "question": "If the GRM fails to release, ________ to the container at the release gate location.",
     "answer": "Apply emergency aft restraint (aircraft tiedown)",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 279,
     "category": "Airdrop",
     "question": "If the GRM(s) fail to release or load stop moving aft, after actuating the ADS Backup CDS Switch ensure that all moving containers have exited, then state \"Malfunction\" and complete the",
     "answer": "CDS Malfunction Checklist",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 280,
     "category": "Airdrop",
     "question": "If a \"No Drop\" situation occurs after initiation of the CDS Airdrop PreSlowdown Checklist, accomplish the -",
     "answer": "Post Drop Checklist",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 281,
     "category": "Airdrop",
     "question": "When the arming wire lanyard is pulled, the safety tie of an M1 or M-2 breaks. What action causes the arming wire lanyard to pull?",
     "answer": "- Parachute deployment",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 282,
     "category": "Airdrop",
     "question": "The M 1 or M-2 release assembly _______ when the load reaches the ground.",
     "answer": "- Tilts and allows the parachute connectors to pull free",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 283,
     "category": "Airdrop",
     "question": "On the M 1 or M-2 release, the _______ attaches to one of the parachute connectors and a lower suspension link.",
     "answer": "- Dragline",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 284,
     "category": "Airdrop",
     "question": "How many G 11B cargo parachutes may be used with one M-1 release assembly?",
     "answer": "- 1 to 3",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 285,
     "category": "Airdrop",
     "question": "What component attaches the load to the parachute release assembly?",
     "answer": "Lower Suspension Link",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 286,
     "category": "Airdrop",
     "question": "How many cargo parachutes can be rigged with an M2 parachute release assembly?",
     "answer": "- 3 to 8",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 287,
     "category": "Airdrop",
     "question": "What component secures the arming wire lanyard to prevent accidental separation from the timer?",
     "answer": "Safety tie",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 288,
     "category": "Airdrop",
     "question": "The long anchor cables are installed in which position?",
     "answer": "Outboard position",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 289,
     "category": "Airdrop",
     "question": "When using the Logistic Gang Lock Release Switches, the lock actuator cycle for _____ seconds for complete retraction of the",
     "answer": "logistic pawl locks",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 290,
     "category": "Airdrop",
     "question": "5",
     "answer": "",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 291,
     "category": "Airdrop",
     "question": "What is used to slow pallet/platform movement which allows for the difference in individual lock release timing?",
     "answer": "Omni-directional rollers",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 292,
     "category": "Airdrop",
     "question": "What type of static line is used for Dual Row Airdrop?",
     "answer": "Release away",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 293,
     "category": "Airdrop",
     "question": "What type of logic is used to obtain a green light for Dual Row Airdrop?",
     "answer": "CDS",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 294,
     "category": "Airdrop",
     "question": "Ensure container bags will",
     "answer": "not contact The Logistic Rails",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 295,
     "category": "Airdrop",
     "question": "The ramp toes may be used for loading 18 foot Dual Row Airdrop 14,500 pounds System (DRAS) platforms",
     "answer": "weighing up to",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 296,
     "category": "Airdrop",
     "question": "Where are the omni directional roller conveyors positioned for Dual Row Airdrop?",
     "answer": "- X= +/- 41 beginning at FS 352 through FS 992",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 297,
     "category": "Airdrop",
     "question": "Prior to loading, what the loadmaster do with unused left/right side tiedown rings on 463L pallets?",
     "answer": "Tie up vertically",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 298,
     "category": "Airdrop",
     "question": "The C 17 has the capability to airdrop up to ______ pounds of equipment rigged on DRAS platforms.",
     "answer": "- 116,000",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 299,
     "category": "Airdrop",
     "question": "When planning drops for 463L pallets, what must the loadmaster ensure at position 7 (FS 1151) Vertical restraint lips are",
     "answer": "retracted",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 300,
     "category": "Airdrop",
     "question": "Ensure the recovery and deployment parachutes are on the ____________ of the load.",
     "answer": "Forward end",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 301,
     "category": "Airdrop",
     "question": "When dropping two or less 463L pallets per side, where may they be positioned in the aircraft?",
     "answer": "They may be positioned in any of the specified locations",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 302,
     "category": "Airdrop",
     "question": "Which side of the aircraft you load first?",
     "answer": "Load the right side of the aircraft prior to the left",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 303,
     "category": "Airdrop",
     "question": "Dual Row Payloads can be rigged on what length of platform?",
     "answer": "18 foot by 88 inches, DRAS platforms",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 304,
     "category": "Airdrop",
     "question": "All static lines used for Dual Row will be what type?",
     "answer": "Release away system",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 305,
     "category": "Airdrop",
     "question": "Who will determine if the ramp and door can be closed safely after a malfunction?",
     "answer": "Loadmaster 2",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 306,
     "category": "Airdrop",
     "question": "If required, how long will loadmaster 1 hold the Logistics Gang Lock Backup L/R rail lock switch(es) to the lock position?",
     "answer": "5.5 seconds",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 307,
     "category": "Airdrop",
     "question": "5 seconds",
     "answer": "",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 308,
     "category": "Airdrop",
     "question": "During a malfunction, when should the Pilot Flying (PF) make aircraft deck angle changes?",
     "answer": "When the action is requested by the loadmaster",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 309,
     "category": "Airdrop",
     "question": "If a pallet or platform fails to move after the locks are released, when does the loadmaster state \"Malfunction\"?",
     "answer": "After all pallets/platforms aft of the malfunctioning pallet/platform have exited",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 310,
     "category": "Airdrop",
     "question": "During the Malfunction Checklist, what is the loadmaster 1 first action if the Log Lock Gang Release L/R Locks Ramp/Floor switch(es) fail(s)?",
     "answer": "Activate the Logistics Gang Lock Backup L/R Rails Lock switch(es)",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 311,
     "category": "Airdrop",
     "question": "What must you not do while applying fwd and aft restraint?",
     "answer": "Position yourself fwd, aft, or between the platforms/pallets until the load is secured",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 312,
     "category": "Airdrop",
     "question": "Locks 16, 17, 18 and 19 are restraining a platform. The values between which locks would be set in the OPEN position?",
     "answer": "16 - 17, 17 - 18, 18 - 19",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 313,
     "category": "Airdrop",
     "question": "Refer to the airdrop system requirement chart in TO 1C17A-1-4 and determine how many pounds of aft restraint are required for lock on a platform that has 3 locks engaged and one 22 foot extraction parachute.",
     "answer": "- 2,000",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 314,
     "category": "Airdrop",
     "question": "Where would you set the Right Lock Select switch to release only the first platform to be airdropped?",
     "answer": "16 - 15",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 315,
     "category": "Airdrop",
     "question": "Which of the following messages must the ADSC (logic) receive before a Heavy Equipment Airdrop can take place?",
     "answer": "Left Locks released",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 316,
     "category": "Airdrop",
     "question": "Select the switch that resets the Drogue Jettison Pin.",
     "answer": "4 (Drogue Jett Reset)",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 317,
     "category": "Airdrop",
     "question": "Which of the following switches activates a pyrotechnic guillotine that cuts the drogue line from the jettison link.",
     "answer": "Emergency Drogue",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 318,
     "category": "Airdrop",
     "question": "Where is the rail bridge assembly stowed when not in use?",
     "answer": "Forward of the left troop door",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 319,
     "category": "Airdrop",
     "question": "If you fail to arm the right locks, they will Provide",
     "answer": "7,500 pounds of Aft restraint",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 320,
     "category": "Airdrop",
     "question": "Using Table 5 2 in TO 13C7-1-5, determine the required length of riser extensions for three G11-B cargo parachutes.",
     "answer": "- 60 Foot",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 321,
     "category": "Airdrop",
     "question": "Use Fig 2 2 of TO 1C-17A-1-4 to answer this question. A 15 foot extraction parachute has an allowable load of ______.",
     "answer": "- 2,520 to 8,000 pounds",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 322,
     "category": "Airdrop",
     "question": "Cargo parachutes are",
     "answer": "used to Slow the descent rate of Heavy Equipment loads",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 323,
     "category": "Airdrop",
     "question": "Which item is the extraction parachute?",
     "answer": "3",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 324,
     "category": "Airdrop",
     "question": "Using Table 5 1 in TO 13C7-1-5, determine the max suspended weight allowable using 4 G11-B parachutes.",
     "answer": "- 20,000 pounds",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 325,
     "category": "Airdrop",
     "question": "A 28 foot extraction parachute requires an extraction line with ______ plies.",
     "answer": "6 plies",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 326,
     "category": "Airdrop",
     "question": "How many stows are required for 60 feet of riser extension.",
     "answer": "8",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 327,
     "category": "Airdrop",
     "question": "What is the function of the Drogue parachute?",
     "answer": "Pull SELB and extraction parachute off the ramp",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 328,
     "category": "Airdrop",
     "question": "Determine how many G11 B cargo parachutes would be required in a cluster to airdrop a Heavy Equipment load which weighs 13,560 pounds.",
     "answer": "- 3",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 329,
     "category": "Airdrop",
     "question": "All of the following are",
     "answer": "characteristics of the G12E cargo parachutes except - Two 2 second delay ree\ufb01ng line cutter",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 330,
     "category": "Airdrop",
     "question": "The first function of an extraction parachute is",
     "answer": "to Extract the Airdrop platform",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 331,
     "category": "Airdrop",
     "question": "Riser Extensions When cargo parachutes are clustered, the distance between the load and the parachute risers lengthens so canopies remain almost vertical above the load. Which component increases the distance?",
     "answer": "",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 332,
     "category": "Airdrop",
     "question": "The Extraction Force Transfer Coupling (EFTC) system uses a component that varies in its length of 12, 16,",
     "answer": "20, 24, 28",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 333,
     "category": "Airdrop",
     "question": "depending on the platform and the load. What is the component?",
     "answer": "Cable Assembly",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 334,
     "category": "Airdrop",
     "question": "What component of the EFTC system is shown in the screen?",
     "answer": "Coupling Link Assembly",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 335,
     "category": "Airdrop",
     "question": "What is the minimum weight of an extracted airdrop load?",
     "answer": "2,520 pounds",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 336,
     "category": "Airdrop",
     "question": "What component of the EFTC system is the arrow pointing to on the screen?",
     "answer": "Locking/safety pin",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 337,
     "category": "Airdrop",
     "question": "What is the function of the deployment line?",
     "answer": "Deploys the Cargo Parachute(s)",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 338,
     "category": "Airdrop",
     "question": "What component of the EFTC system is the arrow pointing to on the screen?",
     "answer": "Latch Assembly",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 339,
     "category": "Airdrop",
     "question": "EFTC system During the initial stage of extraction, the extraction force is applied to the platform. What transfers extraction force to the deployment line?",
     "answer": "",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 340,
     "category": "Airdrop",
     "question": "During an extraction airdrop, the arm of the actuator assembly rides on top of the",
     "answer": "Left ADS rail",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 341,
     "category": "Airdrop",
     "question": "Type V platforms have a maximum length of ________ feet.",
     "answer": "32",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 342,
     "category": "Airdrop",
     "question": "Which of the following is not a component of lashing?",
     "answer": "Sling",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 343,
     "category": "Airdrop",
     "question": "Rear panel assemblies have _______ tiedown rings.",
     "answer": "4",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 344,
     "category": "Airdrop",
     "question": "Which of the following information is not contained in the data tag?",
     "answer": "Lateral Center of Gravity",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 345,
     "category": "Airdrop",
     "question": "Select the suspension bracket assembly.",
     "answer": "1",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 346,
     "category": "Airdrop",
     "question": "Platform panels are",
     "answer": "held together by the",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 347,
     "category": "Airdrop",
     "question": "Side rails",
     "answer": "",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 348,
     "category": "Airdrop",
     "question": "What is the cumulative gross rigged weight maximum of a sequential platform drop?",
     "answer": "110,000",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 349,
     "category": "Airdrop",
     "question": "Select the actuator mounting bracket.",
     "answer": "2",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 350,
     "category": "Airdrop",
     "question": "What is the purpose of suspension slings in Heavy Equipment buildup?",
     "answer": "Connect the parachute release assembly to the platform/item",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 351,
     "category": "Airdrop",
     "question": "When dropping items in cold weather , what type of material should be used to secure slings and lashings?",
     "answer": "Type I, 1/4 inch cotton webbing",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 352,
     "category": "Airdrop",
     "question": "When Type V platforms impact the ground The platform spreads the",
     "answer": "shock of impact",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 353,
     "category": "Airdrop",
     "question": "Which publication specifies packaging and labeling requirements for HAZMAT accompanying an airdrop load?",
     "answer": "AFMAN 24-204",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 354,
     "category": "Airdrop",
     "question": "Select the platform extraction bracket assembly.",
     "answer": "4",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 355,
     "category": "Airdrop",
     "question": "If the airdrop load you are inspecting weighs 35,000 pounds, according to TO 1C17A-1-4, what parachute con\ufb01guration (number and type of extraction parachutes) will be used?",
     "answer": "- Two 28 foot extraction parachutes",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 356,
     "category": "Airdrop",
     "question": "Which direction should",
     "answer": "the parachute bridles face on an airdrop platform Aft",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 357,
     "category": "Airdrop",
     "question": "When inspecting an M 1 release, one end of the dragline should be tied to the ________ with the other end tied to one side of the lower suspension link.",
     "answer": "- Parachute Connector",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 358,
     "category": "Airdrop",
     "question": "The actuator should be installed on the bracket of the platform before it is loaded onto the aircraft.",
     "answer": "False",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 359,
     "category": "Airdrop",
     "question": "What material is used to restraint strap for two to five G11 parachutes?",
     "answer": "Type VIII Nylon",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 360,
     "category": "Airdrop",
     "question": "The number of knives used on a multi-cut release strap will correlate with the number of _________ on the load.",
     "answer": "- Restraint Straps",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 361,
     "category": "Airdrop",
     "question": "Which of the following is reset from the aft left loadmaster station?",
     "answer": "Tow Plate switch",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 362,
     "category": "Airdrop",
     "question": "On which side is the Rail Bridge assembly installed when dropping Heavy Equipment?",
     "answer": "Left only",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 363,
     "category": "Airdrop",
     "question": "Configurations for Airdrop are contained in AFI 11-2C-17, Vol.",
     "answer": "3 ADDENDA A",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 364,
     "category": "Airdrop",
     "question": "The simple platform weight is limited to ________ pounds.",
     "answer": "60,000",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 365,
     "category": "Airdrop",
     "question": "Pre\ufb02ight both left and right PDMs when both are scheduled to be used. This may be accomplish by depressing the Red Light Switch, arming the opposite PDM and rearming the TRM.",
     "answer": "True",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 366,
     "category": "Airdrop",
     "question": "Omni-directional Which of the following roller conveyors are not used for Heavy Equipment airdrop?",
     "answer": "",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 367,
     "category": "Airdrop",
     "question": "Ensure your fingers remain clear of the Emergency Drogue Jettison pyrotechnic device when Installing",
     "answer": "the TRM cover",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 368,
     "category": "Airdrop",
     "question": "Heavy equipment platform combinations totaling _________ feet may be airdropped.",
     "answer": "64",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 369,
     "category": "Airdrop",
     "question": "When preparing the aircraft for Heavy Equipment airdrop, after locking the Right locks from the sidewall control panels, ensure more than ______ pounds of tension is set in each lock prior to arming.",
     "answer": "500",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 370,
     "category": "Airdrop",
     "question": "Which of the following operations is correct in obtaining an estimated landing CG?",
     "answer": "ZFW subtract airdrop load add landing fuel",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 371,
     "category": "Airdrop",
     "question": "When loading platforms into the aircraft, avoid excessive speed.",
     "answer": "True",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 372,
     "category": "Airdrop",
     "question": "If using lock numbers 9 through 14, valves between _________ will be in the open position.",
     "answer": "9-10, 10-11, 11-12, 12-13, 13-14",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 373,
     "category": "Airdrop",
     "question": "Ensure all retractable lips on the cargo \ufb02oor and ramp rail lock True mechanisms aft of the airdrop platforms are retracted before an airdrop is",
     "answer": "attempted",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 374,
     "category": "Airdrop",
     "question": "Command Post will",
     "answer": "be notified immediately when any of the following occur: injury or death; off drop zone drops; and Damage to equipment",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 375,
     "category": "Airdrop",
     "question": "When will the crew initiate the Post Drop Checklist?",
     "answer": "After the loadmaster calls \"load clear\" and the Red Light is on",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 376,
     "category": "Airdrop",
     "question": "Which of these malfunctions would cause you to activate the Emergency Drogue Jettison switch?",
     "answer": "Drogue Jettison switch failed to release Drogue chute",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 377,
     "category": "Airdrop",
     "question": "What is the procedure if the drogue chute is outside the aircraft and the TRM has failed to release after the Tow Plate switch has been activated?",
     "answer": "Activate the Drogue Jettison switch",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 378,
     "category": "Airdrop",
     "question": "If the extraction parachutes have exited the aircraft and the platform fails to move, ensure the Right Lock Select Rotary switch is",
     "answer": "set to the lowest lock number setting for the platform that failed to move and activate the ADS Right Locks Gang release",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 379,
     "category": "Airdrop",
     "question": "What is the correct procedure if a platform becomes loose prior to green light on an airdrop mission?",
     "answer": "State \"malfunction\" and accomplish the Heavy Equipment Malfunction Checklist",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 380,
     "category": "Airdrop",
     "question": "Verify the corresponding lock annunciators on the __________ have extinguished to correspond with Left Lock and Drop Group Select Rotary switch position ADS",
     "answer": "Lock Status panel",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 381,
     "category": "Airdrop",
     "question": "If the Tow Release Armed annunciator fails to extinguish, immediately Position the Tow Plate",
     "answer": "switch to release",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 382,
     "category": "Airdrop",
     "question": "What switch would you activate if the Right Drogue Chute Arm annunciator fails to extinguish when the PM activates the Ready/Drogue switch light?",
     "answer": "Right Drogue Chute Deploy",
-    "reference": 
+    "reference": "" 
   },
   {
     "id": 383,
     "category": "Airdrop",
     "question": "Because the left rail locks operate in pairs, a lock may be engaged fwd, between or aft of airdrop platform. If this condition exist, the locks will be retracted during the Slowdown Checklist.",
     "answer": "True",
-    "reference": 
+    "reference": "" 
   }
 ]
+
 
 
