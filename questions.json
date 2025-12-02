@@ -1318,8 +1318,8 @@
   {
     "id": 188,
     "category": "Airdrop",
-    "question": "What size skidboard is not used for Container Delivery System airdrop on the C-17 aircraft?",
-    "answer": "48" x 48"",
+    "question": "What size skidboards are used for Container Delivery System airdrop on the C-17 aircraft?",
+    "answer": "48x48, 48x72, 48x96",
     "reference": "" 
   },
   {
@@ -2681,6 +2681,7 @@
     "reference": "" 
   }
 ]
+
 
 
 
