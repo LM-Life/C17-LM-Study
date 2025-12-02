@@ -943,7 +943,7 @@
     "question": "Instructors shall be current and qualified in any event they instruct.",
     "answer": "True",
     "reference": "AFMAN11 -2C-17 V1 [Para. 1.10.1]"
-  }
+  },
   {
     "id": 136,
     "category": "Airdrop",
@@ -2674,4 +2674,5 @@
     "reference": 
   }
 ]
+
 
