@@ -580,3 +580,42 @@ els.exportFlagsBtn?.addEventListener("click", (e) => {
 // -------------------------------
 if (els.appVersion) els.appVersion.textContent = APP_VERSION;
 loadQuestions();
+
+function setVersions() {
+  const appEl = document.getElementById("appVersion");
+  const cacheEl = document.getElementById("cacheVersion");
+
+  if (appEl) appEl.textContent = `v${APP_VERSION}`;
+
+  if (!("serviceWorker" in navigator) || !cacheEl) {
+    cacheEl.textContent = "";
+    return;
+  }
+
+  navigator.serviceWorker.ready.then((reg) => {
+    if (!reg.active) return;
+
+    const channel = new MessageChannel();
+    channel.port1.onmessage = (event) => {
+      if (event.data?.type === "CACHE_VERSION") {
+        const cacheName = event.data.cache || "";
+        const match = cacheName.match(/v([\d.]+)/);
+        const cacheVersion = match ? match[1] : "unknown";
+
+        cacheEl.textContent = `cache: v${cacheVersion}`;
+
+        if (cacheVersion !== APP_VERSION) {
+          cacheEl.classList.add("stale");
+        }
+      }
+    };
+
+    reg.active.postMessage("GET_CACHE_VERSION", [channel.port2]);
+  });
+}
+
+document.getElementById("cacheVersion")?.addEventListener("click", () => {
+  if (document.getElementById("cacheVersion").classList.contains("stale")) {
+    location.reload(true);
+  }
+});
