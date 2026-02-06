@@ -223,6 +223,7 @@ input[type="checkbox"] {
   max-width: 720px;
   margin: 0 auto;
   perspective: 1200px;
+  overflow: hidden;
 }
 
 .card-inner {
@@ -248,10 +249,15 @@ input[type="checkbox"] {
   backface-visibility: hidden;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .card-question {
   justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .card-answer {
@@ -442,6 +448,8 @@ input[type="checkbox"] {
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .flag-panel label {
@@ -544,12 +552,12 @@ input[type="checkbox"] {
   }
 
   .card.flag-open {
-  min-height: 360px; /* adjust until it looks good on desktop */
+    min-height: 380px; /* adjust until it looks good on desktop */
   }
   
   @media (max-width: 768px) {
     .card.flag-open {
-      min-height: 320px; /* a bit smaller on mobile if you want */
+      min-height: 420px; /* a bit smaller on mobile if you want */
     }
   }
 
