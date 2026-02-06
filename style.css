@@ -624,4 +624,10 @@ input[type="checkbox"] {
   .toast.hidden {
     pointer-events: none;
   }
+  /* Hide Install button on small screens */
+  @media (max-width: 768px) {
+    #installBtn,
+    .install-btn {
+      display: none !important;
+  }
 }
