@@ -23,7 +23,7 @@
   {
     "id": 4,
     "category": "MQF Oct 2025",
-    "question": "When the APU alert start feature is used, there will be no until the Battery Bus is powered.",
+    "question": "When the APU alert start feature is used, there will be no _________ until the Battery Bus is powered.",
     "answer": "fire detection or protection",
     "reference": "TO 1C -17A-1 [Para. 1- 198 (C)]"
   },
@@ -44,7 +44,7 @@
   {
     "id": 7,
     "category": "MQF Oct 2025",
-    "question": "To preclude damage to the landing gear, accomplish no more than consecutive landings without a cooling period. A cooling period consists of, flying with the gear retracted for at least 20 minutes or with the gear extended for at least 10 minutes before the next landing.",
+    "question": "To preclude damage to the landing gear, accomplish no more than _____ consecutive landings without a cooling period. A cooling period consists of, flying with the gear retracted for at least 20 minutes or with the gear extended for at least 10 minutes before the next landing.",
     "answer": "four",
     "reference": "TO 1C -17A-1 [Para. 5- 82]"
   },
@@ -58,42 +58,42 @@
   {
     "id": 9,
     "category": "MQF Oct 2025",
-    "question": "Following an intentional cabin depressurization above 10,000 feet, the cabin must be repressurized to less than feet to reset the regulators. If the regulators are not reset, subsequent flight above 9,000 feet cabin altitude may deploy the passenger oxygen masks.",
+    "question": "Following an intentional cabin depressurization above 10,000 feet, the cabin must be repressurized to less than ______ feet to reset the regulators. If the regulators are not reset, subsequent flight above 9,000 feet cabin altitude may deploy the passenger oxygen masks.",
     "answer": "3,500",
     "reference": "TO 1C -17A-1 [Para. 1-2663 (N)]"
   },
   {
     "id": 10,
     "category": "MQF Oct 2025",
-    "question": "Below feet cabin altitude, each emergency oxygen regulator SURGE MODE lever/three position toggle switch must be positioned to MAN ON/MANUAL ON position to ensure regulated oxygen is provided to passengers.",
+    "question": "Below _______ feet cabin altitude, each emergency oxygen regulator SURGE MODE lever/three position toggle switch must be positioned to MAN ON/MANUAL ON position to ensure regulated oxygen is provided to passengers.",
     "answer": "12,500",
     "reference": "TO 1C -17A-1 [Para. 1-2623]"
   },
   {
     "id": 11,
     "category": "MQF Oct 2025",
-    "question": "The passenger oxygen masks can be manually deployed at any altitude with the -1-emergency oxygen regulator by positioning the SURGE MODE lever to the MAN ON position, and rotating thespring loaded surge knob and holding momentarily (approximately seconds) to open the passenger oxygen containers and start the flow of oxygen.",
+    "question": "The passenger oxygen masks can be manually deployed at any altitude with the -1-emergency oxygen regulator by positioning the SURGE MODE lever to the MAN ON position, and rotating the spring loaded surge knob _______ and holding momentarily (approximately ____ seconds) to open the passenger oxygen containers and start the flow of oxygen.",
     "answer": "clockwise; 6",
     "reference": "TO 1C -17A-1 [Para. 1-2623]"
   },
   {
     "id": 12,
     "category": "MQF Oct 2025",
-    "question": "If either the pilot\u2019s or loadmaster\u2019s FED ARM switch is in ARM, all four FEDS hatches can be deployed from either the initiator handles.",
+    "question": "If either the pilot or loadmaster's FEDS ARM switch is in ARM, all four FEDS hatches can be deployed from either the _________ initiator handles.",
     "answer": "maintenance/ditching hatch or the forward loadmaster station",
     "reference": "TO 1C -17A-1 [Para. 1-2641]"
   },
   {
     "id": 13,
     "category": "MQF Oct 2025",
-    "question": "Portable hand fire extinguishers are provided in the following areas: in the cockpit, in the crew rest area, and in the cargo compartment.",
+    "question": "Portable hand fire extinguishers are provided in the following areas: ____ in the cockpit, ____ in the crew rest area, and ____ in the cargo compartment.",
     "answer": "2; 1; 6",
     "reference": "TO 1C -17A-1 [Para. 1-2656]"
   },
   {
     "id": 14,
     "category": "MQF Oct 2025",
-    "question": "When a delay in a winching operation occurs on the cargo ramp or toes secure the item using___",
+    "question": "When a delay in a winching operation occurs on the cargo ramp or toes secure the item using _____",
     "answer": "Chain type tiedown",
     "reference": "TO 1C -17A-1 [Para. 2 -1120 S15 g (W)]"
   },
@@ -128,35 +128,35 @@
   {
     "id": 19,
     "category": "MQF Oct 2025",
-    "question": "During in -flight operation of the troop doors, deploy the air deflector between and degrees before opening the first door.",
+    "question": "During in-flight operation of the troop doors, deploy the air deflector between ____ and ____ degrees before opening the first door.",
     "answer": "10; 15",
     "reference": "TO 1C -17A-1 [Para. 2-754]"
   },
   {
     "id": 20,
     "category": "MQF Oct 2025",
-    "question": "When on/offloading vehicles, do not deflate vehicle pneumatic tires .",
+    "question": "When on/offloading vehicles, do not deflate vehicle pneumatic tires ________ .",
     "answer": "below the tires rated inflation pressure",
     "reference": "TO 1C -17A- 1 [Para . 2-1116 S4b  (C)]"
   },
   {
     "id": 21,
     "category": "MQF Oct 2025",
-    "question": "Equipment mounted on a single axle loaded with its tongue resting on the aircraft floor or ramp .",
+    "question": "Equipment mounted on a single axle loaded with its tongue resting on the aircraft floor or ramp ______.",
     "answer": "will be drained",
     "reference": "TO 1C -17A- 1 [Para . 2-1120 S8i]"
   },
   {
     "id": 22,
     "category": "MQF Oct 2025",
-    "question": "When the vehicle is parked on the cargo floor and parking brakes are inoperative, .",
+    "question": "When the vehicle is parked on the cargo floor and parking brakes are inoperative, __________ .",
     "answer": "install a minimum of two chains and two tiedown devices, one forward and one aft",
     "reference": "TO 1C -17A- 1 [Para . 2-1120 S16c]"
   },
   {
     "id": 23,
     "category": "MQF Oct 2025",
-    "question": "Whe n loading pallets with a bare tine forklift, one set of inner roller channels may be removed from the ramp toes if the pallet weight does not exceed pounds.",
+    "question": "When loading pallets with a bare tine forklift, one set of inner roller channels may be removed from the ramp toes if the pallet weight does not exceed ______ pounds.",
     "answer": "8,500",
     "reference": "T.O. 1C -17A- 1 [Para . 2-1118 S2 ]"
   },
@@ -177,42 +177,42 @@
   {
     "id": 26,
     "category": "MQF Oct 2025",
-    "question": "All odors not identifiable by the flight crew shall be considered toxic. Refer immediately to .",
+    "question": "All odors not identifiable by the flight crew shall be considered toxic. Refer immediately to the _______ .",
     "answer": "Smoke, Fire or Fumes Procedure",
     "reference": "TO 1C -17A-1 [Para. 3- 39]"
   },
   {
     "id": 27,
     "category": "MQF Oct 2025",
-    "question": "When ditching is imminent, as a minimum, the loadmaster will provide .",
+    "question": "When ditching is imminent, as a minimum, the loadmaster will provide ________ .",
     "answer": "a flashlight and first aid kit",
     "reference": "TO 1C -17A-1 [Table 3-19]"
   },
   {
     "id": 28,
     "category": "MQF Oct 2025",
-    "question": "If a fire is being fed by oxygen from an oxygen system, the system should be turned off with the until the fire is suppressed.",
+    "question": "If a fire is being fed by oxygen from an oxygen system, the system should be turned off with the ______ until the fire is suppressed.",
     "answer": "manual shutoff valves",
     "reference": "TO 1C -17A- 1 [Para . 3-322 (W)]"
   },
   {
     "id": 29,
     "category": "MQF Oct 2025",
-    "question": "Selective freefall of any landing gear can be accomplished by activating the release handles only for those gear that are not extended. When lowering both main gear on one side, lower .",
+    "question": "Selective freefall of any landing gear can be accomplished by activating the release handles only for those gear that are not extended. When lowering both main gear on one side, lower _______ .",
     "answer": "the forward gear first",
     "reference": "TO 1C -17A- 1 [Para . 3-481 (N)]"
   },
   {
     "id": 30,
     "category": "MQF Oct 2025",
-    "question": "The maximum vertical height of a load to be jettisoned is inches measured from the of the pallet/platform.",
+    "question": "The maximum vertical height of a load to be jettisoned is ______ inches measured from the _____ of the pallet/platform.",
     "answer": "118; top",
     "reference": "TO 1C -17A-1 [Para. 3-502 (N)]"
   },
   {
     "id": 31,
     "category": "MQF Oct 2025",
-    "question": "During cargo jettison, ensure all selected lock annunciators are before stating \"LOCKS RELEASED\".",
+    "question": "During cargo jettison, ensure all selected lock annunciators are _______ before stating \"LOCKS RELEASED\".",
     "answer": "blank",
     "reference": "TO 1C -17A-1 [Para. 3-503 (W)]"
   },
@@ -220,27 +220,27 @@
     "id": 32,
     "category": "MQF Oct 2025",
     "question": "If a vehicle is driven on the aircraft, shoring is limited to _______ layer(s). This restriction does not apply to shoring placed _______.",
-    "answer": "1 / Underneath the cargo ramp or  ramp toes",
+    "answer": "1; Underneath the cargo ramp or ramp toes",
     "reference": "TO 1C -17A- 1 [Para. 2- 1120]"
   },
   {
     "id": 33,
     "category": "MQF Oct 2025",
-    "question": "When loaded for operational use, the ATGL is loaded ___ ADS pallet position 1. When a Seat Pallet isloaded in ADS pallet position 2, the ATGL is loaded ____.",
-    "answer": "10 inches fwd of/ ADS pallet position 1",
+    "question": "When loaded for operational use, the ATGL is loaded ___ ADS pallet position 1. When a Seat Pallet is loaded in ADS pallet position 2, the ATGL is loaded ____.",
+    "answer": "10 inches fwd of, ADS pallet position 1",
     "reference": "TO 1C -17A-1 [Para. 1-2753 (N)]"
   },
   {
     "id": 34,
     "category": "MQF Oct 2025",
-    "question": "During a ditching, do not activate prior to the aircraft coming to a rest as life rafts may be lost.",
+    "question": "During a ditching, do not activate ______ prior to the aircraft coming to a rest as life rafts may be lost.",
     "answer": "FEDS hatches",
     "reference": "TO 1C -17A-1 [Para. 3-522 (W)]"
   },
   {
     "id": 35,
     "category": "MQF Oct 2025",
-    "question": "The maximum cargo weight that can be loaded left or right of aircraft centerline is pounds, provided all aircraft limitations are complied with.",
+    "question": "The maximum cargo weight that can be loaded left or right of aircraft centerline is _______ pounds, provided all aircraft limitations are complied with.",
     "answer": "93,000",
     "reference": "TO 1C -17A-1 [Para. 5-107]"
   },
@@ -254,15 +254,15 @@
   {
     "id": 37,
     "category": "MQF Oct 2025",
-    "question": "With ambient temperatures are at or below -9 \u00b0C (15 \u00b0F), the AUX pumps may not initially generate full pressure. If system pressure does not rise to at least 3500 psi within 30 seconds of selecting the pump to AUTO, select the pump to off, wait 30 seconds and proceed as follows.1. Select the AUX pump to A UTO for 30 seconds, then off for 30 seconds.2. Repeat or until system pressure indicates at least 3500 psi.",
+    "question": "With ambient temperatures at or below -9 C (15 F), the AUX pumps may not initially generate full pressure. If system pressure does not rise to at least 3500 psi within 30 seconds of selecting the pump to AUTO, select the pump to off, wait 30 seconds and proceed as follows. 1. Select the AUX pump to AUTO for 30 seconds, then off for 30 seconds. 2. Repeat ______ or until system pressure indicates at least 3500 psi.",
     "answer": "for a maximum of 10 cycles",
     "reference": "TO 1C -17A-1 [Para. 7-177]"
   },
   {
     "id": 38,
     "category": "MQF Oct 2025",
-    "question": "If the prime mover is not assigned specifically for the intended unit and additional braking is not available, i.e., airbrakes, the prime mover total gross weight should be the unit to be loaded/offloaded.",
-    "answer": "Greater  than",
+    "question": "If the prime mover is not assigned specifically for the intended unit and additional braking is not available, i.e., airbrakes, the prime mover total gross weight should be _____ the unit to be loaded/offloaded.",
+    "answer": "Greater than",
     "reference": "TO 1C -17A-1 [Para. 2- 1120 S12]"
   },
   {
@@ -275,28 +275,28 @@
   {
     "id": 40,
     "category": "MQF Oct 2025",
-    "question": "When using the struts to change the offload clearance hold the STAB STRUTS control handle to ___ until the struts stop lifting the aircraf t or there is no less than __ inch of chrome showing on the nose gear strut.",
-    "answer": "EXT  / 1",
+    "question": "When using the struts to change the offload clearance hold the STAB STRUTS control handle to ___ until the struts stop lifting the aircraf t or there is no less than ___ inch of chrome showing on the nose gear strut.",
+    "answer": "EXT; 1",
     "reference": "TO 1C -17A-9 [Para. 4B-19]"
   },
   {
     "id": 41,
     "category": "MQF Oct 2025",
-    "question": "Chain bridles installed as the sole means of attaining forward, aft, and vertical restraint requirements also meet lateral restraint requirements if both the forward and aft restraint bridles utilize the same type oftiedown chains.",
-    "answer": "",
+    "question": "Chain bridles installed as the sole means of attaining forward, aft, and vertical restraint requirements also meet lateral restraint requirements if both the forward and aft restraint bridles utilize the same type of tiedown chains.",
+    "answer": "True",
     "reference": "TO 1C -17A-9 [Para. 4C- 17]"
   },
   {
     "id": 42,
     "category": "MQF Oct 2025",
-    "question": "Whe n loading pallets with ramp toes installed, at what weight are struts required?",
+    "question": "When loading pallets with ramp toes installed, at what weight are struts required?",
     "answer": "8,400",
     "reference": "TO 1C -17A-9 [Table 4B- 1]"
   },
   {
     "id": 43,
     "category": "MQF Oct 2025",
-    "question": "When us i ng the ramp as a lifting/lowering aid, the stabilizer struts shall be deployed when weight exceeds _______ pounds.",
+    "question": "When using the ramp as a lifting/lowering aid, the stabilizer struts shall be deployed when weight exceeds _______ pounds.",
     "answer": "10,355",
     "reference": "TO 1C -17A-9 [Para. 4B-11 (C)]"
   },
@@ -305,19 +305,19 @@
     "category": "MQF Oct 2025",
     "question": "If nonstandard cargo/equipment is presented for airlift and an air transportability certification from AFLCMC/EZFC (ATTLA) does not accompany the load, these items .",
     "answer": "may be loaded provided they do not exceed the limitations/procedures in the -9",
-    "reference": "TO 1C -17A- 9 [Page. iv ]"
+    "reference": "TO 1C -17A- 9 [Page. iv]"
   },
   {
     "id": 45,
     "category": "MQF Oct 2025",
-    "question": "Vehicle single axle weights equal to or greater than pounds must be loaded within 8 inches of the aircraft centerline in compartments D, F and G.",
+    "question": "Vehicle single axle weights equal to or greater than _____ pounds must be loaded within 8 inches of the aircraft centerline in compartments D, F and G.",
     "answer": "22,001",
     "reference": "TO 1C -17A-9 [Fig. 4D-10 S1]"
   },
   {
     "id": 46,
     "category": "MQF Oct 2025",
-    "question": "Vehicle single axle weights equal to or greater than pounds must be loaded within 8 inches of the aircraft centerline in compartment E.",
+    "question": "Vehicle single axle weights equal to or greater than _____ pounds must be loaded within 8 inches of the aircraft centerline in compartment E.",
     "answer": "27,001",
     "reference": "TO 1C -17A-9 [Fig. 4D-10 S1]"
   },
@@ -331,106 +331,106 @@
   {
     "id": 48,
     "category": "MQF Oct 2025",
-    "question": "Tracked vehicles with articulated suspension and with wheel weights exceeding lbs (average) must be loaded within 8 inches of aircraft centerline.",
+    "question": "Tracked vehicles with articulated suspension and with wheel weights exceeding _____ lbs (average) must be loaded within 8 inches of aircraft centerline.",
     "answer": "5,000",
     "reference": ""
   },
   {
     "id": 49,
     "category": "MQF Oct 2025",
-    "question": "Tunner loader furnishe d bridge plates shall not be used when loading/offloading rollin g st ock from a K-loader with the ramp toes installed.",
-    "answer": "Tru e",
+    "question": "Tunner loader furnished bridge plates shall not be used when loading/offloading rolling stock from a K-loader with the ramp toes installed.",
+    "answer": "True",
     "reference": "TO 1C -17A-9 [Para. 4B- 11 (C)]"
   },
   {
     "id": 50,
     "category": "MQF Oct 2025",
-    "question": "Hazardous cargo considered jettisonable be positioned forward of non- jettisonable cargo, except when its size, weight, and location will permit jettison by hand.",
+    "question": "Hazardous cargo considered jettisonable _______ be positioned forward of non-jettisonable cargo, except when its size, weight, and location will permit jettison by hand.",
     "answer": "shall not",
     "reference": "TO 1C -17A-9 [Para. 5- 9]"
   },
   {
     "id": 51,
     "category": "MQF Oct 2025",
-    "question": "When cargo projects aft of the end of the logistics rails (FS ), ensure the ramp toes do not contact the cargo while being raised to the vertical position.",
+    "question": "When cargo projects aft of the end of the logistics rails (FS _______ ), ensure the ramp toes do not contact the cargo while being raised to the vertical position.",
     "answer": "1390",
     "reference": "TO 1C -17A-9 [Para. 2- 35 (C)]"
   },
   {
     "id": 52,
     "category": "MQF Oct 2025",
-    "question": "When pedestal shoring is used under the Ramp Ground Support Pad for special loads, the shoring shall be a minimum of inches long and inches wide.",
-    "answer": "18/30",
+    "question": "When pedestal shoring is used under the Ramp Ground Support Pad for special loads, the shoring shall be a minimum of inches ____ long and ____ inches wide.",
+    "answer": "18; 30",
     "reference": "TO 1C -17A-9 [Para. 2- 72]"
   },
   {
     "id": 53,
     "category": "MQF Oct 2025",
-    "question": "The aft end of the ramp toes shall not be supported when in the position.",
+    "question": "The aft end of the ramp toes shall not be supported when in the _____ position.",
     "answer": "low",
     "reference": "TO 1C -17A-9 [Para. 2- 75]"
   },
   {
     "id": 54,
     "category": "MQF Oct 2025",
-    "question": "R eplace winch cable if or more broken wires per strand inch or or more broken wires per cable inch are found. The maximum number of broken wires shall not occur in any two consecutive inches of cable.",
+    "question": "Replace winch cable if ___ or more broken wires per strand inch or ___ or more broken wires per cable inch are found. The maximum number of broken wires shall not occur in any two consecutive inches of cable.",
     "answer": "4; 7",
     "reference": "TO 1C -17A-9 [Para. 4E- 14]"
   },
   {
     "id": 55,
     "category": "MQF Oct 2025",
-    "question": "When winching and the direction of pull is changed, the sheave .",
+    "question": "When winching and the direction of pull is changed, the sheave _____.",
     "answer": "must be manually realigned to the new direction",
     "reference": "TO 1C -17A-9 [Para. 2-172]"
   },
   {
     "id": 56,
     "category": "MQF Oct 2025",
-    "question": "In flight, the ramp toes will be .",
-    "answer": "stowed on the cargo door or installed and raised to the up (vertical over- center)  position",
+    "question": "In flight, the ramp toes will be ______.",
+    "answer": "stowed on the cargo door or installed and raised to the up (vertical over-center) position",
     "reference": "TO 1C -17A-9 [Para. 2- 76]"
   },
   {
     "id": 57,
     "category": "MQF Oct 2025",
-    "question": "P alletized seat assemblies may be loaded in the logistic rails when transported as cargo. Passengers will not occupy palletized seats in the logistic rails.",
+    "question": "Palletized seat assemblies may be loaded in the logistic rails when transported as cargo. Passengers will not occupy palletized seats in the logistic rails.",
     "answer": "True",
     "reference": "TO 1C -17A-9 [Para. 3- 49]"
   },
   {
     "id": 58,
     "category": "MQF Oct 2025",
-    "question": "On aeromedical evacuation missions with litter or ambulatory patients, the ramp is restricte d .",
+    "question": "On aeromedical evacuation missions with litter or ambulatory patients, the ramp is restricted ______.",
     "answer": "to two pallets in the ADS rails or centerline floor loaded items",
     "reference": "TO 1C -17A-9 [Para. 4B-7]"
   },
   {
     "id": 59,
     "category": "MQF Oct 2025",
-    "question": "Pallets or pallet trains up to pounds per pallet may be loaded into the logistics rail/lock systems provided at least one lock left and one right are engaged in each pallet.",
+    "question": "Pallets or pallet trains up to ______ pounds per pallet may be loaded into the logistics rail/lock systems provided at least one lock left and one right are engaged in each pallet.",
     "answer": "10,355",
     "reference": "TO 1C -17A-9 [Para. 4C- 11]"
   },
   {
     "id": 60,
     "category": "MQF Oct 2025",
-    "question": "The ramp loadable height capability varies between inches at the ramp hinge to inches at the end of the ramp.",
+    "question": "The ramp loadable height capability varies between ______ inches at the ramp hinge to ______ inches at the end of the ramp.",
     "answer": "156; 116",
     "reference": "T.O. 1C -17A- 9 [Para. 4D -20]"
   },
   {
     "id": 61,
     "category": "MQF Oct 2025",
-    "question": "Spotters are required to observe clearances and to prevent contact with the wing box structure when loading cargo higher than inches forward of FS .",
+    "question": "Spotters are required to observe clearances and to prevent contact with the wing box structure when loading cargo higher than ______ inches forward of FS ______.",
     "answer": "148; 937",
     "reference": "T.O. 1C -17A- 9 [Para. 4D -7 (N)]"
   },
   {
     "id": 62,
     "category": "MQF Oct 2025",
-    "question": "Maximum useable surface area for netted cargo is by and shall not be exceeded.",
-    "answer": "104/84",
+    "question": "Maximum useable surface area for netted cargo is _____ by _____ and shall not be exceeded.",
+    "answer": "104; 84",
     "reference": "T.O. 1C -17A- 9 [Para. 4C -5]"
   },
   {
@@ -443,14 +443,14 @@
   {
     "id": 64,
     "category": "MQF Oct 2025",
-    "question": "If are not used, Ramirez 40K and Emerson 25K- loaders must be backed -in when preparing to load/unload cargo into the logistic rail system.",
+    "question": "If ______ are not used, Ramirez 40K and Emerson 25K-loaders must be backed-in when preparing to load/unload cargo into the logistic rail system.",
     "answer": "ramp toes",
     "reference": ""
   },
   {
     "id": 65,
     "category": "MQF Oct 2025",
-    "question": "Required restraint for cargo on the pallet/pallet train shall be provided using nets, tiedown straps, or chains. When supplemental restraint is required, additional tiedowns may be attached to the pallet orcargo floor.",
+    "question": "Required restraint for cargo on the pallet/pallet train shall be provided using nets, tiedown straps, or chains. When supplemental restraint is required, additional tiedowns may be attached to the pallet or cargo floor.",
     "answer": "True",
     "reference": ""
   },
@@ -464,29 +464,29 @@
   {
     "id": 67,
     "category": "MQF Oct 2025",
-    "question": "Netted two pallet trains that exceed shall be restrained to the cargo floor.",
+    "question": "Netted two pallet trains that exceed _______ shall be restrained to the cargo floor.",
     "answer": "20,710 pounds",
     "reference": "TO 1C -17A-9 [Para. 4C- 19]"
   },
   {
     "id": 68,
     "category": "MQF Oct 2025",
-    "question": "Pallets or pallet trains up to 7,800 pounds per pallet may be loaded into the ADS rail/lock system when .",
+    "question": "Pallets or pallet trains up to 7,800 pounds per pallet may be loaded into the ADS rail/lock system when _______.",
     "answer": "at least one lock left and one right are engaged in each pallet",
     "reference": "TO 1C -17A-9 [Para. 4C- 12]"
   },
   {
     "id": 69,
     "category": "MQF Oct 2025",
-    "question": "Ensure cargo is restrained for prior to raising and closing the ramp when cargo is positioned on the ramp for flight.",
+    "question": "Ensure cargo is restrained for _________ prior to raising and closing the ramp when cargo is positioned on the ramp for flight.",
     "answer": "forward and aft directions",
     "reference": "TO 1C -17A-9 [Para. 4B- 11 (C)]"
   },
   {
     "id": 70,
     "category": "MQF Oct 2025",
-    "question": "When properly installed on a single pallet, the nets provide all the necessary restraint for cargo loads up to pounds when the height of stacked cargo does not exceed 96 inches.",
-    "answer": "",
+    "question": "When properly installed on a single pallet, the nets provide all the necessary restraint for cargo loads up to ______ pounds when the height of stacked cargo does not exceed 96 inches.",
+    "answer": "10,000",
     "reference": "TO 1C -17A-9 [Para. 4C- 15]"
   },
   {
@@ -499,15 +499,15 @@
   {
     "id": 72,
     "category": "MQF Oct 2025",
-    "question": "The maximum pallet/platform weight on two ramp toes is pounds except for 18- foot DRAS platforms which may be increased to 14,500 pounds.",
-    "answer": "",
+    "question": "The maximum pallet/platform weight on two ramp toes is ______ pounds except for 18-foot DRAS platforms which may be increased to 14,500 pounds.",
+    "answer": "10,355",
     "reference": "TO 1C -17A-9 [Para. 4B- 14]"
   },
   {
     "id": 73,
     "category": "MQF Oct 2025",
-    "question": "The maximum single axle load on the toes in the low position is pounds.",
-    "answer": "",
+    "question": "The maximum single axle load on the toes in the low position is _______ pounds.",
+    "answer": "10,355",
     "reference": "TO 1C -17A-9 [Para. 4B- 14]"
   },
   {
@@ -520,91 +520,91 @@
   {
     "id": 75,
     "category": "MQF Oct 2025",
-    "question": "Two or thre e pallet train w eight f or cargo secured w i th n ets and stacked t o 96 inches shall no t exceed pounds.",
+    "question": "Two or three pallet train weight for cargo secured with nets and stacked to 96 inches shall not exceed ______ pounds.",
     "answer": "26,000",
     "reference": "TO 1C -17A-9 [Para. 4C- 19]"
   },
   {
     "id": 76,
     "category": "MQF Oct 2025",
-    "question": "Two or three pallet train weight for cargo secured with nets and stacked above 96 inches (not to exceed 100 inches) shall not exceed pounds.",
+    "question": "Two or three pallet train weight for cargo secured with nets and stacked above 96 inches (not to exceed 100 inches) shall not exceed ______ pounds.",
     "answer": "21,000",
     "reference": "TO 1C -17A-9 [Para. 4C- 19]"
   },
   {
     "id": 77,
     "category": "MQF Oct 2025",
-    "question": "All vehicle winching must be closely monitored by a crew of at least personnel.",
-    "answer": "3c.4",
+    "question": "All vehicle winching must be closely monitored by a crew of at least _____ personnel.",
+    "answer": "3",
     "reference": "TO 1C -17A-9 [Para. 4E-21]"
   },
   {
     "id": 78,
     "category": "MQF Oct 2025",
-    "question": "When low profile cargo does not permit the use of side nets, the top net may be used by for all restraint provided the cargo weight does not exceed pounds and cargo height does not exceed inches from the pallet surface.",
+    "question": "When low profile cargo does not permit the use of side nets, the top net may be used by for all restraint provided the cargo weight does not exceed _______ pounds and cargo height does not exceed _____ inches from the pallet surface.",
     "answer": "2,500; 45",
     "reference": "TO 1C -17A-9 [Para. 4C- 24]"
   },
   {
     "id": 79,
     "category": "MQF Oct 2025",
-    "question": "When plywood barriers and chain bridles are installed for forward restraint on palletized cargo, pallets that exceed inches in height will have a minimum of bridle(s) installed and the minimum thickness for the barrier will be inches.",
+    "question": "When plywood barriers and chain bridles are installed for forward restraint on palletized cargo, pallets that exceed _____ inches in height will have a minimum of ____ bridle(s) installed and the minimum thickness for the barrier will be ____ inches.",
     "answer": "30; 2; 3/4",
     "reference": "TO 1C -17A-9 [Para. 4C- 32]"
   },
   {
     "id": 80,
     "category": "MQF Oct 2025",
-    "question": "If stowage pins are not engaged on side of each toe stowed on the cargo door, that toe may come loose during flight.",
+    "question": "If _____ stowage pins are not engaged on ________ side of each toe stowed on the cargo door, that toe may come loose during flight.",
     "answer": "lower; both left and right",
     "reference": "TO 1C -17A-9 [Para. 3- 27 (W)]"
   },
   {
     "id": 81,
     "category": "MQF Oct 2025",
-    "question": "If not carefully monitored, MHE may contact the aircraft while positioning pallets/platforms for loading into the logistic rail system.",
+    "question": "If not carefully monitored, MHE may contact the aircraft ______ while positioning pallets/platforms for loading into the logistic rail system.",
     "answer": "strakes",
     "reference": "TO 1C -17A-9 [Para. 4C- 39 (C)"
   },
   {
     "id": 82,
     "category": "MQF Oct 2025",
-    "question": "To maintain continuous cable tension while winching, it may be necessary to physicallythe vehicle/item aft when traversing the main floor/ramp hinge while the loadmaster gradually unwinds the cable.",
+    "question": "To maintain continuous cable tension while winching, it may be necessary to physically ______ the vehicle/item aft when traversing the main floor/ramp hinge while the loadmaster gradually unwinds the cable.",
     "answer": "push",
     "reference": "TO 1C -17A-9 [Para. 4E-32 (N)]"
   },
   {
     "id": 83,
     "category": "MQF Oct 2025",
-    "question": "Empty 463L pallets may be stacked for airlift up to a maximum of pallets, excluding the base support pallet.",
+    "question": "Empty 463L pallets may be stacked for airlift up to a maximum of ______ pallets, excluding the base support pallet.",
     "answer": "20",
     "reference": "TO 1C -17A-9 [Para. 4C- 36]"
   },
   {
     "id": 84,
     "category": "MQF Oct 2025",
-    "question": "During palletized cargo loading (non -winching), the minimum distance between the aircraft ramp/toes and K- loader is inches.",
-    "answer": "4c.6",
+    "question": "During palletized cargo loading (non-winching), the minimum distance between the aircraft ramp/toes and K-loader is ____ inches.",
+    "answer": "4",
     "reference": "TO 1C -17A-9 [Para. 4C- 50 (C)]"
   },
   {
     "id": 85,
     "category": "MQF Oct 2025",
-    "question": "Damage may occur if cargo tiedown that spans from the main floor to the ramp is not or sufficiently slackened before lowering the ramp.",
+    "question": "Damage may occur if cargo tiedown that spans from the main floor to the ramp is not ______ or sufficiently slackened before lowering the ramp.",
     "answer": "removed",
     "reference": "TO 1C -17A-9 [Para. 4B- 50 (C)]"
   },
   {
     "id": 86,
     "category": "MQF Oct 2025",
-    "question": "The minimum thickness of rolling shoring shall be .",
+    "question": "The minimum thickness of rolling shoring shall be _____ .",
     "answer": "1/2 inches",
     "reference": "TO 1C -17A-9 [Para. 4B- 69]"
   },
   {
     "id": 87,
     "category": "MQF Oct 2025",
-    "question": "With the ramp toes in the high position, the required overlap between the ramp toe contact pads and the floor of the loader is inches.",
+    "question": "With the ramp toes in the high position, the required overlap between the ramp toe contact pads and the floor of the loader is _____ inches.",
     "answer": "11",
     "reference": "TO 1C -17A-9 [Table 4B- 1 (C)]"
   },
@@ -618,29 +618,29 @@
   {
     "id": 89,
     "category": "MQF Oct 2025",
-    "question": "Each tiedown ring can accommodate up to CGU-1/B tiedown straps for any directional pull calculations.",
+    "question": "Each tiedown ring can accommodate up to _______ CGU-1/B tiedown straps for any directional pull calculations.",
     "answer": "five",
     "reference": "TO 1C -17A-9 [Para. 4B- 47]"
   },
   {
     "id": 90,
     "category": "MQF Oct 2025",
-    "question": "When attaching multiple devices to one tiedown ring, the ring .",
+    "question": "When attaching multiple devices to one tiedown ring, the ring ______ .",
     "answer": "cannot be used for both forward and aft restraint",
     "reference": "TO 1C -17A-9 [Para. 4B- 46]"
   },
   {
     "id": 91,
     "category": "MQF Oct 2025",
-    "question": "When using CGU-1/B tiedown devices, ensure that a minimum of turns of strap is wound around the ratchet spool to prevent slippage of strap.",
+    "question": "When using CGU-1/B tiedown devices, ensure that a minimum of _____ turns of strap is wound around the ratchet spool to prevent slippage of strap.",
     "answer": "1-1/2",
     "reference": "TO 1C -17A-9 [Fig. 2-49 (N)]"
   },
   {
     "id": 92,
     "category": "MQF Oct 2025",
-    "question": "When the Engines are at IDLE, m aintain a ___ foot radius distance.",
-    "answer": "",
+    "question": "When the Engines are at IDLE, maintain a ___ foot radius distance.",
+    "answer": "9",
     "reference": "1C-17A-9 [Fig 1-2]"
   },
   {
@@ -660,2028 +660,326 @@
   {
     "id": 95,
     "category": "MQF Oct 2025",
-    "question": "or will be worn at all times while crewmembers are operating at their primary duty station.",
+    "question": "______ or ______ will be worn at all times while crewmembers are operating at their primary duty station.",
     "answer": "Headsets; helmets",
     "reference": "AFMAN11 -2C-17 V3 [Para. 5.1.1]"
   },
   {
     "id": 96,
     "category": "MQF Oct 2025",
-    "question": "Misson with __ or more passengers should be planned with a pallet position available for baggage.",
+    "question": "Misson with ____ or more passengers should be planned with a pallet position available for baggage.",
     "answer": "20",
     "reference": "AFMAN11 -2C-17 V3 [Para. 11.3.4]"
   },
   {
     "id": 97,
     "category": "MQF Oct 2025",
-    "question": "During ERO, do not on-load or offload through the crew entrance door and the cargo ramp/door at the same time unless both doors are directly supervised by a .",
+    "question": "During ERO, do not on-load or offload through the crew entrance door and the cargo ramp/door at the same time unless both doors are directly supervised by a _______ .",
     "answer": "C-17A qualified pilot/loadmaster",
     "reference": "AFMAN11 -2C-17 V3 [Para. 15.3.2]"
   },
   {
     "id": 98,
     "category": "MQF Oct 2025",
-    "question": "Emergency airlift of personnel: For planning purposes, an estimate of personnel can be seated on the main floor, and on the ramp. The actual number of personnel may exceed this depending their size, amount of baggage/equipment carried, and the number of tiedown straps onboardthe aircraft.",
+    "question": "Emergency airlift of personnel: For planning purposes, an estimate of _____ personnel can be seated on the main floor, and _____ on the ramp. The actual number of personnel may exceed this depending their size, amount of baggage/equipment carried, and the number of tiedown straps onboard the aircraft.",
     "answer": "300; 50",
     "reference": "AFMAN11 -2C-17 V3 [Para. 15.4]"
   },
   {
     "id": 99,
     "category": "MQF Oct 2025",
-    "question": "The maximum altitude for emergency airlift of personnel will not exceed flight level .",
+    "question": "The maximum altitude for emergency airlift of personnel will not exceed flight level ______.",
     "answer": "250",
     "reference": "AFMAN11 -2C-17 V3 [Para. 15.4.2]"
   },
   {
     "id": 100,
     "category": "MQF Oct 2025",
-    "question": "The following smoke detectors are required for home station/main operating base departures: One AV, all 4 IRU, plus two others in the cargo compartment.",
+    "question": "The following smoke detectors are required for home station/main operating base departures: One AV, all 4 IRU, ________ plus two others in the cargo compartment.",
     "answer": "Sensor 9, 10, 13, 14",
     "reference": "AFMAN 11 -2C-17 V3 [Table 4.1]"
   },
   {
     "id": 101,
     "category": "MQF Oct 2025",
-    "question": "Maintenance personnel or a crew member should be used to act as \u201cground\u201d during engine starts. The engines may be started without someone outside the aircraft. If this option is used, ensure all crewmembers are thoroughly briefed.",
+    "question": "Maintenance personnel or a crew member should be used to act as "ground" during engine starts. The engines may be started without someone outside the aircraft. If this option is used, ensure all crewmembers are thoroughly briefed.",
     "answer": "True",
     "reference": "AFMAN11 -2C-17 V3 [Para. 5.20]"
   },
   {
     "id": 102,
     "category": "MQF Oct 2025",
-    "question": "is the waiver authority for locally tasked missions ( regarding the Minimum Equipment List).",
+    "question": "________ is the waiver authority for locally tasked missions (regarding the Minimum Equipment List).",
     "answer": "The WG/CC or equivalent, delegable no lower than OG/CC",
     "reference": "AFMAN11 -2C-17 V3 [Para. 4.3.1]"
   },
   {
     "id": 103,
     "category": "MQF Oct 2025",
-    "question": "Do not taxi an aircraft within of obstructions without wing walkers monitoring the clearance between aircraft and obstructions. With wing walkers, avoid taxi obstructions by at least _____ .",
-    "answer": "25 feet; 10 f eet",
+    "question": "Do not taxi an aircraft within ________ of obstructions without wing walkers monitoring the clearance between aircraft and obstructions. With wing walkers, avoid taxi obstructions by at least _____ .",
+    "answer": "25 feet; 10 feet",
     "reference": "AFMAN11 -2C-17 V3 [Para. 5.12.1]"
   },
   {
     "id": 104,
-    "category": "MQF Oct 2025",
-    "question": "Personnel performing duties requiring them to be mobile in the cargo compartment during airdrop, low level operations, or threat environments will wear .",
+    "category": "MQF Oct 2025 - Airdrop",
+    "question": "Personnel performing duties requiring them to be mobile in the cargo compartment during airdrop, low level operations, or threat environments will wear _______.",
     "answer": "protective headgear",
     "reference": "AFMAN11 -2C-17 V3 [Para. 15.1.2]"
   },
   {
     "id": 105,
-    "category": "MQF Oct 2025",
-    "question": "Ai rland cargo/baggage loaded on the cargo floor must not obstruct the path of the paratrooper exit, interfere with the installed anchor cables, or exceed a maximum width of ____ inches with both doors or ___ inches if only one door is used.",
-    "answer": "",
+    "category": "MQF Oct 2025 - Airdrop",
+    "question": "Airland cargo/baggage loaded on the cargo floor must not obstruct the path of the paratrooper exit, interfere with the installed anchor cables, or exceed a maximum width of ____ inches with both doors or ___ inches if only one door is used.",
+    "answer": "144; 178",
     "reference": "AFMAN 11 -2C-17V3 [Table 17.1]"
   },
   {
     "id": 106,
-    "category": "MQF Oct 2025",
-    "question": "If ADS Rail Locks are before lock force pounds are set, FALSE/inaccurate force pounds settings may result.",
+    "category": "MQF Oct 2025 - Airdrop",
+    "question": "If ADS Rail Locks are ______ before lock force pounds are set, FALSE/inaccurate force pounds settings may result.",
     "answer": "armed",
     "reference": "TO 1C -17A-1- 4 [Para. 2 -7 (W)]"
   },
   {
     "id": 107,
-    "category": "MQF Oct 2025",
+    "category": "MQF Oct 2025 - Airdrop",
     "question": "The Depressurization Checklist will be run prior to the .",
     "answer": "Slowdown Checklist",
     "reference": "TO 1C -17A-1- 4 [Para. 2 -274]"
   },
   {
     "id": 108,
-    "category": "MQF Oct 2025",
-    "question": "Accomplish the Cabin Altitude Checklist before .",
-    "answer": "",
+    "category": "MQF Oct 2025 - Airdrop",
+    "question": "Accomplish the Cabin Altitude Checklist before ______.",
+    "answer": "exceeding a cabin altitude of 10,000 feet MSL",
     "reference": "TO 1C -17A-1- 4 [Para. 2 -272]"
   },
   {
     "id": 109,
-    "category": "MQF Oct 2025",
+    "category": "MQF Oct 2025 - Airdrop",
     "question": "If the drogue chute does not deploy with the manual backup switch, the loadmaster will state __________ and complete the Heavy Equipment Malfunction Checklist.",
-    "answer": "\u201cMALFUNCTION\u201d",
+    "answer": "MALFUNCTION",
     "reference": "TO 1C -17A-1- 4 [Para. 4 -40]"
   },
   {
     "id": 110,
-    "category": "MQF Oct 2025",
-    "question": "If the Tow Release Mechanism fails to release the extraction link with the manual backup switch, the loadmaster will state \u201cMALFUNCTION\u201d and ________.",
+    "category": "MQF Oct 2025 - Airdrop",
+    "question": "If the Tow Release Mechanism fails to release the extraction link with the manual backup switch, the loadmaster will state MALFUNCTION and ________.",
     "answer": "complete Heavy Equipment Airdrop Malfunction Checklist",
     "reference": "TO 1C -17A-1- 4 [Para. 4 -42]"
   },
   {
     "id": 111,
-    "category": "MQF Oct 2025",
-    "question": "I f the extraction parachutes have exited the aircraft and the platform fails to move, ensure the rotary switch is set to the lowest lock number setting that is engaged in the platform that failed to move and activate the .",
+    "category": "MQF Oct 2025 - Airdrop",
+    "question": "If the extraction parachutes have exited the aircraft and the platform fails to move, ensure the rotary switch is set to the lowest lock number setting that is engaged in the platform that failed to move and activate the ________.",
     "answer": "ADS R LOCK SELECT; R LOCKS GANG RELEASE switch",
     "reference": "TO 1C -17A-1- 4 [Para. 4 -44]"
   },
   {
     "id": 112,
-    "category": "MQF Oct 2025",
-    "question": "After a Heavy Equipment Platform is loaded, the load equalization valves are opened between the platform\u2019s ADS right locks used in order to ________.",
+    "category": "MQF Oct 2025 - Aidrop",
+    "question": "After a Heavy Equipment Platform is loaded, the load equalization valves are opened between the platform's ADS right locks used in order to ________.",
     "answer": "balance load extraction force between locks.",
     "reference": "TO 1C -17A-1- 4 [Para. 1 -88]"
   },
   {
     "id": 113,
-    "category": "MQF Oct 2025",
-    "question": "The BSA is required for CDS loads exceeding _____lbs per side. When the first bundle against theBSA exceeds _____inches in height, three horizontal beams are required.",
+    "category": "MQF Oct 2025 - Airdrop",
+    "question": "The BSA is required for CDS loads exceeding _____lbs per side. When the first bundle against the BSA exceeds _____inches in height, three horizontal beams are required.",
     "answer": "9,400; 60",
     "reference": "TO 1C -17A-1- 4 [Table 1 -3]"
   },
   {
     "id": 114,
-    "category": "MQF Oct 2025",
-    "question": "When additional personnel airdrops are conducted after the initial airdrop sortie, loadmasters shall reinspect the troop doors before takeoff IAW the Personnel Airdrop Preparation and Loading Checklist.For subsequent personnel airdrops, a tactile- only che ck is required between drops.",
+    "category": "MQF Oct 2025 - Airdrop",
+    "question": "When additional personnel airdrops are conducted after the initial airdrop sortie, loadmasters shall reinspect the troop doors before takeoff IAW the Personnel Airdrop Preparation and Loading Checklist. For subsequent personnel airdrops, a tactile- only check is required between drops.",
     "answer": "True",
     "reference": "TO 1C -17A-1- 4 [Para. 2 -158 S2 (W)]"
   },
   {
     "id": 115,
-    "category": "MQF Oct 2025",
-    "question": "During a towed parachutist condition, the PF will as the parachutist may start swinging violently, which will increase the possibility of injury.",
+    "category": "MQF Oct 2025 - Airdrop",
+    "question": "During a towed parachutist condition, the PF will ________ as the parachutist may start swinging violently, which will increase the possibility of injury.",
     "answer": "avoid turning the aircraft in the direction of the towed parachutist",
     "reference": "TO 1C -17A-1- 4 [Para. 4 -9]"
   },
   {
     "id": 116,
-    "category": "MQF Oct 2025",
-    "question": "During a towed parachutist condition, the first priority is to retrieve the parachutist, regardless of whether the parachutist is conscious or unconscious. If the decision to cut the parachutist free, the ________ will cut the static line on the aircraft commander\u2019s command.",
+    "category": "MQF Oct 2025 - Airdrop",
+    "question": "During a towed parachutist condition, the first priority is to retrieve the parachutist, regardless of whether the parachutist is conscious or unconscious. If the decision is to cut the parachutist free, the ________ will cut the static line on the aircraft commander's command.",
     "answer": "loadmaster",
     "reference": "TO 1C -17A-1- 4 [Para. 4 -12]"
   },
   {
     "id": 117,
-    "category": "MQF Oct 2025",
-    "question": "During Fouled Parachutist Retrieval do not attempt to pull the through the spool assembly.",
+    "category": "MQF Oct 2025 - Airdrop",
+    "question": "During Fouled Parachutist Retrieval do not attempt to pull the ______ through the spool assembly.",
     "answer": "D-bags",
     "reference": "TO 1C -17A-1- 4 [Para. 4 -19 (W)]"
   },
   {
     "id": 118,
-    "category": "MQF Oct 2025",
-    "question": "Dur ing the CDS Airdrop Slowdown Checklist, visually inspect each Type XXVI nylon release gate to ensure it is positioned on the GRM release roller and .",
+    "category": "MQF Oct 2025 - Airdrop",
+    "question": "During the CDS Airdrop Slowdown Checklist, visually inspect each Type XXVI nylon release gate to ensure it is positioned on the GRM release roller and _________.",
     "answer": "has not become tangled or caught on the release arm hinge joint",
     "reference": "TO 1C -17A-1- 4 [Para. 2 -187 S2  (N)]"
   },
   {
     "id": 119,
-    "category": "MQF Oct 2025",
+    "category": "MQF Oct 2025 - Airdrop",
     "question": "The cam followers of the TRM shall be over the extraction link shoulder and be _____. Failure to comply may result in the inability to arm the TRM.",
     "answer": "against the body of the link.",
     "reference": "TO 1C -17A-1- 4 [Para. 2 -31 S9g  (N)]"
   },
   {
     "id": 120,
-    "category": "MQF Oct 2025",
-    "question": "Loadmasters requiring mobility in the cargo compartment while using a restraint harness can be unattached as long as they remain forward of with the cargo door and ramp open or with the paratroop door(s) open.",
+    "category": "MQF Oct 2025 - Airdrop",
+    "question": "Loadmasters requiring mobility in the cargo compartment while using a restraint harness can be unattached as long as they remain forward of _______ with the cargo door and ramp open or ________ with the paratroop door(s) open.",
     "answer": "FS 1188; FS 1027",
     "reference": "AFMAN11 -2C-17 V3 [Para. 17.6.2.1]"
   },
   {
     "id": 121,
-    "category": "MQF Oct 2025",
+    "category": "MQF Oct 2025 - Airdrop",
     "question": "For static line jumps, static lines are attached to anchor cables before troop door(s) are opened. Jumpers exiting on subsequent passes may stand and hook up with door(s) opened if they are forward of _______.",
     "answer": "FS 1027",
     "reference": "AFMAN11 -2C-17 V3 [Para. 17.6.2]"
   },
   {
     "id": 122,
-    "category": "MQF Oct 2025",
-    "question": "When in-flight rigging is required, the loadmaster will use the applicable as a checklist to ensure all items are completed.",
+    "category": "MQF Oct 2025 - Airdrop",
+    "question": "When in-flight rigging is required, the loadmaster will use the applicable _________ as a checklist to ensure all items are completed.",
     "answer": "Joint Airdrop Inspection Form",
     "reference": "TO 1C -17A-1- 4 [Para. 2 -142]"
   },
   {
     "id": 123,
-    "category": "MQF Oct 2025",
-    "question": "A \"No Drop\" will be called if Slowdown or Quick Drop Checklist items are not completed prior to the initiation of the Checklist.",
+    "category": "MQF Oct 2025 - Airdrop",
+    "question": "A "No Drop" will be called if Slowdown or Quick Drop Checklist items are not completed prior to the initiation of the _______ Checklist.",
     "answer": "Release Point",
     "reference": "TO 1C -17A-1- 4 [Para. 2 -153 (N)]"
   },
   {
     "id": 124,
-    "category": "MQF Oct 2025",
+    "category": "MQF Oct 2025 - Airdrop",
     "question": "Loadmasters may attempt to regain ADS logic up to initiation of the Checklist.",
     "answer": "Release Point",
     "reference": "TO 1C -17A-1- 4 [Para. 2 -154]"
   },
   {
     "id": 125,
-    "category": "MQF Oct 2025",
-    "question": "When preflighting the retriever winch cable for personnel airdrops, up to broken wires are allowed per inch. The maximum number of broken wires shall not occur in any two consecutive inches of cable.",
+    "category": "MQF Oct 2025 - Airdrop",
+    "question": "When preflighting the retriever winch cable for personnel airdrops, up to _____ broken wires are allowed per inch. The maximum number of broken wires shall not occur in any two consecutive inches of cable.",
     "answer": "3",
     "reference": "TO 1C -17A-1- 4 [Para. 2 -4 S6 ]"
   },
   {
     "id": 126,
-    "category": "MQF Oct 2025",
-    "question": "In the event that a lock is engaged in a platform and the second lock on the same panel is engaged between, adjacent or aft of the platform, use the INC/DECR toggle switch and decrease the setting .",
+    "category": "MQF Oct 2025 - Airdrop",
+    "question": "In the event that a lock is engaged in a platform and the second lock on the same panel is engaged between, adjacent or aft of the platform, use the INC/DECR toggle switch and decrease the setting ________ .",
     "answer": "to 00 for a minimum of 2 seconds",
     "reference": "TO 1C -17A-1- 4 [Para. 2 -7 S39a]"
   },
   {
     "id": 127,
-    "category": "MQF Oct 2025",
-    "question": "The required number of left-hand locks engaged in each platform must be equal to or greater than the number of right -hand locks engaged in that platform.",
+    "category": "MQF Oct 2025 - Airdrop",
+    "question": "The required number of left-hand locks engaged in each platform must be equal to or greater than the number of right-hand locks engaged in that platform.",
     "answer": "True",
     "reference": "TO 1C -17A-1- 4 [Para. 2 -7 S39 (N)]"
   },
   {
     "id": 128,
-    "category": "MQF Oct 2025",
-    "question": "At Sq/CC\u2019s discretion, a Non -Mission Ready loadmaster and an instructor loadmaster may fulfill an augmented crew complement.",
+    "category": "MQF Oct 2025 - Instructor",
+    "question": "At Sq/CC's discretion, a Non-Mission Ready loadmaster and an instructor loadmaster may fulfill an augmented crew complement.",
     "answer": "True",
     "reference": "AFMAN11 -2C-17 V 3 [Para. 3.2.1]"
   },
   {
     "id": 129,
-    "category": "MQF Oct 2025",
-    "question": "Instructors are responsible to provide students with .",
+    "category": "MQF Oct 2025 - Instructor",
+    "question": "Instructors are responsible to provide students with _______.",
     "answer": "thorough preflight briefings, post- flight briefings and critiques",
     "reference": "AFMAN11 -2C-17 V1 [Para. 5.5.5.2]"
   },
   {
     "id": 130,
-    "category": "MQF Oct 2025",
-    "question": "Should the judgement or proficiency of the trainee raise a question in the instructor\u2019s mind as to the trainee\u2019s ability to safely execute the duties of the aircrew position at any time during the flight, the instructor will immediately .",
+    "category": "MQF Oct 2025 - Instuctor",
+    "question": "Should the judgement or proficiency of the trainee raise a question in the instructor's mind as to the trainee's ability to safely execute the duties of the aircrew position at any time during the flight, the instructor will immediately _______.",
     "answer": "takeover the duties",
     "reference": "AFMAN11 -2C-17 V1 [Para. 5.5.5.6]"
   },
   {
     "id": 131,
-    "category": "MQF Oct 2025",
-    "question": "An aircrew member is unqualified upon expiration of .",
-    "answer": "a ll of the above",
+    "category": "MQF Oct 2025 - Instructor",
+    "question": "An aircrew member is unqualified upon expiration of ________.",
+    "answer": "all of the above",
     "reference": "AFMAN11 -2C-17 V1 [Para. 2.9]"
   },
   {
     "id": 132,
-    "category": "MQF Oct 2025",
-    "question": "Individuals who complete the applicable instructor course are qualified instructors .",
+    "category": "MQF Oct 2025 - Instructor",
+    "question": "Individuals who complete the applicable instructor course are qualified instructors _________.",
     "answer": "for all mission qualification events in which they maintain currency",
     "reference": "AFMAN11 -2C-17 V1 [Para. 5.5.2]"
   },
   {
     "id": 133,
-    "category": "MQF Oct 2025",
-    "question": "Instructors will review each student\u2019s training record .",
+    "category": "MQF Oct 2025 - Instructor",
+    "question": "Instructors will review each student's training record ________.",
     "answer": "prior to performing each training flight or session",
     "reference": "AFMAN11 -2C-17 V1 [Para. 5.5.5.3]"
   },
   {
     "id": 134,
-    "category": "MQF Oct 2025",
+    "category": "MQF Oct 2025 - Instructor",
     "question": "When performing crewmember duties, the following personnel will be under direct supervision of an instructor of like specialty:",
     "answer": "all the above",
     "reference": "AFMAN11 -2C-17 V1 [Para. 1.10.2]"
   },
   {
     "id": 135,
-    "category": "MQF Oct 2025",
+    "category": "MQF Oct 2025 - Instructor",
     "question": "Instructors shall be current and qualified in any event they instruct.",
     "answer": "True",
     "reference": "AFMAN11 -2C-17 V1 [Para. 1.10.1]"
   },
   {
     "id": 136,
-    "category": "Airdrop",
-    "question": "Whose responsibility is it to ensure airdrop kits contain enough equipment to satisfy load or mission requirements?",
-    "answer": "Loadmaster",
-    "reference": ""
+    "category": "MQF Oct 2025 - Instructor",
+    "question": "A non-current or unqualified loadmaster may serve as a primary aircrew member on any mission when supervised by a qualified instructor or flight examiner (direct supervision for critical phases of flight).",
+    "answer": "True",
+    "reference": "11-2C-17 V3 [Para. 3.3.1"
    },
   {
-    "id": 136,
-    "category": "Airdrop",
-    "question": "Whose responsibility is it to ensure airdrop kits contain enough equipment to satisfy load or mission requirements?",
-    "answer": "Loadmaster",
-    "reference": "" 
+    "id": 140,
+    "category": "MQF Oct 2025 - Airdrop",
+    "question": "The loadmaster will not disconnect the restraint harness or lengthen it to the point that would allow the crewmember to fall outside the aircraft except for a towed trooper, or an emergency that threatens the survivability of the aircraft.",
+    "answer": "True",
+    "reference": "AFMAN 11-2C-17V3 [Para. 17.6.2.1]" 
   },
   {
     "id": 137,
-    "category": "Airdrop",
-    "question": "If a troop door is open, the aircraft is below 800' AGL and the Loadmaster is performing duties, he/she must wear ...",
-    "answer": "Restraint Harness",
-    "reference": "" 
+    "category": "MQF Oct 2025 - Airdrop",
+    "question": "In an emergency parachutist bailout situation, the static line drop altitude is ________ft AGL and the free fall altitude is ______ft AGL.",
+    "answer": "550; 2,000",
+    "reference": "1C-17A-1-4 [Para. 2-124 S5]" 
   },
   {
     "id": 138,
-    "category": "Airdrop",
-    "question": "During Low-level and/or airdrop operations, what gear must personnel wear if mission requires personnel mobility in the cargo compartment?",
-    "answer": "Protective Headgear",
-    "reference": "" 
+    "category": "MQF Oct 2025 - Airdrop",
+    "question": "When utilizing the long anchor cable for personnel airdrop, a maximum of ______ static lines can be attached to the long anchor cable.",
+    "answer": "30",
+    "reference": "1C-17A-1-4 [Para 2-158 S2 (W)]" 
   },
   {
     "id": 139,
-    "category": "Airdrop",
-    "question": "The Loadmaster will advise the pilot when an emergency or malfunction exists in the cargo compartment, complete the required checklist and...",
-    "answer": "Report status",
-    "reference": "" 
-  },
-  {
-    "id": 140,
-    "category": "Airdrop",
-    "question": "The Loadmaster completes the Joint Airdrop Inspection Form before takeoff and ... and troop document.",
-    "answer": "Verify the accuracy of the cargo",
-    "reference": "" 
-  },
-  {
-    "id": 141,
-    "category": "Airdrop",
-    "question": "An airdrop method that requires either qualified Army or Air Force jumpmasters or trainees under supervision of qualified personnel to conduct airdrop is known as...",
-    "answer": "Jumpmaster directed airdrop",
-    "reference": "" 
-  },
-  {
-    "id": 142,
-    "category": "Airdrop",
-    "question": "For airdrop missions, particular attention is placed on briefings for geographical locations and...",
-    "answer": "Time coordination",
-    "reference": "" 
-  },
-  {
-    "id": 143,
-    "category": "Airdrop",
-    "question": "The aft anchor cable support provides",
-    "answer": "the attachment point for the long anchor cable",
-    "reference": "" 
-  },
-  {
-    "id": 144,
-    "category": "Airdrop",
-    "question": "The tiedown ring pan covers provide a smooth floor surface adjacent to",
-    "answer": "the troop doors",
-    "reference": "" 
-  },
-  {
-    "id": 145,
-    "category": "Airdrop",
-    "question": "What shall be used as the primary control for the static line retrieval winches?",
-    "answer": "The Remote Winch Controller (RWC)",
-    "reference": "" 
-  },
-  {
-    "id": 146,
-    "category": "Airdrop",
-    "question": "The green jump signal light is activated by the ... switch light being manually operated.",
-    "answer": "Jump/Release",
-    "reference": "" 
-  },
-  {
-    "id": 147,
-    "category": "Airdrop",
-    "question": "The ADS ARM annunciator indicates that the Loadmaster has completed the proper sequence of events and the ADSC has completed the required logic for the specific airdrop.",
-    "answer": "T/FTRUE",
-    "reference": "" 
-  },
-  {
-    "id": 148,
-    "category": "Airdrop",
-    "question": "The ______ annunciator blinks while the air de\ufb02ector is in transit.",
-    "answer": "DFTR DEPLOYED",
-    "reference": "" 
-  },
-  {
-    "id": 149,
-    "category": "Airdrop",
-    "question": "There are",
-    "answer": "______ static lines anchor cable assemblies on the C-174",
-    "reference": "" 
-  },
-  {
-    "id": 150,
-    "category": "Airdrop",
-    "question": "When removing the pulley and choker hook from the stowage locations, the Loadmaster should exercise care when pulling retrieval equipment from",
-    "answer": "the stowage locations",
-    "reference": "" 
-  },
-  {
-    "id": 151,
-    "category": "Airdrop",
-    "question": "Which switch controls the intensity of the jump platform lights?",
-    "answer": "Jump Platform",
-    "reference": "" 
-  },
-  {
-    "id": 152,
-    "category": "Airdrop",
-    "question": "Which of the following jump signal lights indicate",
-    "answer": "the preparatory signalAmber",
-    "reference": "" 
-  },
-  {
-    "id": 153,
-    "category": "Airdrop",
-    "question": "The actuation of which switch-light alerts personnel in the cargo compartment that an airdrop is",
-    "answer": "imminentRed Lt",
-    "reference": "" 
-  },
-  {
-    "id": 154,
-    "category": "Airdrop",
-    "question": "The _______ switchlight enables the Loadmaster control panels.",
-    "answer": "LM PNL PWR",
-    "reference": "" 
-  },
-  {
-    "id": 155,
-    "category": "Airdrop",
-    "question": "Which one of the following is not a functional task of the ADSC?",
-    "answer": "Hydraulic System Controller (HSC)",
-    "reference": "" 
-  },
-  {
-    "id": 156,
-    "category": "Airdrop",
-    "question": "Which personnel airdrop cargo compartment configuration provides",
-    "answer": "a maximum of 54 seatADP-1",
-    "reference": "" 
-  },
-  {
-    "id": 157,
-    "category": "Airdrop",
-    "question": "The retriever winch cable can have up to ____ broken wires per inch.",
-    "answer": "3",
-    "reference": "" 
-  },
-  {
-    "id": 158,
-    "category": "Airdrop",
-    "question": "Control of the jump signal light intensity at the AFT LM PNL must be enabled from the FWD LM STATION. t/f?",
-    "answer": "TRUE",
-    "reference": "" 
-  },
-  {
-    "id": 159,
-    "category": "Airdrop",
-    "question": "The anchor cable can have up to ____ broken wires per inch.",
-    "answer": "6",
-    "reference": "" 
-  },
-  {
-    "id": 160,
-    "category": "Airdrop",
-    "question": "When the Red LT switch on the pilot's ADS PNL is",
-    "answer": "depressed twice, the jump signal lightsAre extinguished",
-    "reference": "" 
-  },
-  {
-    "id": 161,
-    "category": "Airdrop",
-    "question": "After completing the SLOWDOWN CHECK, the Loadmaster gives theJumpmaster control of",
-    "answer": "the troop door",
-    "reference": "" 
-  },
-  {
-    "id": 162,
-    "category": "Airdrop",
-    "question": "Jumpers exiting on subsequent passes may stand and hook up with doors open if they are",
-    "answer": "forward ofFS1027",
-    "reference": "" 
-  },
-  {
-    "id": 163,
-    "category": "Airdrop",
-    "question": "G 14 parachutes used for door bundle airdrops can support a minimum weight of ______ pounds and a maximum weight of ______ pounds.",
-    "answer": "200; 500",
-    "reference": "" 
-  },
-  {
-    "id": 164,
-    "category": "Airdrop",
-    "question": "What side of the door bundle should the parachute be on when the bundle is positioned in the door?",
-    "answer": "Top or Inboard",
-    "reference": "" 
-  },
-  {
-    "id": 165,
-    "category": "Airdrop",
-    "question": "What is the maximum weight of a door bundle excluding the weight of the parachute?",
-    "answer": "500 pounds",
-    "reference": "" 
-  },
-  {
-    "id": 166,
-    "category": "Airdrop",
-    "question": "What are the maximum dimensions of a door bundle?",
-    "answer": "48\" x 30\" x 66\"",
-    "reference": "" 
-  },
-  {
-    "id": 167,
-    "category": "Airdrop",
-    "question": "When are",
-    "answer": "door bundles positioned in the paratroop doors prior to completion of the Slowdown Checklist",
-    "reference": "" 
-  },
-  {
-    "id": 168,
-    "category": "Airdrop",
-    "question": "visual and verbal signals During the jumpmaster briefing, the loadmaster and the jumpmaster will",
-    "answer": "coordinate",
-    "reference": "" 
-  },
-  {
-    "id": 169,
-    "category": "Airdrop",
-    "question": "You must",
-    "answer": "report malfunctions occurring during an airdrop mission by Identifying the malfunction which affected the mission and debrief the reporting agency",
-    "reference": "" 
-  },
-  {
-    "id": 170,
-    "category": "Airdrop",
-    "question": "When retrieving the fouled paratrooper , you should be careful not to position your hand(s) between the static lines and the fuselage. T/F?",
-    "answer": "True",
-    "reference": "" 
-  },
-  {
-    "id": 171,
-    "category": "Airdrop",
-    "question": "After beginning the malfunction checklist, ensure the red jump light is ON and the ORIDE switch is",
-    "answer": "set, and then check the towed trooper's condition by looking for him/her to maintain a tight body position with both hands on his/her reserve parachute",
-    "reference": "" 
-  },
-  {
-    "id": 172,
-    "category": "Airdrop",
-    "question": "During post mission debriefing, it would not be necessary for the aircrew to notify Command Post when an ______ occurs",
-    "answer": "improper paratrooper exit",
-    "reference": "" 
-  },
-  {
-    "id": 173,
-    "category": "Airdrop",
-    "question": "During a personnel airdrop, with twenty troopers remaining, you notice one of the paratroopers is being towed.",
-    "answer": "You should use prearranged hand signals to alert the jumpmaster",
-    "reference": "" 
-  },
-  {
-    "id": 174,
-    "category": "Airdrop",
-    "question": "During paratroop retrieval, personnel should",
-    "answer": "remain clear of the Static line retriever cable ______ until the parachutist has been retrieved to the door area.",
-    "reference": "" 
-  },
-  {
-    "id": 175,
-    "category": "Airdrop",
-    "question": "When retrieving a towed paratrooper , do not attempt to pull the D-bags",
-    "answer": "through the spool assembly",
-    "reference": "" 
-  },
-  {
-    "id": 176,
-    "category": "Airdrop",
-    "question": "A DD-Form 1748-2 is not required to be submitted for failure of airdrop equipment, unless a towed paratrooper is involved. T/F?",
-    "answer": "False",
-    "reference": "" 
-  },
-  {
-    "id": 177,
-    "category": "Airdrop",
-    "question": "Which of the following best defines a High Altitude Low Opening (HALO) airdropThe parachutist exits the aircraft and opens the parachute at",
-    "answer": "a low altitude",
-    "reference": "" 
-  },
-  {
-    "id": 178,
-    "category": "Airdrop",
-    "question": "Oxygen pre-breathing is",
-    "answer": "necessary to reduce the risk of decompression sickness",
-    "reference": "" 
-  },
-  {
-    "id": 179,
-    "category": "Airdrop",
-    "question": "Ensure any paratrooper remaining onboard the aircraft after a high altitude drop de-arm their parachute before cabin altitude descends belowSet",
-    "answer": "parachute activation altitude",
-    "reference": "" 
-  },
-  {
-    "id": 180,
-    "category": "Airdrop",
-    "question": "For unpressurized operations above 13,000 feet MSL all personnel must",
-    "answer": "use supplemental oxygen in all instances",
-    "reference": "" 
-  },
-  {
-    "id": 181,
-    "category": "Airdrop",
-    "question": "If a high altitude airdrop emergency occurs involving a physiological incident abort the mission and proceed to the nearest base with",
-    "answer": "qualified medical assistance.",
-    "reference": "" 
-  },
-  {
-    "id": 182,
-    "category": "Airdrop",
-    "question": "Turn on the Red Light After the Loadmaster notifies the pilot of a high altitude airdrop malfunction, the PM will",
-    "answer": "immediately",
-    "reference": "" 
-  },
-  {
-    "id": 183,
-    "category": "Airdrop",
-    "question": "For high altitude personnel airdrop, complete the Slowdown and configure no later than ...",
-    "answer": "minutes prior to scheduled drop time for jumpmaster directed airdrops3",
-    "reference": "" 
-  },
-  {
-    "id": 184,
-    "category": "Airdrop",
-    "question": "Airdrops conducted above ...",
-    "answer": "feet AGL are considered high altitude airdrops3,000",
-    "reference": "" 
-  },
-  {
-    "id": 185,
-    "category": "Airdrop",
-    "question": "When cabin altitude exceeds a minimum of ... feet MSL, all crewmembers will continuously breathe 100% Oxygen.",
-    "answer": "10,000",
-    "reference": "" 
-  },
-  {
-    "id": 186,
-    "category": "Airdrop",
-    "question": "The altitude wind restriction for a high altitude personnel airdrop is?",
-    "answer": "none",
-    "reference": "" 
-  },
-  {
-    "id": 187,
-    "category": "Airdrop",
-    "question": "The physiological technician's duties do not include",
-    "answer": "controlling the cabin pressure",
-    "reference": "" 
-  },
-  {
-    "id": 188,
-    "category": "Airdrop",
-    "question": "What size skidboards are used for Container Delivery System airdrop on the C-17 aircraft?",
-    "answer": "48x48, 48x72, 48x96",
-    "reference": "" 
-  },
-  {
-    "id": 189,
-    "category": "Airdrop",
-    "question": "5\"",
-    "answer": "",
-    "reference": "" 
-  },
-  {
-    "id": 190,
-    "category": "Airdrop",
-    "question": "What is the minimum suspended weight requirement for a CDS container?",
-    "answer": "501 pounds",
-    "reference": "" 
-  },
-  {
-    "id": 191,
-    "category": "Airdrop",
-    "question": "Which of the following are the correct rigging materials needed to construct a forward restraint gate on the ramp for CDS?",
-    "answer": "Van Zelm ratchets, wishbone fitting, nylon webbing",
-    "reference": "" 
-  },
-  {
-    "id": 192,
-    "category": "Airdrop",
-    "question": "Which low-velocity cargo parachute is normally used for CDS airdrops?",
-    "answer": "G-12E",
-    "reference": "" 
-  },
-  {
-    "id": 193,
-    "category": "Airdrop",
-    "question": "The 12 foot and 26 foot",
-    "answer": "parachutes are high velocity",
-    "reference": "" 
-  },
-  {
-    "id": 194,
-    "category": "Airdrop",
-    "question": "The function of a high velocity parachute is to stabilize the load. T/F?",
-    "answer": "True",
-    "reference": "" 
-  },
-  {
-    "id": 195,
-    "category": "Airdrop",
-    "question": "Low velocity and high velocity CDS dropped at 10,000 MSL or above are",
-    "answer": "rigged with Breakaway Static Line",
-    "reference": "" 
-  },
-  {
-    "id": 196,
-    "category": "Airdrop",
-    "question": "Which of the following shows the correct sequence for cargo load buildup?",
-    "answer": "Skidboards, honeycomb, sling assembly, cover",
-    "reference": "" 
-  },
-  {
-    "id": 197,
-    "category": "Airdrop",
-    "question": "Containers with damaged or warped skidboards may cause delayed release",
-    "answer": "or load malfunction",
-    "reference": "" 
-  },
-  {
-    "id": 198,
-    "category": "Airdrop",
-    "question": "What is the maximum suspended weight capacity of a CDS container?",
-    "answer": "2,200 pounds",
-    "reference": "" 
-  },
-  {
-    "id": 199,
-    "category": "Airdrop",
-    "question": "The tiedown ring pan covers provide",
-    "answer": "A smooth floor surface adjacent to the troop door",
-    "reference": "" 
-  },
-  {
-    "id": 200,
-    "category": "Airdrop",
-    "question": "What shall be used as the primary control for the static line retrieval winches?",
-    "answer": "The Remote Winch Controller (RWC)",
-    "reference": "" 
-  },
-  {
-    "id": 202,
-    "category": "Airdrop",
-    "question": "The green jump signal light is",
-    "answer": "activated by the _______ switch light being manually operated Jump/release",
-    "reference": "" 
-  },
-  {
-    "id": 203,
-    "category": "Airdrop",
-    "question": "The ADS ARM annunciator indicates that the Loadmaster has completed the proper sequence of events and the ADSC has completed the required logic for the specific airdrop.",
-    "answer": "True",
-    "reference": "" 
-  },
-  {
-    "id": 204,
-    "category": "Airdrop",
-    "question": "The ______ annunciator blinks while the air de\ufb02ector is in transit.",
-    "answer": "DFTR DEPLOYED",
-    "reference": "" 
-  },
-  {
-    "id": 205,
-    "category": "Airdrop",
-    "question": "There are",
-    "answer": "______ static lines anchor cable assemblies on the C17 - 4",
-    "reference": "" 
-  },
-  {
-    "id": 206,
-    "category": "Airdrop",
-    "question": "When removing the pulley and choker hook from the stowage locations, the Loadmaster Should",
-    "answer": "exercise care when pulling retrieval equipment from the stowage locations",
-    "reference": "" 
-  },
-  {
-    "id": 207,
-    "category": "Airdrop",
-    "question": "Which switch controls the intensity of the jump platform lights?",
-    "answer": "Jump Platform",
-    "reference": "" 
-  },
-  {
-    "id": 208,
-    "category": "Airdrop",
-    "question": "Which of the following jump signal lights indicate the preparatory signal?",
-    "answer": "Amber",
-    "reference": "" 
-  },
-  {
-    "id": 209,
-    "category": "Airdrop",
-    "question": "The actuation of which switch light alerts personnel in the cargo compartment that an airdrop is imminent?",
-    "answer": "-Red LT",
-    "reference": "" 
-  },
-  {
-    "id": 210,
-    "category": "Airdrop",
-    "question": "The _______ switch light enables the Loadmaster control panels.",
-    "answer": "LM PNL PWR",
-    "reference": "" 
-  },
-  {
-    "id": 211,
-    "category": "Airdrop",
-    "question": "Which one of the following is not a functional task of the ADSC?",
-    "answer": "Hydraulic System Controller (HSC)",
-    "reference": "" 
-  },
-  {
-    "id": 212,
-    "category": "Airdrop",
-    "question": "Which personnel airdrop cargo compartment configuration provides a maximum of 54 seats?",
-    "answer": "ADP-1",
-    "reference": "" 
-  },
-  {
-    "id": 213,
-    "category": "Airdrop",
-    "question": "The retriever winch cable can have up to ____ broken wires per inch.",
-    "answer": "3",
-    "reference": "" 
-  },
-  {
-    "id": 214,
-    "category": "Airdrop",
-    "question": "Control of the jump signal light intensity at the AFT LM PNL must be enabled from the FWD LM STATION.",
-    "answer": "True",
-    "reference": "" 
-  },
-  {
-    "id": 215,
-    "category": "Airdrop",
-    "question": "The anchor cable can have up to ____ broken wires per inch.",
-    "answer": "6",
-    "reference": "" 
-  },
-  {
-    "id": 216,
-    "category": "Airdrop",
-    "question": "When the Red LT switch on the pilot's ADS PNL is",
-    "answer": "depressed twice, the jump signal lights Are extinguished",
-    "reference": "" 
-  },
-  {
-    "id": 217,
-    "category": "Airdrop",
-    "question": "After completing the SLOWDOWN CHECK, the Loadmaster gives the Jumpmaster control of",
-    "answer": "the troop door(s)",
-    "reference": "" 
-  },
-  {
-    "id": 218,
-    "category": "Airdrop",
-    "question": "Jumpers exiting on subsequent passes may stand and hook up FS 1027 with doors open if they are",
-    "answer": "forward of",
-    "reference": "" 
-  },
-  {
-    "id": 219,
-    "category": "Airdrop",
-    "question": "G 14 parachutes used for door bundle airdrops can support a minimum weight of ______ pounds and a maximum weight of ______ pounds.",
-    "answer": "200; 500",
-    "reference": "" 
-  },
-  {
-    "id": 220,
-    "category": "Airdrop",
-    "question": "What side of the door bundle should the parachute be on when the bundle is positioned in the door?",
-    "answer": "Top or inboard",
-    "reference": "" 
-  },
-  {
-    "id": 221,
-    "category": "Airdrop",
-    "question": "What is the maximum weight of a door bundle excluding the weight of the parachute?",
-    "answer": "500 pounds",
-    "reference": "" 
-  },
-  {
-    "id": 222,
-    "category": "Airdrop",
-    "question": "What are the maximum dimensions of a door bundle?",
-    "answer": "48\" x 30\" x 66\"",
-    "reference": "" 
-  },
-  {
-    "id": 223,
-    "category": "Airdrop",
-    "question": "When are door bundles positioned in the paratroop doors?",
-    "answer": "Prior to completion of the Slowdown Checklist",
-    "reference": "" 
-  },
-  {
-    "id": 224,
-    "category": "Airdrop",
-    "question": "During the jumpmaster briefing, the Loadmaster and the jumpmaster will",
-    "answer": "coordinate Visual and verbal signals",
-    "reference": "" 
-  },
-  {
-    "id": 225,
-    "category": "Airdrop",
-    "question": "You must",
-    "answer": "report malfunctions occurring during an airdrop mission by Identifying the malfunction which affected the mission and debrie\ufb01ng the reporting agency When retrieving the fouled paratrooper, you should be careful not to position your hand(s) between the static lines and the fuselage - True",
-    "reference": "" 
-  },
-  {
-    "id": 226,
-    "category": "Airdrop",
-    "question": "After beginning the malfunction checklist, ensure the red jump light is ON and the ORIDE switch is",
-    "answer": "set, and then check the towed trooper's condition by looking for him/her to Maintain a tight body position with both hands on his/her reserve parachute",
-    "reference": "" 
-  },
-  {
-    "id": 227,
-    "category": "Airdrop",
-    "question": "During post mission debriefing, it would not be necessary for the aircrew to notify Command Post when ______ occurs.",
-    "answer": "An improper paratrooper exit",
-    "reference": "" 
-  },
-  {
-    "id": 228,
-    "category": "Airdrop",
-    "question": "During a personnel airdrop, with twenty troopers remaining, you notice one of the paratroopers is being towed.",
-    "answer": "You should Use prearranged hand signals to alert the jumpmaster",
-    "reference": "" 
-  },
-  {
-    "id": 229,
-    "category": "Airdrop",
-    "question": "During paratroop retrieval, personnel should remain clear of the ______ until the parachutist has been retrieved to the door area.",
-    "answer": "Static line retriever cable",
-    "reference": "" 
-  },
-  {
-    "id": 230,
-    "category": "Airdrop",
-    "question": "A DD-Form 1748-2 is not required to be submitted for failure of airdrop equipment, unless a towed paratrooper is involved.",
-    "answer": "False",
-    "reference": "" 
-  },
-  {
-    "id": 231,
-    "category": "Airdrop",
-    "question": "Which of the following best defines a High Altitude Low Opening (HALO) airdrop?",
-    "answer": "The parachutist exits the aircraft and opens the parachute at a low altitude",
-    "reference": "" 
-  },
-  {
-    "id": 232,
-    "category": "Airdrop",
-    "question": "Ensure any paratrooper remaining onboard the aircraft after a high al-Set parachute activation altitude titude drop de-arm their parachute before cabin",
-    "answer": "altitude descends below",
-    "reference": "" 
-  },
-  {
-    "id": 233,
-    "category": "Airdrop",
-    "question": "For unpressurized operations above 13,000 feet MSL All personnel must",
-    "answer": "use supplemental oxygen in all instances",
-    "reference": "" 
-  },
-  {
-    "id": 234,
-    "category": "Airdrop",
-    "question": "If a high altitude airdrop emergency occurs involving a physiological incident Abort the mission and proceed to the nearest base with",
-    "answer": "qualified medical assistance",
-    "reference": "" 
-  },
-  {
-    "id": 235,
-    "category": "Airdrop",
-    "question": "After the Loadmaster notifies the pilot of a high altitude airdrop malfunction, the PM will",
-    "answer": "immediately Turn on the red light",
-    "reference": "" 
-  },
-  {
-    "id": 236,
-    "category": "Airdrop",
-    "question": "For high altitude personnel airdrop, complete the Slowdown and configure no later than ____ minutes prior to scheduled drop time for jumpmaster directed airdrops.",
-    "answer": "3",
-    "reference": "" 
-  },
-  {
-    "id": 237,
-    "category": "Airdrop",
-    "question": "Airdrops conducted above ______ feet AGL are considered high altitude airdrops.",
-    "answer": "3,000",
-    "reference": "" 
-  },
-  {
-    "id": 238,
-    "category": "Airdrop",
-    "question": "When cabin altitude exceeds a minimum of ______ feet MSL, all crewmembers will continuously breathe 100% Oxygen.",
-    "answer": "10,000",
-    "reference": "" 
-  },
-  {
-    "id": 239,
-    "category": "Airdrop",
-    "question": "The altitude wind restriction for a high altitude personnel airdrop is",
-    "answer": "None",
-    "reference": "" 
-  },
-  {
-    "id": 240,
-    "category": "Airdrop",
-    "question": "Controlling the cabin pressure The physiological technician's duties",
-    "answer": "do not include",
-    "reference": "" 
-  },
-  {
-    "id": 241,
-    "category": "Airdrop",
-    "question": "What size skidboard is not used for Container Delivery System airdrop on the C-17 aircraft?",
-    "answer": "48\" x",
-    "reference": "" 
-  },
-  {
-    "id": 242,
-    "category": "Airdrop",
-    "question": "5\"",
-    "answer": "",
-    "reference": "" 
-  },
-  {
-    "id": 243,
-    "category": "Airdrop",
-    "question": "What is the minimum suspended weight requirement for a CDS container?",
-    "answer": "501 pounds",
-    "reference": "" 
-  },
-  {
-    "id": 244,
-    "category": "Airdrop",
-    "question": "Which of the following are the correct rigging materials needed to construct a forward restraint gate on the ramp for CDS?",
-    "answer": "Van Zelm ratchets, wishbone \ufb01tting, nylon webbing",
-    "reference": "" 
-  },
-  {
-    "id": 245,
-    "category": "Airdrop",
-    "question": "Which Low Velocity cargo parachute is normally used for CDS airdrops?",
-    "answer": "G-12E",
-    "reference": "" 
-  },
-  {
-    "id": 246,
-    "category": "Airdrop",
-    "question": "The 12 foot and 26 foot parachutes are ________ parachutes.",
-    "answer": "High Velocity",
-    "reference": "" 
-  },
-  {
-    "id": 247,
-    "category": "Airdrop",
-    "question": "The function of a high velocity parachute is to stabilized the load.",
-    "answer": "True",
-    "reference": "" 
-  },
-  {
-    "id": 248,
-    "category": "Airdrop",
-    "question": "Low velocity and high velocity CDS dropped at 10,000 MSL or above are",
-    "answer": "rigged with Breakaway Static Line",
-    "reference": "" 
-  },
-  {
-    "id": 249,
-    "category": "Airdrop",
-    "question": "Which of the following shows the correct sequence for cargo load buildup?",
-    "answer": "Skidboards, honeycomb, sling assembly, cover",
-    "reference": "" 
-  },
-  {
-    "id": 250,
-    "category": "Airdrop",
-    "question": "Containers with damaged or warped skidboards may Cause delayed release",
-    "answer": "or load malfunction",
-    "reference": "" 
-  },
-  {
-    "id": 251,
-    "category": "Airdrop",
-    "question": "What is the maximum suspended weight capacity of a CDS container?",
-    "answer": "2,200 pounds",
-    "reference": "" 
-  },
-  {
-    "id": 252,
-    "category": "Airdrop",
-    "question": "Who signs the DD Form 1748 1 at completion of the Before Loading Inspection?",
-    "answer": "- Airdrop Support Unit TFI and AF JAI",
-    "reference": "" 
-  },
-  {
-    "id": 253,
-    "category": "Airdrop",
-    "question": "The types of low velocity cargo parachute used with A22 cargo loads are",
-    "answer": "the G-12E and - G14",
-    "reference": "" 
-  },
-  {
-    "id": 254,
-    "category": "Airdrop",
-    "question": "When performing the load inspection, ensure Type XXVI webbing is properly routed through container webbing.",
-    "answer": "Check to ensure webbing is routed through the container at or near the vertical CG",
-    "reference": "" 
-  },
-  {
-    "id": 255,
-    "category": "Airdrop",
-    "question": "Who signs DD Form 1748 1 at completion of the After-Loading Inspection?",
-    "answer": "- Loadmaster, AFJAI and Airdrop Support Unit TFI",
-    "reference": "" 
-  },
-  {
-    "id": 256,
-    "category": "Airdrop",
-    "question": "The function of the Enhanced Container Vertical Restraint system (ECVR) is",
-    "answer": "to Provide vertical restraint for the CDS containers aft of FS 1100",
-    "reference": "" 
-  },
-  {
-    "id": 257,
-    "category": "Airdrop",
-    "question": "If the GATE SELECT rotary switch is set as shown (3), which gate(s) will be release?",
-    "answer": "3, 4, 5",
-    "reference": "" 
-  },
-  {
-    "id": 258,
-    "category": "Airdrop",
-    "question": "The function of the Buffer Stop Assembly (BSA) is",
-    "answer": "to Provide fwd restraint for CDS containers",
-    "reference": "" 
-  },
-  {
-    "id": 259,
-    "category": "Airdrop",
-    "question": "Where is the Buffer Stop Assembly stowed when not assembled?",
-    "answer": "On the left and right sidewall, adjacent to the cargo door (FS 1421)",
-    "reference": "" 
-  },
-  {
-    "id": 260,
-    "category": "Airdrop",
-    "question": "Using the CDS/BSA requirements figure in TO 117A-1-4, how many beams and what size tiedown chains would you use to restrain a single side of containers weighing 2,328 pounds each and less than 60 inches high?",
-    "answer": "- 3 beams; 10,000 pound chains",
-    "reference": "" 
-  },
-  {
-    "id": 261,
-    "category": "Airdrop",
-    "question": "What is the function of the Gate Release Mechanism (GRM)?",
-    "answer": "Provides \ufb01nal aft restraint and release capacity",
-    "reference": "" 
-  },
-  {
-    "id": 262,
-    "category": "Airdrop",
-    "question": "How can you tell that all CDS Airdrop logic is satisfied?",
-    "answer": "ADS ARMED/CDS ARMED annunciator illuminated",
-    "reference": "" 
-  },
-  {
-    "id": 263,
-    "category": "Airdrop",
-    "question": "A single crewmember should",
-    "answer": "remove or stow the Buffer Stop Assembly horizontal beams False",
-    "reference": "" 
-  },
-  {
-    "id": 264,
-    "category": "Airdrop",
-    "question": "During the Pre Slowdown Checklist, when using the Con\ufb01ned Ballistic System (CBS) to airdrop containers, the loadmaster - Removes",
-    "answer": "the safety pins",
-    "reference": "" 
-  },
-  {
-    "id": 265,
-    "category": "Airdrop",
-    "question": "The maximum gate weight on the C17 aircraft for CDS airdrop is",
-    "answer": "______ pounds.",
-    "reference": "" 
-  },
-  {
-    "id": 266,
-    "category": "Airdrop",
-    "question": "18,800",
-    "answer": "",
-    "reference": "" 
-  },
-  {
-    "id": 267,
-    "category": "Airdrop",
-    "question": "Configuration CD 1 is",
-    "answer": "used to perform - Container airdrop or a combination of containers and personnel",
-    "reference": "" 
-  },
-  {
-    "id": 268,
-    "category": "Airdrop",
-    "question": "Failure to ensure that the GRM actuator release pin returns to fully extended unassisted may result in an airdrop malfunction and",
-    "answer": "aircraft damage True",
-    "reference": "" 
-  },
-  {
-    "id": 269,
-    "category": "Airdrop",
-    "question": "When removing or stowing the BSA horizontal beams safely You need",
-    "answer": "at least two",
-    "reference": "" 
-  },
-  {
-    "id": 270,
-    "category": "Airdrop",
-    "question": "What is the maximum bundle load weight for configuration CD1?",
-    "answer": "- 93,120",
-    "reference": "" 
-  },
-  {
-    "id": 271,
-    "category": "Airdrop",
-    "question": "CDS 1 con\ufb01guration offers a maximum of 102 troop",
-    "answer": "seats - False",
-    "reference": "" 
-  },
-  {
-    "id": 272,
-    "category": "Airdrop",
-    "question": "Gloves should",
-    "answer": "not be used when configuring logistic rails to prevent hand injury False",
-    "reference": "" 
-  },
-  {
-    "id": 273,
-    "category": "Airdrop",
-    "question": "On DD Form 365 4, Form F, you subtract reference 22 from reference 21 to obtain the - Corrected zero fuel",
-    "answer": "weight and moments",
-    "reference": "" 
-  },
-  {
-    "id": 274,
-    "category": "Airdrop",
-    "question": "If the GRM fails to release, you must",
-    "answer": "first Activate the ADS Backup CDS Switch",
-    "reference": "" 
-  },
-  {
-    "id": 275,
-    "category": "Airdrop",
-    "question": "The loadmaster will make a visual inspection of the cargo compartment prior to the initiation of the _________ to ensure nothing has fallen between or aft the airdrop loads as a result of takeoff or evasive maneuver .",
-    "answer": "Pre-Slowdown Checklist",
-    "reference": "" 
-  },
-  {
-    "id": 276,
-    "category": "Airdrop",
-    "question": "If the GRM has released and container(s) has/have shifted, _________ using aircraft tiedown equipment.",
-    "answer": "Apply fwd and aft emergency restraint",
-    "reference": "" 
-  },
-  {
-    "id": 277,
-    "category": "Airdrop",
-    "question": "During a CDS airdrop, 4 of 12 bundles jammed, when must the static line be retrieved?",
-    "answer": "After notifying the pilot of the malfunction and ensuring that the red light is on",
-    "reference": "" 
-  },
-  {
-    "id": 278,
-    "category": "Airdrop",
-    "question": "If the GRM fails to release, ________ to the container at the release gate location.",
-    "answer": "Apply emergency aft restraint (aircraft tiedown)",
-    "reference": "" 
-  },
-  {
-    "id": 279,
-    "category": "Airdrop",
-    "question": "If the GRM(s) fail to release or load stop moving aft, after actuating the ADS Backup CDS Switch ensure that all moving containers have exited, then state \"Malfunction\" and complete the",
-    "answer": "CDS Malfunction Checklist",
-    "reference": "" 
-  },
-  {
-    "id": 280,
-    "category": "Airdrop",
-    "question": "If a \"No Drop\" situation occurs after initiation of the CDS Airdrop PreSlowdown Checklist, accomplish the -",
-    "answer": "Post Drop Checklist",
-    "reference": "" 
-  },
-  {
-    "id": 281,
-    "category": "Airdrop",
-    "question": "When the arming wire lanyard is pulled, the safety tie of an M1 or M-2 breaks. What action causes the arming wire lanyard to pull?",
-    "answer": "- Parachute deployment",
-    "reference": "" 
-  },
-  {
-    "id": 282,
-    "category": "Airdrop",
-    "question": "The M 1 or M-2 release assembly _______ when the load reaches the ground.",
-    "answer": "- Tilts and allows the parachute connectors to pull free",
-    "reference": "" 
-  },
-  {
-    "id": 283,
-    "category": "Airdrop",
-    "question": "On the M 1 or M-2 release, the _______ attaches to one of the parachute connectors and a lower suspension link.",
-    "answer": "- Dragline",
-    "reference": "" 
-  },
-  {
-    "id": 284,
-    "category": "Airdrop",
-    "question": "How many G 11B cargo parachutes may be used with one M-1 release assembly?",
-    "answer": "- 1 to 3",
-    "reference": "" 
-  },
-  {
-    "id": 285,
-    "category": "Airdrop",
-    "question": "What component attaches the load to the parachute release assembly?",
-    "answer": "Lower Suspension Link",
-    "reference": "" 
-  },
-  {
-    "id": 286,
-    "category": "Airdrop",
-    "question": "How many cargo parachutes can be rigged with an M2 parachute release assembly?",
-    "answer": "- 3 to 8",
-    "reference": "" 
-  },
-  {
-    "id": 287,
-    "category": "Airdrop",
-    "question": "What component secures the arming wire lanyard to prevent accidental separation from the timer?",
-    "answer": "Safety tie",
-    "reference": "" 
-  },
-  {
-    "id": 288,
-    "category": "Airdrop",
-    "question": "The long anchor cables are installed in which position?",
-    "answer": "Outboard position",
-    "reference": "" 
-  },
-  {
-    "id": 289,
-    "category": "Airdrop",
-    "question": "When using the Logistic Gang Lock Release Switches, the lock actuator cycle for _____ seconds for complete retraction of the",
-    "answer": "logistic pawl locks",
-    "reference": "" 
-  },
-  {
-    "id": 290,
-    "category": "Airdrop",
-    "question": "5",
-    "answer": "",
-    "reference": "" 
-  },
-  {
-    "id": 291,
-    "category": "Airdrop",
-    "question": "What is used to slow pallet/platform movement which allows for the difference in individual lock release timing?",
-    "answer": "Omni-directional rollers",
-    "reference": "" 
-  },
-  {
-    "id": 292,
-    "category": "Airdrop",
-    "question": "What type of static line is used for Dual Row Airdrop?",
-    "answer": "Release away",
-    "reference": "" 
-  },
-  {
-    "id": 293,
-    "category": "Airdrop",
-    "question": "What type of logic is used to obtain a green light for Dual Row Airdrop?",
-    "answer": "CDS",
-    "reference": "" 
-  },
-  {
-    "id": 294,
-    "category": "Airdrop",
-    "question": "Ensure container bags will",
-    "answer": "not contact The Logistic Rails",
-    "reference": "" 
-  },
-  {
-    "id": 295,
-    "category": "Airdrop",
-    "question": "The ramp toes may be used for loading 18 foot Dual Row Airdrop 14,500 pounds System (DRAS) platforms",
-    "answer": "weighing up to",
-    "reference": "" 
-  },
-  {
-    "id": 296,
-    "category": "Airdrop",
-    "question": "Where are the omni directional roller conveyors positioned for Dual Row Airdrop?",
-    "answer": "- X= +/- 41 beginning at FS 352 through FS 992",
-    "reference": "" 
-  },
-  {
-    "id": 297,
-    "category": "Airdrop",
-    "question": "Prior to loading, what the loadmaster do with unused left/right side tiedown rings on 463L pallets?",
-    "answer": "Tie up vertically",
-    "reference": "" 
-  },
-  {
-    "id": 298,
-    "category": "Airdrop",
-    "question": "The C 17 has the capability to airdrop up to ______ pounds of equipment rigged on DRAS platforms.",
-    "answer": "- 116,000",
-    "reference": "" 
-  },
-  {
-    "id": 299,
-    "category": "Airdrop",
-    "question": "When planning drops for 463L pallets, what must the loadmaster ensure at position 7 (FS 1151) Vertical restraint lips are",
-    "answer": "retracted",
-    "reference": "" 
-  },
-  {
-    "id": 300,
-    "category": "Airdrop",
-    "question": "Ensure the recovery and deployment parachutes are on the ____________ of the load.",
-    "answer": "Forward end",
-    "reference": "" 
-  },
-  {
-    "id": 301,
-    "category": "Airdrop",
-    "question": "When dropping two or less 463L pallets per side, where may they be positioned in the aircraft?",
-    "answer": "They may be positioned in any of the specified locations",
-    "reference": "" 
-  },
-  {
-    "id": 302,
-    "category": "Airdrop",
-    "question": "Which side of the aircraft you load first?",
-    "answer": "Load the right side of the aircraft prior to the left",
-    "reference": "" 
-  },
-  {
-    "id": 303,
-    "category": "Airdrop",
-    "question": "Dual Row Payloads can be rigged on what length of platform?",
-    "answer": "18 foot by 88 inches, DRAS platforms",
-    "reference": "" 
-  },
-  {
-    "id": 304,
-    "category": "Airdrop",
-    "question": "All static lines used for Dual Row will be what type?",
-    "answer": "Release away system",
-    "reference": "" 
-  },
-  {
-    "id": 305,
-    "category": "Airdrop",
-    "question": "Who will determine if the ramp and door can be closed safely after a malfunction?",
-    "answer": "Loadmaster 2",
-    "reference": "" 
-  },
-  {
-    "id": 306,
-    "category": "Airdrop",
-    "question": "If required, how long will loadmaster 1 hold the Logistics Gang Lock Backup L/R rail lock switch(es) to the lock position?",
-    "answer": "5.5 seconds",
-    "reference": "" 
-  },
-  {
-    "id": 307,
-    "category": "Airdrop",
-    "question": "5 seconds",
-    "answer": "",
-    "reference": "" 
-  },
-  {
-    "id": 308,
-    "category": "Airdrop",
-    "question": "During a malfunction, when should the Pilot Flying (PF) make aircraft deck angle changes?",
-    "answer": "When the action is requested by the loadmaster",
-    "reference": "" 
-  },
-  {
-    "id": 309,
-    "category": "Airdrop",
-    "question": "If a pallet or platform fails to move after the locks are released, when does the loadmaster state \"Malfunction\"?",
-    "answer": "After all pallets/platforms aft of the malfunctioning pallet/platform have exited",
-    "reference": "" 
-  },
-  {
-    "id": 310,
-    "category": "Airdrop",
-    "question": "During the Malfunction Checklist, what is the loadmaster 1 first action if the Log Lock Gang Release L/R Locks Ramp/Floor switch(es) fail(s)?",
-    "answer": "Activate the Logistics Gang Lock Backup L/R Rails Lock switch(es)",
-    "reference": "" 
-  },
-  {
-    "id": 311,
-    "category": "Airdrop",
-    "question": "What must you not do while applying fwd and aft restraint?",
-    "answer": "Position yourself fwd, aft, or between the platforms/pallets until the load is secured",
-    "reference": "" 
-  },
-  {
-    "id": 312,
-    "category": "Airdrop",
-    "question": "Locks 16, 17, 18 and 19 are restraining a platform. The values between which locks would be set in the OPEN position?",
-    "answer": "16 - 17, 17 - 18, 18 - 19",
-    "reference": "" 
-  },
-  {
-    "id": 313,
-    "category": "Airdrop",
-    "question": "Refer to the airdrop system requirement chart in TO 1C17A-1-4 and determine how many pounds of aft restraint are required for lock on a platform that has 3 locks engaged and one 22 foot extraction parachute.",
-    "answer": "- 2,000",
-    "reference": "" 
-  },
-  {
-    "id": 314,
-    "category": "Airdrop",
-    "question": "Where would you set the Right Lock Select switch to release only the first platform to be airdropped?",
-    "answer": "16 - 15",
-    "reference": "" 
-  },
-  {
-    "id": 315,
-    "category": "Airdrop",
-    "question": "Which of the following messages must the ADSC (logic) receive before a Heavy Equipment Airdrop can take place?",
-    "answer": "Left Locks released",
-    "reference": "" 
-  },
-  {
-    "id": 316,
-    "category": "Airdrop",
-    "question": "Select the switch that resets the Drogue Jettison Pin.",
-    "answer": "4 (Drogue Jett Reset)",
-    "reference": "" 
-  },
-  {
-    "id": 317,
-    "category": "Airdrop",
-    "question": "Which of the following switches activates a pyrotechnic guillotine that cuts the drogue line from the jettison link.",
-    "answer": "Emergency Drogue",
-    "reference": "" 
-  },
-  {
-    "id": 318,
-    "category": "Airdrop",
-    "question": "Where is the rail bridge assembly stowed when not in use?",
-    "answer": "Forward of the left troop door",
-    "reference": "" 
-  },
-  {
-    "id": 319,
-    "category": "Airdrop",
-    "question": "If you fail to arm the right locks, they will Provide",
-    "answer": "7,500 pounds of Aft restraint",
-    "reference": "" 
-  },
-  {
-    "id": 320,
-    "category": "Airdrop",
-    "question": "Using Table 5 2 in TO 13C7-1-5, determine the required length of riser extensions for three G11-B cargo parachutes.",
-    "answer": "- 60 Foot",
-    "reference": "" 
-  },
-  {
-    "id": 321,
-    "category": "Airdrop",
-    "question": "Use Fig 2 2 of TO 1C-17A-1-4 to answer this question. A 15 foot extraction parachute has an allowable load of ______.",
-    "answer": "- 2,520 to 8,000 pounds",
-    "reference": "" 
-  },
-  {
-    "id": 322,
-    "category": "Airdrop",
-    "question": "Cargo parachutes are",
-    "answer": "used to Slow the descent rate of Heavy Equipment loads",
-    "reference": "" 
-  },
-  {
-    "id": 323,
-    "category": "Airdrop",
-    "question": "Which item is the extraction parachute?",
-    "answer": "3",
-    "reference": "" 
-  },
-  {
-    "id": 324,
-    "category": "Airdrop",
-    "question": "Using Table 5 1 in TO 13C7-1-5, determine the max suspended weight allowable using 4 G11-B parachutes.",
-    "answer": "- 20,000 pounds",
-    "reference": "" 
-  },
-  {
-    "id": 325,
-    "category": "Airdrop",
-    "question": "A 28 foot extraction parachute requires an extraction line with ______ plies.",
-    "answer": "6 plies",
-    "reference": "" 
-  },
-  {
-    "id": 326,
-    "category": "Airdrop",
-    "question": "How many stows are required for 60 feet of riser extension.",
-    "answer": "8",
-    "reference": "" 
-  },
-  {
-    "id": 327,
-    "category": "Airdrop",
-    "question": "What is the function of the Drogue parachute?",
-    "answer": "Pull SELB and extraction parachute off the ramp",
-    "reference": "" 
-  },
-  {
-    "id": 328,
-    "category": "Airdrop",
-    "question": "Determine how many G11 B cargo parachutes would be required in a cluster to airdrop a Heavy Equipment load which weighs 13,560 pounds.",
-    "answer": "- 3",
-    "reference": "" 
-  },
-  {
-    "id": 329,
-    "category": "Airdrop",
-    "question": "All of the following are",
-    "answer": "characteristics of the G12E cargo parachutes except - Two 2 second delay ree\ufb01ng line cutter",
-    "reference": "" 
-  },
-  {
-    "id": 330,
-    "category": "Airdrop",
-    "question": "The first function of an extraction parachute is",
-    "answer": "to Extract the Airdrop platform",
-    "reference": "" 
-  },
-  {
-    "id": 331,
-    "category": "Airdrop",
-    "question": "Riser Extensions When cargo parachutes are clustered, the distance between the load and the parachute risers lengthens so canopies remain almost vertical above the load. Which component increases the distance?",
-    "answer": "",
-    "reference": "" 
-  },
-  {
-    "id": 332,
-    "category": "Airdrop",
-    "question": "The Extraction Force Transfer Coupling (EFTC) system uses a component that varies in its length of 12, 16,",
-    "answer": "20, 24, 28",
-    "reference": "" 
-  },
-  {
-    "id": 333,
-    "category": "Airdrop",
-    "question": "depending on the platform and the load. What is the component?",
-    "answer": "Cable Assembly",
-    "reference": "" 
-  },
-  {
-    "id": 334,
-    "category": "Airdrop",
-    "question": "What component of the EFTC system is shown in the screen?",
-    "answer": "Coupling Link Assembly",
-    "reference": "" 
-  },
-  {
-    "id": 335,
-    "category": "Airdrop",
-    "question": "What is the minimum weight of an extracted airdrop load?",
-    "answer": "2,520 pounds",
-    "reference": "" 
-  },
-  {
-    "id": 336,
-    "category": "Airdrop",
-    "question": "What component of the EFTC system is the arrow pointing to on the screen?",
-    "answer": "Locking/safety pin",
-    "reference": "" 
-  },
-  {
-    "id": 337,
-    "category": "Airdrop",
-    "question": "What is the function of the deployment line?",
-    "answer": "Deploys the Cargo Parachute(s)",
-    "reference": "" 
-  },
-  {
-    "id": 338,
-    "category": "Airdrop",
-    "question": "What component of the EFTC system is the arrow pointing to on the screen?",
-    "answer": "Latch Assembly",
-    "reference": "" 
-  },
-  {
-    "id": 339,
-    "category": "Airdrop",
-    "question": "EFTC system During the initial stage of extraction, the extraction force is applied to the platform. What transfers extraction force to the deployment line?",
-    "answer": "",
-    "reference": "" 
-  },
-  {
-    "id": 340,
-    "category": "Airdrop",
-    "question": "During an extraction airdrop, the arm of the actuator assembly rides on top of the",
-    "answer": "Left ADS rail",
-    "reference": "" 
-  },
-  {
-    "id": 341,
-    "category": "Airdrop",
-    "question": "Type V platforms have a maximum length of ________ feet.",
-    "answer": "32",
-    "reference": "" 
-  },
-  {
-    "id": 342,
-    "category": "Airdrop",
-    "question": "Which of the following is not a component of lashing?",
-    "answer": "Sling",
-    "reference": "" 
-  },
-  {
-    "id": 343,
-    "category": "Airdrop",
-    "question": "Rear panel assemblies have _______ tiedown rings.",
-    "answer": "4",
-    "reference": "" 
-  },
-  {
-    "id": 344,
-    "category": "Airdrop",
-    "question": "Which of the following information is not contained in the data tag?",
-    "answer": "Lateral Center of Gravity",
-    "reference": "" 
-  },
-  {
-    "id": 345,
-    "category": "Airdrop",
-    "question": "Select the suspension bracket assembly.",
-    "answer": "1",
-    "reference": "" 
-  },
-  {
-    "id": 346,
-    "category": "Airdrop",
-    "question": "Platform panels are",
-    "answer": "held together by the",
-    "reference": "" 
-  },
-  {
-    "id": 347,
-    "category": "Airdrop",
-    "question": "Side rails",
-    "answer": "",
-    "reference": "" 
-  },
-  {
-    "id": 348,
-    "category": "Airdrop",
-    "question": "What is the cumulative gross rigged weight maximum of a sequential platform drop?",
-    "answer": "110,000",
-    "reference": "" 
-  },
-  {
-    "id": 349,
-    "category": "Airdrop",
-    "question": "Select the actuator mounting bracket.",
-    "answer": "2",
-    "reference": "" 
-  },
-  {
-    "id": 350,
-    "category": "Airdrop",
-    "question": "What is the purpose of suspension slings in Heavy Equipment buildup?",
-    "answer": "Connect the parachute release assembly to the platform/item",
-    "reference": "" 
-  },
-  {
-    "id": 351,
-    "category": "Airdrop",
-    "question": "When dropping items in cold weather , what type of material should be used to secure slings and lashings?",
-    "answer": "Type I, 1/4 inch cotton webbing",
-    "reference": "" 
-  },
-  {
-    "id": 352,
-    "category": "Airdrop",
-    "question": "When Type V platforms impact the ground The platform spreads the",
-    "answer": "shock of impact",
-    "reference": "" 
-  },
-  {
-    "id": 353,
-    "category": "Airdrop",
-    "question": "Which publication specifies packaging and labeling requirements for HAZMAT accompanying an airdrop load?",
-    "answer": "AFMAN 24-204",
-    "reference": "" 
-  },
-  {
-    "id": 354,
-    "category": "Airdrop",
-    "question": "Select the platform extraction bracket assembly.",
-    "answer": "4",
-    "reference": "" 
-  },
-  {
-    "id": 355,
-    "category": "Airdrop",
-    "question": "If the airdrop load you are inspecting weighs 35,000 pounds, according to TO 1C17A-1-4, what parachute con\ufb01guration (number and type of extraction parachutes) will be used?",
-    "answer": "- Two 28 foot extraction parachutes",
-    "reference": "" 
-  },
-  {
-    "id": 356,
-    "category": "Airdrop",
-    "question": "Which direction should",
-    "answer": "the parachute bridles face on an airdrop platform Aft",
-    "reference": "" 
-  },
-  {
-    "id": 357,
-    "category": "Airdrop",
-    "question": "When inspecting an M 1 release, one end of the dragline should be tied to the ________ with the other end tied to one side of the lower suspension link.",
-    "answer": "- Parachute Connector",
-    "reference": "" 
-  },
-  {
-    "id": 358,
-    "category": "Airdrop",
-    "question": "The actuator should be installed on the bracket of the platform before it is loaded onto the aircraft.",
-    "answer": "False",
-    "reference": "" 
-  },
-  {
-    "id": 359,
-    "category": "Airdrop",
-    "question": "What material is used to restraint strap for two to five G11 parachutes?",
-    "answer": "Type VIII Nylon",
-    "reference": "" 
-  },
-  {
-    "id": 360,
-    "category": "Airdrop",
-    "question": "The number of knives used on a multi-cut release strap will correlate with the number of _________ on the load.",
-    "answer": "- Restraint Straps",
-    "reference": "" 
-  },
-  {
-    "id": 361,
-    "category": "Airdrop",
-    "question": "Which of the following is reset from the aft left loadmaster station?",
-    "answer": "Tow Plate switch",
-    "reference": "" 
-  },
-  {
-    "id": 362,
-    "category": "Airdrop",
-    "question": "On which side is the Rail Bridge assembly installed when dropping Heavy Equipment?",
-    "answer": "Left only",
-    "reference": "" 
-  },
-  {
-    "id": 363,
-    "category": "Airdrop",
-    "question": "Configurations for Airdrop are contained in AFI 11-2C-17, Vol.",
-    "answer": "3 ADDENDA A",
-    "reference": "" 
-  },
-  {
-    "id": 364,
-    "category": "Airdrop",
-    "question": "The simple platform weight is limited to ________ pounds.",
-    "answer": "60,000",
-    "reference": "" 
-  },
-  {
-    "id": 365,
-    "category": "Airdrop",
-    "question": "Pre\ufb02ight both left and right PDMs when both are scheduled to be used. This may be accomplish by depressing the Red Light Switch, arming the opposite PDM and rearming the TRM.",
-    "answer": "True",
-    "reference": "" 
-  },
-  {
-    "id": 366,
-    "category": "Airdrop",
-    "question": "Omni-directional Which of the following roller conveyors are not used for Heavy Equipment airdrop?",
-    "answer": "",
-    "reference": "" 
-  },
-  {
-    "id": 367,
-    "category": "Airdrop",
-    "question": "Ensure your fingers remain clear of the Emergency Drogue Jettison pyrotechnic device when Installing",
-    "answer": "the TRM cover",
-    "reference": "" 
-  },
-  {
-    "id": 368,
-    "category": "Airdrop",
-    "question": "Heavy equipment platform combinations totaling _________ feet may be airdropped.",
-    "answer": "64",
-    "reference": "" 
-  },
-  {
-    "id": 369,
-    "category": "Airdrop",
-    "question": "When preparing the aircraft for Heavy Equipment airdrop, after locking the Right locks from the sidewall control panels, ensure more than ______ pounds of tension is set in each lock prior to arming.",
-    "answer": "500",
-    "reference": "" 
-  },
-  {
-    "id": 370,
-    "category": "Airdrop",
-    "question": "Which of the following operations is correct in obtaining an estimated landing CG?",
-    "answer": "ZFW subtract airdrop load add landing fuel",
-    "reference": "" 
-  },
-  {
-    "id": 371,
-    "category": "Airdrop",
-    "question": "When loading platforms into the aircraft, avoid excessive speed.",
-    "answer": "True",
-    "reference": "" 
-  },
-  {
-    "id": 372,
-    "category": "Airdrop",
-    "question": "If using lock numbers 9 through 14, valves between _________ will be in the open position.",
-    "answer": "9-10, 10-11, 11-12, 12-13, 13-14",
-    "reference": "" 
-  },
-  {
-    "id": 373,
-    "category": "Airdrop",
-    "question": "Ensure all retractable lips on the cargo \ufb02oor and ramp rail lock True mechanisms aft of the airdrop platforms are retracted before an airdrop is",
-    "answer": "attempted",
-    "reference": "" 
-  },
-  {
-    "id": 374,
-    "category": "Airdrop",
-    "question": "Command Post will",
-    "answer": "be notified immediately when any of the following occur: injury or death; off drop zone drops; and Damage to equipment",
-    "reference": "" 
-  },
-  {
-    "id": 375,
-    "category": "Airdrop",
-    "question": "When will the crew initiate the Post Drop Checklist?",
-    "answer": "After the loadmaster calls \"load clear\" and the Red Light is on",
-    "reference": "" 
-  },
-  {
-    "id": 376,
-    "category": "Airdrop",
-    "question": "Which of these malfunctions would cause you to activate the Emergency Drogue Jettison switch?",
-    "answer": "Drogue Jettison switch failed to release Drogue chute",
-    "reference": "" 
-  },
-  {
-    "id": 377,
-    "category": "Airdrop",
-    "question": "What is the procedure if the drogue chute is outside the aircraft and the TRM has failed to release after the Tow Plate switch has been activated?",
-    "answer": "Activate the Drogue Jettison switch",
-    "reference": "" 
-  },
-  {
-    "id": 378,
-    "category": "Airdrop",
-    "question": "If the extraction parachutes have exited the aircraft and the platform fails to move, ensure the Right Lock Select Rotary switch is",
-    "answer": "set to the lowest lock number setting for the platform that failed to move and activate the ADS Right Locks Gang release",
-    "reference": "" 
-  },
-  {
-    "id": 379,
-    "category": "Airdrop",
-    "question": "What is the correct procedure if a platform becomes loose prior to green light on an airdrop mission?",
-    "answer": "State \"malfunction\" and accomplish the Heavy Equipment Malfunction Checklist",
-    "reference": "" 
-  },
-  {
-    "id": 380,
-    "category": "Airdrop",
-    "question": "Verify the corresponding lock annunciators on the __________ have extinguished to correspond with Left Lock and Drop Group Select Rotary switch position ADS",
-    "answer": "Lock Status panel",
-    "reference": "" 
-  },
-  {
-    "id": 381,
-    "category": "Airdrop",
-    "question": "If the Tow Release Armed annunciator fails to extinguish, immediately Position the Tow Plate",
-    "answer": "switch to release",
-    "reference": "" 
-  },
-  {
-    "id": 382,
-    "category": "Airdrop",
-    "question": "What switch would you activate if the Right Drogue Chute Arm annunciator fails to extinguish when the PM activates the Ready/Drogue switch light?",
-    "answer": "Right Drogue Chute Deploy",
-    "reference": "" 
-  },
-  {
-    "id": 383,
-    "category": "Airdrop",
-    "question": "Because the left rail locks operate in pairs, a lock may be engaged fwd, between or aft of airdrop platform. If this condition exist, the locks will be retracted during the Slowdown Checklist.",
-    "answer": "True",
-    "reference": "" 
-  }
-]
-
+    "category": "MQF Oct 2025",
+    "question": "_________ highlight essential operating procedures, practice, condition or statement, etc. which if not strictly observed could result in damage to, or destruction of equipment or loss of mission effectiveness.",
+    "answer": "Cautions",
+    "reference": "TO 1C-17A-9 [Para. 1-43 (C)]" 
+  },
+  
 
 
 
