@@ -3,7 +3,7 @@
 // ===============================
 
 // Update this string whenever you push a meaningful new build
-const APP_VERSION = "1.2.0 Beta - added MQF Oct 2025 + Airdrop + Flags";
+const APP_VERSION = "1.2.0";
 
 // ---------- Version display (App + Cache) ----------
 function formatVersionLabel(ver) {
@@ -107,7 +107,7 @@ let flags = {};
 document.addEventListener("DOMContentLoaded", () => {
   // Show app version in footer if element exists
   setVersions();
-loadFlags();
+  loadFlags();
   setupUI();
   loadQuestions();
   setupPWA && setupPWA();
@@ -323,9 +323,9 @@ function setupUI() {
     flagToggleBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       flagPanel.classList.toggle("hidden");
-      
+
       const isOpen = !flagPanel.classList.contains("hidden");
-        card.classList.toggle("flag-open", isOpen);
+      card.classList.toggle("flag-open", isOpen);
     });
   }
 
@@ -441,243 +441,242 @@ function updateFilteredQuestions() {
   if (currentIndex >= filteredQuestions.length) {
     currentIndex = 0;
   }
-  
+
   function showToast(message, duration = 2000) {
-  const toast = document.getElementById("toast");
-  if (!toast) return;
+    const toast = document.getElementById("toast");
+    if (!toast) return;
 
-  toast.textContent = message;
-  toast.classList.remove("hidden");
-  toast.classList.add("show");
+    toast.textContent = message;
+    toast.classList.remove("hidden");
+    toast.classList.add("show");
 
-  setTimeout(() => {
-    toast.classList.remove("show");
-    setTimeout(() => toast.classList.add("hidden"), 300);
-  }, duration);
+    setTimeout(() => {
+      toast.classList.remove("show");
+      setTimeout(() => toast.classList.add("hidden"), 300);
+    }, duration);
+  }
 }
+  // ===============================
+  // Rendering
+  // ===============================
 
-// ===============================
-// Rendering
-// ===============================
+  function renderCurrentQuestion() {
+    const questionEl = document.getElementById("questionText");
+    const answerEl = document.getElementById("answerText");
+    const referenceEl = document.getElementById("referenceText");
+    const categoryLabel = document.getElementById("categoryLabel");
+    const counterLabel = document.getElementById("counterLabel");
+    const modeHint = document.getElementById("modeHint");
+    const shortAnswerArea = document.getElementById("shortAnswerArea");
+    const mcArea = document.getElementById("mcArea");
+    const mcOptionsContainer = document.getElementById("mcOptions");
+    const card = document.getElementById("card");
+    const flagText = document.getElementById("flagText");
+    const flagPanel = document.getElementById("flagPanel");
 
-function renderCurrentQuestion() {
-  const questionEl = document.getElementById("questionText");
-  const answerEl = document.getElementById("answerText");
-  const referenceEl = document.getElementById("referenceText");
-  const categoryLabel = document.getElementById("categoryLabel");
-  const counterLabel = document.getElementById("counterLabel");
-  const modeHint = document.getElementById("modeHint");
-  const shortAnswerArea = document.getElementById("shortAnswerArea");
-  const mcArea = document.getElementById("mcArea");
-  const mcOptionsContainer = document.getElementById("mcOptions");
-  const card = document.getElementById("card");
-  const flagText = document.getElementById("flagText");
-  const flagPanel = document.getElementById("flagPanel");
-
-  if (!filteredQuestions.length) {
-    questionEl.textContent = "No questions available in this category.";
-    answerEl.textContent = "";
-    referenceEl.textContent = "";
-    categoryLabel.textContent = "None";
-    counterLabel.textContent = "0 / 0";
-    shortAnswerArea.classList.add("hidden");
-    mcArea.classList.add("hidden");
-    if (flagPanel) flagPanel.classList.add("hidden");
-    if (flagText) flagText.value = "";
-    updateProgressUI();
-    return;
-  }
-
-  const q = filteredQuestions[currentIndex];
-
-  // Reset card side
-  card.classList.remove("flipped");
-
-  questionEl.textContent = q.question;
-  answerEl.textContent = q.answer;
-  referenceEl.textContent =
-    showReference && q.reference ? `Reference: ${q.reference}` : "";
-  categoryLabel.textContent = q.category || "Uncategorized";
-  counterLabel.textContent = `${currentIndex + 1} / ${filteredQuestions.length}`;
-
-  // Mode-specific setup
-  if (currentMode === "flashcard") {
-    modeHint.textContent = "Tap/click anywhere on the card to flip between question and answer.";
-    shortAnswerArea.classList.add("hidden");
-    mcArea.classList.add("hidden");
-  } else if (currentMode === "multiple-choice") {
-    modeHint.textContent = "Select the best answer, then flip the card to verify.";
-    shortAnswerArea.classList.add("hidden");
-    mcArea.classList.remove("hidden");
-    renderMCOptions(q, mcOptionsContainer);
-  } else if (currentMode === "short-answer") {
-    modeHint.textContent = "Type your answer, hit 'Check Answer', then flip to compare.";
-    shortAnswerArea.classList.remove("hidden");
-    mcArea.classList.add("hidden");
-    const saInput = document.getElementById("shortAnswerInput");
-    if (saInput) saInput.value = "";
-  }
-
-  // Flag UI reset & restore
-  if (flagPanel) {
-    flagPanel.classList.add("hidden");
-  }
-  if (flagText) {
-    const flagData = flags[q.id];
-    flagText.value = flagData ? flagData.text : "";
-  }
-  updateFlagUI(q.id);
-
-  updateProgressUI();
-}
-
-function renderMCOptions(question, container) {
-  if (!container) return;
-
-  container.innerHTML = "";
-
-  const pool = filteredQuestions.length >= 4 ? filteredQuestions : allQuestions;
-  const wrongAnswers = pool
-    .filter(q => q.answer && q.answer !== question.answer)
-    .map(q => q.answer);
-
-  const options = [question.answer];
-  shuffleArray(wrongAnswers);
-  for (const a of wrongAnswers) {
-    if (options.length >= 4) break;
-    if (!options.includes(a)) options.push(a);
-  }
-
-  shuffleArray(options);
-
-  options.forEach(optText => {
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "mc-option";
-    btn.textContent = optText;
-    btn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      handleMCSelection(btn, optText === question.answer);
-    });
-    container.appendChild(btn);
-  });
-}
-
-// ===============================
-// Answer Handling
-// ===============================
-
-function handleMCSelection(button, isCorrect) {
-  stats.attempts += 1;
-  if (isCorrect) {
-    stats.correct += 1;
-  }
-
-  const allOpts = button.parentElement.querySelectorAll(".mc-option");
-  allOpts.forEach(opt => {
-    opt.disabled = true;
-    if (opt.textContent === filteredQuestions[currentIndex].answer) {
-      opt.classList.add("correct");
-    } else if (opt === button && !isCorrect) {
-      opt.classList.add("incorrect");
+    if (!filteredQuestions.length) {
+      questionEl.textContent = "No questions available in this category.";
+      answerEl.textContent = "";
+      referenceEl.textContent = "";
+      categoryLabel.textContent = "None";
+      counterLabel.textContent = "0 / 0";
+      shortAnswerArea.classList.add("hidden");
+      mcArea.classList.add("hidden");
+      if (flagPanel) flagPanel.classList.add("hidden");
+      if (flagText) flagText.value = "";
+      updateProgressUI();
+      return;
     }
-  });
 
-  updateProgressUI();
-}
+    const q = filteredQuestions[currentIndex];
 
-function handleShortAnswerCheck() {
-  if (!filteredQuestions.length) return;
+    // Reset card side
+    card.classList.remove("flipped");
 
-  const input = document.getElementById("shortAnswerInput");
-  if (!input) return;
+    questionEl.textContent = q.question;
+    answerEl.textContent = q.answer;
+    referenceEl.textContent =
+      showReference && q.reference ? `Reference: ${q.reference}` : "";
+    categoryLabel.textContent = q.category || "Uncategorized";
+    counterLabel.textContent = `${currentIndex + 1} / ${filteredQuestions.length}`;
 
-  const userText = (input.value || "").trim();
-  if (!userText) {
-    alert("Type an answer first, then press Check Answer.");
-    return;
+    // Mode-specific setup
+    if (currentMode === "flashcard") {
+      modeHint.textContent = "Tap/click anywhere on the card to flip between question and answer.";
+      shortAnswerArea.classList.add("hidden");
+      mcArea.classList.add("hidden");
+    } else if (currentMode === "multiple-choice") {
+      modeHint.textContent = "Select the best answer, then flip the card to verify.";
+      shortAnswerArea.classList.add("hidden");
+      mcArea.classList.remove("hidden");
+      renderMCOptions(q, mcOptionsContainer);
+    } else if (currentMode === "short-answer") {
+      modeHint.textContent = "Type your answer, hit 'Check Answer', then flip to compare.";
+      shortAnswerArea.classList.remove("hidden");
+      mcArea.classList.add("hidden");
+      const saInput = document.getElementById("shortAnswerInput");
+      if (saInput) saInput.value = "";
+    }
+
+    // Flag UI reset & restore
+    if (flagPanel) {
+      flagPanel.classList.add("hidden");
+    }
+    if (flagText) {
+      const flagData = flags[q.id];
+      flagText.value = flagData ? flagData.text : "";
+    }
+    updateFlagUI(q.id);
+
+    updateProgressUI();
   }
-  stats.attempts += 1;
 
-  const correct = filteredQuestions[currentIndex].answer || "";
-  if (userText.length && correct.length) {
-    const u = userText.toLowerCase();
-    const c = correct.toLowerCase();
-    if (u === c || u.includes(c) || c.includes(u)) {
+  function renderMCOptions(question, container) {
+    if (!container) return;
+
+    container.innerHTML = "";
+
+    const pool = filteredQuestions.length >= 4 ? filteredQuestions : allQuestions;
+    const wrongAnswers = pool
+      .filter(q => q.answer && q.answer !== question.answer)
+      .map(q => q.answer);
+
+    const options = [question.answer];
+    shuffleArray(wrongAnswers);
+    for (const a of wrongAnswers) {
+      if (options.length >= 4) break;
+      if (!options.includes(a)) options.push(a);
+    }
+
+    shuffleArray(options);
+
+    options.forEach(optText => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "mc-option";
+      btn.textContent = optText;
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        handleMCSelection(btn, optText === question.answer);
+      });
+      container.appendChild(btn);
+    });
+  }
+
+  // ===============================
+  // Answer Handling
+  // ===============================
+
+  function handleMCSelection(button, isCorrect) {
+    stats.attempts += 1;
+    if (isCorrect) {
       stats.correct += 1;
     }
+
+    const allOpts = button.parentElement.querySelectorAll(".mc-option");
+    allOpts.forEach(opt => {
+      opt.disabled = true;
+      if (opt.textContent === filteredQuestions[currentIndex].answer) {
+        opt.classList.add("correct");
+      } else if (opt === button && !isCorrect) {
+        opt.classList.add("incorrect");
+      }
+    });
+
+    updateProgressUI();
   }
 
-  updateProgressUI();
-  document.getElementById("card").classList.add("flipped");
-}
+  function handleShortAnswerCheck() {
+    if (!filteredQuestions.length) return;
 
-// ===============================
-// Progress
-// ===============================
+    const input = document.getElementById("shortAnswerInput");
+    if (!input) return;
 
-function updateProgressUI() {
-  const correctCountEl = document.getElementById("correctCount");
-  const attemptCountEl = document.getElementById("attemptCount");
-  const progressBar = document.getElementById("progressBar");
+    const userText = (input.value || "").trim();
+    if (!userText) {
+      alert("Type an answer first, then press Check Answer.");
+      return;
+    }
+    stats.attempts += 1;
 
-  if (correctCountEl) correctCountEl.textContent = stats.correct;
-  if (attemptCountEl) attemptCountEl.textContent = stats.attempts;
+    const correct = filteredQuestions[currentIndex].answer || "";
+    if (userText.length && correct.length) {
+      const u = userText.toLowerCase();
+      const c = correct.toLowerCase();
+      if (u === c || u.includes(c) || c.includes(u)) {
+        stats.correct += 1;
+      }
+    }
 
-  const pct = stats.attempts > 0 ? Math.round((stats.correct / stats.attempts) * 100) : 0;
-  if (progressBar) {
-    progressBar.style.width = pct + "%";
+    updateProgressUI();
+    document.getElementById("card").classList.add("flipped");
   }
-}
 
-// ===============================
-// Utility
-// ===============================
+  // ===============================
+  // Progress
+  // ===============================
 
-function shuffleArray(arr) {
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
+  function updateProgressUI() {
+    const correctCountEl = document.getElementById("correctCount");
+    const attemptCountEl = document.getElementById("attemptCount");
+    const progressBar = document.getElementById("progressBar");
+
+    if (correctCountEl) correctCountEl.textContent = stats.correct;
+    if (attemptCountEl) attemptCountEl.textContent = stats.attempts;
+
+    const pct = stats.attempts > 0 ? Math.round((stats.correct / stats.attempts) * 100) : 0;
+    if (progressBar) {
+      progressBar.style.width = pct + "%";
+    }
   }
-}
 
-// ===============================
-// PWA Setup
-// ===============================
+  // ===============================
+  // Utility
+  // ===============================
 
-function setupPWA() {
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("service-worker.js").catch(console.error);
-  
-    // Update cache version label once SW is ready
-    setVersions();
-}
+  function shuffleArray(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+  }
 
-  window.addEventListener("beforeinstallprompt", (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    const btn = document.getElementById("installBtn");
-    if (!btn) return;
-    btn.hidden = false;
-    btn.addEventListener(
-      "click",
-      async () => {
-        btn.hidden = true;
-        if (!deferredPrompt) return;
-        deferredPrompt.prompt();
-        await deferredPrompt.userChoice;
-        deferredPrompt = null;
-      },
-      { once: true }
-    );
-  });
+  // ===============================
+  // PWA Setup
+  // ===============================
+
+  function setupPWA() {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js").catch(console.error);
+
+      // Update cache version label once SW is ready
+      setVersions();
+    }
+
+    window.addEventListener("beforeinstallprompt", (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      const btn = document.getElementById("installBtn");
+      if (!btn) return;
+      btn.hidden = false;
+      btn.addEventListener(
+        "click",
+        async () => {
+          btn.hidden = true;
+          if (!deferredPrompt) return;
+          deferredPrompt.prompt();
+          await deferredPrompt.userChoice;
+          deferredPrompt = null;
+        },
+        { once: true }
+      );
+    });
     const installBtn = document.getElementById("installBtn");
     const isStandalone =
       window.matchMedia("(display-mode: standalone)").matches ||
       window.navigator.standalone === true;
-  
+
     if (isStandalone && installBtn) {
       installBtn.style.display = "none";
     }
   }
-}
