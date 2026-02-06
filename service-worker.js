@@ -11,6 +11,15 @@ const ASSETS = [
   './manifest.json'
 ];
 
+self.addEventListener("message", (event) => {
+  if (event.data === "GET_CACHE_VERSION") {
+    event.source.postMessage({
+      type: "CACHE_VERSION",
+      cache: CACHE_NAME,
+    });
+  }
+});
+
 // Install: cache core assets and take control ASAP
 self.addEventListener('install', (event) => {
   event.waitUntil(
