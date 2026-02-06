@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadFlags();
   setupUI();
   loadQuestions();
-  setupPWA();
+  setupPWA && setupPWA();
 });
 
 // ===============================
