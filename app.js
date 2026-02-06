@@ -278,9 +278,7 @@ function setupUI() {
       flagPanel.classList.toggle("hidden");
       
       const isOpen = !flagPanel.classList.contains("hidden");
-      if (card) {
         card.classList.toggle("flag-open", isOpen);
-      }
     });
   }
 
