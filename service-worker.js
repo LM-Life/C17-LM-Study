@@ -13,7 +13,10 @@ const ASSETS = [
 
 self.addEventListener("message", (event) => {
   if (event.data === "GET_CACHE_VERSION") {
-    event.source.postMessage({ type: "CACHE_VERSION", cache: CACHE_NAME });
+    event.source.postMessage({
+      type: "CACHE_VERSION",
+      cache: CACHE_NAME,
+    });
   }
 });
 
