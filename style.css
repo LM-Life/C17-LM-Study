@@ -600,4 +600,28 @@ input[type="checkbox"] {
     margin-left: auto;        /* aligns with card-area rather than full width */
     margin-right: auto;
   }
+  
+  .toast {
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1f2937; /* dark slate */
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .toast.show {
+    opacity: 1;
+  }
+  
+  .toast.hidden {
+    pointer-events: none;
+  }
 }
