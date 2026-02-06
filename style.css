@@ -251,10 +251,10 @@ input[type="checkbox"] {
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 
 .card-question {
-  justify-content: space-between;
   display: flex;
   flex-direction: column;
   gap: 10px;
