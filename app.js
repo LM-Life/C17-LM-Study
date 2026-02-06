@@ -65,19 +65,6 @@ function setVersions() {
 // Backend endpoint for saving flags (Google Apps Script web app URL)
 const FLAG_API_URL = "https://script.google.com/macros/s/AKfycbwyssy1vWNQW_WbBj5LVXjf_-UDF-B4oHLWAg3YVoolfGpgVNDsiBY6BVdtBXs4JP9iCA/exec";
 
-function getDeviceId() {
-  try {
-    let id = localStorage.getItem("c17_device_id");
-    if (!id) {
-      id = "dev-" + Math.random().toString(36).slice(2) + Date.now().toString(36);
-      localStorage.setItem("c17_device_id", id);
-    }
-    return id;
-  } catch {
-    return "unknown-device";
-  }
-}
-
 // Question data
 let allQuestions = [];
 let filteredQuestions = [];
@@ -211,7 +198,7 @@ async function submitFlagToServer(question, flagText) {
       userAgent: navigator.userAgent
     };
 
-    const res = await fetch(FLAG_ENDPOINT_URL, {
+    const res = await fetch(FLAG_API_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
@@ -441,20 +428,6 @@ function updateFilteredQuestions() {
   if (currentIndex >= filteredQuestions.length) {
     currentIndex = 0;
   }
-
-  function showToast(message, duration = 2000) {
-    const toast = document.getElementById("toast");
-    if (!toast) return;
-
-    toast.textContent = message;
-    toast.classList.remove("hidden");
-    toast.classList.add("show");
-
-    setTimeout(() => {
-      toast.classList.remove("show");
-      setTimeout(() => toast.classList.add("hidden"), 300);
-    }, duration);
-  }
 }
   // ===============================
   // Rendering
@@ -639,6 +612,20 @@ function updateFilteredQuestions() {
       const j = Math.floor(Math.random() * (i + 1));
       [arr[i], arr[j]] = [arr[j], arr[i]];
     }
+  }
+
+  function showToast(message, duration = 2000) {
+    const toast = document.getElementById("toast");
+    if (!toast) return;
+
+    toast.textContent = message;
+    toast.classList.remove("hidden");
+    toast.classList.add("show");
+
+    setTimeout(() => {
+      toast.classList.remove("show");
+      setTimeout(() => toast.classList.add("hidden"), 300);
+    }, duration);
   }
 
   // ===============================
