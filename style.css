@@ -206,11 +206,12 @@ input[type="checkbox"] {
 .card {
   position: relative;
   width: 100%;
-  min-height: 260px;
+  min-height: 420px;
   max-width: 720px;
   margin: 0 auto;
   perspective: 1200px;
-  overflow: hidden;
+  height: auto;
+  overflow: visible;
 }
 
 .card-inner {
@@ -236,7 +237,7 @@ input[type="checkbox"] {
   backface-visibility: hidden;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
+  overflow: visible;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
 }
@@ -462,6 +463,7 @@ input[type="checkbox"] {
 .hidden {
   display: none !important;
 }
+
 /* Mobile tweaks */
 @media (max-width: 768px) {
   body {
@@ -528,9 +530,10 @@ input[type="checkbox"] {
   }
 
   /* Card: a bit taller, smaller question font */
+  @media (max-width: 768px) {
   .card {
     margin-top: 12px;
-    min-height: 260px;
+    min-height: 480px;
   }
 
   .card h2,
@@ -562,6 +565,7 @@ input[type="checkbox"] {
     font-size: 0.8rem;
     min-height: 40px;
   }
+  
 /* Desktop layout – controls on left, card on right */
 @media (min-width: 1024px) {
   .app-main {
