@@ -778,7 +778,7 @@
   },
   {
     "id": 112,
-    "category": "MQF Oct 2025 - Aidrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "question": "After a Heavy Equipment Platform is loaded, the load equalization valves are opened between the platform's ADS right locks used in order to ________.",
     "answer": "balance load extraction force between locks.",
     "reference": "TO 1C -17A-1- 4 [Para. 1 -88]"
@@ -904,7 +904,7 @@
   },
   {
     "id": 130,
-    "category": "MQF Oct 2025 - Instuctor",
+    "category": "MQF Oct 2025 - Instructor",
     "question": "Should the judgement or proficiency of the trainee raise a question in the instructor's mind as to the trainee's ability to safely execute the duties of the aircrew position at any time during the flight, the instructor will immediately _______.",
     "answer": "takeover the duties",
     "reference": "AFMAN11 -2C-17 V1 [Para. 5.5.5.6]"
@@ -981,6 +981,7 @@
   }
 ]
   
+
 
 
 
