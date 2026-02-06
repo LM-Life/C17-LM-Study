@@ -200,35 +200,29 @@ function getDeviceId() {
   }
 }
 
-async function submitFlagToServer(question, flagText); showToast("🚩 Flag saved") {
-  if (!FLAG_API_URL) return;
-  if (!flagText || !flagText.trim()) return;
-  if (flags[q.id] && flags[q.id].text === text) {
-  showToast("Already flagged");
-  return;
-
-  const payload = {
-    questionId: question.id,
-    question: question.question,
-    category: question.category,
-    answer: question.answer,
-    reference: question.reference || "",
-    flagText: flagText,
-    appVersion: APP_VERSION || "",
-    deviceId: getDeviceId(),
-    userAgent: navigator.userAgent || ""
-  };
-
+async function submitFlagToServer(question, flagText) {
   try {
-    fetch(FLAG_API_URL, {
+    const payload = {
+      id: question.id,
+      category: question.category,
+      question: question.question,
+      flag: flagText,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent
+    };
+
+    const res = await fetch(FLAG_ENDPOINT_URL, {
       method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "text/plain" },
-      body: JSON.stringify(payload)
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
     });
+
+    if (!res.ok) throw new Error("Flag submission failed");
+
+    showToast("🚩 Flag saved");
   } catch (err) {
-    console.warn("Flag submit failed:", err);
-    showToast("⚠️ Flag saved locally (offline)");
+    console.error(err);
+    showToast("⚠️ Failed to save flag");
   }
 }
 
