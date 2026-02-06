@@ -702,7 +702,7 @@
   {
     "id": 101,
     "category": "MQF Oct 2025",
-    "question": "Maintenance personnel or a crew member should be used to act as "ground" during engine starts. The engines may be started without someone outside the aircraft. If this option is used, ensure all crewmembers are thoroughly briefed.",
+    "question": "Maintenance personnel or a crew member should be used to act as 'ground' during engine starts. The engines may be started without someone outside the aircraft. If this option is used, ensure all crewmembers are thoroughly briefed.",
     "answer": "True",
     "reference": "AFMAN11 -2C-17 V3 [Para. 5.20]"
   },
@@ -856,7 +856,7 @@
   {
     "id": 123,
     "category": "MQF Oct 2025 - Airdrop",
-    "question": "A "No Drop" will be called if Slowdown or Quick Drop Checklist items are not completed prior to the initiation of the _______ Checklist.",
+    "question": "A 'No Drop' will be called if Slowdown or Quick Drop Checklist items are not completed prior to the initiation of the _______ Checklist.",
     "answer": "Release Point",
     "reference": "TO 1C -17A-1- 4 [Para. 2 -153 (N)]"
   },
@@ -981,6 +981,7 @@
   }
 ]
   
+
 
 
 
