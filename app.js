@@ -4,6 +4,10 @@
 
 // Update this string whenever you push a meaningful new build
 const APP_VERSION = "1.2.1";
+const versionEl = document.getElementById("appVersion");
+if (versionEl) {
+  versionEl.textContent = `v${APP_VERSION}`;
+}
 
 // Backend endpoint for saving flags (Google Apps Script web app URL)
 const FLAG_API_URL = "https://script.google.com/macros/s/AKfycbwyssy1vWNQW_WbBj5LVXjf_-UDF-B4oHLWAg3YVoolfGpgVNDsiBY6BVdtBXs4JP9iCA/exec";
