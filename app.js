@@ -678,5 +678,6 @@ function setupPWA() {
   
     if (isStandalone && installBtn) {
       installBtn.style.display = "none";
+    }
   }
 }
