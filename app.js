@@ -158,24 +158,22 @@ async function submitFlagToServer(question, flagText) {
     answer: question.answer,
     reference: question.reference || "",
     flagText: flagText,
-    appVersion: APP_VERSION,
+    appVersion: APP_VERSION || "",
     deviceId: getDeviceId(),
     userAgent: navigator.userAgent || ""
   };
 
   try {
-    await fetch(FLAG_API_URL, {
+    fetch(FLAG_API_URL, {
       method: "POST",
-      // 👇 no-cors + simple content-type to avoid preflight/CORS headaches
-      mode: "no-cors",
+      mode: "no-cors",                    // 🔑 critical
       headers: {
-        "Content-Type": "text/plain;charset=utf-8"
+        "Content-Type": "text/plain"      // 🔑 critical
       },
       body: JSON.stringify(payload)
     });
-    // It's an opaque response in no-cors mode, but the request still reaches Apps Script.
   } catch (err) {
-    console.warn("Failed to submit flag to server:", err);
+    console.warn("Flag submit failed:", err);
   }
 }
 
