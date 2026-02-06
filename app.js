@@ -150,6 +150,9 @@ function getDeviceId() {
 async function submitFlagToServer(question, flagText); showToast("🚩 Flag saved") {
   if (!FLAG_API_URL) return;
   if (!flagText || !flagText.trim()) return;
+  if (flags[q.id] && flags[q.id].text === text) {
+  showToast("Already flagged");
+  return;
 
   const payload = {
     questionId: question.id,
@@ -166,14 +169,13 @@ async function submitFlagToServer(question, flagText); showToast("🚩 Flag save
   try {
     fetch(FLAG_API_URL, {
       method: "POST",
-      mode: "no-cors",                    // 🔑 critical
-      headers: {
-        "Content-Type": "text/plain"      // 🔑 critical
-      },
+      mode: "no-cors",
+      headers: { "Content-Type": "text/plain" },
       body: JSON.stringify(payload)
     });
   } catch (err) {
     console.warn("Flag submit failed:", err);
+    showToast("⚠️ Flag saved locally (offline)");
   }
 }
 
