@@ -610,6 +610,8 @@ function setVersions() {
   });
 }
 
+setVersions();
+
 document.getElementById("cacheVersion")?.addEventListener("click", () => {
   if (document.getElementById("cacheVersion").classList.contains("stale")) {
     location.reload(true);
