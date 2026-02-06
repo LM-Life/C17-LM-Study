@@ -5,54 +5,65 @@
 // Update this string whenever you push a meaningful new build
 const APP_VERSION = "1.2.0 Beta - added MQF Oct 2025 + Airdrop + Flags";
 
-// Backend endpoint for saving flags (Google Apps Script web app URL)
-const FLAG_API_URL = "https://script.google.com/macros/s/AKfycbwyssy1vWNQW_WbBj5LVXjf_-UDF-B4oHLWAg3YVoolfGpgVNDsiBY6BVdtBXs4JP9iCA/exec";
-
-
-// -------------------------------
-// Version display (App + Cache)
-// -------------------------------
-function formatAppVersionLabel(v) {
-  const s = String(v || "").trim();
-  if (!s) return "";
-  // If it already starts with "v" or "ver", keep as-is
-  if (/^(v|ver\.?)/i.test(s)) return s;
-  return `v${s}`;
+// ---------- Version display (App + Cache) ----------
+function formatVersionLabel(ver) {
+  if (!ver) return "";
+  const v = String(ver).trim();
+  if (/^v\d/i.test(v)) return v;
+  if (/^ver\.?\s*/i.test(v)) return "v" + v.replace(/^ver\.?\s*/i, "");
+  if (/^\d/.test(v)) return "v" + v;
+  return v;
 }
 
 function setVersions() {
   const appEl = document.getElementById("appVersion");
   const cacheEl = document.getElementById("cacheVersion");
 
-  if (appEl) appEl.textContent = formatAppVersionLabel(APP_VERSION);
+  if (appEl) appEl.textContent = formatVersionLabel(APP_VERSION);
 
+  // If the page doesn't have a cacheVersion element, do nothing.
   if (!cacheEl) return;
-  cacheEl.textContent = ""; // filled in when SW responds
 
-  if (!("serviceWorker" in navigator)) return;
+  // If SW isn't supported, hide the cache line.
+  if (!("serviceWorker" in navigator)) {
+    cacheEl.textContent = "";
+    return;
+  }
 
   navigator.serviceWorker.ready
     .then((reg) => {
-      if (!reg || !reg.active) return;
+      if (!reg || !reg.active) {
+        cacheEl.textContent = "";
+        return;
+      }
 
-      // Ask SW for its current cache name/version
-      reg.active.postMessage("GET_CACHE_VERSION");
+      const channel = new MessageChannel();
+      channel.port1.onmessage = (event) => {
+        if (event.data?.type === "CACHE_VERSION") {
+          const cacheName = event.data.cache || "";
+          // Expected: c17-study-cache-1.3  (or similar)
+          const m = cacheName.match(/cache-(\d[\d.]*)/i) || cacheName.match(/-(\d[\d.]*)$/);
+          const cacheVersion = m ? m[1] : "unknown";
+
+          cacheEl.textContent = `cache: v${cacheVersion}`;
+
+          // If APP_VERSION contains a semantic version, mark stale when different.
+          const appMatch = String(APP_VERSION).match(/(\d+\.\d+(?:\.\d+)?)/);
+          const appSemver = appMatch ? appMatch[1] : null;
+          if (appSemver && cacheVersion !== appSemver) cacheEl.classList.add("stale");
+        }
+      };
+
+      reg.active.postMessage("GET_CACHE_VERSION", [channel.port2]);
     })
-    .catch(() => {});
-
-  // Listen once (guard against duplicates)
-  if (!window.__cacheVersionListenerAdded) {
-    window.__cacheVersionListenerAdded = true;
-    navigator.serviceWorker.addEventListener("message", (event) => {
-      if (event.data?.type !== "CACHE_VERSION") return;
-      const cacheName = event.data.cache || "";
-      // Works for: c17-study-cache-1.3 OR c17-study-cache-v12.9
-      const m = cacheName.match(/c17-study-cache-(v?[\d.]+)/i) || cacheName.match(/cache-(v?[\d.]+)/i);
-      const ver = m ? m[1] : "unknown";
-      if (cacheEl) cacheEl.textContent = `cache: ${/^v/i.test(ver) ? ver : "v" + ver}`;
+    .catch(() => {
+      cacheEl.textContent = "";
     });
-  }
 }
+
+
+// Backend endpoint for saving flags (Google Apps Script web app URL)
+const FLAG_API_URL = "https://script.google.com/macros/s/AKfycbwyssy1vWNQW_WbBj5LVXjf_-UDF-B4oHLWAg3YVoolfGpgVNDsiBY6BVdtBXs4JP9iCA/exec";
 
 function getDeviceId() {
   try {
@@ -94,8 +105,9 @@ let flags = {};
 // ===============================
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Show app version in footer if element exists
   setVersions();
-    loadFlags();
+loadFlags();
   setupUI();
   loadQuestions();
   setupPWA && setupPWA();
@@ -242,12 +254,6 @@ function setupUI() {
   const clearFlagBtn = document.getElementById("clearFlagBtn");
   const flagText = document.getElementById("flagText");
   const exportFlagsBtn = document.getElementById("exportFlagsBtn"); // optional
-  // Guard: if core UI elements are missing, don't crash the app
-  if (!card || !modeSelect || !shuffleToggle || !showRefToggle || !prevBtn || !nextBtn || !flipBackBtn || !checkShortAnswerBtn || !categorySelect) {
-    console.error("UI init aborted: missing one or more required elements.");
-    return;
-  }
-
 
   // Card flip
   card.addEventListener("click", (e) => {
@@ -648,7 +654,10 @@ function shuffleArray(arr) {
 function setupPWA() {
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("service-worker.js").catch(console.error);
-  }
+  
+    // Update cache version label once SW is ready
+    setVersions();
+}
 
   window.addEventListener("beforeinstallprompt", (e) => {
     e.preventDefault();
