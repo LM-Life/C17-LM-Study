@@ -107,7 +107,7 @@ let flags = {};
 document.addEventListener("DOMContentLoaded", () => {
   // Show app version in footer if element exists
   setVersions();
-loadFlags();
+  loadFlags();
   setupUI();
   loadQuestions();
   setupPWA && setupPWA();
