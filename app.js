@@ -3,7 +3,64 @@
 // ===============================
 
 // Update this string whenever you push a meaningful new build
-const APP_VERSION = "1.2.1";
+const APP_VERSION = "1.2.0 Beta - added MQF Oct 2025 + Airdrop + Flags";
+
+// ---------- Version display (App + Cache) ----------
+function formatVersionLabel(ver) {
+  if (!ver) return "";
+  const v = String(ver).trim();
+  if (/^v\d/i.test(v)) return v;
+  if (/^ver\.?\s*/i.test(v)) return "v" + v.replace(/^ver\.?\s*/i, "");
+  if (/^\d/.test(v)) return "v" + v;
+  return v;
+}
+
+function setVersions() {
+  const appEl = document.getElementById("appVersion");
+  const cacheEl = document.getElementById("cacheVersion");
+
+  if (appEl) appEl.textContent = formatVersionLabel(APP_VERSION);
+
+  // If the page doesn't have a cacheVersion element, do nothing.
+  if (!cacheEl) return;
+
+  // If SW isn't supported, hide the cache line.
+  if (!("serviceWorker" in navigator)) {
+    cacheEl.textContent = "";
+    return;
+  }
+
+  navigator.serviceWorker.ready
+    .then((reg) => {
+      if (!reg || !reg.active) {
+        cacheEl.textContent = "";
+        return;
+      }
+
+      const channel = new MessageChannel();
+      channel.port1.onmessage = (event) => {
+        if (event.data?.type === "CACHE_VERSION") {
+          const cacheName = event.data.cache || "";
+          // Expected: c17-study-cache-1.3  (or similar)
+          const m = cacheName.match(/cache-(\d[\d.]*)/i) || cacheName.match(/-(\d[\d.]*)$/);
+          const cacheVersion = m ? m[1] : "unknown";
+
+          cacheEl.textContent = `cache: v${cacheVersion}`;
+
+          // If APP_VERSION contains a semantic version, mark stale when different.
+          const appMatch = String(APP_VERSION).match(/(\d+\.\d+(?:\.\d+)?)/);
+          const appSemver = appMatch ? appMatch[1] : null;
+          if (appSemver && cacheVersion !== appSemver) cacheEl.classList.add("stale");
+        }
+      };
+
+      reg.active.postMessage("GET_CACHE_VERSION", [channel.port2]);
+    })
+    .catch(() => {
+      cacheEl.textContent = "";
+    });
+}
+
 
 // Backend endpoint for saving flags (Google Apps Script web app URL)
 const FLAG_API_URL = "https://script.google.com/macros/s/AKfycbwyssy1vWNQW_WbBj5LVXjf_-UDF-B4oHLWAg3YVoolfGpgVNDsiBY6BVdtBXs4JP9iCA/exec";
@@ -49,12 +106,8 @@ let flags = {};
 
 document.addEventListener("DOMContentLoaded", () => {
   // Show app version in footer if element exists
-  const versionEl = document.getElementById("appVersion");
-  if (versionEl) {
-    versionEl.textContent = APP_VERSION;
-  }
-
-  loadFlags();
+  setVersions();
+loadFlags();
   setupUI();
   loadQuestions();
   setupPWA && setupPWA();
@@ -601,7 +654,10 @@ function shuffleArray(arr) {
 function setupPWA() {
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("service-worker.js").catch(console.error);
-  }
+  
+    // Update cache version label once SW is ready
+    setVersions();
+}
 
   window.addEventListener("beforeinstallprompt", (e) => {
     e.preventDefault();
@@ -630,12 +686,3 @@ function setupPWA() {
       installBtn.style.display = "none";
   }
 }
-
-
-// Boot
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("./service-worker.js").catch(() => {});
-}
-
-setVersions();
-loadQuestions();
