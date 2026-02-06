@@ -100,21 +100,21 @@
   {
     "id": 15,
     "category": "MQF Oct 2025",
-    "question": "The EEBD is a -minute self -contained, disposable breathing unit. There are installed on the aircraft.",
+    "question": "The EEBD is a ____ -minute self-contained, disposable breathing unit. There are ___ installed on the aircraft.",
     "answer": "15; 6",
     "reference": "TO 1C -17A-1 [Para. 1 -2658]"
   },
   {
     "id": 16,
     "category": "MQF Oct 2025",
-    "question": "If the aircraft is powered by batteries alone and the pilot\u2019s CNC indicates OFF, radio communication is possible using the radio with the VHF/UHF Backup Control panel.",
+    "question": "If the aircraft is powered by batteries alone and the pilot's CNC indicates OFF, radio communication is possible using the _______ radio with the VHF/UHF Backup Control panel.",
     "answer": "COM 1",
     "reference": ""
   },
   {
     "id": 17,
     "category": "MQF Oct 2025",
-    "question": "During AE missions, the loadmaster advises the medical crew director that seat belts are required .",
+    "question": "During AE missions, the loadmaster advises the medical crew director that seat belts are required ______.",
     "answer": "immediately prior to takeoff",
     "reference": "TO 1C -17A-1 [Para. 2-55 LM S5 ]"
   },
@@ -2681,6 +2681,7 @@
     "reference": "" 
   }
 ]
+
 
 
 
