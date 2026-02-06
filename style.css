@@ -156,6 +156,11 @@ textarea:focus {
 input[type="checkbox"] {
   accent-color: var(--accent);
 }
+  
+.cache-version.stale {
+cursor: pointer;
+text-decoration: underline;
+}
 
 /* Buttons */
 
