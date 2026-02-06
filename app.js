@@ -147,7 +147,7 @@ function getDeviceId() {
   }
 }
 
-async function submitFlagToServer(question, flagText) {
+async function submitFlagToServer(question, flagText); showToast("🚩 Flag saved") {
   if (!FLAG_API_URL) return;
   if (!flagText || !flagText.trim()) return;
 
@@ -394,6 +394,19 @@ function updateFilteredQuestions() {
   if (currentIndex >= filteredQuestions.length) {
     currentIndex = 0;
   }
+  
+  function showToast(message, duration = 2000) {
+  const toast = document.getElementById("toast");
+  if (!toast) return;
+
+  toast.textContent = message;
+  toast.classList.remove("hidden");
+  toast.classList.add("show");
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+    setTimeout(() => toast.classList.add("hidden"), 300);
+  }, duration);
 }
 
 // ===============================
