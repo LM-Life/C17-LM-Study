@@ -623,4 +623,12 @@ function setupPWA() {
       { once: true }
     );
   });
+    const installBtn = document.getElementById("installBtn");
+    const isStandalone =
+      window.matchMedia("(display-mode: standalone)").matches ||
+      window.navigator.standalone === true;
+  
+    if (isStandalone && installBtn) {
+      installBtn.style.display = "none";
+  }
 }
