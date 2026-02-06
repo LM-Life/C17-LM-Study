@@ -6,7 +6,7 @@
 const APP_VERSION = "v1.2.0 - MQF Oct 2025 + Airdrop + Flags";
 
 // Backend endpoint for saving flags (Google Apps Script web app URL)
-const FLAG_API_URL = "https://script.google.com/macros/s/AKfycbydVE6oosUP8DwUX-cPVgBh_UXotKItZuNgji0OX84brvW2yYKE-nGEdb58qeHu_HHR2Q/exec";
+const FLAG_API_URL = "https://script.google.com/macros/s/AKfycbwyssy1vWNQW_WbBj5LVXjf_-UDF-B4oHLWAg3YVoolfGpgVNDsiBY6BVdtBXs4JP9iCA/exec";
 
 function getDeviceId() {
   try {
