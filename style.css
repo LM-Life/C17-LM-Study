@@ -212,6 +212,7 @@ input[type="checkbox"] {
   perspective: 1200px;
   height: auto;
   overflow: visible;
+  transition: min height 0.25s ease;
 }
 
 .card-inner {
@@ -231,7 +232,7 @@ input[type="checkbox"] {
 }
 
 .card-face {
-  position: absolute;
+  position: relative;
   inset: 0;
   padding: 18px 18px 14px;
   backface-visibility: hidden;
