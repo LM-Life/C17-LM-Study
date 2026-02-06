@@ -1,5 +1,5 @@
 // Bump this when you want to force all clients to update
-const CACHE_VERSION = '1.4';  // <-- change this to a new value on each major update
+const CACHE_VERSION = '12.10';  // <-- change this to a new value on each major update
 const CACHE_NAME = `c17-study-cache-${CACHE_VERSION}`;
 
 const ASSETS = [
