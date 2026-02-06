@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <title>C-17 Loadmaster Study App</title>
@@ -8,7 +7,6 @@
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
   <header class="app-header">
     <div class="app-title">
@@ -17,11 +15,13 @@
     </div>
 
     <div class="app-meta">
+      <div class="version-block">
         <span class="app-version" id="appVersion"></span>
         <span class="cache-version" id="cacheVersion"></span>
       </div>
-      <button id="installBtn" class="btn secondary" hidden>Install App</button>
     </div>
+
+    <button id="installBtn" class="btn secondary" hidden>Install App</button>
   </header>
 
   <main class="app-main">
@@ -60,7 +60,7 @@
         <button id="exportFlagsBtn" class="btn small outline" type="button">
           ⬇️ Export Flags
         </button>
-
+      
         <button id="prevBtn" class="btn ghost" type="button">← Prev</button>
         <button id="nextBtn" class="btn primary" type="button">Next →</button>
       </div>
@@ -85,24 +85,34 @@
             </div>
 
             <div class="meta-row">
-              <span id="categoryLabel" class="pill"></span>
-              <span id="counterLabel" class="counter"></span>
+              <span id="categoryLabel" class="pill">Category</span>
+              <span id="counterLabel" class="counter">0 / 0</span>
             </div>
 
             <div class="flag-row">
-              <button id="flagToggleBtn" class="btn small ghost">🚩 Flag this question</button>
+              <button id="flagToggleBtn" class="btn small ghost" type="button">
+                🚩 Flag this question
+              </button>
               <span id="flagStatus" class="flag-status"></span>
             </div>
 
             <div id="flagPanel" class="flag-panel hidden">
               <label for="flagText">Why are you flagging this question?</label>
-              <textarea id="flagText" rows="2"></textarea>
+              <textarea
+                id="flagText"
+                rows="2"
+                placeholder="Type what seems wrong or unclear..."
+              ></textarea>
               <div class="flag-actions">
-                <button id="saveFlagBtn" class="btn small secondary">Save flag</button>
-                <button id="clearFlagBtn" class="btn small ghost">Clear flag</button>
+                <button id="saveFlagBtn" class="btn small secondary" type="button">
+                  Save flag
+                </button>
+                <button id="clearFlagBtn" class="btn small ghost" type="button">
+                  Clear flag
+                </button>
               </div>
             </div>
-          </div><!-- end card-question -->
+          </div> <!-- end card-question -->
 
           <div class="card-face card-answer">
             <h3>Answer</h3>
@@ -111,13 +121,12 @@
             <button id="flipBackBtn" class="btn ghost small">Back to Question</button>
           </div>
         </div> <!-- end card-inner -->
-      </div> <!-- end card -->
+      </div>   <!-- end card -->
 
       <div class="help-text">
         <p><strong>Flashcard:</strong> Tap/click the card to flip between question and answer.</p>
         <p><strong>Multiple Choice:</strong> Pick an answer, then flip the card to confirm.</p>
-        <p><strong>Short Answer:</strong> Type your answer, hit “Check Answer”, then flip to see the official answer +
-          reference.</p>
+        <p><strong>Short Answer:</strong> Type your answer, hit “Check Answer”, then flip to see the official answer + reference.</p>
       </div>
     </section>
 
@@ -141,8 +150,7 @@
   </footer>
 
   <script src="app.js" defer></script>
-
+  
   <div id="toast" class="toast hidden"></div>
 </body>
-
 </html>
