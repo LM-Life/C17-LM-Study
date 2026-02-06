@@ -63,11 +63,27 @@ body {
   gap: 0.75rem;
 }
 
-/* Version styling */
+.version-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.2;
+}
+
 .app-version {
   font-size: 0.85rem;
-  opacity: 0.6;
-  white-space: nowrap;
+  opacity: 0.7;
+}
+
+.cache-version {
+  font-size: 0.7rem;
+  opacity: 0.45;
+}
+
+/* Mobile centering */
+@media (max-width: 640px) {
+  .version-block {
+    align-items: center;
 }
 
 /* Main layout */
