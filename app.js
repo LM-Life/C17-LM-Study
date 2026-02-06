@@ -3,7 +3,7 @@
 // ===============================
 
 // Update this string whenever you push a meaningful new build
-const APP_VERSION = "1.2.1";
+const APP_VERSION = "ver. 1.2.1";
 const versionEl = document.getElementById("appVersion");
 if (versionEl) {
   versionEl.textContent = `v${APP_VERSION}`;
