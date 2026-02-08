@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>C-17 Loadmaster Study App</title>
+  <title>C-17 Loadmaster Study</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="app-header">
     <div class="app-title">
       <h1>C-17 Loadmaster Study</h1>
-      <p class="subtitle">Question Bank • Flashcards • Quizzes</p>
+      <p class="subtitle">Flashcards • Question Bank</p>
     </div>
-    
+
     <div class="app-meta">
       <div class="version-block">
         <span class="app-version" id="appVersion"></span>
@@ -32,14 +32,7 @@
         </select>
       </div>
 
-      <div class="control-group">
-        <label for="modeSelect">Mode</label>
-        <select id="modeSelect">
-          <option value="flashcard">Flashcard</option>
-          <option value="multiple-choice">Multiple Choice</option>
-          <option value="short-answer">Short Answer</option>
-        </select>
-      </div>
+      <!-- Flashcard-only build: Mode selector removed on purpose (can be re-added later) -->
 
       <div class="control-group">
         <label for="shuffleToggle">
@@ -59,29 +52,21 @@
         <button id="exportFlagsBtn" class="btn small outline" type="button">
           ⬇️ Export Flags
         </button>
-      
+
         <button id="prevBtn" class="btn ghost" type="button">← Prev</button>
         <button id="nextBtn" class="btn primary" type="button">Next →</button>
       </div>
-
     </section>
 
     <section class="card-area">
       <div id="card" class="card">
         <div class="card-inner">
+          <!-- QUESTION FACE -->
           <div class="card-face card-question">
             <h2 id="questionText">Loading questions...</h2>
+
+            <!-- Used by app.js to show a flashcard hint; safe if removed -->
             <div id="modeHint" class="mode-hint"></div>
-
-            <div id="shortAnswerArea" class="short-answer-area hidden">
-              <label for="shortAnswerInput">Your Answer</label>
-              <textarea id="shortAnswerInput" rows="3" placeholder="Type your answer here..."></textarea>
-              <button id="checkShortAnswerBtn" class="btn secondary">Check Answer</button>
-            </div>
-
-            <div id="mcArea" class="mc-area hidden">
-              <div id="mcOptions"></div>
-            </div>
 
             <div class="meta-row">
               <span id="categoryLabel" class="pill">Category</span>
@@ -113,43 +98,29 @@
             </div>
           </div> <!-- end card-question -->
 
+          <!-- ANSWER FACE -->
           <div class="card-face card-answer">
             <h3>Answer</h3>
             <p id="answerText"></p>
             <p id="referenceText" class="reference"></p>
-            <button id="flipBackBtn" class="btn ghost small">Back to Question</button>
+            <button id="flipBackBtn" class="btn ghost small" type="button">
+              Back to Question
+            </button>
           </div>
         </div> <!-- end card-inner -->
       </div>   <!-- end card -->
 
       <div class="help-text">
-        <p><strong>Flashcard:</strong> Tap/click the card to flip between question and answer.</p>
-        <p><strong>Multiple Choice:</strong> Pick an answer, then flip the card to confirm.</p>
-        <p><strong>Short Answer:</strong> Type your answer, hit “Check Answer”, then flip to see the official answer + reference.</p>
-      </div>
-    </section>
-
-    <section class="progress">
-      <div class="progress-row">
-        <div>
-          <strong>Correct (MC / Short):</strong> <span id="correctCount">0</span>
-        </div>
-        <div>
-          <strong>Attempts:</strong> <span id="attemptCount">0</span>
-        </div>
-      </div>
-      <div class="progress-bar-wrap">
-        <div id="progressBar" class="progress-bar"></div>
+        <p><strong>Flashcards:</strong> Tap/click the card to flip between question and answer.</p>
       </div>
     </section>
   </main>
 
   <footer class="app-footer">
-    <span>C-17 LM Study • Offline-capable PWA •</span>
+    <span>C-17 LM Study • Offline-capable PWA</span>
   </footer>
 
-  <script src="app.js" defer></script>
-  
   <div id="toast" class="toast hidden"></div>
+  <script src="app.js" defer></script>
 </body>
 </html>
