@@ -41,6 +41,42 @@ function setVersions() {
         cacheEl.textContent = "";
         return;
       }
+      
+    function setupUpdateFlow() {
+    if (!("serviceWorker" in navigator)) return;
+  
+    navigator.serviceWorker.register("service-worker.js").then((reg) => {
+      // New SW found
+      reg.addEventListener("updatefound", () => {
+        const newWorker = reg.installing;
+        if (!newWorker) return;
+  
+        newWorker.addEventListener("statechange", () => {
+          if (
+            newWorker.state === "installed" &&
+            navigator.serviceWorker.controller
+          ) {
+            // Show update banner
+            const banner = document.getElementById("updateBanner");
+            const btn = document.getElementById("updateReloadBtn");
+  
+            if (!banner || !btn) return;
+  
+            banner.classList.remove("hidden");
+  
+            btn.onclick = () => {
+              newWorker.postMessage("SKIP_WAITING");
+            };
+          }
+        });
+      });
+    });
+  
+    // Reload when new SW takes control
+    navigator.serviceWorker.addEventListener("controllerchange", () => {
+      window.location.reload();
+    });
+  }
 
       const channel = new MessageChannel();
       channel.port1.onmessage = (event) => {
@@ -98,6 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupUI();
   loadQuestions();
   setupPWA();
+  setupUpdateFlow();
 });
 
 // -----------------------------
