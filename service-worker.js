@@ -19,6 +19,10 @@ self.addEventListener("message", (event) => {
       cache: CACHE_NAME,
     });
   }
+  
+  if (event.data === "SKIP_WAITING") {
+    self.skipWaiting();
+  }
 });
 
 // Install: cache core assets and take control ASAP
