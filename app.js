@@ -4,7 +4,7 @@
 // ===============================
 
 // Update this string whenever you push a meaningful new build
-const APP_VERSION = "1.2.1";
+const APP_VERSION = "1.2.0";
 
 // Backend endpoint for saving flags (Google Apps Script web app URL)
 const FLAG_API_URL =
@@ -41,42 +41,6 @@ function setVersions() {
         cacheEl.textContent = "";
         return;
       }
-      
-    function setupUpdateFlow() {
-    if (!("serviceWorker" in navigator)) return;
-  
-    navigator.serviceWorker.register("service-worker.js").then((reg) => {
-      // New SW found
-      reg.addEventListener("updatefound", () => {
-        const newWorker = reg.installing;
-        if (!newWorker) return;
-  
-        newWorker.addEventListener("statechange", () => {
-          if (
-            newWorker.state === "installed" &&
-            navigator.serviceWorker.controller
-          ) {
-            // Show update banner
-            const banner = document.getElementById("updateBanner");
-            const btn = document.getElementById("updateReloadBtn");
-  
-            if (!banner || !btn) return;
-  
-            banner.classList.remove("hidden");
-  
-            btn.onclick = () => {
-              newWorker.postMessage("SKIP_WAITING");
-            };
-          }
-        });
-      });
-    });
-  
-    // Reload when new SW takes control
-    navigator.serviceWorker.addEventListener("controllerchange", () => {
-      window.location.reload();
-    });
-  }
 
       const channel = new MessageChannel();
       channel.port1.onmessage = (event) => {
@@ -107,6 +71,30 @@ function setVersions() {
     });
 }
 
+
+// -----------------------------
+// Card height sync (prevents cut-off when flag panel expands)
+// -----------------------------
+function syncCardHeight() {
+  const card = document.getElementById("card");
+  if (!card) return;
+
+  const inner = card.querySelector(".card-inner");
+  const qFace = card.querySelector(".card-question");
+  const aFace = card.querySelector(".card-answer");
+  if (!inner || !qFace || !aFace) return;
+
+  const active = card.classList.contains("flipped") ? aFace : qFace;
+
+  // scrollHeight works even when faces are absolutely positioned
+  const h = active.scrollHeight;
+
+  // Add a little breathing room so shadows/borders don't clip
+  inner.style.height = `${Math.max(h, 220)}px`;
+}
+
+window.addEventListener("resize", () => syncCardHeight());
+
 // -----------------------------
 // App State
 // -----------------------------
@@ -134,7 +122,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setupUI();
   loadQuestions();
   setupPWA();
-  setupUpdateFlow();
 });
 
 // -----------------------------
@@ -294,6 +281,7 @@ function setupUI() {
   function hideFlagPanel() {
     if (flagPanel) flagPanel.classList.add("hidden");
     if (card) card.classList.remove("flag-open");
+    syncCardHeight();
   }
 
   // Card flip (flashcard only)
@@ -301,6 +289,7 @@ function setupUI() {
     card.addEventListener("click", (e) => {
       if (e.target.closest("textarea") || e.target.closest("button")) return;
       card.classList.toggle("flipped");
+      syncCardHeight();
     });
   }
 
@@ -308,6 +297,7 @@ function setupUI() {
     flipBackBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       card.classList.remove("flipped");
+      syncCardHeight();
     });
   }
 
@@ -318,6 +308,7 @@ function setupUI() {
       currentIndex = 0;
       updateFilteredQuestions();
       renderCurrentQuestion();
+      syncCardHeight();
       hideFlagPanel();
     });
   }
@@ -327,6 +318,7 @@ function setupUI() {
     showRefToggle.addEventListener("change", () => {
       showReference = showRefToggle.checked;
       renderCurrentQuestion();
+      syncCardHeight();
     });
   }
 
@@ -336,6 +328,7 @@ function setupUI() {
       currentIndex = 0;
       updateFilteredQuestions();
       renderCurrentQuestion();
+      syncCardHeight();
       hideFlagPanel();
     });
   }
@@ -348,8 +341,10 @@ function setupUI() {
       currentIndex =
         (currentIndex - 1 + filteredQuestions.length) % filteredQuestions.length;
       card.classList.remove("flipped");
+      syncCardHeight();
       hideFlagPanel();
       renderCurrentQuestion();
+      syncCardHeight();
     });
   }
 
@@ -359,8 +354,10 @@ function setupUI() {
       if (!filteredQuestions.length) return;
       currentIndex = (currentIndex + 1) % filteredQuestions.length;
       card.classList.remove("flipped");
+      syncCardHeight();
       hideFlagPanel();
       renderCurrentQuestion();
+      syncCardHeight();
     });
   }
 
@@ -371,6 +368,7 @@ function setupUI() {
       flagPanel.classList.toggle("hidden");
       const isOpen = !flagPanel.classList.contains("hidden");
       card.classList.toggle("flag-open", isOpen);
+      syncCardHeight();
     });
   }
 
@@ -440,6 +438,7 @@ async function loadQuestions() {
     populateCategories();
     updateFilteredQuestions();
     renderCurrentQuestion();
+      syncCardHeight();
   } catch (err) {
     console.error(err);
     const qEl = document.getElementById("questionText");
@@ -517,6 +516,7 @@ function renderCurrentQuestion() {
   const q = filteredQuestions[currentIndex];
 
   if (card) card.classList.remove("flipped");
+      syncCardHeight();
 
   questionEl.textContent = q.question;
   answerEl.textContent = q.answer;
