@@ -255,11 +255,15 @@ async function submitFlagToServer(question, flagText) {
       body: body.toString(),
     });
 
+    const text = await res.text();
+
     if (!res.ok) {
-      const text = await res.text();
       console.error("Flag save failed:", res.status, text);
       throw new Error("Flag submission failed");
     }
+
+    let parsed = null;
+    try { parsed = JSON.parse(text); } catch (_) {}
 
     showToast("🚩 Flag saved");
   } catch (err) {
@@ -267,7 +271,6 @@ async function submitFlagToServer(question, flagText) {
     showToast("⚠️ Failed to save flag");
   }
 }
-
 
 // -----------------------------
 // UI Setup
