@@ -606,3 +606,24 @@ function setupPWA() {
 
   if (isStandalone && installBtn) installBtn.style.display = "none";
 }
+
+function requestCacheVersion() {
+  if (!navigator.serviceWorker.controller) return;
+
+  navigator.serviceWorker.controller.postMessage("GET_CACHE_VERSION");
+}
+
+navigator.serviceWorker.addEventListener("message", (event) => {
+  if (event.data?.type === "CACHE_VERSION") {
+    const el = document.getElementById("cacheVersion");
+    if (el) {
+      el.textContent = `cache ${event.data.cache}`;
+    }
+  }
+});
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.ready.then(() => {
+    requestCacheVersion();
+  });
+}
