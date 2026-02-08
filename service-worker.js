@@ -8,7 +8,8 @@ const ASSETS = [
   './style.css',
   './app.js',
   './questions.json',
-  './manifest.json'
+  './manifest.json',
+  './service-worker.js'
 ];
 
 self.addEventListener("message", (event) => {
