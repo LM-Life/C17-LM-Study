@@ -206,10 +206,21 @@ async function submitFlagToServer(question, flagTextValue) {
   });
 
   const text = await res.text().catch(() => "");
-  const obj = JSON.parse(text);
-   if (!obj.ok) throw new Error(obj.error || "Server returned not ok");
-
-
+  let json = null;
+   try {
+     json = JSON.parse(text);
+   } catch (e) {
+     // If server returned a plain-text error, surface it clearly
+     if (text && text.startsWith("ERROR")) {
+       throw new Error(text);
+     }
+     // Otherwise don't hard-fail on non-JSON responses
+     json = null;
+   }
+   
+   if (json && json.ok === false) {
+     throw new Error(json.error || "Server returned ok:false");
+   }
 
   if (!res.ok) {
     console.error("Flag POST failed:", res.status, res.statusText, text.slice(0, 300));
