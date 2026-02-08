@@ -242,7 +242,7 @@ async function submitFlagToServer(question, flagText) {
       appVersion: APP_VERSION,
     };
 
-    // Apps Script-friendly encoding
+    // Apps Script-friendly form body: data=<json>
     const body = new URLSearchParams();
     body.set("data", JSON.stringify(payload));
 
@@ -255,19 +255,17 @@ async function submitFlagToServer(question, flagText) {
       body: body.toString(),
     });
 
+    // Read as text (NOT json) so we never crash on non-JSON responses
     const text = await res.text();
 
     if (!res.ok) {
-      console.error("Flag save failed:", res.status, text);
-      throw new Error("Flag submission failed");
+      console.error("Flag submission failed:", res.status, text);
+      throw new Error(`HTTP ${res.status}`);
     }
-
-    let parsed = null;
-    try { parsed = JSON.parse(text); } catch (_) {}
 
     showToast("🚩 Flag saved");
   } catch (err) {
-    console.error(err);
+    console.error("Failed to save flag:", err);
     showToast("⚠️ Failed to save flag");
   }
 }
