@@ -1,226 +1,113 @@
-// ===============================
-// C-17 LM Study App - app.js (Flashcard-only)
-// Drop-in replacement: removes Multiple Choice + Short Answer logic/UI dependencies
-// ===============================
+/* C-17 LM Study — Flashcard-only app.js (drop-in)
+   - Flashcard flip only (no MC / short answer)
+   - Flagging w/ Google Apps Script backend (form-encoded POST)
+   - Export flags (JSON)
+   - Cache + app version display
+   - Update-available banner support
+   - Dynamic card height sync so flag panel never clips
+*/
 
-// Update this string whenever you push a meaningful new build
-const APP_VERSION = "1.2.1";
+"use strict";
 
-// Backend endpoint for saving flags (Google Apps Script web app URL)
-const FLAG_API_URL =
-  "https://script.google.com/macros/s/AKfycbwyssy1vWNQW_WbBj5LVXjf_-UDF-B4oHLWAg3YVoolfGpgVNDsiBY6BVdtBXs4JP9iCA/exec";
+/* =========================
+   CONFIG
+========================= */
 
-// ---------- Version display (App + Cache) ----------
-function formatVersionLabel(ver) {
-  if (!ver) return "";
-  const v = String(ver).trim();
-  if (/^v\d/i.test(v)) return v;
-  if (/^ver\.?\s*/i.test(v)) return "v" + v.replace(/^ver\.?\s*/i, "");
-  if (/^\d/.test(v)) return "v" + v;
-  return v;
-}
+// Update this when you release
+const APP_VERSION = "v1.2.1";
 
-function setVersions() {
-  const appEl = document.getElementById("appVersion");
-  const cacheEl = document.getElementById("cacheVersion");
+// Your Google Apps Script Web App URL (must end with /exec)
+const FLAG_API_URL = window.FLAGS_ENDPOINT || ""; // optional: define in index.html
 
-  if (appEl) appEl.textContent = formatVersionLabel(APP_VERSION);
+/* =========================
+   DOM
+========================= */
 
-  // If the page doesn't have a cacheVersion element, do nothing.
-  if (!cacheEl) return;
+const el = (id) => document.getElementById(id);
 
-  // If SW isn't supported, hide the cache line.
-  if (!("serviceWorker" in navigator)) {
-    cacheEl.textContent = "";
-    return;
-  }
+const card = el("card");
+const questionText = el("questionText");
+const answerText = el("answerText");
+const referenceText = el("referenceText");
+const categoryLabel = el("categoryLabel");
+const counterLabel = el("counterLabel");
+const modeHint = el("modeHint");
 
-  navigator.serviceWorker.ready
-    .then((reg) => {
-      if (!reg || !reg.active) {
-        cacheEl.textContent = "";
-        return;
-      }
+const categorySelect = el("categorySelect");
+const shuffleToggle = el("shuffleToggle");
+const showRefToggle = el("showRefToggle");
 
-      const channel = new MessageChannel();
-      channel.port1.onmessage = (event) => {
-        if (event.data?.type !== "CACHE_VERSION") return;
+const prevBtn = el("prevBtn");
+const nextBtn = el("nextBtn");
+const flipBackBtn = el("flipBackBtn");
 
-        const cacheName = event.data.cache || "";
-        // Expected: c17-study-cache-1.3 (or similar)
-        const m =
-          cacheName.match(/cache-(\d[\d.]*)/i) ||
-          cacheName.match(/-(\d[\d.]*)$/);
-        const cacheVersion = m ? m[1] : "unknown";
+const flagToggleBtn = el("flagToggleBtn");
+const flagPanel = el("flagPanel");
+const flagText = el("flagText");
+const saveFlagBtn = el("saveFlagBtn");
+const clearFlagBtn = el("clearFlagBtn");
+const flagStatus = el("flagStatus");
+const exportFlagsBtn = el("exportFlagsBtn");
 
-        cacheEl.textContent = `cache: v${cacheVersion}`;
+const toastEl = el("toast");
+const installBtn = el("installBtn");
 
-        // Mark stale if semantic version differs
-        const appMatch = String(APP_VERSION).match(/(\d+\.\d+(?:\.\d+)?)/);
-        const appSemver = appMatch ? appMatch[1] : null;
-        cacheEl.classList.toggle(
-          "stale",
-          Boolean(appSemver && cacheVersion !== appSemver)
-        );
-      };
+const appVersionEl = el("appVersion");
+const cacheVersionEl = el("cacheVersion");
 
-      reg.active.postMessage("GET_CACHE_VERSION", [channel.port2]);
-    })
-    .catch(() => {
-      cacheEl.textContent = "";
-    });
-}
+const updateBanner = el("updateBanner");
+const updateReloadBtn = el("updateReloadBtn");
 
-function setupUpdateFlow() {
-  if (!("serviceWorker" in navigator)) return;
+/* =========================
+   STATE
+========================= */
 
-  navigator.serviceWorker.addEventListener("message", (event) => {
-    if (event.data?.type === "SW_UPDATE_READY") {
-      showToast("⬆️ Update available — refresh to apply", {
-        persistent: true,
-        actionText: "Refresh",
-        action: () => window.location.reload(),
-      });
-    }
-  });
-}
-
-// -----------------------------
-// Card height sync (prevents cut-off when flag panel expands)
-// -----------------------------
-function syncCardHeight() {
-  const card = document.getElementById("card");
-  if (!card) return;
-
-  const inner = card.querySelector(".card-inner");
-  const qFace = card.querySelector(".card-question");
-  const aFace = card.querySelector(".card-answer");
-  if (!inner || !qFace || !aFace) return;
-
-  const active = card.classList.contains("flipped") ? aFace : qFace;
-
-  // scrollHeight works even when faces are absolutely positioned
-  const h = active.scrollHeight;
-
-  // Add a little breathing room so shadows/borders don't clip
-  inner.style.height = `${Math.max(h, 220)}px`;
-}
-
-window.addEventListener("resize", () => syncCardHeight());
-
-// -----------------------------
-// App State
-// -----------------------------
-
-let allQuestions = [];
+let questions = [];
 let filteredQuestions = [];
 let currentIndex = 0;
 
 let shuffleEnabled = true;
 let showReference = true;
 
-// Per-device flag storage: { [questionId]: { text, flaggedAt } }
-let flags = {};
+// Flags are stored locally for export, and also POSTed to backend
+let flags = {}; // { [id]: { text, savedAt, questionSnapshot } }
 
-// PWA install prompt
-let deferredPrompt = null;
+/* =========================
+   UTIL
+========================= */
 
-// -----------------------------
-// Init
-// -----------------------------
-
-document.addEventListener("DOMContentLoaded", () => {
-  setVersions();
-  loadFlags();
-  setupUI();
-  loadQuestions();
-  setupPWA();
-  setupUpdateFlow();
-});
-
-// -----------------------------
-// Flags: localStorage helpers
-// -----------------------------
-
-function loadFlags() {
-  try {
-    const raw = localStorage.getItem("c17_flags");
-    flags = raw ? JSON.parse(raw) : {};
-  } catch (e) {
-    console.warn("Could not load flags from localStorage:", e);
-    flags = {};
-  }
+function showToast(message, ms = 2200) {
+  if (!toastEl) return;
+  toastEl.textContent = message;
+  toastEl.classList.remove("hidden");
+  toastEl.classList.add("show");
+  window.clearTimeout(showToast._t);
+  showToast._t = window.setTimeout(() => {
+    toastEl.classList.remove("show");
+    toastEl.classList.add("hidden");
+  }, ms);
 }
 
-function saveFlags() {
-  try {
-    localStorage.setItem("c17_flags", JSON.stringify(flags));
-  } catch (e) {
-    console.warn("Could not save flags to localStorage:", e);
-  }
+function safeText(s) {
+  return (s ?? "").toString();
 }
 
-function updateFlagUI(questionId) {
-  const flagStatusEl = document.getElementById("flagStatus");
-  if (!flagStatusEl) return;
-
-  const flagData = flags[questionId];
-  if (flagData) {
-    flagStatusEl.textContent = "Flagged";
-    flagStatusEl.classList.add("flagged");
-  } else {
-    flagStatusEl.textContent = "";
-    flagStatusEl.classList.remove("flagged");
-  }
-}
-
-// Export flags (for dev review) – per device
-function exportFlags() {
-  const entries = Object.entries(flags);
-  if (!entries.length) {
-    alert("No questions have been flagged on this device.");
-    return;
-  }
-
-  const exportData = entries.map(([id, data]) => {
-    const numericId = Number(id);
-    const q = allQuestions.find((qq) => qq.id === numericId);
-    return {
-      id: numericId,
-      question: q ? q.question : "(Question not found in current bank)",
-      answer: q ? q.answer : "",
-      category: q ? q.category : "",
-      reference: q && q.reference ? q.reference : "",
-      flagText: data.text,
-      flaggedAt: data.flaggedAt,
-      deviceId: getDeviceId(),
-      userAgent: navigator.userAgent,
-    };
-  });
-
-  const blob = new Blob([JSON.stringify(exportData, null, 2)], {
-    type: "application/json",
-  });
-
-  const url = URL.createObjectURL(blob);
+function downloadJSON(filename, obj) {
+  const blob = new Blob([JSON.stringify(obj, null, 2)], { type: "application/json" });
   const a = document.createElement("a");
-  const stamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, "-");
-  a.href = url;
-  a.download = `c17_flags_${stamp}.json`;
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
   document.body.appendChild(a);
   a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
+  a.remove();
+  URL.revokeObjectURL(a.href);
 }
 
 function getDeviceId() {
   try {
     let id = localStorage.getItem("c17_device_id");
     if (!id) {
-      id =
-        "dev-" +
-        Math.random().toString(36).slice(2) +
-        Date.now().toString(36);
+      id = "dev-" + Math.random().toString(36).slice(2) + Date.now().toString(36);
       localStorage.setItem("c17_device_id", id);
     }
     return id;
@@ -229,429 +116,491 @@ function getDeviceId() {
   }
 }
 
-async function submitFlagToServer(question, flagText) {
-  try {
-    const payload = {
-      id: question.id,
-      category: question.category,
-      question: question.question,
-      flag: flagText,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      deviceId: getDeviceId(),
-      appVersion: APP_VERSION,
-    };
+/* =========================
+   CARD HEIGHT SYNC (prevents clipping)
+========================= */
 
-    // Apps Script-friendly form body: data=<json>
-    const body = new URLSearchParams();
-    body.set("data", JSON.stringify(payload));
+function getActiveFace() {
+  if (!card) return null;
+  const flipped = card.classList.contains("flipped");
+  return flipped ? card.querySelector(".card-answer") : card.querySelector(".card-question");
+}
 
-    const res = await fetch(FLAG_API_URL, {
-      method: "POST",
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
-      },
-      body: body.toString(),
-    });
+function syncCardHeight() {
+  if (!card) return;
 
-    // Read as text (NOT json) so we never crash on non-JSON responses
-    const text = await res.text();
+  const inner = card.querySelector(".card-inner");
+  const face = getActiveFace();
+  if (!inner || !face) return;
 
-    if (!res.ok) {
-      console.error("Flag submission failed:", res.status, text);
-      throw new Error(`HTTP ${res.status}`);
-    }
+  // Temporarily allow measuring full height
+  const prevOverflow = face.style.overflow;
+  face.style.overflow = "visible";
 
-    showToast("🚩 Flag saved");
-  } catch (err) {
-    console.error("Failed to save flag:", err);
-    showToast("⚠️ Failed to save flag");
+  // Add a little padding so it feels roomy
+  const h = Math.ceil(face.scrollHeight) + 2;
+
+  face.style.overflow = prevOverflow;
+
+  inner.style.minHeight = `${h}px`;
+}
+
+/* =========================
+   FLAG PANEL
+========================= */
+
+function setFlagPanelOpen(open) {
+  if (!flagPanel || !card) return;
+  if (open) {
+    flagPanel.classList.remove("hidden");
+    card.classList.add("flag-open");
+  } else {
+    flagPanel.classList.add("hidden");
+    card.classList.remove("flag-open");
+    if (flagText) flagText.value = "";
+  }
+  syncCardHeight();
+}
+
+function updateFlagStatusUI(q) {
+  if (!flagStatus || !q) return;
+  if (flags[q.id]) {
+    flagStatus.textContent = "Flagged";
+  } else {
+    flagStatus.textContent = "";
   }
 }
 
-// -----------------------------
-// UI Setup
-// -----------------------------
+/* =========================
+   BACKEND POST (Apps Script-friendly)
+========================= */
 
-function setupUI() {
-  const card = document.getElementById("card");
-  const shuffleToggle = document.getElementById("shuffleToggle");
-  const showRefToggle = document.getElementById("showRefToggle");
-  const prevBtn = document.getElementById("prevBtn");
-  const nextBtn = document.getElementById("nextBtn");
-  const flipBackBtn = document.getElementById("flipBackBtn");
-  const categorySelect = document.getElementById("categorySelect");
-
-  // (Flashcard-only) Hide mode selector if it exists
-  const modeSelect = document.getElementById("modeSelect");
-  if (modeSelect) {
-    modeSelect.value = "flashcard";
-    modeSelect.disabled = true;
-    const wrap = modeSelect.closest(".control-group");
-    if (wrap) wrap.style.display = "none";
+async function submitFlagToServer(question, flagTextValue) {
+  if (!FLAG_API_URL) {
+    // Not configured; treat as local-only
+    return { ok: false, reason: "No FLAG_API_URL" };
   }
 
-  // Hide MC/Short-Answer UI areas if present in HTML
-  const shortAnswerArea = document.getElementById("shortAnswerArea");
-  if (shortAnswerArea) shortAnswerArea.classList.add("hidden");
-  const mcArea = document.getElementById("mcArea");
-  if (mcArea) mcArea.classList.add("hidden");
+  const payload = {
+    id: question.id,
+    category: question.category || "",
+    question: question.question || "",
+    answer: question.answer || "",
+    reference: question.reference || "",
+    flagText: flagTextValue || "",
+    timestamp: new Date().toISOString(),
+    userAgent: navigator.userAgent,
+    deviceId: getDeviceId(),
+    appVersion: APP_VERSION || "",
+  };
 
-  // Flag-related elements
-  const flagToggleBtn = document.getElementById("flagToggleBtn");
-  const flagPanel = document.getElementById("flagPanel");
-  const saveFlagBtn = document.getElementById("saveFlagBtn");
-  const clearFlagBtn = document.getElementById("clearFlagBtn");
-  const flagText = document.getElementById("flagText");
-  const exportFlagsBtn = document.getElementById("exportFlagsBtn");
+  // Form-encoded is the most reliable for Apps Script
+  const body = new URLSearchParams();
+  body.set("data", JSON.stringify(payload));
 
-  function hideFlagPanel() {
-    if (flagPanel) flagPanel.classList.add("hidden");
-    if (card) card.classList.remove("flag-open");
-    syncCardHeight();
+  const res = await fetch(FLAG_API_URL, {
+    method: "POST",
+    mode: "cors",
+    headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+    body: body.toString(),
+  });
+
+  const text = await res.text().catch(() => "");
+
+  if (!res.ok) {
+    console.error("Flag POST failed:", res.status, res.statusText, text.slice(0, 300));
+    throw new Error(`HTTP ${res.status}`);
   }
 
-  // Card flip (flashcard only)
-  if (card) {
-    card.addEventListener("click", (e) => {
-      if (e.target.closest("textarea") || e.target.closest("button")) return;
-      card.classList.toggle("flipped");
-      syncCardHeight();
-    });
-  }
-
-  if (flipBackBtn && card) {
-    flipBackBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      card.classList.remove("flipped");
-      syncCardHeight();
-    });
-  }
-
-  // Shuffle toggle
-  if (shuffleToggle) {
-    shuffleToggle.addEventListener("change", () => {
-      shuffleEnabled = shuffleToggle.checked;
-      currentIndex = 0;
-      updateFilteredQuestions();
-      renderCurrentQuestion();
-      syncCardHeight();
-      hideFlagPanel();
-    });
-  }
-
-  // Show reference toggle
-  if (showRefToggle) {
-    showRefToggle.addEventListener("change", () => {
-      showReference = showRefToggle.checked;
-      renderCurrentQuestion();
-      syncCardHeight();
-    });
-  }
-
-  // Category filter
-  if (categorySelect) {
-    categorySelect.addEventListener("change", () => {
-      currentIndex = 0;
-      updateFilteredQuestions();
-      renderCurrentQuestion();
-      syncCardHeight();
-      hideFlagPanel();
-    });
-  }
-
-  // Navigation
-  if (prevBtn && card) {
-    prevBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      if (!filteredQuestions.length) return;
-      currentIndex =
-        (currentIndex - 1 + filteredQuestions.length) % filteredQuestions.length;
-      card.classList.remove("flipped");
-      syncCardHeight();
-      hideFlagPanel();
-      renderCurrentQuestion();
-      syncCardHeight();
-    });
-  }
-
-  if (nextBtn && card) {
-    nextBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      if (!filteredQuestions.length) return;
-      currentIndex = (currentIndex + 1) % filteredQuestions.length;
-      card.classList.remove("flipped");
-      syncCardHeight();
-      hideFlagPanel();
-      renderCurrentQuestion();
-      syncCardHeight();
-    });
-  }
-
-  // Flag UI: toggle panel
-  if (flagToggleBtn && flagPanel && card) {
-    flagToggleBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      flagPanel.classList.toggle("hidden");
-      const isOpen = !flagPanel.classList.contains("hidden");
-      card.classList.toggle("flag-open", isOpen);
-      syncCardHeight();
-    });
-  }
-
-  // Save flag
-  if (saveFlagBtn && flagText) {
-    saveFlagBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      if (!filteredQuestions.length) return;
-
-      const q = filteredQuestions[currentIndex];
-      const text = (flagText.value || "").trim();
-      if (!text) {
-        alert("Type what is wrong or unclear before saving the flag.");
-        return;
-      }
-
-      flags[q.id] = { text, flaggedAt: new Date().toISOString() };
-      saveFlags();
-      updateFlagUI(q.id);
-      submitFlagToServer(q, text);
-    });
-  }
-
-  // Clear flag
-  if (clearFlagBtn && flagText) {
-    clearFlagBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      if (!filteredQuestions.length) return;
-
-      const q = filteredQuestions[currentIndex];
-      delete flags[q.id];
-      saveFlags();
-      flagText.value = "";
-      updateFlagUI(q.id);
-    });
-  }
-
-  // Export flags
-  if (exportFlagsBtn) {
-    exportFlagsBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      exportFlags();
-    });
-  }
+  // We don't require JSON, but try to parse if available
+  let parsed = null;
+  try { parsed = JSON.parse(text); } catch (_) {}
+  return { ok: true, text, parsed };
 }
 
-// -----------------------------
-// Data Loading
-// -----------------------------
+/* =========================
+   QUESTIONS LOADING
+========================= */
 
 async function loadQuestions() {
-  try {
-    const res = await fetch("questions.json", { cache: "no-store" });
-    if (!res.ok) throw new Error("Failed to load questions.json");
-    const data = await res.json();
-
-    if (!Array.isArray(data)) throw new Error("questions.json is not an array");
-
-    allQuestions = data.map((q, idx) => ({
-      id: q.id != null ? q.id : idx + 1,
-      category: q.category || "General",
-      question: q.question || "(Missing question text)",
-      answer: q.answer || "",
-      reference: q.reference || "",
-    }));
-
-    populateCategories();
-    updateFilteredQuestions();
-    renderCurrentQuestion();
-      syncCardHeight();
-  } catch (err) {
-    console.error(err);
-    const qEl = document.getElementById("questionText");
-    if (qEl) {
-      qEl.textContent =
-        "Error loading questions.json. Please ensure the file is present with valid JSON.";
-    }
-  }
+  // Cache-busting query param helps while iterating; SW still network-first for questions.json.
+  const url = `questions.json?v=${encodeURIComponent(APP_VERSION)}`;
+  const res = await fetch(url, { cache: "no-store" });
+  if (!res.ok) throw new Error(`Failed to load questions.json (HTTP ${res.status})`);
+  const data = await res.json();
+  if (!Array.isArray(data)) throw new Error("questions.json must be an array");
+  return data;
 }
 
 function populateCategories() {
-  const categorySelect = document.getElementById("categorySelect");
   if (!categorySelect) return;
+  const cats = Array.from(new Set(questions.map(q => safeText(q.category).trim()).filter(Boolean))).sort();
+  categorySelect.innerHTML = `<option value="all">All Categories</option>` + cats.map(c => {
+    const v = c.replace(/"/g, "&quot;");
+    return `<option value="${v}">${v}</option>`;
+  }).join("");
+}
 
-  categorySelect.innerHTML = "";
-  const allOpt = document.createElement("option");
-  allOpt.value = "all";
-  allOpt.textContent = "All Categories";
-  categorySelect.appendChild(allOpt);
-
-  const categories = Array.from(new Set(allQuestions.map((q) => q.category))).sort();
-  for (const cat of categories) {
-    const opt = document.createElement("option");
-    opt.value = cat;
-    opt.textContent = cat;
-    categorySelect.appendChild(opt);
+function shuffleArray(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
   }
+  return a;
 }
 
 function updateFilteredQuestions() {
-  const categorySelect = document.getElementById("categorySelect");
-  const selectedCategory = categorySelect ? categorySelect.value : "all";
+  const cat = categorySelect ? categorySelect.value : "all";
+  let list = questions;
 
-  filteredQuestions = allQuestions.filter((q) => {
-    if (selectedCategory === "all") return true;
-    return q.category === selectedCategory;
-  });
+  if (cat && cat !== "all") {
+    list = list.filter(q => safeText(q.category) === cat);
+  }
 
-  if (shuffleEnabled) shuffleArray(filteredQuestions);
+  filteredQuestions = shuffleEnabled ? shuffleArray(list) : list.slice();
+
   if (currentIndex >= filteredQuestions.length) currentIndex = 0;
 }
 
-// -----------------------------
-// Rendering (Flashcards only)
-// -----------------------------
-
 function renderCurrentQuestion() {
-  const questionEl = document.getElementById("questionText");
-  const answerEl = document.getElementById("answerText");
-  const referenceEl = document.getElementById("referenceText");
-  const categoryLabel = document.getElementById("categoryLabel");
-  const counterLabel = document.getElementById("counterLabel");
-  const modeHint = document.getElementById("modeHint");
-  const card = document.getElementById("card");
-
-  const flagText = document.getElementById("flagText");
-  const flagPanel = document.getElementById("flagPanel");
-
-  if (!questionEl || !answerEl) return;
-
   if (!filteredQuestions.length) {
-    questionEl.textContent = "No questions available in this category.";
-    answerEl.textContent = "";
-    if (referenceEl) referenceEl.textContent = "";
-    if (categoryLabel) categoryLabel.textContent = "None";
+    if (questionText) questionText.textContent = "No questions found.";
+    if (answerText) answerText.textContent = "";
+    if (referenceText) referenceText.textContent = "";
+    if (categoryLabel) categoryLabel.textContent = "";
     if (counterLabel) counterLabel.textContent = "0 / 0";
-    if (modeHint)
-      modeHint.textContent =
-        "Flashcards: Tap/click anywhere on the card to flip between question and answer.";
-    if (flagPanel) flagPanel.classList.add("hidden");
-    if (flagText) flagText.value = "";
+    setFlagPanelOpen(false);
     return;
   }
 
   const q = filteredQuestions[currentIndex];
 
+  if (questionText) questionText.textContent = safeText(q.question);
+  if (answerText) answerText.textContent = safeText(q.answer);
+  if (referenceText) {
+    referenceText.textContent = showReference ? safeText(q.reference) : "";
+    referenceText.style.display = showReference ? "block" : "none";
+  }
+
+  if (categoryLabel) categoryLabel.textContent = safeText(q.category || "Category");
+  if (counterLabel) counterLabel.textContent = `${currentIndex + 1} / ${filteredQuestions.length}`;
+
+  if (modeHint) modeHint.textContent = "Tap/click the card to flip";
+
+  updateFlagStatusUI(q);
+
+  // Close flag panel when navigating/questions change
+  setFlagPanelOpen(false);
+
+  // Make sure card starts unflipped on new question
   if (card) card.classList.remove("flipped");
-      syncCardHeight();
 
-  questionEl.textContent = q.question;
-  answerEl.textContent = q.answer;
-
-  if (referenceEl) {
-    referenceEl.textContent =
-      showReference && q.reference ? `Reference: ${q.reference}` : "";
-  }
-
-  if (categoryLabel) categoryLabel.textContent = q.category || "Uncategorized";
-  if (counterLabel)
-    counterLabel.textContent = `${currentIndex + 1} / ${filteredQuestions.length}`;
-
-  if (modeHint)
-    modeHint.textContent =
-      "Flashcards: Tap/click anywhere on the card to flip between question and answer.";
-
-  // Reset flag panel on render
-  if (flagPanel) flagPanel.classList.add("hidden");
-  if (flagText) {
-    const flagData = flags[q.id];
-    flagText.value = flagData ? flagData.text : "";
-  }
-  updateFlagUI(q.id);
+  // sync height after DOM paints
+  requestAnimationFrame(syncCardHeight);
 }
 
-// -----------------------------
-// Utilities
-// -----------------------------
+/* =========================
+   VERSIONS (App + Cache)
+========================= */
 
-function shuffleArray(arr) {
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
+function setAppVersionUI() {
+  if (appVersionEl) appVersionEl.textContent = APP_VERSION;
+}
+
+function requestCacheVersion() {
+  if (!("serviceWorker" in navigator)) return;
+  if (!navigator.serviceWorker.controller) return;
+  try {
+    navigator.serviceWorker.controller.postMessage("GET_CACHE_VERSION");
+  } catch (e) {
+    console.warn("Unable to request cache version:", e);
   }
 }
 
-function showToast(message, duration = 2000) {
-  const toast = document.getElementById("toast");
-  if (!toast) return;
-
-  toast.textContent = message;
-  toast.classList.remove("hidden");
-  toast.classList.add("show");
-
-  setTimeout(() => {
-    toast.classList.remove("show");
-    setTimeout(() => toast.classList.add("hidden"), 300);
-  }, duration);
+function setupCacheVersionListener() {
+  if (!("serviceWorker" in navigator)) return;
+  navigator.serviceWorker.addEventListener("message", (event) => {
+    if (event.data?.type === "CACHE_VERSION") {
+      if (cacheVersionEl) cacheVersionEl.textContent = `cache ${event.data.cache}`;
+      return;
+    }
+    if (event.data?.type === "SW_UPDATE_READY") {
+      // optional SW->UI messaging if you choose to implement
+      showUpdateBanner(event.data?.workerId);
+      return;
+    }
+  });
 }
 
-// -----------------------------
-// PWA Setup
-// -----------------------------
+/* =========================
+   UPDATE AVAILABLE (banner + reload)
+========================= */
 
-function setupPWA() {
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("service-worker.js").catch(console.error);
-    setVersions();
-  }
+let _pendingWaitingWorker = null;
+
+function showUpdateBanner() {
+  if (!updateBanner || !updateReloadBtn) return;
+  updateBanner.classList.remove("hidden");
+  updateReloadBtn.onclick = () => {
+    if (_pendingWaitingWorker) {
+      _pendingWaitingWorker.postMessage("SKIP_WAITING");
+    } else if (navigator.serviceWorker?.controller) {
+      // fallback: ask active controller to skip waiting (may not work if none waiting)
+      navigator.serviceWorker.controller.postMessage("SKIP_WAITING");
+    } else {
+      window.location.reload();
+    }
+  };
+}
+
+function setupUpdateFlow() {
+  if (!("serviceWorker" in navigator)) return;
+
+  navigator.serviceWorker.register("./service-worker.js").then((reg) => {
+    // If there's already a waiting worker, show banner
+    if (reg.waiting) {
+      _pendingWaitingWorker = reg.waiting;
+      showUpdateBanner();
+    }
+
+    reg.addEventListener("updatefound", () => {
+      const newWorker = reg.installing;
+      if (!newWorker) return;
+
+      newWorker.addEventListener("statechange", () => {
+        if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
+          _pendingWaitingWorker = reg.waiting || newWorker;
+          showUpdateBanner();
+        }
+      });
+    });
+  }).catch((e) => {
+    console.warn("SW register failed:", e);
+  });
+
+  // When the new worker takes control, reload once
+  navigator.serviceWorker.addEventListener("controllerchange", () => {
+    window.location.reload();
+  });
+}
+
+/* =========================
+   INSTALL (PWA)
+========================= */
+
+let deferredPrompt = null;
+
+function setupInstallPrompt() {
+  if (!installBtn) return;
 
   window.addEventListener("beforeinstallprompt", (e) => {
     e.preventDefault();
     deferredPrompt = e;
-
-    const btn = document.getElementById("installBtn");
-    if (!btn) return;
-
-    btn.hidden = false;
-    btn.addEventListener(
-      "click",
-      async () => {
-        btn.hidden = true;
-        if (!deferredPrompt) return;
-        deferredPrompt.prompt();
-        await deferredPrompt.userChoice;
-        deferredPrompt = null;
-      },
-      { once: true }
-    );
+    installBtn.hidden = false;
   });
 
-  const installBtn = document.getElementById("installBtn");
-  const isStandalone =
-    window.matchMedia("(display-mode: standalone)").matches ||
-    window.navigator.standalone === true;
-
-  if (isStandalone && installBtn) installBtn.style.display = "none";
+  installBtn.addEventListener("click", async () => {
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    try { await deferredPrompt.userChoice; } catch (_) {}
+    deferredPrompt = null;
+    installBtn.hidden = true;
+  });
 }
 
-function requestCacheVersion() {
-  if (!navigator.serviceWorker.controller) return;
+/* =========================
+   EVENTS
+========================= */
 
-  navigator.serviceWorker.controller.postMessage("GET_CACHE_VERSION");
+function currentQuestion() {
+  return filteredQuestions.length ? filteredQuestions[currentIndex] : null;
 }
 
-navigator.serviceWorker.addEventListener("message", (event) => {
-  if (event.data?.type === "CACHE_VERSION") {
-    const el = document.getElementById("cacheVersion");
-    if (el) {
-      el.textContent = `cache ${event.data.cache}`;
-    }
+function setupEvents() {
+  if (!card) return;
+
+  // Flip on card tap (except when interacting with controls)
+  card.addEventListener("click", (e) => {
+    const tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : "";
+    if (["button", "select", "textarea", "input", "label", "a"].includes(tag)) return;
+    card.classList.toggle("flipped");
+    requestAnimationFrame(syncCardHeight);
+  });
+
+  if (flipBackBtn) {
+    flipBackBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      card.classList.remove("flipped");
+      requestAnimationFrame(syncCardHeight);
+    });
   }
-});
 
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.ready.then(() => {
-    requestCacheVersion();
-  });
+  if (shuffleToggle) {
+    shuffleToggle.addEventListener("change", () => {
+      shuffleEnabled = !!shuffleToggle.checked;
+      currentIndex = 0;
+      updateFilteredQuestions();
+      renderCurrentQuestion();
+    });
+  }
+
+  if (showRefToggle) {
+    showRefToggle.addEventListener("change", () => {
+      showReference = !!showRefToggle.checked;
+      // Don't reset question, just rerender
+      renderCurrentQuestion();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (!filteredQuestions.length) return;
+      currentIndex = (currentIndex - 1 + filteredQuestions.length) % filteredQuestions.length;
+      renderCurrentQuestion();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (!filteredQuestions.length) return;
+      currentIndex = (currentIndex + 1) % filteredQuestions.length;
+      renderCurrentQuestion();
+    });
+  }
+
+  if (categorySelect) {
+    categorySelect.addEventListener("change", () => {
+      currentIndex = 0;
+      updateFilteredQuestions();
+      renderCurrentQuestion();
+    });
+  }
+
+  // Flag UI
+  if (flagToggleBtn) {
+    flagToggleBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const open = flagPanel?.classList.contains("hidden");
+      setFlagPanelOpen(open);
+    });
+  }
+
+  if (saveFlagBtn) {
+    saveFlagBtn.addEventListener("click", async (e) => {
+      e.stopPropagation();
+      const q = currentQuestion();
+      if (!q) return;
+
+      const text = safeText(flagText?.value).trim();
+      if (!text) {
+        showToast("Type a reason before saving.");
+        return;
+      }
+
+      // Save locally (always)
+      flags[q.id] = {
+        text,
+        savedAt: new Date().toISOString(),
+        questionSnapshot: {
+          id: q.id, category: q.category, question: q.question, answer: q.answer, reference: q.reference || ""
+        },
+      };
+      try { localStorage.setItem("c17_flags", JSON.stringify(flags)); } catch (_) {}
+
+      updateFlagStatusUI(q);
+
+      // Send to backend
+      try {
+        await submitFlagToServer(q, text);
+        showToast("🚩 Flag saved");
+      } catch (err) {
+        console.error("Flag submit failed:", err);
+        showToast("⚠️ Failed to save flag");
+      }
+
+      setFlagPanelOpen(false);
+    });
+  }
+
+  if (clearFlagBtn) {
+    clearFlagBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const q = currentQuestion();
+      if (!q) return;
+
+      delete flags[q.id];
+      try { localStorage.setItem("c17_flags", JSON.stringify(flags)); } catch (_) {}
+      updateFlagStatusUI(q);
+      showToast("Flag cleared");
+      setFlagPanelOpen(false);
+    });
+  }
+
+  if (exportFlagsBtn) {
+    exportFlagsBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const out = Object.values(flags).map(f => f.questionSnapshot ? ({
+        ...f.questionSnapshot,
+        flagText: f.text,
+        savedAt: f.savedAt,
+        deviceId: getDeviceId(),
+        appVersion: APP_VERSION,
+      }) : f);
+      downloadJSON("flags_export.json", out);
+      showToast("⬇️ Exported flags");
+    });
+  }
+
+  // Resize should re-sync
+  window.addEventListener("resize", () => requestAnimationFrame(syncCardHeight));
 }
+
+/* =========================
+   INIT
+========================= */
+
+async function init() {
+  setAppVersionUI();
+  setupCacheVersionListener();
+  setupUpdateFlow();
+  setupInstallPrompt();
+
+  // Load flags from localStorage (export still works offline)
+  try {
+    const raw = localStorage.getItem("c17_flags");
+    if (raw) flags = JSON.parse(raw) || {};
+  } catch {
+    flags = {};
+  }
+
+  // Load questions
+  try {
+    questions = await loadQuestions();
+  } catch (e) {
+    console.error(e);
+    if (questionText) questionText.textContent = "Error loading questions.json. Check console.";
+    showToast("❌ Failed to load questions.json");
+    return;
+  }
+
+  populateCategories();
+
+  shuffleEnabled = !!(shuffleToggle ? shuffleToggle.checked : true);
+  showReference = !!(showRefToggle ? showRefToggle.checked : true);
+
+  updateFilteredQuestions();
+  setupEvents();
+  renderCurrentQuestion();
+
+  // Cache version (wait for SW control)
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.ready.then(() => {
+      requestCacheVersion();
+    }).catch(() => {});
+  }
+}
+
+document.addEventListener("DOMContentLoaded", init);
