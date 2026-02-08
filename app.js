@@ -4,7 +4,7 @@
 // ===============================
 
 // Update this string whenever you push a meaningful new build
-const APP_VERSION = "1.2.0";
+const APP_VERSION = "1.2.1";
 
 // Backend endpoint for saving flags (Google Apps Script web app URL)
 const FLAG_API_URL =
