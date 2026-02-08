@@ -206,6 +206,10 @@ async function submitFlagToServer(question, flagTextValue) {
   });
 
   const text = await res.text().catch(() => "");
+  const obj = JSON.parse(text);
+   if (!obj.ok) throw new Error(obj.error || "Server returned not ok");
+
+
 
   if (!res.ok) {
     console.error("Flag POST failed:", res.status, res.statusText, text.slice(0, 300));
