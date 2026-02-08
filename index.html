@@ -1,126 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>C-17 Loadmaster Study</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="app-header">
-    <div class="app-title">
-      <h1>C-17 Loadmaster Study</h1>
-      <p class="subtitle">Flashcards • Question Bank</p>
-    </div>
+< !DOCTYPE html >
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <title>C-17 Loadmaster Study</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="manifest" href="manifest.json" />
+      <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+      <header class="app-header">
+        <div class="app-title">
+          <h1>C-17 Loadmaster Study</h1>
+          <p class="subtitle">Flashcards • Question Bank</p>
+        </div>
 
-    <div class="app-meta">
-      <div class="version-block">
-        <span class="app-version" id="appVersion"></span>
-        <span class="cache-version" id="cacheVersion"></span>
-      </div>
-      <button id="installBtn" class="btn secondary" hidden>Install App</button>
-    </div>
-  </header>
+        <div class="app-meta">
+          <div class="version-block">
+            <span class="app-version" id="appVersion"></span>
+            <span class="cache-version" id="cacheVersion"></span>
+          </div>
+          <button id="installBtn" class="btn secondary" hidden>Install App</button>
+        </div>
+      </header>
 
-  <main class="app-main">
-    <section class="controls">
-      <div class="control-group">
-        <label for="categorySelect">Category</label>
-        <select id="categorySelect">
-          <option value="all">All Categories</option>
-        </select>
-      </div>
+      <main class="app-main">
+        <section class="controls">
+          <div class="control-group">
+            <label for="categorySelect">Category</label>
+            <select id="categorySelect">
+              <option value="all">All Categories</option>
+            </select>
+          </div>
 
-      <!-- Flashcard-only build: Mode selector removed on purpose (can be re-added later) -->
+          <div class="control-group">
+            <label for="shuffleToggle">
+              <input type="checkbox" id="shuffleToggle" checked />
+              Shuffle Questions
+            </label>
+          </div>
 
-      <div class="control-group">
-        <label for="shuffleToggle">
-          <input type="checkbox" id="shuffleToggle" checked />
-          Shuffle Questions
-        </label>
-      </div>
+          <div class="control-group">
+            <label for="showRefToggle">
+              <input type="checkbox" id="showRefToggle" checked />
+              Show References
+            </label>
+          </div>
 
-      <div class="control-group">
-        <label for="showRefToggle">
-          <input type="checkbox" id="showRefToggle" checked />
-          Show References
-        </label>
-      </div>
+          <div class="nav-row">
+            <button id="exportFlagsBtn" class="btn small outline" type="button">
+              ⬇️ Export Flags
+            </button>
 
-      <div class="nav-row">
-        <button id="exportFlagsBtn" class="btn small outline" type="button">
-          ⬇️ Export Flags
-        </button>
+            <button id="prevBtn" class="btn ghost" type="button">← Prev</button>
+            <button id="nextBtn" class="btn primary" type="button">Next →</button>
+          </div>
+        </section>
 
-        <button id="prevBtn" class="btn ghost" type="button">← Prev</button>
-        <button id="nextBtn" class="btn primary" type="button">Next →</button>
-      </div>
-    </section>
+        <section class="card-area">
+          <div id="card" class="card">
+            <div class="card-inner">
+              <div class="card-face card-question">
+                <h2 id="questionText">Loading questions...</h2>
 
-    <section class="card-area">
-      <div id="card" class="card">
-        <div class="card-inner">
-          <!-- QUESTION FACE -->
-          <div class="card-face card-question">
-            <h2 id="questionText">Loading questions...</h2>
+                <div id="modeHint" class="mode-hint"></div>
 
-            <!-- Used by app.js to show a flashcard hint; safe if removed -->
-            <div id="modeHint" class="mode-hint"></div>
+                <div class="meta-row">
+                  <span id="categoryLabel" class="pill">Category</span>
+                  <span id="counterLabel" class="counter">0 / 0</span>
+                </div>
 
-            <div class="meta-row">
-              <span id="categoryLabel" class="pill">Category</span>
-              <span id="counterLabel" class="counter">0 / 0</span>
-            </div>
+                <div class="flag-row">
+                  <button id="flagToggleBtn" class="btn small ghost" type="button">
+                    🚩 Flag this question
+                  </button>
+                  <span id="flagStatus" class="flag-status"></span>
+                </div>
 
-            <div class="flag-row">
-              <button id="flagToggleBtn" class="btn small ghost" type="button">
-                🚩 Flag this question
-              </button>
-              <span id="flagStatus" class="flag-status"></span>
-            </div>
+                <div id="flagPanel" class="flag-panel hidden">
+                  <label for="flagText">Why are you flagging this question?</label>
+                  <textarea
+                    id="flagText"
+                    rows="2"
+                    placeholder="Type what seems wrong or unclear..."
+                  ></textarea>
+                  <div class="flag-actions">
+                    <button id="saveFlagBtn" class="btn small secondary" type="button">
+                      Save flag
+                    </button>
+                    <button id="clearFlagBtn" class="btn small ghost" type="button">
+                      Clear flag
+                    </button>
+                  </div>
+                </div>
+              </div>
 
-            <div id="flagPanel" class="flag-panel hidden">
-              <label for="flagText">Why are you flagging this question?</label>
-              <textarea
-                id="flagText"
-                rows="2"
-                placeholder="Type what seems wrong or unclear..."
-              ></textarea>
-              <div class="flag-actions">
-                <button id="saveFlagBtn" class="btn small secondary" type="button">
-                  Save flag
-                </button>
-                <button id="clearFlagBtn" class="btn small ghost" type="button">
-                  Clear flag
+              <div class="card-face card-answer">
+                <h3>Answer</h3>
+                <p id="answerText"></p>
+                <p id="referenceText" class="reference"></p>
+                <button id="flipBackBtn" class="btn ghost small" type="button">
+                  Back to Question
                 </button>
               </div>
             </div>
-          </div> <!-- end card-question -->
-
-          <!-- ANSWER FACE -->
-          <div class="card-face card-answer">
-            <h3>Answer</h3>
-            <p id="answerText"></p>
-            <p id="referenceText" class="reference"></p>
-            <button id="flipBackBtn" class="btn ghost small" type="button">
-              Back to Question
-            </button>
           </div>
-        </div> <!-- end card-inner -->
-      </div>   <!-- end card -->
 
-      <div class="help-text">
-        <p><strong>Flashcards:</strong> Tap/click the card to flip between question and answer.</p>
-      </div>
-    </section>
-  </main>
+          <div class="help-text">
+            <p><strong>Flashcards:</strong> Tap/click the card to flip between question and answer.</p>
+          </div>
+        </section>
+      </main>
 
-  <footer class="app-footer">
-    <span>C-17 LM Study • Offline-capable PWA</span>
-  </footer>
+      <footer class="app-footer">
+        <span>C-17 LM Study • Offline-capable PWA</span>
+      </footer>
 
-  <div id="toast" class="toast hidden"></div>
-  <script src="app.js" defer></script>
-</body>
-</html>
+      <div id="toast" class="toast hidden"></div>
+      <script src="app.js" defer></script>
+    </body>
+  </html>
