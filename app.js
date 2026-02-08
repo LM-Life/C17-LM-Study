@@ -71,6 +71,19 @@ function setVersions() {
     });
 }
 
+function setupUpdateFlow() {
+  if (!("serviceWorker" in navigator)) return;
+
+  navigator.serviceWorker.addEventListener("message", (event) => {
+    if (event.data?.type === "SW_UPDATE_READY") {
+      showToast("⬆️ Update available — refresh to apply", {
+        persistent: true,
+        actionText: "Refresh",
+        action: () => window.location.reload(),
+      });
+    }
+  });
+}
 
 // -----------------------------
 // Card height sync (prevents cut-off when flag panel expands)
@@ -122,6 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupUI();
   loadQuestions();
   setupPWA();
+  setupUpdateFlow();
 });
 
 // -----------------------------
