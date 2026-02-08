@@ -228,19 +228,32 @@ async function submitFlagToServer(question, flagText) {
       appVersion: APP_VERSION,
     };
 
+    // Apps Script-friendly encoding
+    const body = new URLSearchParams();
+    body.set("data", JSON.stringify(payload));
+
     const res = await fetch(FLAG_API_URL, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+      },
+      body: body.toString(),
     });
 
-    if (!res.ok) throw new Error("Flag submission failed");
+    if (!res.ok) {
+      const text = await res.text();
+      console.error("Flag save failed:", res.status, text);
+      throw new Error("Flag submission failed");
+    }
+
     showToast("🚩 Flag saved");
   } catch (err) {
     console.error(err);
     showToast("⚠️ Failed to save flag");
   }
 }
+
 
 // -----------------------------
 // UI Setup
