@@ -441,3 +441,34 @@ textarea{ resize:vertical; }
     text-align:center;
   }
 }
+
+/* =========================
+   PULL TO REFRESH (iOS)
+========================= */
+
+.ptr{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 10px;
+  pointer-events: none;
+  z-index: 3000;
+  transform: translateY(-64px);
+  transition: transform 0.15s ease;
+}
+
+.ptr-text{
+  background: #1f2937;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+
+.ptr.hidden{ display:none; }
