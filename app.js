@@ -73,6 +73,104 @@ let showReference = true;
 let flags = {}; // { [id]: { text, savedAt, questionSnapshot } }
 
 /* =========================
+   RFRSH
+========================= */
+
+function setupPullToRefresh() {
+  const ptr = document.getElementById("ptr");
+  const ptrText = document.getElementById("ptrText");
+  if (!ptr || !ptrText) return;
+
+  // If we loaded with a cache-bust param, remove it after load so URLs stay clean
+  try {
+    const u = new URL(window.location.href);
+    if (u.searchParams.has("r")) {
+      u.searchParams.delete("r");
+      window.history.replaceState(null, "", u.pathname + (u.search ? u.search : "") + u.hash);
+    }
+  } catch {}
+
+  let startY = 0;
+  let pulling = false;
+  let dist = 0;
+  const THRESHOLD = 80;
+
+  const isInteractive = (target) => {
+    if (!target) return false;
+    const tag = (target.tagName || "").toLowerCase();
+    return tag === "input" || tag === "textarea" || tag === "select" || tag === "button";
+  };
+
+  const show = () => { ptr.classList.remove("hidden"); };
+  const hide = () => { ptr.classList.add("hidden"); ptr.style.transform = "translateY(-64px)"; };
+
+  const setPull = (px) => {
+    // Ease the pull distance so it feels nicer
+    const eased = Math.min(110, px * 0.6);
+    ptr.style.transform = `translateY(${eased - 64}px)`;
+  };
+
+  const doRefresh = () => {
+    ptrText.textContent = "Refreshing…";
+    // Cache-busting reload so iOS standalone + SW actually refreshes
+    const u = new URL(window.location.href);
+    u.searchParams.set("r", Date.now().toString());
+    window.location.replace(u.toString());
+  };
+
+  window.addEventListener("touchstart", (e) => {
+    if (isInteractive(e.target)) return;
+
+    // Only activate when at top of page
+    if (window.scrollY > 0) return;
+
+    startY = e.touches[0].clientY;
+    pulling = true;
+    dist = 0;
+
+    ptrText.textContent = "Pull to refresh";
+    show();
+  }, { passive: true });
+
+  window.addEventListener("touchmove", (e) => {
+    if (!pulling) return;
+    if (isInteractive(e.target)) return;
+    if (window.scrollY > 0) return;
+
+    const y = e.touches[0].clientY;
+    dist = Math.max(0, y - startY);
+
+    if (dist > 0) {
+      // prevent iOS rubber-band from feeling weird while we show our own PTR
+      e.preventDefault();
+      setPull(dist);
+
+      if (dist >= THRESHOLD) {
+        ptrText.textContent = "Release to refresh";
+      } else {
+        ptrText.textContent = "Pull to refresh";
+      }
+    }
+  }, { passive: false });
+
+  window.addEventListener("touchend", () => {
+    if (!pulling) return;
+    pulling = false;
+
+    if (dist >= THRESHOLD) {
+      doRefresh();
+    } else {
+      hide();
+    }
+  });
+
+  window.addEventListener("touchcancel", () => {
+    pulling = false;
+    hide();
+  });
+}
+
+/* =========================
    UTIL
 ========================= */
 
@@ -582,6 +680,7 @@ async function init() {
   setupCacheVersionListener();
   setupUpdateFlow();
   setupInstallPrompt();
+  setupPullToRefresh(); 
 
   // Load flags from localStorage (export still works offline)
   try {
