@@ -231,16 +231,18 @@ function syncCardHeight() {
   const face = getActiveFace();
   if (!inner || !face) return;
 
-  // Temporarily allow measuring full height
+  // ✅ allow the container to shrink before we measure
+  inner.style.height = "auto";
+
+  // Measure the active face
   const prevOverflow = face.style.overflow;
   face.style.overflow = "visible";
-
-  // Add a little padding so it feels roomy
   const h = Math.ceil(face.scrollHeight) + 2;
 
   face.style.overflow = prevOverflow;
-
-  inner.style.minHeight = `${h}px`;
+   
+  // ✅ set an explicit height (so it can shrink too)
+  inner.style.height = `${h}px`;
 }
 
 /* =========================
@@ -384,6 +386,7 @@ function renderCurrentQuestion() {
     if (categoryLabel) categoryLabel.textContent = "";
     if (counterLabel) counterLabel.textContent = "0 / 0";
     setFlagPanelOpen(false);
+    requestAnimationFrame(syncCardHeight);
     return;
   }
 
