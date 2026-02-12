@@ -538,6 +538,12 @@ function renderCurrentQuestion() {
 
     // Disable submit until a selection is made
     if (mcSubmitBtn) mcSubmitBtn.disabled = true;
+     
+    if (mcSubmitBtn) mcSubmitBtn.style.display = "inline-flex";
+  } else {
+    // Flashcard mode
+    if (mcSubmitBtn) mcSubmitBtn.style.display = "none";
+  }
 
     const choices = Array.isArray(q.choices) ? q.choices : [];
     choices.forEach((choice) => {
