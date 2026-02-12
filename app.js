@@ -563,7 +563,7 @@ function renderCurrentQuestion() {
     // Show MC container and build choices
     if (mcContainer) mcContainer.classList.remove("hidden");
     if (mcChoices) mcChoices.innerHTML = "";
-    if (mcSubmitBtn) mcSubmitBtn.style.display = "inline-flex";
+    if (mcSubmitBtn) mcSubmitBtn.style.display = isMobileUI() ? "none" : "inline-flex";
 
     // Disable submit until a selection is made
     if (mcSubmitBtn) mcSubmitBtn.disabled = true;
@@ -831,16 +831,16 @@ if (flipBackBtn) {
   }
 
   if (shuffleToggle) {
-    shuffleToggle.addEventListener("change", () => {
-      shuffleEnabled = !!shuffleToggle.checked;
-      currentIndex = 0;
-      updateFilteredQuestions();
-      renderCurrentQuestion();
-      if (isMobileUI()) setControlsCollapsed(true);
-});
-  }
+  shuffleToggle.addEventListener("change", () => {
+    shuffleEnabled = !!shuffleToggle.checked;
+    currentIndex = 0;
+    updateFilteredQuestions();
+    renderCurrentQuestion();
+    if (isMobileUI()) setControlsCollapsed(true);
+  });
+}
 
-  if (showRefToggle) {
+if (showRefToggle) {
     showRefToggle.addEventListener("change", () => {
       showReference = !!showRefToggle.checked;
       // Don't reset question, just rerender
@@ -984,23 +984,30 @@ if (flipBackBtn) {
     });
   }
   if (bbPrimaryBtn) {
-    bbPrimaryBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const q = currentQuestion();
-      if (!q) return;
+  bbPrimaryBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const q = currentQuestion();
+    if (!q) return;
 
-      if (q.type === "mc") {
-        if (hasSubmittedMc) {
-          nextBtn?.click();
-        } else {
-          submitMultipleChoice(q);
-        }
+    if (q.type === "mc") {
+      if (hasSubmittedMc) {
+        nextBtn?.click();
+      } else {
+        submitMultipleChoice(q);
       }
+    } else {
+      // Flashcard flip
+      if (card) card.classList.toggle("flipped");
+      requestAnimationFrame(syncCardHeight);
+    }
+  });
+}
 
-  // Prevent reference disclosure clicks from bubbling to the card
-  if (refDetails) {
-    refDetails.addEventListener(\"click\", (e) => e.stopPropagation());
-  }
+// Prevent reference disclosure clicks from bubbling to the card
+if (refDetails) {
+  refDetails.addEventListener("click", (e) => e.stopPropagation());
+}
+
  else {
         if (card) card.classList.toggle("flipped");
         requestAnimationFrame(syncCardHeight);
