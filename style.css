@@ -472,3 +472,21 @@ textarea{ resize:vertical; }
 }
 
 .ptr.hidden{ display:none; }
+
+/* Multiple choice */
+.mc-container { margin-top: 14px; }
+.mc-choices { display: flex; flex-direction: column; gap: 10px; margin-bottom: 10px; }
+.mc-choice {
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.06);
+}
+.mc-choice.selected { outline: 2px solid rgba(255,255,255,0.30); }
+.mc-choice.correct  { border-color: rgba(0,255,0,0.35); }
+.mc-choice.incorrect{ border-color: rgba(255,0,0,0.35); }
+.mc-key { display:inline-block; min-width: 28px; font-weight: 700; margin-right: 10px; }
+.mc-result { margin-bottom: 8px; }
+.mc-correct, .mc-explain { margin-top: 8px; }
