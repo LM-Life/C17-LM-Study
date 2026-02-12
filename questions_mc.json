@@ -1,54 +1,3638 @@
 [
   {
-    "id": "TO_1C17A-9_WB_001",
+    "id": "MQF_2025_001",
     "type": "mc",
-    "prompt": "Which document is the primary source for C-17 load planning and restraint criteria?",
+    "category": "General",
+    "prompt": "To override the #2 or #3 hydraulic aux pumps for an auto shutdown due to low quantity or overheat, .",
     "choices": [
       {
         "key": "A",
-        "text": "TO 1C-17A-1"
+        "text": "Press and hold appropriate Aux pump switch for 5 seconds"
       },
       {
         "key": "B",
-        "text": "TO 1C-17A-9"
+        "text": "Press and hold XFER pump switch for 5 seconds"
       },
       {
         "key": "C",
-        "text": "AFMAN 11-2C-17, Vol 3"
+        "text": "Press and hold appropriate Aux pump switch for 3 seconds"
       },
       {
         "key": "D",
-        "text": "AMC Supplement to AFI 11-202"
+        "text": "Press and hold XFER pump switch for 3 seconds"
       }
     ],
-    "correctKey": "B",
-    "explanation": "TO 1C-17A-9 is the primary technical order for load planning/restraint guidance.",
-    "reference": "TO 1C-17A-9"
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Fig. 1-135 S6]"
   },
   {
-    "id": "LM_GENERAL_002",
+    "id": "MQF_2025_002",
     "type": "mc",
-    "prompt": "In a standard multiple-choice item, what should the app use to determine the correct answer?",
+    "category": "General",
+    "prompt": "The APU starter operating limit is and any APU starter engagement is considered a start attempt.",
     "choices": [
       {
         "key": "A",
-        "text": "The longest choice text"
+        "text": "1 minute"
       },
       {
         "key": "B",
-        "text": "Randomly sampled answers from other questions"
+        "text": "56-76 seconds"
       },
       {
         "key": "C",
-        "text": "A dedicated correctKey tied to the question"
+        "text": "2 minutes"
       },
       {
         "key": "D",
-        "text": "Alphabetical order"
+        "text": "15-30 seconds"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 5-34]"
+  },
+  {
+    "id": "MQF_2025_003",
+    "type": "mc",
+    "category": "General",
+    "prompt": "When cycling a circuit breaker, pull the CB out, wait or as indicated, then push the CB in.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "10 seconds"
+      },
+      {
+        "key": "B",
+        "text": "5 seconds"
+      },
+      {
+        "key": "C",
+        "text": "1 minutes"
+      },
+      {
+        "key": "D",
+        "text": "30 seconds"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 3-30]"
+  },
+  {
+    "id": "MQF_2025_004",
+    "type": "mc",
+    "category": "General",
+    "prompt": "When the APU alert start feature is used, there will be no until the Battery Bus is powered.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "fuel flow"
+      },
+      {
+        "key": "B",
+        "text": "available power"
+      },
+      {
+        "key": "C",
+        "text": "fire detection or protection"
+      },
+      {
+        "key": "D",
+        "text": "emergency exit lights"
       }
     ],
     "correctKey": "C",
-    "explanation": "Using a dedicated correctKey prevents the app from pulling random distractors from other questions.",
-    "reference": "App design: questions_mc.json"
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 1-198 (C)]"
+  },
+  {
+    "id": "MQF_2025_005",
+    "type": "mc",
+    "category": "General",
+    "prompt": "When starting the APU, starts may be attempted per rolling hour cycle with a minimum delay of minutes between attempts.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "3, 1, 5"
+      },
+      {
+        "key": "B",
+        "text": "1, 3, 5"
+      },
+      {
+        "key": "C",
+        "text": "2, 3, 5"
+      },
+      {
+        "key": "D",
+        "text": "5, 1, 3"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO1C-17A-1 [Para. 5-34]"
+  },
+  {
+    "id": "MQF_2025_006",
+    "type": "mc",
+    "category": "General",
+    "prompt": "The Battery Direct Bus, the Battery Bus, the AC and DC Emergency Buses, and the AC and DC Transfer Buses comprise the .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "electrical power system"
+      },
+      {
+        "key": "B",
+        "text": "battery power system"
+      },
+      {
+        "key": "C",
+        "text": "external power system"
+      },
+      {
+        "key": "D",
+        "text": "emergency power system"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 1-374]"
+  },
+  {
+    "id": "MQF_2025_007",
+    "type": "mc",
+    "category": "General",
+    "prompt": "To preclude damage to the landing gear, accomplish no more than consecutive landings without a cooling period. A cooling period consists of, flying with the gear retracted for at least 20 minutes or with the gear extended for at least 10 minutes before the next landing.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "two"
+      },
+      {
+        "key": "B",
+        "text": "three"
+      },
+      {
+        "key": "C",
+        "text": "four"
+      },
+      {
+        "key": "D",
+        "text": "five"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 5-82]"
+  },
+  {
+    "id": "MQF_2025_008",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Without both air conditioning packs operating, the or must be open during operation of the cargo exhaust fans to ensure proper ventilation.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Crew door/forward emergency escape door"
+      },
+      {
+        "key": "B",
+        "text": "Crew door/Ramp and Door"
+      },
+      {
+        "key": "C",
+        "text": "Troop doors/Crew door"
+      },
+      {
+        "key": "D",
+        "text": "Mx ditching hatch/forward emergency escape door"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 2-1120 S10 (W)]"
+  },
+  {
+    "id": "MQF_2025_009",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Following an intentional cabin depressurization above 10,000 feet, the cabin must be repressurized to less than feet to reset the regulators. If the regulators are not reset, subsequent flight above 9,000 feet cabin altitude may deploy the passenger oxygen masks.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "3,500"
+      },
+      {
+        "key": "B",
+        "text": "8,000"
+      },
+      {
+        "key": "C",
+        "text": "8,500"
+      },
+      {
+        "key": "D",
+        "text": "12,500"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 1-2663 (N)]"
+  },
+  {
+    "id": "MQF_2025_010",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Below feet cabin altitude, each emergency oxygen regulator SURGE MODE lever/three position toggle switch must be positioned to MAN ON/MANUAL ON position to ensure regulated oxygen is provided to passengers.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "25,000"
+      },
+      {
+        "key": "B",
+        "text": "20,000"
+      },
+      {
+        "key": "C",
+        "text": "15,000"
+      },
+      {
+        "key": "D",
+        "text": "12,500"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 1-2623]"
+  },
+  {
+    "id": "MQF_2025_011",
+    "type": "mc",
+    "category": "General",
+    "prompt": "The passenger oxygen masks can be manually deployed at any altitude with the -1-emergency oxygen regulator by positioning the SURGE MODE lever to the MAN ON position, and rotating the spring loaded surge knob and holding momentarily (approximately seconds) to open the passenger oxygen containers and start the flow of oxygen.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "clockwise; 3"
+      },
+      {
+        "key": "B",
+        "text": "counterclockwise; 3"
+      },
+      {
+        "key": "C",
+        "text": "clockwise; 6"
+      },
+      {
+        "key": "D",
+        "text": "counterclockwise; 6"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 1-2623]"
+  },
+  {
+    "id": "MQF_2025_012",
+    "type": "mc",
+    "category": "General",
+    "prompt": "If either the pilot’s or loadmaster’s FED ARM switch is in ARM, all four FEDS hatches can be deployed from either the initiator handles.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "pilots overhead panel or the aft left loadmaster station"
+      },
+      {
+        "key": "B",
+        "text": "pilots overhead panel or the maintenance/ditching hatch"
+      },
+      {
+        "key": "C",
+        "text": "forward loadmaster station or the aft left loadmaster station"
+      },
+      {
+        "key": "D",
+        "text": "maintenance/ditching hatch or the forward loadmaster station"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 1-2641]"
+  },
+  {
+    "id": "MQF_2025_013",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Portable hand fire extinguishers are provided in the following areas: in the cockpit, in the crew rest area, and in the cargo compartment.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "2; 1; 6"
+      },
+      {
+        "key": "B",
+        "text": "1; 2; 6"
+      },
+      {
+        "key": "C",
+        "text": "2; 0; 7"
+      },
+      {
+        "key": "D",
+        "text": "1; 1; 7"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 1-2656]"
+  },
+  {
+    "id": "MQF_2025_014",
+    "type": "mc",
+    "category": "General",
+    "prompt": "When a delay in a winching operation occurs on the cargo ramp or toes secure the item using",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Straps"
+      },
+      {
+        "key": "B",
+        "text": "Chain type tiedown"
+      },
+      {
+        "key": "C",
+        "text": "Chocks"
+      },
+      {
+        "key": "D",
+        "text": "Brakes"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 2-1120 S15g (W)]"
+  },
+  {
+    "id": "MQF_2025_015",
+    "type": "mc",
+    "category": "General",
+    "prompt": "The EEBD is a -minute self-contained, disposable breathing unit. There are installed on the aircraft.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "15; 4"
+      },
+      {
+        "key": "B",
+        "text": "20; 4"
+      },
+      {
+        "key": "C",
+        "text": "15; 6"
+      },
+      {
+        "key": "D",
+        "text": "20; 6"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 1-2658]"
+  },
+  {
+    "id": "MQF_2025_016",
+    "type": "mc",
+    "category": "General",
+    "prompt": "If the aircraft is powered by batteries alone and the pilot’s CNC indicates OFF, radio communication is possible using the radio with the VHF/UHF Backup Control panel.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "COM 1"
+      },
+      {
+        "key": "B",
+        "text": "COM 2"
+      },
+      {
+        "key": "C",
+        "text": "UHF"
+      },
+      {
+        "key": "D",
+        "text": "VHF"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 2-37 S24 (N)]"
+  },
+  {
+    "id": "MQF_2025_017",
+    "type": "mc",
+    "category": "General",
+    "prompt": "During AE missions, the loadmaster advises the medical crew director that seat belts are required .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "at the briefing"
+      },
+      {
+        "key": "B",
+        "text": "immediately prior to engine start"
+      },
+      {
+        "key": "C",
+        "text": "immediately prior to taxi"
+      },
+      {
+        "key": "D",
+        "text": "immediately prior to takeoff"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 2-55 LM S5]"
+  },
+  {
+    "id": "MQF_2025_018",
+    "type": "mc",
+    "category": "General",
+    "prompt": "In the After Landing Checklist, Loadmasters may remove all tie down, except one fwd/one aft after clearing the active runway.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 2-72 LM S5]"
+  },
+  {
+    "id": "MQF_2025_019",
+    "type": "mc",
+    "category": "General",
+    "prompt": "During in-flight operation of the troop doors, deploy the air deflector between and degrees before opening the first door.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "5; 10"
+      },
+      {
+        "key": "B",
+        "text": "10; 15"
+      },
+      {
+        "key": "C",
+        "text": "15; 20"
+      },
+      {
+        "key": "D",
+        "text": "20; 25"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 2-754]"
+  },
+  {
+    "id": "MQF_2025_020",
+    "type": "mc",
+    "category": "General",
+    "prompt": "When on/offloading vehicles, do not deflate vehicle pneumatic tires .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "at any time"
+      },
+      {
+        "key": "B",
+        "text": "to decrease PSI"
+      },
+      {
+        "key": "C",
+        "text": "to reduce the need for shoring"
+      },
+      {
+        "key": "D",
+        "text": "below the tires rated inflation pressure"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 2-1116 S4b (C)]"
+  },
+  {
+    "id": "MQF_2025_021",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Equipment mounted on a single axle loaded with its tongue resting on the aircraft floor or ramp .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "will be drained and purged"
+      },
+      {
+        "key": "B",
+        "text": "will be drained"
+      },
+      {
+        "key": "C",
+        "text": "may be transported with fuel in tank not to exceed 1/2 tank"
+      },
+      {
+        "key": "D",
+        "text": "may be transported with fuel in tank not to exceed 3/4 tank"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 2-1120 S8i]"
+  },
+  {
+    "id": "MQF_2025_022",
+    "type": "mc",
+    "category": "General",
+    "prompt": "When the vehicle is parked on the cargo floor and parking brakes are inoperative, .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "install a minimum of one chock, aft of the tires"
+      },
+      {
+        "key": "B",
+        "text": "install a minimum of two chocks, one forward and one aft of the tires"
+      },
+      {
+        "key": "C",
+        "text": "install a minimum of two chains and two tiedown devices, one forward and one aft"
+      },
+      {
+        "key": "D",
+        "text": "install a minimum of one chain to prevent the vehicle from rolling out of the aircraft"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 2-1120 S16c]"
+  },
+  {
+    "id": "MQF_2025_023",
+    "type": "mc",
+    "category": "General",
+    "prompt": "When loading pallets with a bare tine forklift, one set of inner roller channels may be removed from the ramp toes if the pallet weight does not exceed pounds.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "8,400"
+      },
+      {
+        "key": "B",
+        "text": "8,500"
+      },
+      {
+        "key": "C",
+        "text": "9,100"
+      },
+      {
+        "key": "D",
+        "text": "10,355"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "T.O. 1C-17A-1 [Para. 2-1118 S2]"
+  },
+  {
+    "id": "MQF_2025_024",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Ramp Blowdown may not function if the weight on the ramp exceeds or, if the aircraft is on an uneven surface.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "20,710"
+      },
+      {
+        "key": "B",
+        "text": "21,000"
+      },
+      {
+        "key": "C",
+        "text": "26,000"
+      },
+      {
+        "key": "D",
+        "text": "20,750"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "1C-17A-1 [Para. 1-2489]"
+  },
+  {
+    "id": "MQF_2025_025",
+    "type": "mc",
+    "category": "General",
+    "prompt": "The signal to prepare for ditching or crash landing is .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "3 short rings of the alarm bell"
+      },
+      {
+        "key": "B",
+        "text": "3 long rings of the alarm bell"
+      },
+      {
+        "key": "C",
+        "text": "6 short rings of the alarm bell"
+      },
+      {
+        "key": "D",
+        "text": "6 long rings of the alarm bell"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Table 3-1]"
+  },
+  {
+    "id": "MQF_2025_026",
+    "type": "mc",
+    "category": "General",
+    "prompt": "All odors not identifiable by the flight crew shall be considered toxic. Refer immediately to .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Cargo Leak Suppression procedure"
+      },
+      {
+        "key": "B",
+        "text": "Smoke or Fumes Removal procedure"
+      },
+      {
+        "key": "C",
+        "text": "Toxic Fumes procedure"
+      },
+      {
+        "key": "D",
+        "text": "Smoke, Fire or Fumes Procedure"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 3-39]"
+  },
+  {
+    "id": "MQF_2025_027",
+    "type": "mc",
+    "category": "General",
+    "prompt": "When ditching is imminent, as a minimum, the loadmaster will provide .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "a classified data case and igloo"
+      },
+      {
+        "key": "B",
+        "text": "a first aid kit and igloo"
+      },
+      {
+        "key": "C",
+        "text": "a flashlight and classified data case"
+      },
+      {
+        "key": "D",
+        "text": "a flashlight and first aid kit"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Table 3-19]"
+  },
+  {
+    "id": "MQF_2025_028",
+    "type": "mc",
+    "category": "General",
+    "prompt": "If a fire is being fed by oxygen from an oxygen system, the system should be turned off with the until the fire is suppressed.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "CRU/73A regulator"
+      },
+      {
+        "key": "B",
+        "text": "-501 emergency regulator"
+      },
+      {
+        "key": "C",
+        "text": "manual shutoff valves"
+      },
+      {
+        "key": "D",
+        "text": "HALO/therapeutic regulator"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 3-322 (W)]"
+  },
+  {
+    "id": "MQF_2025_029",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Selective freefall of any landing gear can be accomplished by activating the release handles only for those gear that are not extended. When lowering both main gear on one side, lower .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "both gear simultaneously"
+      },
+      {
+        "key": "B",
+        "text": "the forward gear first"
+      },
+      {
+        "key": "C",
+        "text": "the aft gear first"
+      },
+      {
+        "key": "D",
+        "text": "the nose gear first"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 3-481 (N)]"
+  },
+  {
+    "id": "MQF_2025_030",
+    "type": "mc",
+    "category": "General",
+    "prompt": "The maximum vertical height of a load to be jettisoned is inches measured from the of the pallet/platform.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "78; bottom"
+      },
+      {
+        "key": "B",
+        "text": "96; top"
+      },
+      {
+        "key": "C",
+        "text": "100; bottom"
+      },
+      {
+        "key": "D",
+        "text": "118; top"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 3-502 (N)]"
+  },
+  {
+    "id": "MQF_2025_031",
+    "type": "mc",
+    "category": "General",
+    "prompt": "During cargo jettison, ensure all selected lock annunciators are before stating \"LOCKS RELEASED\".",
+    "choices": [
+      {
+        "key": "A",
+        "text": "indicating locked"
+      },
+      {
+        "key": "B",
+        "text": "flashing"
+      },
+      {
+        "key": "C",
+        "text": "blank"
+      },
+      {
+        "key": "D",
+        "text": "flashing or blank"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 3-503 (W)]"
+  },
+  {
+    "id": "MQF_2025_032",
+    "type": "mc",
+    "category": "General",
+    "prompt": "If a vehicle is driven on the aircraft, shoring is limited to layer(s). This restriction does not apply to shoring placed .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "1 / On top of the cargo ramp"
+      },
+      {
+        "key": "B",
+        "text": "1 / On top of the ramp toes"
+      },
+      {
+        "key": "C",
+        "text": "1 / Underneath the cargo ramp or ramp toes"
+      },
+      {
+        "key": "D",
+        "text": "2 / Underneath the cargo ramp or ramp toes"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 2-1120]"
+  },
+  {
+    "id": "MQF_2025_033",
+    "type": "mc",
+    "category": "General",
+    "prompt": "When loaded for operational use, the ATGL is loaded ADS pallet position 1. When a Seat Pallet is loaded in ADS pallet position 2, the ATGL is loaded .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "10 inches aft of/ ADS pallet position 2"
+      },
+      {
+        "key": "B",
+        "text": "10 inches fwd of/ ADS pallet position 1"
+      },
+      {
+        "key": "C",
+        "text": "20 inches aft of/ ADS pallet position 1"
+      },
+      {
+        "key": "D",
+        "text": "20 inches fwd of/ ADS Pallet position 2"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 1-2753 (N)]"
+  },
+  {
+    "id": "MQF_2025_034",
+    "type": "mc",
+    "category": "General",
+    "prompt": "During a ditching, do not activate prior to the aircraft coming to a rest as life rafts may be lost.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "EPOS"
+      },
+      {
+        "key": "B",
+        "text": "FEDS hatches"
+      },
+      {
+        "key": "C",
+        "text": "Ramp Blowdown"
+      },
+      {
+        "key": "D",
+        "text": "Emergency Locator Transmitter"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 3-522 (W)]"
+  },
+  {
+    "id": "MQF_2025_035",
+    "type": "mc",
+    "category": "General",
+    "prompt": "The maximum cargo weight that can be loaded left or right of aircraft centerline is pounds, provided all aircraft limitations are complied with.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "65,000"
+      },
+      {
+        "key": "B",
+        "text": "88,000"
+      },
+      {
+        "key": "C",
+        "text": "91,000"
+      },
+      {
+        "key": "D",
+        "text": "93,000"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 5-107]"
+  },
+  {
+    "id": "MQF_2025_036",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Do not use SECURE cargo compartment lighting in flight. PA system speakers/volume will be deactivated during any condition that activates the cargo compartment lights because of sidewall oxygen system deployment. The speakers/volume .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "will not function until SECURE lighting is deselected"
+      },
+      {
+        "key": "B",
+        "text": "must be manually reactivated to make PA announcements"
+      },
+      {
+        "key": "C",
+        "text": "cannot be reactivated"
+      },
+      {
+        "key": "D",
+        "text": "will not function until NORMAL lighting is selected"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 1-629 (C)]"
+  },
+  {
+    "id": "MQF_2025_037",
+    "type": "mc",
+    "category": "General",
+    "prompt": "With ambient temperatures are at or below -9 °C (15 °F), the AUX pumps may not initially generate full pressure. If system pressure does not rise to at least 3500 psi within 30 seconds of selecting the pump to AUTO, select the pump to off, wait 30 seconds and proceed as follows.1. Select the AUX pump to AUTO for 30 seconds, then off for 30 seconds.2. Repeat or until system pressure indicates at least 3500 psi.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "for a maximum of 5 cycles"
+      },
+      {
+        "key": "B",
+        "text": "for a minimum of 5 cycles"
+      },
+      {
+        "key": "C",
+        "text": "for a maximum of 10 cycles"
+      },
+      {
+        "key": "D",
+        "text": "for a minimum of 10 cycles"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 7-177]"
+  },
+  {
+    "id": "MQF_2025_038",
+    "type": "mc",
+    "category": "General",
+    "prompt": "If the prime mover is not assigned specifically for the intended unit and additional braking is not available, i.e., airbrakes, the prime mover total gross weight should be the unit to be loaded/offloaded.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Greater than"
+      },
+      {
+        "key": "B",
+        "text": "Less than"
+      },
+      {
+        "key": "C",
+        "text": "Equal to"
+      },
+      {
+        "key": "D",
+        "text": "Considered for"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-1 [Para. 2-1120 S12]"
+  },
+  {
+    "id": "MQF_2025_039",
+    "type": "mc",
+    "category": "General",
+    "prompt": "A vehicle with a transmission that is not equipped with a neutral position shall be loaded/offloaded under its own power. When more than one layer of shoring is required, the shoring prefabricated or joined together.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Will be"
+      },
+      {
+        "key": "B",
+        "text": "Should be"
+      },
+      {
+        "key": "C",
+        "text": "May be"
+      },
+      {
+        "key": "D",
+        "text": "Could be"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4B-11 (C)]"
+  },
+  {
+    "id": "MQF_2025_040",
+    "type": "mc",
+    "category": "General",
+    "prompt": "When using the struts to change the offload clearance hold the STAB STRUTS control handle to until the struts stop lifting the aircraft or there is no less than inch of chrome showing on the nose gear strut.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "HOLD / 1"
+      },
+      {
+        "key": "B",
+        "text": "EXT / 2"
+      },
+      {
+        "key": "C",
+        "text": "EXT / 1"
+      },
+      {
+        "key": "D",
+        "text": "HOLD / 2"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4B-19]"
+  },
+  {
+    "id": "MQF_2025_041",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Chain bridles installed as the sole means of attaining forward, aft, and vertical restraint requirements also meet lateral restraint requirements if both the forward and aft restraint bridles utilize the same type of tiedown chains.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4C-17]"
+  },
+  {
+    "id": "MQF_2025_042",
+    "type": "mc",
+    "category": "General",
+    "prompt": "When loading pallets with ramp toes installed, at what weight are struts required?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "8,400"
+      },
+      {
+        "key": "B",
+        "text": "8,500"
+      },
+      {
+        "key": "C",
+        "text": "10,000"
+      },
+      {
+        "key": "D",
+        "text": "10,355"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Table 4B-1]"
+  },
+  {
+    "id": "MQF_2025_043",
+    "type": "mc",
+    "category": "General",
+    "prompt": "highlight essential operating procedures, practice, condition or statement, etc. which if not strictly observed could result in damage to, or destruction of equipment or loss if mission effectiveness",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Warning"
+      },
+      {
+        "key": "B",
+        "text": "Cautions"
+      },
+      {
+        "key": "C",
+        "text": "Notes"
+      },
+      {
+        "key": "D",
+        "text": "Boldface items"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [ Para 1-43 (C)]"
+  },
+  {
+    "id": "MQF_2025_044",
+    "type": "mc",
+    "category": "General",
+    "prompt": "When using the ramp as a lifting/lowering aid, the stabilizer struts shall be deployed when weight exceeds pounds.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "8,400"
+      },
+      {
+        "key": "B",
+        "text": "8,500"
+      },
+      {
+        "key": "C",
+        "text": "10,000"
+      },
+      {
+        "key": "D",
+        "text": "10,355"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4B-11 (C)]"
+  },
+  {
+    "id": "MQF_2025_045",
+    "type": "mc",
+    "category": "General",
+    "prompt": "If nonstandard cargo/equipment is presented for airlift and an air transportability certification from AFLCMC/EZFC (ATTLA) does not accompany the load, these items .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "shall be frustrated"
+      },
+      {
+        "key": "B",
+        "text": "may be loaded provided they do not exceed the limitations/procedures in the -9"
+      },
+      {
+        "key": "C",
+        "text": "shall not be loaded under any circumstances"
+      },
+      {
+        "key": "D",
+        "text": "may be loaded so long as passengers are not manifested"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Page. iv]"
+  },
+  {
+    "id": "MQF_2025_046",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Vehicle single axle weights equal to or greater than pounds must be loaded within 8 inches of the aircraft centerline in compartments D, F and G.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "15,001"
+      },
+      {
+        "key": "B",
+        "text": "22,001"
+      },
+      {
+        "key": "C",
+        "text": "27,001"
+      },
+      {
+        "key": "D",
+        "text": "36,000"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Fig. 4D-10 S1]"
+  },
+  {
+    "id": "MQF_2025_047",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Vehicle single axle weights equal to or greater than pounds must be loaded within 8 inches of the aircraft centerline in compartment E.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "22,001"
+      },
+      {
+        "key": "B",
+        "text": "23,000"
+      },
+      {
+        "key": "C",
+        "text": "27,001"
+      },
+      {
+        "key": "D",
+        "text": "36,000"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Fig. 4D-10 S1]"
+  },
+  {
+    "id": "MQF_2025_048",
+    "type": "mc",
+    "category": "General",
+    "prompt": "The maximum vehicle weight of a tracked vehicle with articulated suspension loaded in E compartment is .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "130,000"
+      },
+      {
+        "key": "B",
+        "text": "135,000"
+      },
+      {
+        "key": "C",
+        "text": "165,000"
+      },
+      {
+        "key": "D",
+        "text": "170,900"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Fig. 4D-17 S2]"
+  },
+  {
+    "id": "MQF_2025_049",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Tracked vehicles with articulated suspension and with wheel weights exceeding lbs (average) must be loaded within 8 inches of aircraft centerline.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "2,000"
+      },
+      {
+        "key": "B",
+        "text": "5,000"
+      },
+      {
+        "key": "C",
+        "text": "7,500"
+      },
+      {
+        "key": "D",
+        "text": "9,000"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Fig. 4D-17 S1 (N)]"
+  },
+  {
+    "id": "MQF_2025_050",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Tunner loader furnished bridge plates shall not be used when loading/offloading rolling stock from a K-loader with the ramp toes installed.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4B-11 (C)]"
+  },
+  {
+    "id": "MQF_2025_051",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Hazardous cargo considered jettisonable be positioned forward of non-jettisonable cargo, except when its size, weight, and location will permit jettison by hand.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "should not"
+      },
+      {
+        "key": "B",
+        "text": "could not"
+      },
+      {
+        "key": "C",
+        "text": "can not"
+      },
+      {
+        "key": "D",
+        "text": "shall not"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 5-9]"
+  },
+  {
+    "id": "MQF_2025_052",
+    "type": "mc",
+    "category": "General",
+    "prompt": "When cargo projects aft of the end of the logistics rails (FS ), ensure the ramp toes do not contact the cargo while being raised to the vertical position.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "1321"
+      },
+      {
+        "key": "B",
+        "text": "1390"
+      },
+      {
+        "key": "C",
+        "text": "1403"
+      },
+      {
+        "key": "D",
+        "text": "1424"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 2-35 (C)]"
+  },
+  {
+    "id": "MQF_2025_053",
+    "type": "mc",
+    "category": "General",
+    "prompt": "When pedestal shoring is used under the Ramp Ground Support Pad for special loads, the shoring shall be a minimum of inches long and inches wide.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "30/30"
+      },
+      {
+        "key": "B",
+        "text": "20/18"
+      },
+      {
+        "key": "C",
+        "text": "18/18"
+      },
+      {
+        "key": "D",
+        "text": "18/30"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 2-72]"
+  },
+  {
+    "id": "MQF_2025_054",
+    "type": "mc",
+    "category": "General",
+    "prompt": "The aft end of the ramp toes shall not be supported when in the position.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "low"
+      },
+      {
+        "key": "B",
+        "text": "high"
+      },
+      {
+        "key": "C",
+        "text": "low or high"
+      },
+      {
+        "key": "D",
+        "text": "stowed"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 2-75]"
+  },
+  {
+    "id": "MQF_2025_055",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Replace winch cable if or more broken wires per strand inch or or more broken wires per cable inch are found. The maximum number of broken wires shall not occur in any two consecutive inches of cable.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "4; 7"
+      },
+      {
+        "key": "B",
+        "text": "3; 6"
+      },
+      {
+        "key": "C",
+        "text": "7;10"
+      },
+      {
+        "key": "D",
+        "text": "4; 6"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4E-14]"
+  },
+  {
+    "id": "MQF_2025_056",
+    "type": "mc",
+    "category": "General",
+    "prompt": "When winching and the direction of pull is changed, the sheave .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "can be realigned with the RWC"
+      },
+      {
+        "key": "B",
+        "text": "will automatically realign to the new direction"
+      },
+      {
+        "key": "C",
+        "text": "is realigned by selecting the #3 hydraulic pump to ON"
+      },
+      {
+        "key": "D",
+        "text": "must be manually realigned to the new direction"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 2-172]"
+  },
+  {
+    "id": "MQF_2025_057",
+    "type": "mc",
+    "category": "General",
+    "prompt": "In flight, the ramp toes will be .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "stowed on the cargo door"
+      },
+      {
+        "key": "B",
+        "text": "installed and raised to the up (vertical over-center) position"
+      },
+      {
+        "key": "C",
+        "text": "stowed on the cargo door or installed and raised to the up (vertical over-center) position"
+      },
+      {
+        "key": "D",
+        "text": "installed in any position"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 2-76]"
+  },
+  {
+    "id": "MQF_2025_058",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Palletized seat assemblies may be loaded in the logistic rails when transported as cargo. Passengers will not occupy palletized seats in the logistic rails.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 3-49]"
+  },
+  {
+    "id": "MQF_2025_059",
+    "type": "mc",
+    "category": "General",
+    "prompt": "On aeromedical evacuation missions with litter or ambulatory patients, the ramp is restricted .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "from carrying any cargo"
+      },
+      {
+        "key": "B",
+        "text": "to loose baggage and floor loaded items only"
+      },
+      {
+        "key": "C",
+        "text": "to two pallets in the left or right logistic rails"
+      },
+      {
+        "key": "D",
+        "text": "to two pallets in the ADS rails or centerline floor loaded items"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4B-7]"
+  },
+  {
+    "id": "MQF_2025_060",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Pallets or pallet trains up to pounds per pallet may be loaded into the logistics rail/lock systems provided at least one lock left and one right are engaged in each pallet.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "7,800"
+      },
+      {
+        "key": "B",
+        "text": "8,000"
+      },
+      {
+        "key": "C",
+        "text": "10,355"
+      },
+      {
+        "key": "D",
+        "text": "20,710"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4C-11]"
+  },
+  {
+    "id": "MQF_2025_061",
+    "type": "mc",
+    "category": "General",
+    "prompt": "The ramp loadable height capability varies between inches at the ramp hinge to inches at the end of the ramp.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "156; 116"
+      },
+      {
+        "key": "B",
+        "text": "148; 128"
+      },
+      {
+        "key": "C",
+        "text": "138; 96"
+      },
+      {
+        "key": "D",
+        "text": "162; 112"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "T.O. 1C-17A-9 [Para. 4D-20]"
+  },
+  {
+    "id": "MQF_2025_062",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Spotters are required to observe clearances and to prevent contact with the wing box structure when loading cargo higher than inches forward of FS .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "148; 937"
+      },
+      {
+        "key": "B",
+        "text": "158; 1165"
+      },
+      {
+        "key": "C",
+        "text": "162; 1074"
+      },
+      {
+        "key": "D",
+        "text": "148; 1074"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "T.O. 1C-17A-9 [Para. 4D-7 (N)]"
+  },
+  {
+    "id": "MQF_2025_063",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Maximum useable surface area for netted cargo is by and shall not be exceeded.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "108/88"
+      },
+      {
+        "key": "B",
+        "text": "106/86"
+      },
+      {
+        "key": "C",
+        "text": "104/84"
+      },
+      {
+        "key": "D",
+        "text": "100/80"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "T.O. 1C-17A-9 [Para. 4C-5]"
+  },
+  {
+    "id": "MQF_2025_064",
+    "type": "mc",
+    "category": "General",
+    "prompt": "The primary method of loading pallets into the ADS and logistic rail system is using the ramp toes.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "T.O. 1C-17A-9 [Para. 4C-50]"
+  },
+  {
+    "id": "MQF_2025_065",
+    "type": "mc",
+    "category": "General",
+    "prompt": "If are not used, Ramirez 40K and Emerson 25K-loaders must be backed-in when preparing to load/unload cargo into the logistic rail system.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "spotters"
+      },
+      {
+        "key": "B",
+        "text": "hand signals"
+      },
+      {
+        "key": "C",
+        "text": "ramp toes"
+      },
+      {
+        "key": "D",
+        "text": "guide rails"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "T.O. 1C-17A-9 [Para. 4C-51]"
+  },
+  {
+    "id": "MQF_2025_066",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Required restraint for cargo on the pallet/pallet train shall be provided using nets, tiedown straps, or chains. When supplemental restraint is required, additional tiedowns may be attached to the pallet or cargo floor.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "T.O. 1C-17A-9 [Para. 4C-13]"
+  },
+  {
+    "id": "MQF_2025_067",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Straps and chains shall not be mixed to restrain cargo in the same direction. However, 10K and 25K devices with the appropriate chains may be used for a given direction of restraint.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "T.O. 1C-17A-9 [Para. 4B-37]"
+  },
+  {
+    "id": "MQF_2025_068",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Netted two pallet trains that exceed shall be restrained to the cargo floor.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "96 inches"
+      },
+      {
+        "key": "B",
+        "text": "10,355 pounds"
+      },
+      {
+        "key": "C",
+        "text": "98 inches"
+      },
+      {
+        "key": "D",
+        "text": "20,710 pounds"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4C-19]"
+  },
+  {
+    "id": "MQF_2025_069",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Pallets or pallet trains up to 7,800 pounds per pallet may be loaded into the ADS rail/lock system when .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "at least one lock left and one right are engaged in each pallet"
+      },
+      {
+        "key": "B",
+        "text": "at least two locks left and two right are engaged in each pallet"
+      },
+      {
+        "key": "C",
+        "text": "all longitudinal restraint is attached to the cargo floor"
+      },
+      {
+        "key": "D",
+        "text": "additional longitudinal restraint is attached to the cargo floor"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4C-12]"
+  },
+  {
+    "id": "MQF_2025_070",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Ensure cargo is restrained for prior to raising and closing the ramp when cargo is positioned on the ramp for flight.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "the forward direction"
+      },
+      {
+        "key": "B",
+        "text": "the aft direction"
+      },
+      {
+        "key": "C",
+        "text": "forward and aft directions"
+      },
+      {
+        "key": "D",
+        "text": "all directions"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4B-11 (C)]"
+  },
+  {
+    "id": "MQF_2025_071",
+    "type": "mc",
+    "category": "General",
+    "prompt": "When properly installed on a single pallet, the nets provide all the necessary restraint for cargo loads up to pounds when the height of stacked cargo does not exceed 96 inches.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "5,000"
+      },
+      {
+        "key": "B",
+        "text": "8,000"
+      },
+      {
+        "key": "C",
+        "text": "10,000"
+      },
+      {
+        "key": "D",
+        "text": "12,500"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4C-15]"
+  },
+  {
+    "id": "MQF_2025_072",
+    "type": "mc",
+    "category": "General",
+    "prompt": "When pallets with lateral overhang are loaded and locked in the ADS rails, sufficient space is required to access the ADS locks for manual release.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4C-9]"
+  },
+  {
+    "id": "MQF_2025_073",
+    "type": "mc",
+    "category": "General",
+    "prompt": "The maximum pallet/platform weight on two ramp toes is pounds except for 18-foot DRAS platforms which may be increased to 14,500 pounds.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "9,500"
+      },
+      {
+        "key": "B",
+        "text": "10,000"
+      },
+      {
+        "key": "C",
+        "text": "10,355"
+      },
+      {
+        "key": "D",
+        "text": "10,500"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4B-14]"
+  },
+  {
+    "id": "MQF_2025_074",
+    "type": "mc",
+    "category": "General",
+    "prompt": "The maximum single axle load on the toes in the low position is pounds.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "5,000"
+      },
+      {
+        "key": "B",
+        "text": "7,500"
+      },
+      {
+        "key": "C",
+        "text": "10,000"
+      },
+      {
+        "key": "D",
+        "text": "10,355"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4B-14]"
+  },
+  {
+    "id": "MQF_2025_075",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Vehicles with transmissions that are not equipped with a neutral position may be loaded/offloaded using the cargo winch.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4E-16 (C)]"
+  },
+  {
+    "id": "MQF_2025_076",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Two or three pallet train weight for cargo secured with nets and stacked to 96 inches shall not exceed pounds.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "21,000"
+      },
+      {
+        "key": "B",
+        "text": "23,000"
+      },
+      {
+        "key": "C",
+        "text": "26,000"
+      },
+      {
+        "key": "D",
+        "text": "30,000"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4C-19]"
+  },
+  {
+    "id": "MQF_2025_077",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Two or three pallet train weight for cargo secured with nets and stacked above 96 inches (not to exceed 100 inches) shall not exceed pounds.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "20,710"
+      },
+      {
+        "key": "B",
+        "text": "21,000"
+      },
+      {
+        "key": "C",
+        "text": "26,000"
+      },
+      {
+        "key": "D",
+        "text": "27,000"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4C-19]"
+  },
+  {
+    "id": "MQF_2025_078",
+    "type": "mc",
+    "category": "General",
+    "prompt": "All vehicle winching must be closely monitored by a crew of at least personnel.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "2"
+      },
+      {
+        "key": "B",
+        "text": "3"
+      },
+      {
+        "key": "C",
+        "text": "4"
+      },
+      {
+        "key": "D",
+        "text": "5"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4E-21]"
+  },
+  {
+    "id": "MQF_2025_079",
+    "type": "mc",
+    "category": "General",
+    "prompt": "When low profile cargo does not permit the use of side nets, the top net may be used by for all restraint provided the cargo weight does not exceed pounds and cargo height does not exceed inches from the pallet surface.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "4,000; 25"
+      },
+      {
+        "key": "B",
+        "text": "4,000; 45"
+      },
+      {
+        "key": "C",
+        "text": "2,500; 25"
+      },
+      {
+        "key": "D",
+        "text": "2,500; 45"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4C-24]"
+  },
+  {
+    "id": "MQF_2025_080",
+    "type": "mc",
+    "category": "General",
+    "prompt": "When plywood barriers and chain bridles are installed for forward restraint on palletized cargo, pallets that exceed inches in height will have a minimum of bridle(s) installed and the minimum thickness for the barrier will be inches.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "20; 1; 1/2"
+      },
+      {
+        "key": "B",
+        "text": "30; 2; 3/4"
+      },
+      {
+        "key": "C",
+        "text": "35; 3; 3/4"
+      },
+      {
+        "key": "D",
+        "text": "40; 3; 1/2"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4C-32]"
+  },
+  {
+    "id": "MQF_2025_081",
+    "type": "mc",
+    "category": "General",
+    "prompt": "If stowage pins are not engaged on side of each toe stowed on the cargo door, that toe may come loose during flight.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "upper; both left and right"
+      },
+      {
+        "key": "B",
+        "text": "upper; either left or right"
+      },
+      {
+        "key": "C",
+        "text": "lower; both left and right"
+      },
+      {
+        "key": "D",
+        "text": "lower; either left or right"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 3-27 (W)]"
+  },
+  {
+    "id": "MQF_2025_082",
+    "type": "mc",
+    "category": "General",
+    "prompt": "If not carefully monitored, MHE may contact the aircraft while positioning pallets/platforms for loading into the logistic rail system.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "door"
+      },
+      {
+        "key": "B",
+        "text": "strakes"
+      },
+      {
+        "key": "C",
+        "text": "center wing box"
+      },
+      {
+        "key": "D",
+        "text": "lower rudder and tail cone"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4C-39 (C)"
+  },
+  {
+    "id": "MQF_2025_083",
+    "type": "mc",
+    "category": "General",
+    "prompt": "To maintain continuous cable tension while winching, it may be necessary to physically the vehicle/item aft when traversing the main floor/ramp hinge while the loadmaster gradually unwinds the cable.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "restrain"
+      },
+      {
+        "key": "B",
+        "text": "push"
+      },
+      {
+        "key": "C",
+        "text": "stop"
+      },
+      {
+        "key": "D",
+        "text": "pull"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4E-32 (N)]"
+  },
+  {
+    "id": "MQF_2025_084",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Empty 463L pallets may be stacked for airlift up to a maximum of pallets, excluding the base support pallet.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "5"
+      },
+      {
+        "key": "B",
+        "text": "10"
+      },
+      {
+        "key": "C",
+        "text": "15"
+      },
+      {
+        "key": "D",
+        "text": "20"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4C-36]"
+  },
+  {
+    "id": "MQF_2025_085",
+    "type": "mc",
+    "category": "General",
+    "prompt": "During palletized cargo loading (non-winching), the minimum distance between the aircraft ramp/toes and K-loader is inches.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "2"
+      },
+      {
+        "key": "B",
+        "text": "4"
+      },
+      {
+        "key": "C",
+        "text": "6"
+      },
+      {
+        "key": "D",
+        "text": "8"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4C-50 (C)]"
+  },
+  {
+    "id": "MQF_2025_086",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Damage may occur if cargo tiedown that spans from the main floor to the ramp is not or sufficiently slackened before lowering the ramp.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "connected"
+      },
+      {
+        "key": "B",
+        "text": "tightened"
+      },
+      {
+        "key": "C",
+        "text": "removed"
+      },
+      {
+        "key": "D",
+        "text": "loosened"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4B-50 (C)]"
+  },
+  {
+    "id": "MQF_2025_087",
+    "type": "mc",
+    "category": "General",
+    "prompt": "The minimum thickness of rolling shoring shall be .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "1/2 inches"
+      },
+      {
+        "key": "B",
+        "text": "3/4 inches"
+      },
+      {
+        "key": "C",
+        "text": "1 inch"
+      },
+      {
+        "key": "D",
+        "text": "1-1/2 inches"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4B-69]"
+  },
+  {
+    "id": "MQF_2025_088",
+    "type": "mc",
+    "category": "General",
+    "prompt": "With the ramp toes in the high position, the required overlap between the ramp toe contact pads and the floor of the loader is inches.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "4"
+      },
+      {
+        "key": "B",
+        "text": "6"
+      },
+      {
+        "key": "C",
+        "text": "8"
+      },
+      {
+        "key": "D",
+        "text": "11"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Table 4B-1 (C)]"
+  },
+  {
+    "id": "MQF_2025_089",
+    "type": "mc",
+    "category": "General",
+    "prompt": "In the high position the ramp toes may be at an angle which causes the aft end of the toe to be above coplanar position with the ramp floor.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Table 4B-1 (C)]"
+  },
+  {
+    "id": "MQF_2025_090",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Each tiedown ring can accommodate up to CGU-1/B tiedown straps for any directional pull calculations.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "three"
+      },
+      {
+        "key": "B",
+        "text": "four"
+      },
+      {
+        "key": "C",
+        "text": "five"
+      },
+      {
+        "key": "D",
+        "text": "six"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4B-47]"
+  },
+  {
+    "id": "MQF_2025_091",
+    "type": "mc",
+    "category": "General",
+    "prompt": "When attaching multiple devices to one tiedown ring, the ring .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "can be used for restraint in only one direction"
+      },
+      {
+        "key": "B",
+        "text": "can be used for restraint in only two directions"
+      },
+      {
+        "key": "C",
+        "text": "cannot be used for both forward and aft restraint"
+      },
+      {
+        "key": "D",
+        "text": "cannot be used for both vertical and lateral restraint"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Para. 4B-46]"
+  },
+  {
+    "id": "MQF_2025_092",
+    "type": "mc",
+    "category": "General",
+    "prompt": "When using CGU-1/B tiedown devices, ensure that a minimum of turns of strap is wound around the ratchet spool to prevent slippage of strap.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "1/2"
+      },
+      {
+        "key": "B",
+        "text": "1"
+      },
+      {
+        "key": "C",
+        "text": "1-1/2"
+      },
+      {
+        "key": "D",
+        "text": "2"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Fig. 2-49 (N)]"
+  },
+  {
+    "id": "MQF_2025_093",
+    "type": "mc",
+    "category": "General",
+    "prompt": "When the Engines are at IDLE, maintain a foot radius distance.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "9"
+      },
+      {
+        "key": "B",
+        "text": "12"
+      },
+      {
+        "key": "C",
+        "text": "13"
+      },
+      {
+        "key": "D",
+        "text": "10"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "1C-17A-9 [Fig 1-2]"
+  },
+  {
+    "id": "MQF_2025_094",
+    "type": "mc",
+    "category": "General",
+    "prompt": "When considering an ATTLA certification, minor deviations to dimensions, weights, etc., are not permitted provided the item does not exceed the limitations/procedures listed in 1C-17A-9.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-9 [Pg. iv]"
+  },
+  {
+    "id": "MQF_2025_095",
+    "type": "mc",
+    "category": "General",
+    "prompt": "To ensure good CRM when there is a multiple loadmaster requirement, the loadmaster assumes overall responsibility for completion of all checklists.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "senior"
+      },
+      {
+        "key": "B",
+        "text": "primary"
+      },
+      {
+        "key": "C",
+        "text": "instructor"
+      },
+      {
+        "key": "D",
+        "text": "evaluator"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "AFMAN11-2C-17 V3 [Para. 3.3.2]"
+  },
+  {
+    "id": "MQF_2025_096",
+    "type": "mc",
+    "category": "General",
+    "prompt": "or will be worn at all times while crewmembers are operating at their primary duty station.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Headsets; helmets"
+      },
+      {
+        "key": "B",
+        "text": "Flight gloves; work gloves"
+      },
+      {
+        "key": "C",
+        "text": "Contact lenses; corrective lenses"
+      },
+      {
+        "key": "D",
+        "text": "All the above"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "AFMAN11-2C-17 V3 [Para. 5.1.1]"
+  },
+  {
+    "id": "MQF_2025_097",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Misson with or more passengers should be planned with a pallet position available for baggage.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "20"
+      },
+      {
+        "key": "B",
+        "text": "30"
+      },
+      {
+        "key": "C",
+        "text": "54"
+      },
+      {
+        "key": "D",
+        "text": "21"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "AFMAN11-2C-17 V3 [Para. 11.3.4]"
+  },
+  {
+    "id": "MQF_2025_098",
+    "type": "mc",
+    "category": "General",
+    "prompt": "During ERO, do not on-load or offload through the crew entrance door and the cargo ramp/door at the same time unless both doors are directly supervised by a .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "FCC"
+      },
+      {
+        "key": "B",
+        "text": "MEP"
+      },
+      {
+        "key": "C",
+        "text": "C-17A qualified pilot/loadmaster"
+      },
+      {
+        "key": "D",
+        "text": "Crewmember"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "AFMAN11-2C-17 V3 [Para. 15.3.2]"
+  },
+  {
+    "id": "MQF_2025_099",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Emergency airlift of personnel: For planning purposes, an estimate of personnel can be seated on the main floor, and on the ramp. The actual number of personnel may exceed this depending their size, amount of baggage/equipment carried, and the number of tiedown straps onboard the aircraft.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "250; 50"
+      },
+      {
+        "key": "B",
+        "text": "300; 50"
+      },
+      {
+        "key": "C",
+        "text": "350; 50"
+      },
+      {
+        "key": "D",
+        "text": "400; 50"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "AFMAN11-2C-17 V3 [Para. 15.4]"
+  },
+  {
+    "id": "MQF_2025_100",
+    "type": "mc",
+    "category": "General",
+    "prompt": "The maximum altitude for emergency airlift of personnel will not exceed flight level .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "100"
+      },
+      {
+        "key": "B",
+        "text": "150"
+      },
+      {
+        "key": "C",
+        "text": "200"
+      },
+      {
+        "key": "D",
+        "text": "250"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "AFMAN11-2C-17 V3 [Para. 15.4.2]"
+  },
+  {
+    "id": "MQF_2025_101",
+    "type": "mc",
+    "category": "General",
+    "prompt": "The following smoke detectors are required for home station/main operating base departures: One AV, all 4 IRU, plus two others in the cargo compartment.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Sensor 1, 2, 10, 11"
+      },
+      {
+        "key": "B",
+        "text": "Sensor 5, 6, 7, 8"
+      },
+      {
+        "key": "C",
+        "text": "Sensor 1, 2, 13, 14"
+      },
+      {
+        "key": "D",
+        "text": "Sensor 9, 10, 13, 14"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "AFMAN 11-2C-17 V3 [Table 4.1]"
+  },
+  {
+    "id": "MQF_2025_102",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Maintenance personnel or a crew member should be used to act as “ground” during engine starts. The engines may be started without someone outside the aircraft. If this option is used, ensure all crewmembers are thoroughly briefed.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "AFMAN11-2C-17 V3 [Para. 5.20]"
+  },
+  {
+    "id": "MQF_2025_103",
+    "type": "mc",
+    "category": "General",
+    "prompt": "is the waiver authority for locally tasked missions (regarding the Minimum Equipment List).",
+    "choices": [
+      {
+        "key": "A",
+        "text": "The WG/CC or equivalent, delegable no lower than OG/CC"
+      },
+      {
+        "key": "B",
+        "text": "The OG/CC or equivalent, delegable no lower than Sq CC"
+      },
+      {
+        "key": "C",
+        "text": "HQ AMC/A3V"
+      },
+      {
+        "key": "D",
+        "text": "DIRMOBFOR"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "AFMAN11-2C-17 V3 [Para. 4.3.1]"
+  },
+  {
+    "id": "MQF_2025_104",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Do not taxi an aircraft within of obstructions without wing walkers monitoring the clearance between aircraft and obstructions. With wing walkers, avoid taxi obstructions by at least .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "25 yards; 10 yards"
+      },
+      {
+        "key": "B",
+        "text": "10 yards; 25 yards"
+      },
+      {
+        "key": "C",
+        "text": "25 feet; 10 feet"
+      },
+      {
+        "key": "D",
+        "text": "10 feet; 25 feet"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "AFMAN11-2C-17 V3 [Para. 5.12.1]"
+  },
+  {
+    "id": "MQF_2025_105",
+    "type": "mc",
+    "category": "General",
+    "prompt": "Personnel performing duties requiring them to be mobile in the cargo compartment during airdrop, low level operations, or threat environments will wear .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "flight gloves"
+      },
+      {
+        "key": "B",
+        "text": "protective headgear"
+      },
+      {
+        "key": "C",
+        "text": "restraint harness"
+      },
+      {
+        "key": "D",
+        "text": "smoke goggles"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "AFMAN11-2C-17 V3 [Para. 15.1.2]"
+  },
+  {
+    "id": "MQF_2025_106",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "The loadmaster will not disconnect the restraint harness or lengthen it to the point that would allow the crewmember to fall outside the aircraft except for a towed trooper, or an emergency that threatens the survivability of the aircraft.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "true"
+      },
+      {
+        "key": "B",
+        "text": "false"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "AFMAN 11-2C-17V3 [Para. 17.6.2.1]"
+  },
+  {
+    "id": "MQF_2025_107",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "In an emergency parachutist bailout situation, the static line drop altitude is ft AGL and the free fall altitude is ft AGL.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "2,000/550"
+      },
+      {
+        "key": "B",
+        "text": "550/2,000"
+      },
+      {
+        "key": "C",
+        "text": "600/1800"
+      },
+      {
+        "key": "D",
+        "text": "1,800/600"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "1C-17A-1-4[Para 2-124 S5]"
+  },
+  {
+    "id": "MQF_2025_108",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "When utilizing the long anchor cable for personnel airdrop, a maximum of static lines can be attached to the long anchor cable.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "20"
+      },
+      {
+        "key": "B",
+        "text": "51"
+      },
+      {
+        "key": "C",
+        "text": "30"
+      },
+      {
+        "key": "D",
+        "text": "54"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "1C-17A-1-4 [Para. 2-158 S2 (W)]"
+  },
+  {
+    "id": "MQF_2025_109",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "Airland cargo/baggage loaded on the cargo floor must not obstruct the path of the paratrooper exit, interfere with the installed anchor cables, or exceed a maximum width of inches with both doors or inches if only one door is used.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "144/178"
+      },
+      {
+        "key": "B",
+        "text": "138/146"
+      },
+      {
+        "key": "C",
+        "text": "116/156"
+      },
+      {
+        "key": "D",
+        "text": "130/140"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "AFMAN 11-2C-17V3 [Table 17.1]"
+  },
+  {
+    "id": "MQF_2025_110",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "If ADS Rail Locks are before lock force pounds are set, FALSE/inaccurate force pounds settings may result.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "locked"
+      },
+      {
+        "key": "B",
+        "text": "unlocked"
+      },
+      {
+        "key": "C",
+        "text": "tested"
+      },
+      {
+        "key": "D",
+        "text": "armed"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-1-4 [Para. 2-7 (W)]"
+  },
+  {
+    "id": "MQF_2025_111",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "The Depressurization Checklist will be run prior to the .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Pre-Slowdown Checklist"
+      },
+      {
+        "key": "B",
+        "text": "Slowdown Checklist"
+      },
+      {
+        "key": "C",
+        "text": "Release Point"
+      },
+      {
+        "key": "D",
+        "text": "1 minute warning"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-1-4 [Para. 2-274]"
+  },
+  {
+    "id": "MQF_2025_112",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "Accomplish the Cabin Altitude Checklist before .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "the Pre-Slowdown Checklist"
+      },
+      {
+        "key": "B",
+        "text": "the Slowdown Checklist"
+      },
+      {
+        "key": "C",
+        "text": "exceeding a cabin altitude of 10,000 feet MSL"
+      },
+      {
+        "key": "D",
+        "text": "exceeding a cabin altitude of 12,5000 feet MSL"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-1-4 [Para. 2-272]"
+  },
+  {
+    "id": "MQF_2025_113",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "If the drogue chute does not deploy with the manual backup switch, the loadmaster will state and complete the Heavy Equipment Malfunction Checklist.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "“NO DROP”"
+      },
+      {
+        "key": "B",
+        "text": "“MALFUNCTION”"
+      },
+      {
+        "key": "C",
+        "text": "“DROGUE JETTISONED”"
+      },
+      {
+        "key": "D",
+        "text": "“JETTISON MALFUNCTION”"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-1-4 [Para. 4-40]"
+  },
+  {
+    "id": "MQF_2025_114",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "If the Tow Release Mechanism fails to release the extraction link with the manual backup switch, the loadmaster will state “MALFUNCTION” and .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "complete Heavy Equipment Airdrop Malfunction Checklist"
+      },
+      {
+        "key": "B",
+        "text": "activate the EMERG DROGUE Jettison switch"
+      },
+      {
+        "key": "C",
+        "text": "activate the R LOCKS GANG RELEASE switch"
+      },
+      {
+        "key": "D",
+        "text": "place the DROGUE JETTISON switch to the OFF position"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-1-4 [Para. 4-42]"
+  },
+  {
+    "id": "MQF_2025_115",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "If the extraction parachutes have exited the aircraft and the platform fails to move, ensure the rotary switch is set to the lowest lock number setting that is engaged in the platform that failed to move and activate the .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "CDS GATE SELECT; ADS BACKUP CDS switch"
+      },
+      {
+        "key": "B",
+        "text": "DROP GP SELECT; R LOCKS GANG RELEASE switch"
+      },
+      {
+        "key": "C",
+        "text": "ADS R LOCK SELECT; R LOCKS GANG RELEASE switch"
+      },
+      {
+        "key": "D",
+        "text": "ADS L LOCK SELECT; L LOCKS GANG RELEASE switch"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-1-4 [Para. 4-44]"
+  },
+  {
+    "id": "MQF_2025_116",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "After a Heavy Equipment Platform is loaded, the load equalization valves are opened between the platform’s ADS right locks used in order to .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "ensure the load equalization reservoir reading is accurate."
+      },
+      {
+        "key": "B",
+        "text": "permit arming of the ADS right locks."
+      },
+      {
+        "key": "C",
+        "text": "balance load extraction force between locks."
+      },
+      {
+        "key": "D",
+        "text": "satisfy in-flight ADS logic requirements."
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-1-4 [Para. 1-88]"
+  },
+  {
+    "id": "MQF_2025_117",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "The BSA is required for CDS loads exceeding lbs per side. When the first bundle against the BSA exceeds inches in height, three horizontal beams are required.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "9,400; 60"
+      },
+      {
+        "key": "B",
+        "text": "14,800; 60"
+      },
+      {
+        "key": "C",
+        "text": "18,800; 101"
+      },
+      {
+        "key": "D",
+        "text": "15,533; 101"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-1-4 [Table 1-3]"
+  },
+  {
+    "id": "MQF_2025_118",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "When additional personnel airdrops are conducted after the initial airdrop sortie, loadmasters shall reinspect the troop doors before takeoff IAW the Personnel Airdrop Preparation and Loading Checklist. For subsequent personnel airdrops, a tactile-only check is required between drops.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-1-4 [Para. 2-158 S2 (W)]"
+  },
+  {
+    "id": "MQF_2025_119",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "During a towed parachutist condition, the PF will as the parachutist may start swinging violently, which will increase the possibility of injury.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "avoid turning the aircraft in the direction of the towed parachutist"
+      },
+      {
+        "key": "B",
+        "text": "initiate a steep climb"
+      },
+      {
+        "key": "C",
+        "text": "turn the aircraft in the direction of the towed parachutist"
+      },
+      {
+        "key": "D",
+        "text": "increase airspeed"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-1-4 [Para. 4-9]"
+  },
+  {
+    "id": "MQF_2025_120",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "During a towed parachutist condition, the first priority is to retrieve the parachutist, regardless of whether the parachutist is conscious or unconscious. If the decision to cut the parachutist free, the will cut the static line on the aircraft commander’s command.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "jumpmaster"
+      },
+      {
+        "key": "B",
+        "text": "safety"
+      },
+      {
+        "key": "C",
+        "text": "mission commander"
+      },
+      {
+        "key": "D",
+        "text": "loadmaster"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-1-4 [Para. 4-12]"
+  },
+  {
+    "id": "MQF_2025_121",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "During Fouled Parachutist Retrieval do not attempt to pull the through the spool assembly.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "parachutist"
+      },
+      {
+        "key": "B",
+        "text": "D-bags"
+      },
+      {
+        "key": "C",
+        "text": "yoke assembly"
+      },
+      {
+        "key": "D",
+        "text": "jumpmaster"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-1-4 [Para. 4-19 (W)]"
+  },
+  {
+    "id": "MQF_2025_122",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "During the CDS Airdrop Slowdown Checklist, visually inspect each Type XXVI nylon release gate to ensure it is positioned on the GRM release roller and .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "that all the excess webbing folded and taped"
+      },
+      {
+        "key": "B",
+        "text": "the looped end overlaps the release arm hinge joint"
+      },
+      {
+        "key": "C",
+        "text": "has not become tangled or caught on the release arm hinge joint"
+      },
+      {
+        "key": "D",
+        "text": "the Van Zelm ratchets are tightened to the maximum extent possible"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-1-4 [Para. 2-187 S2 (N)]"
+  },
+  {
+    "id": "MQF_2025_123",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "The cam followers of the TRM shall be over the extraction link shoulder and be . Failure to comply may result in the inability to arm the TRM.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "perpendicular to the link."
+      },
+      {
+        "key": "B",
+        "text": "within 1/4” of the body of the link."
+      },
+      {
+        "key": "C",
+        "text": "in a position that permits ADS arming."
+      },
+      {
+        "key": "D",
+        "text": "against the body of the link."
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-1-4 [Para. 2-31 S9g (N)]"
+  },
+  {
+    "id": "MQF_2025_124",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "Loadmasters requiring mobility in the cargo compartment while using a restraint harness can be unattached as long as they remain forward of with the cargo door and ramp open or with the paratroop door(s) open.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "FS 1165; FS 1074"
+      },
+      {
+        "key": "B",
+        "text": "FS 1188; FS 1027"
+      },
+      {
+        "key": "C",
+        "text": "FS 1309; FS 1092"
+      },
+      {
+        "key": "D",
+        "text": "FS 1403; FS 1135"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "AFMAN11-2C-17 V3 [Para. 17.6.2.1]"
+  },
+  {
+    "id": "MQF_2025_125",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "For static line jumps, static lines are attached to anchor cables before troop door(s) are opened. Jumpers exiting on subsequent passes may stand and hook up with door(s) opened if they are forward of .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "FS 781"
+      },
+      {
+        "key": "B",
+        "text": "FS 1027"
+      },
+      {
+        "key": "C",
+        "text": "FS 1100"
+      },
+      {
+        "key": "D",
+        "text": "FS 1188"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "AFMAN11-2C-17 V3 [Para. 17.6.2]"
+  },
+  {
+    "id": "MQF_2025_126",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "When in-flight rigging is required, the loadmaster will use the applicable as a checklist to ensure all items are completed.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "rigging manual"
+      },
+      {
+        "key": "B",
+        "text": "section of the loading manual"
+      },
+      {
+        "key": "C",
+        "text": "section of the airdrop manual"
+      },
+      {
+        "key": "D",
+        "text": "Joint Airdrop Inspection Form"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-1-4 [Para. 2-142]"
+  },
+  {
+    "id": "MQF_2025_127",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "A \"No Drop\" will be called if Slowdown or Quick Drop Checklist items are not completed prior to the initiation of the Checklist.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Cabin Altitude"
+      },
+      {
+        "key": "B",
+        "text": "Malfunction"
+      },
+      {
+        "key": "C",
+        "text": "Release Point"
+      },
+      {
+        "key": "D",
+        "text": "Post Drop"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-1-4 [Para. 2-153 (N)]"
+  },
+  {
+    "id": "MQF_2025_128",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "Loadmasters may attempt to regain ADS logic up to initiation of the Checklist.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Slowdown"
+      },
+      {
+        "key": "B",
+        "text": "Release Point"
+      },
+      {
+        "key": "C",
+        "text": "Pre-Slowdown"
+      },
+      {
+        "key": "D",
+        "text": "Malfunction"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "",
+    "reference": "TO 1C-17A-1-4 [Para. 2-154]"
+  },
+  {
+    "id": "MQF_2025_129",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "When preflighting the retriever winch cable for personnel airdrops, up to broken wires are allowed per inch. The maximum number of broken wires shall not occur in any two consecutive inches of cable.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "0"
+      },
+      {
+        "key": "B",
+        "text": "2"
+      },
+      {
+        "key": "C",
+        "text": "3"
+      },
+      {
+        "key": "D",
+        "text": "6"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "TO 1C-17A-1-4 [Para. 2-4 S6]"
+  },
+  {
+    "id": "MQF_2025_130",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "In the event that a lock is engaged in a platform and the second lock on the same panel is engaged between, adjacent or aft of the platform, use the INC/DECR toggle switch and decrease the setting .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "to below 500 for a minimum of 5 seconds"
+      },
+      {
+        "key": "B",
+        "text": "to one increment below the required restraint"
+      },
+      {
+        "key": "C",
+        "text": "until the lock beeps"
+      },
+      {
+        "key": "D",
+        "text": "to 00 for a minimum of 2 seconds"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "TO 1C-17A-1-4 [Para. 2-7 S39a]"
+  },
+  {
+    "id": "MQF_2025_131",
+    "type": "mc",
+    "category": "Airdrop",
+    "prompt": "The required number of left-hand locks engaged in each platform must be equal to or greater than the number of right-hand locks engaged in that platform.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "TO 1C-17A-1-4 [Para. 2-7 S39 (N)]"
+  },
+  {
+    "id": "MQF_2025_132",
+    "type": "mc",
+    "category": "Instructor",
+    "prompt": "At Sq/CC’s discretion, a Non-Mission Ready loadmaster and an instructor loadmaster may fulfill an augmented crew complement.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "AFMAN11-2C-17 V3 [Para. 3.2.1]"
+  },
+  {
+    "id": "MQF_2025_133",
+    "type": "mc",
+    "category": "Instructor",
+    "prompt": "Instructors are responsible to provide students with .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "a paper copy of all TMS write-ups"
+      },
+      {
+        "key": "B",
+        "text": "a detailed lesson plan for every training session"
+      },
+      {
+        "key": "C",
+        "text": "references for all areas that have been instructed"
+      },
+      {
+        "key": "D",
+        "text": "thorough preflight briefings, post-flight briefings and critiques"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "AFMAN11-2C-17 V1 [Para. 5.5.5.2]"
+  },
+  {
+    "id": "MQF_2025_134",
+    "type": "mc",
+    "category": "Instructor",
+    "prompt": "Should the judgement or proficiency of the trainee raise a question in the instructor’s mind as to the trainee’s ability to safely execute the duties of the aircrew position at any time during the flight, the instructor will immediately .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "document the performance"
+      },
+      {
+        "key": "B",
+        "text": "notify the pilot"
+      },
+      {
+        "key": "C",
+        "text": "takeover the duties"
+      },
+      {
+        "key": "D",
+        "text": "terminate the mission"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "AFMAN11-2C-17 V1 [Para. 5.5.5.6]"
+  },
+  {
+    "id": "MQF_2025_135",
+    "type": "mc",
+    "category": "Instructor",
+    "prompt": "An aircrew member is unqualified upon expiration of .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "qualification evaluation"
+      },
+      {
+        "key": "B",
+        "text": "loss of currency exceeding 6 months"
+      },
+      {
+        "key": "C",
+        "text": "completion of qualification evaluation in a different MDS"
+      },
+      {
+        "key": "D",
+        "text": "all of the above"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "AFMAN11-2C-17 V1 [Para. 2.9]"
+  },
+  {
+    "id": "MQF_2025_136",
+    "type": "mc",
+    "category": "Instructor",
+    "prompt": "Individuals who complete the applicable instructor course are qualified instructors .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "in only their basic qualification for the first 90 days"
+      },
+      {
+        "key": "B",
+        "text": "when certified by the OG/CC"
+      },
+      {
+        "key": "C",
+        "text": "for all mission qualification events in which they maintain currency"
+      },
+      {
+        "key": "D",
+        "text": "after all TMS entries are complete"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "",
+    "reference": "AFMAN11-2C-17 V1 [Para. 5.5.2]"
+  },
+  {
+    "id": "MQF_2025_137",
+    "type": "mc",
+    "category": "Instructor",
+    "prompt": "Instructors will review each student’s training record .",
+    "choices": [
+      {
+        "key": "A",
+        "text": "prior to entering post mission crew rest"
+      },
+      {
+        "key": "B",
+        "text": "after each flight"
+      },
+      {
+        "key": "C",
+        "text": "after each ATS contractor training session"
+      },
+      {
+        "key": "D",
+        "text": "prior to performing each training flight or session"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "AFMAN11-2C-17 V1 [Para. 5.5.5.3]"
+  },
+  {
+    "id": "MQF_2025_138",
+    "type": "mc",
+    "category": "Instructor",
+    "prompt": "When performing crewmember duties, the following personnel will be under direct supervision of an instructor of like specialty:",
+    "choices": [
+      {
+        "key": "A",
+        "text": "non-current crewmembers"
+      },
+      {
+        "key": "B",
+        "text": "crewmembers in initial, upgrade or re-qualification flying training unless syllabus states direct supervision is not required"
+      },
+      {
+        "key": "C",
+        "text": "any other personnel designated by the Wg/CC, OG/CC, or Sq/CC"
+      },
+      {
+        "key": "D",
+        "text": "all the above"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "",
+    "reference": "AFMAN11-2C-17 V1 [Para. 1.10.2]"
+  },
+  {
+    "id": "MQF_2025_139",
+    "type": "mc",
+    "category": "Instructor",
+    "prompt": "Instructors shall be current and qualified in any event they instruct.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "AFMAN11-2C-17 V1 [Para. 1.10.1]"
+  },
+  {
+    "id": "MQF_2025_140",
+    "type": "mc",
+    "category": "Instructor",
+    "prompt": "A non-current or unqualified loadmaster may serve as a primary aircrew member on any mission when supervised by a qualified instructor or flight examiner (direct supervision for critical phases of flight).",
+    "choices": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "",
+    "reference": "11-2C-17 V3 [Para. 3.3.1]"
   }
 ]
