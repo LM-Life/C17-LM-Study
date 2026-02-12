@@ -1,0 +1,54 @@
+[
+  {
+    "id": "TO_1C17A-9_WB_001",
+    "type": "mc",
+    "prompt": "Which document is the primary source for C-17 load planning and restraint criteria?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "TO 1C-17A-1"
+      },
+      {
+        "key": "B",
+        "text": "TO 1C-17A-9"
+      },
+      {
+        "key": "C",
+        "text": "AFMAN 11-2C-17, Vol 3"
+      },
+      {
+        "key": "D",
+        "text": "AMC Supplement to AFI 11-202"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "TO 1C-17A-9 is the primary technical order for load planning/restraint guidance.",
+    "reference": "TO 1C-17A-9"
+  },
+  {
+    "id": "LM_GENERAL_002",
+    "type": "mc",
+    "prompt": "In a standard multiple-choice item, what should the app use to determine the correct answer?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "The longest choice text"
+      },
+      {
+        "key": "B",
+        "text": "Randomly sampled answers from other questions"
+      },
+      {
+        "key": "C",
+        "text": "A dedicated correctKey tied to the question"
+      },
+      {
+        "key": "D",
+        "text": "Alphabetical order"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Using a dedicated correctKey prevents the app from pulling random distractors from other questions.",
+    "reference": "App design: questions_mc.json"
+  }
+]
