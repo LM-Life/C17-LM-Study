@@ -59,6 +59,17 @@ const cacheVersionEl = el("cacheVersion");
 const updateBanner = el("updateBanner");
 const updateReloadBtn = el("updateReloadBtn");
 
+
+
+const filtersToggleBtn = el("filtersToggleBtn");
+const controlsBody = el("controlsBody");
+
+const bottomBar = el("bottomBar");
+const bbPrevBtn = el("bbPrevBtn");
+const bbNextBtn = el("bbNextBtn");
+const bbPrimaryBtn = el("bbPrimaryBtn");
+const refDetails = el("refDetails");
+
 const mcContainer = el("mcContainer");
 const mcChoices = el("mcChoices");
 const mcSubmitBtn = el("mcSubmitBtn");
@@ -78,7 +89,8 @@ let showReference = true;
 let selectedMode = "flashcard"; // flashcard | mc
 let selectedSubCategory = "all";
 
-
+// Mobile UI state
+let controlsCollapsed = false;
 // MC per-question UI state
 let selectedMcKey = null;
 let hasSubmittedMc = false;
@@ -205,6 +217,22 @@ function safeText(s) {
 }
 
 
+
+
+
+function isMobileUI() {
+  return window.matchMedia && window.matchMedia("(max-width: 768px)").matches;
+}
+
+function setControlsCollapsed(collapsed) {
+  controlsCollapsed = !!collapsed;
+  if (controlsBody) controlsBody.classList.toggle("collapsed", controlsCollapsed);
+  try { localStorage.setItem("c17_controls_collapsed", controlsCollapsed ? "1" : "0"); } catch (_) {}
+}
+
+function syncBottomBarPresence() {
+  document.body.classList.toggle("has-bottom-bar", isMobileUI());
+}
 /* =========================
    MULTIPLE CHOICE (separate file)
    - questions_mc.json contains MC items with choices + correctKey
@@ -560,7 +588,9 @@ function renderCurrentQuestion() {
 
         if (mcSubmitBtn) mcSubmitBtn.disabled = false;
         requestAnimationFrame(syncCardHeight);
-      });
+      
+        if (bbPrimaryBtn && q.type === "mc" && !hasSubmittedMc) bbPrimaryBtn.disabled = false;
+});
       mcChoices.appendChild(btn);
     });
 
@@ -592,6 +622,21 @@ function renderCurrentQuestion() {
   if (card) card.classList.remove("flipped");
 
   // sync height after DOM paints
+  
+  // Bottom bar behavior (mobile)
+  if (bbPrimaryBtn) {
+    if (q.type === "mc") {
+      bbPrimaryBtn.textContent = hasSubmittedMc ? "Next" : "Submit";
+      bbPrimaryBtn.disabled = (!hasSubmittedMc && !selectedMcKey);
+    } else {
+      bbPrimaryBtn.textContent = "Flip";
+      bbPrimaryBtn.disabled = false;
+    }
+  }
+  if (refDetails) {
+    if (isMobileUI()) refDetails.open = false;
+  }
+
   requestAnimationFrame(syncCardHeight);
 }
 
@@ -604,7 +649,9 @@ function submitMultipleChoice(q) {
   hasSubmittedMc = true;
   if (mcSubmitBtn) mcSubmitBtn.disabled = true;
 
-  const selected = safeText(selectedMcKey).trim().toUpperCase();
+  
+  if (bbPrimaryBtn) { bbPrimaryBtn.textContent = "Next"; bbPrimaryBtn.disabled = false; }
+const selected = safeText(selectedMcKey).trim().toUpperCase();
   const correctKey = safeText(q.correctKey).trim().toUpperCase();
   const isCorrect = (selected === correctKey);
 
@@ -788,7 +835,8 @@ function setupEvents() {
       currentIndex = 0;
       updateFilteredQuestions();
       renderCurrentQuestion();
-    });
+      if (isMobileUI()) setControlsCollapsed(true);
+});
   }
 
   if (showRefToggle) {
@@ -911,8 +959,50 @@ function setupEvents() {
     });
   }
 
+
+  // Mobile: Filters collapse toggle
+  if (filtersToggleBtn) {
+    filtersToggleBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      setControlsCollapsed(!controlsCollapsed);
+      showToast(controlsCollapsed ? "Filters hidden" : "Filters shown", 1200);
+    });
+  }
+
+  // Mobile: Bottom bar navigation mirrors main buttons
+  if (bbPrevBtn) {
+    bbPrevBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      prevBtn?.click();
+    });
+  }
+  if (bbNextBtn) {
+    bbNextBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      nextBtn?.click();
+    });
+  }
+  if (bbPrimaryBtn) {
+    bbPrimaryBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const q = currentQuestion();
+      if (!q) return;
+
+      if (q.type === "mc") {
+        if (hasSubmittedMc) {
+          nextBtn?.click();
+        } else {
+          submitMultipleChoice(q);
+        }
+      } else {
+        if (card) card.classList.toggle("flipped");
+        requestAnimationFrame(syncCardHeight);
+      }
+    });
+  }
+
   // Resize should re-sync
-  window.addEventListener("resize", () => requestAnimationFrame(syncCardHeight));
+  window.addEventListener("resize", () => { syncBottomBarPresence(); requestAnimationFrame(syncCardHeight); });
 }
 
 /* =========================
@@ -924,8 +1014,8 @@ async function init() {
   setupCacheVersionListener();
   setupUpdateFlow();
   setupInstallPrompt();
-  setupPullToRefresh(); 
-
+  setupPullToRefresh();
+  syncBottomBarPresence();
   // Load flags from localStorage (export still works offline)
   try {
     const raw = localStorage.getItem("c17_flags");
@@ -933,6 +1023,11 @@ async function init() {
   } catch {
     flags = {};
   }
+
+
+  // Load mobile UI prefs
+  try { controlsCollapsed = (localStorage.getItem("c17_controls_collapsed") === "1"); } catch (_) { controlsCollapsed = false; }
+  if (isMobileUI()) setControlsCollapsed(controlsCollapsed);
 
   // Load questions
   try {

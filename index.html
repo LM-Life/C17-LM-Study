@@ -32,7 +32,10 @@
 
       <main class="app-main">
         <section class="controls">
-          <div class="control-group">
+          
+          <button id="filtersToggleBtn" class="btn outline small filters-toggle" type="button">☰ Filters</button>
+          <div id="controlsBody" class="controls-body">
+<div class="control-group">
 <label for="modeSelect">Mode</label>
 <select id="modeSelect">
   <option value="flashcard">Flashcard</option>
@@ -68,6 +71,7 @@
 
             <button id="prevBtn" class="btn ghost" type="button">← Prev</button>
             <button id="nextBtn" class="btn primary" type="button">Next →</button>
+          </div>
           </div>
         </section>
 
@@ -120,7 +124,10 @@
               <div class="card-face card-answer">
                 <h3>Answer</h3>
                 <p id="answerText"></p>
-                <p id="referenceText" class="reference"></p>
+                <details id="refDetails" class="ref-details">
+                  <summary>Reference</summary>
+                  <p id="referenceText" class="reference"></p>
+                </details>
                 <button id="flipBackBtn" class="btn ghost small" type="button">
                   Back to Question
                 </button>
@@ -133,6 +140,12 @@
           </div>
         </section>
       </main>
+      <div id="bottomBar" class="bottom-bar">
+        <button id="bbPrevBtn" class="btn ghost" type="button">← Prev</button>
+        <button id="bbPrimaryBtn" class="btn primary" type="button">Flip</button>
+        <button id="bbNextBtn" class="btn ghost" type="button">Next →</button>
+      </div>
+
 
       <footer class="app-footer">
         <span>C-17 LM Study • Offline-capable PWA</span>

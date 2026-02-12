@@ -490,3 +490,84 @@ textarea{ resize:vertical; }
 .mc-key { display:inline-block; min-width: 28px; font-weight: 700; margin-right: 10px; }
 .mc-result { margin-bottom: 8px; }
 .mc-correct, .mc-explain { margin-top: 8px; }
+
+
+/* =========================
+   MOBILE UI TIGHTENING
+========================= */
+
+/* Filters toggle only shows on mobile */
+.filters-toggle{
+  display:none;
+  width:100%;
+  justify-content:center;
+  margin-bottom:12px;
+}
+
+.controls-body.collapsed{
+  display:none;
+}
+
+/* Reference collapsible */
+.ref-details{
+  margin-top:10px;
+  border:1px solid rgba(255,255,255,0.10);
+  border-radius:12px;
+  padding:8px 10px;
+  background: rgba(0,0,0,0.10);
+}
+.ref-details summary{
+  cursor:pointer;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  user-select:none;
+}
+.ref-details[open] summary{
+  color: var(--text-main);
+}
+
+/* Sticky bottom action bar (mobile) */
+.bottom-bar{
+  display:none;
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  z-index: 2500;
+  background: rgba(15,21,32,0.92);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+  gap: 10px;
+  align-items:center;
+}
+.bottom-bar .btn{
+  flex: 1 1 0;
+  justify-content:center;
+}
+
+/* Give page room for bottom bar */
+body.has-bottom-bar{
+  padding-bottom: 92px;
+}
+
+@media (max-width: 768px){
+  .filters-toggle{ display:flex; }
+  .bottom-bar{ display:flex; }
+
+  /* Hide the desktop nav buttons inside the controls column on mobile */
+  .controls .nav-row{ display:none; }
+
+  /* Tighten controls padding and spacing */
+  .controls{ padding:14px; }
+  .control-group{ margin-bottom:10px; }
+  select, textarea{ padding:7px; }
+
+  /* Tighten card a bit */
+  .card{ padding:16px; border-radius:16px; }
+  #questionText{ font-size:1.08rem; line-height:1.4; }
+
+  /* Choices tighter */
+  .mc-choice{ padding:9px 10px; }
+}
