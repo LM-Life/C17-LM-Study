@@ -1023,7 +1023,7 @@ if (refDetails) {
         if (card) card.classList.toggle("flipped");
         requestAnimationFrame(syncCardHeight);
       }
-    });
+    }
   }
 
   // Resize should re-sync
