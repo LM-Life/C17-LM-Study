@@ -233,6 +233,14 @@ function setControlsCollapsed(collapsed) {
 function syncBottomBarPresence() {
   document.body.classList.toggle("has-bottom-bar", isMobileUI());
 }
+
+
+function normalizeMcSection(category) {
+  const c = safeText(category).toLowerCase();
+  if (c.includes("airdrop")) return "Airdrop";
+  if (c.includes("instructor")) return "Instructor";
+  return "General";
+}
 /* =========================
    MULTIPLE CHOICE (separate file)
    - questions_mc.json contains MC items with choices + correctKey
@@ -465,6 +473,8 @@ function populateModeAndSections() {
 
   let sections = [];
   if (selectedMode === "mc") {
+    // Always present the three standard MQF sections, even if your category strings are like:
+    // "MQF Oct 2025 - General" / "... - Airdrop" / "... - Instructor"
     sections = ["General", "Airdrop", "Instructor"];
   } else {
     sections = Array.from(
@@ -515,7 +525,10 @@ function updateFilteredQuestions() {
 
   // Section filter
   if (selectedSubCategory && selectedSubCategory !== "all") {
-    list = list.filter(q => safeText(q.category).trim() === selectedSubCategory);
+    list = list.filter(q => {
+      if (q.type === "mc") return normalizeMcSection(q.category) === selectedSubCategory;
+      return safeText(q.category).trim() === selectedSubCategory;
+    });
   }
 
   filteredQuestions = shuffleEnabled ? shuffleArray(list) : list.slice();
