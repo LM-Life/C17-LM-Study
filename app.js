@@ -815,13 +815,14 @@ function setupEvents() {
 
   // Flip on card tap (except when interacting with controls)
   card.addEventListener("click", (e) => {
-    const tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : "";
-    if (["button", "select", "textarea", "input", "label", "a"].includes(tag)) return;
+    // Disable tap-to-flip for multiple choice (prevents reference/choice taps from flipping)
+    const q = currentQuestion();
+    if (q && q.type === "mc") return;
+
     card.classList.toggle("flipped");
     requestAnimationFrame(syncCardHeight);
   });
-
-  if (flipBackBtn) {
+if (flipBackBtn) {
     flipBackBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       card.classList.remove("flipped");
@@ -994,7 +995,13 @@ function setupEvents() {
         } else {
           submitMultipleChoice(q);
         }
-      } else {
+      }
+
+  // Prevent reference disclosure clicks from bubbling to the card
+  if (refDetails) {
+    refDetails.addEventListener(\"click\", (e) => e.stopPropagation());
+  }
+ else {
         if (card) card.classList.toggle("flipped");
         requestAnimationFrame(syncCardHeight);
       }

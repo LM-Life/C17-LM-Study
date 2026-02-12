@@ -570,4 +570,8 @@ body.has-bottom-bar{
 
   /* Choices tighter */
   .mc-choice{ padding:9px 10px; }
+
+  /* Hide in-card MC submit on mobile (use bottom bar instead) */
+  #mcSubmitBtn{ display:none !important; }
 }
+/* Hide in-card MC submit on mobile */
