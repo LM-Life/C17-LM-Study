@@ -1,5 +1,5 @@
 // Bump this when you want to force all clients to update
-const CACHE_VERSION = 'v12.22';  // <-- change this to a new value on each major update
+const CACHE_VERSION = 'v12.23';  // <-- change this to a new value on each major update
 const CACHE_NAME = `c17-study-cache-${CACHE_VERSION}`;
 
 const ASSETS = [
@@ -8,6 +8,7 @@ const ASSETS = [
   './style.css',
   './app.js',
   './questions.json',
+  './questions_mc.json',
   './manifest.json',
   './service-worker.js'
 ];
@@ -75,6 +76,21 @@ self.addEventListener('fetch', (event) => {
     );
     return;
   }
+
+
+// Network-first for questions_mc.json so your MC updates propagate
+if (url.pathname.endsWith('questions_mc.json')) {
+  event.respondWith(
+    fetch(req)
+      .then((networkRes) => {
+        const clone = networkRes.clone();
+        caches.open(CACHE_NAME).then((cache) => cache.put(req, clone));
+        return networkRes;
+      })
+      .catch(() => caches.match(req)) // if offline, fall back to cached
+  );
+  return;
+}
 
   // Default: cache-first
   event.respondWith(
