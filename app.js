@@ -58,6 +58,10 @@ const cacheVersionEl = el("cacheVersion");
 const updateBanner = el("updateBanner");
 const updateReloadBtn = el("updateReloadBtn");
 
+const mcContainer = el("mcContainer");
+const mcChoices = el("mcChoices");
+const mcSubmitBtn = el("mcSubmitBtn");
+
 /* =========================
    STATE
 ========================= */
@@ -68,6 +72,11 @@ let currentIndex = 0;
 
 let shuffleEnabled = true;
 let showReference = true;
+
+
+// MC per-question UI state
+let selectedMcKey = null;
+let hasSubmittedMc = false;
 
 // Flags are stored locally for export, and also POSTed to backend
 let flags = {}; // { [id]: { text, savedAt, questionSnapshot } }
@@ -188,6 +197,72 @@ function showToast(message, ms = 2200) {
 
 function safeText(s) {
   return (s ?? "").toString();
+}
+
+
+/* =========================
+   MULTIPLE CHOICE (separate file)
+   - questions_mc.json contains MC items with choices + correctKey
+========================= */
+
+const QUESTIONS_FREE_RESPONSE_URL = "questions.json";
+const QUESTIONS_MULTIPLE_CHOICE_URL = "questions_mc.json";
+
+function normalizeFreeResponseQuestions(raw) {
+  if (!Array.isArray(raw)) return [];
+  return raw
+    .filter(Boolean)
+    .map((q, idx) => ({
+      id: q.id || q.ID || `FR_${idx}`,
+      type: "fr",
+      category: safeText(q.category || q.Category),
+      question: safeText(q.question || q.prompt || q.Question),
+      answer: safeText(q.answer || q.Answer),
+      reference: safeText(q.reference || q.Reference || q.ref),
+    }))
+    .filter(q => q.question.trim().length > 0);
+}
+
+function normalizeMultipleChoiceQuestions(raw) {
+  if (!Array.isArray(raw)) return [];
+  return raw
+    .filter(Boolean)
+    .map((q, idx) => ({
+      id: q.id || `MC_${idx}`,
+      type: "mc",
+      category: safeText(q.category || q.Category),
+      question: safeText(q.prompt || q.question || ""),
+      choices: Array.isArray(q.choices) ? q.choices : [],
+      correctKey: safeText(q.correctKey).trim(),
+      answer: safeText(q.correctKey).trim(),
+      explanation: safeText(q.explanation),
+      reference: safeText(q.reference),
+    }))
+    .filter(q => q.question.trim().length > 0 && q.choices.length >= 2 && q.correctKey);
+}
+
+async function loadQuestionsMerged() {
+  const [freeRaw, mcRaw] = await Promise.all([
+    fetch(`${QUESTIONS_FREE_RESPONSE_URL}?v=${encodeURIComponent(APP_VERSION)}`, { cache: "no-store" })
+      .then(r => (r.ok ? r.json() : []))
+      .catch(() => []),
+    fetch(`${QUESTIONS_MULTIPLE_CHOICE_URL}?v=${encodeURIComponent(APP_VERSION)}`, { cache: "no-store" })
+      .then(r => (r.ok ? r.json() : []))
+      .catch(() => []),
+  ]);
+
+  const free = normalizeFreeResponseQuestions(freeRaw);
+  const mc = normalizeMultipleChoiceQuestions(mcRaw);
+  return [...free, ...mc];
+}
+
+function escapeHtml(str) {
+  return (str ?? "").toString()
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
 }
 
 function downloadJSON(filename, obj) {
@@ -338,13 +413,10 @@ async function submitFlagToServer(question, flagTextValue) {
 ========================= */
 
 async function loadQuestions() {
-  // Cache-busting query param helps while iterating; SW still network-first for questions.json.
-  const url = `questions.json?v=${encodeURIComponent(APP_VERSION)}`;
-  const res = await fetch(url, { cache: "no-store" });
-  if (!res.ok) throw new Error(`Failed to load questions.json (HTTP ${res.status})`);
-  const data = await res.json();
-  if (!Array.isArray(data)) throw new Error("questions.json must be an array");
-  return data;
+  // Loads BOTH questions.json (free-response flashcards) and questions_mc.json (multiple choice)
+  const merged = await loadQuestionsMerged();
+  if (!Array.isArray(merged)) throw new Error("Questions must be an array");
+  return merged;
 }
 
 function populateCategories() {
@@ -386,23 +458,83 @@ function renderCurrentQuestion() {
     if (categoryLabel) categoryLabel.textContent = "";
     if (counterLabel) counterLabel.textContent = "0 / 0";
     setFlagPanelOpen(false);
+    if (mcContainer) mcContainer.classList.add("hidden");
     requestAnimationFrame(syncCardHeight);
     return;
   }
 
   const q = filteredQuestions[currentIndex];
 
+  // Reset MC state whenever question changes
+  selectedMcKey = null;
+  hasSubmittedMc = false;
+
+  // Question text
   if (questionText) questionText.textContent = safeText(q.question);
-  if (answerText) answerText.textContent = safeText(q.answer);
+
+  // Reference handling on answer face
   if (referenceText) {
+    // For MC we may show reference after submit; default to user's toggle behavior
     referenceText.textContent = showReference ? safeText(q.reference) : "";
     referenceText.style.display = showReference ? "block" : "none";
   }
 
+  // Category/counter
   if (categoryLabel) categoryLabel.textContent = safeText(q.category || "Category");
   if (counterLabel) counterLabel.textContent = `${currentIndex + 1} / ${filteredQuestions.length}`;
 
-  if (modeHint) modeHint.textContent = "Tap/click the card to flip";
+  // Mode hint + per-type UI
+  if (q.type === "mc") {
+    if (modeHint) modeHint.textContent = "Select an option, then tap Submit";
+
+    // Show MC container and build choices
+    if (mcContainer) mcContainer.classList.remove("hidden");
+    if (mcChoices) mcChoices.innerHTML = "";
+
+    // Disable submit until a selection is made
+    if (mcSubmitBtn) mcSubmitBtn.disabled = true;
+
+    const choices = Array.isArray(q.choices) ? q.choices : [];
+    choices.forEach((choice) => {
+      const key = safeText(choice.key).trim();
+      const text = safeText(choice.text);
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "mc-choice";
+      btn.dataset.key = key;
+      btn.innerHTML = `<span class="mc-key">${escapeHtml(key)}</span><span class="mc-text">${escapeHtml(text)}</span>`;
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (hasSubmittedMc) return;
+        selectedMcKey = key;
+
+        // visual selected
+        [...mcChoices.querySelectorAll(".mc-choice")].forEach(b => b.classList.remove("selected"));
+        btn.classList.add("selected");
+
+        if (mcSubmitBtn) mcSubmitBtn.disabled = false;
+        requestAnimationFrame(syncCardHeight);
+      });
+      mcChoices.appendChild(btn);
+    });
+
+    if (mcSubmitBtn) {
+      mcSubmitBtn.onclick = (e) => {
+        e.stopPropagation();
+        submitMultipleChoice(q);
+      };
+    }
+
+    // For MC, clear answer until submitted
+    if (answerText) answerText.textContent = "";
+
+  } else {
+    if (modeHint) modeHint.textContent = "Tap/click the card to flip";
+    if (mcContainer) mcContainer.classList.add("hidden");
+
+    // Free-response uses the stored answer
+    if (answerText) answerText.textContent = safeText(q.answer);
+  }
 
   updateFlagStatusUI(q);
 
@@ -413,6 +545,57 @@ function renderCurrentQuestion() {
   if (card) card.classList.remove("flipped");
 
   // sync height after DOM paints
+  requestAnimationFrame(syncCardHeight);
+}
+
+
+
+function submitMultipleChoice(q) {
+  if (!q || q.type !== "mc") return;
+  if (!selectedMcKey) return;
+
+  hasSubmittedMc = true;
+  if (mcSubmitBtn) mcSubmitBtn.disabled = true;
+
+  const selected = safeText(selectedMcKey).trim().toUpperCase();
+  const correctKey = safeText(q.correctKey).trim().toUpperCase();
+  const isCorrect = (selected === correctKey);
+
+  // Find correct choice text
+  const correctChoice = (Array.isArray(q.choices) ? q.choices : []).find(c => safeText(c.key).trim().toUpperCase() === correctKey);
+  const correctText = correctChoice ? `${safeText(correctChoice.key)} — ${safeText(correctChoice.text)}` : correctKey;
+
+  // Highlight choices
+  if (mcChoices) {
+    [...mcChoices.querySelectorAll(".mc-choice")].forEach((b) => {
+      const k = safeText(b.dataset.key).trim().toUpperCase();
+      if (k === correctKey) b.classList.add("correct");
+      if (k === selected && !isCorrect) b.classList.add("incorrect");
+    });
+  }
+
+  // Populate the answer face
+  const header = isCorrect ? "Correct ✅" : "Incorrect ❌";
+  const explain = safeText(q.explanation).trim();
+  const ref = safeText(q.reference).trim();
+
+  if (answerText) {
+    answerText.innerHTML = `
+      <div class="mc-result">${escapeHtml(header)}</div>
+      <div class="mc-correct"><b>Correct:</b> ${escapeHtml(correctText)}</div>
+      ${explain ? `<div class="mc-explain">${escapeHtml(explain)}</div>` : ""}
+    `;
+  }
+
+  // Reference toggle still applies
+  if (referenceText) {
+    referenceText.textContent = (showReference && ref) ? ref : "";
+    referenceText.style.display = (showReference && ref) ? "block" : "none";
+  }
+
+  // Auto-flip to show the answer once submitted
+  if (card) card.classList.add("flipped");
+
   requestAnimationFrame(syncCardHeight);
 }
 
