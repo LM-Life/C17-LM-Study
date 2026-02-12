@@ -531,6 +531,12 @@ function renderCurrentQuestion() {
   // Mode hint + per-type UI
   if (q.type === "mc") {
     if (modeHint) modeHint.textContent = "Select an option, then tap Submit";
+          
+    if (mcSubmitBtn) mcSubmitBtn.style.display = "inline-flex";
+  } else {
+    // Flashcard mode
+    if (mcSubmitBtn) mcSubmitBtn.style.display = "none";
+  }
 
     // Show MC container and build choices
     if (mcContainer) mcContainer.classList.remove("hidden");
@@ -538,12 +544,6 @@ function renderCurrentQuestion() {
 
     // Disable submit until a selection is made
     if (mcSubmitBtn) mcSubmitBtn.disabled = true;
-     
-    if (mcSubmitBtn) mcSubmitBtn.style.display = "inline-flex";
-  } else {
-    // Flashcard mode
-    if (mcSubmitBtn) mcSubmitBtn.style.display = "none";
-  }
 
     const choices = Array.isArray(q.choices) ? q.choices : [];
     choices.forEach((choice) => {
