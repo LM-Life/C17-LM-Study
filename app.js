@@ -1023,8 +1023,6 @@ if (refDetails) {
         if (card) card.classList.toggle("flipped");
         requestAnimationFrame(syncCardHeight);
       }
-    }
-  }
 
   // Resize should re-sync
   window.addEventListener("resize", () => { syncBottomBarPresence(); requestAnimationFrame(syncCardHeight); });
