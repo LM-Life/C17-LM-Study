@@ -33,7 +33,8 @@ const categoryLabel = el("categoryLabel");
 const counterLabel = el("counterLabel");
 const modeHint = el("modeHint");
 
-const categorySelect = el("categorySelect");
+const modeSelect = el("modeSelect");
+const subCategorySelect = el("subCategorySelect");
 const shuffleToggle = el("shuffleToggle");
 const showRefToggle = el("showRefToggle");
 
@@ -72,6 +73,10 @@ let currentIndex = 0;
 
 let shuffleEnabled = true;
 let showReference = true;
+
+// Filter state: Mode + Section
+let selectedMode = "flashcard"; // flashcard | mc
+let selectedSubCategory = "all";
 
 
 // MC per-question UI state
@@ -419,13 +424,46 @@ async function loadQuestions() {
   return merged;
 }
 
-function populateCategories() {
-  if (!categorySelect) return;
-  const cats = Array.from(new Set(questions.map(q => safeText(q.category).trim()).filter(Boolean))).sort();
-  categorySelect.innerHTML = `<option value="all">All Categories</option>` + cats.map(c => {
-    const v = c.replace(/"/g, "&quot;");
-    return `<option value="${v}">${v}</option>`;
-  }).join("");
+function populateModeAndSections() {
+  // Mode dropdown
+  if (modeSelect) {
+    modeSelect.value = selectedMode;
+  }
+
+  // Section dropdown depends on mode:
+  // - Flashcard: unique categories from free-response questions (type === 'fr')
+  // - Multiple Choice: General / Airdrop / Instructor (from MC questions)
+  if (!subCategorySelect) return;
+
+  let sections = [];
+  if (selectedMode === "mc") {
+    sections = ["General", "Airdrop", "Instructor"];
+  } else {
+    sections = Array.from(
+      new Set(
+        questions
+          .filter(q => q.type === "fr")
+          .map(q => safeText(q.category).trim())
+          .filter(Boolean)
+      )
+    ).sort();
+  }
+
+  const opts = [`<option value="all">All</option>`].concat(
+    sections.map(s => {
+      const v = s.replace(/"/g, "&quot;");
+      return `<option value="${v}">${v}</option>`;
+    })
+  );
+
+  subCategorySelect.innerHTML = opts.join("");
+  // Keep selection if still valid, otherwise reset
+  const stillValid =
+    selectedSubCategory === "all" ||
+    sections.includes(selectedSubCategory);
+
+  selectedSubCategory = stillValid ? selectedSubCategory : "all";
+  subCategorySelect.value = selectedSubCategory;
 }
 
 function shuffleArray(arr) {
@@ -438,11 +476,18 @@ function shuffleArray(arr) {
 }
 
 function updateFilteredQuestions() {
-  const cat = categorySelect ? categorySelect.value : "all";
+  // Mode filter
   let list = questions;
 
-  if (cat && cat !== "all") {
-    list = list.filter(q => safeText(q.category) === cat);
+  if (selectedMode === "mc") {
+    list = list.filter(q => q.type === "mc");
+  } else {
+    list = list.filter(q => q.type === "fr");
+  }
+
+  // Section filter
+  if (selectedSubCategory && selectedSubCategory !== "all") {
+    list = list.filter(q => safeText(q.category).trim() === selectedSubCategory);
   }
 
   filteredQuestions = shuffleEnabled ? shuffleArray(list) : list.slice();
@@ -770,15 +815,26 @@ function setupEvents() {
     });
   }
 
-  if (categorySelect) {
-    categorySelect.addEventListener("change", () => {
+  if (modeSelect) {
+    modeSelect.addEventListener("change", () => {
+      selectedMode = modeSelect.value === "mc" ? "mc" : "flashcard";
       currentIndex = 0;
+      // Rebuild sections for the new mode
+      populateModeAndSections();
       updateFilteredQuestions();
       renderCurrentQuestion();
     });
   }
 
-  // Flag UI
+  if (subCategorySelect) {
+    subCategorySelect.addEventListener("change", () => {
+      selectedSubCategory = subCategorySelect.value || "all";
+      currentIndex = 0;
+      updateFilteredQuestions();
+      renderCurrentQuestion();
+    });
+  }
+// Flag UI
   if (flagToggleBtn) {
     flagToggleBtn.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -886,7 +942,7 @@ async function init() {
     return;
   }
 
-  populateCategories();
+  populateModeAndSections();
 
   shuffleEnabled = !!(shuffleToggle ? shuffleToggle.checked : true);
   showReference = !!(showRefToggle ? showRefToggle.checked : true);
