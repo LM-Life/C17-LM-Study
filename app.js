@@ -532,15 +532,10 @@ function renderCurrentQuestion() {
   if (q.type === "mc") {
     if (modeHint) modeHint.textContent = "Select an option, then tap Submit";
           
-    if (mcSubmitBtn) mcSubmitBtn.style.display = "inline-flex";
-  } else {
-    // Flashcard mode
-    if (mcSubmitBtn) mcSubmitBtn.style.display = "none";
-  }
-
     // Show MC container and build choices
     if (mcContainer) mcContainer.classList.remove("hidden");
     if (mcChoices) mcChoices.innerHTML = "";
+    if (mcSubmitBtn) mcSubmitBtn.style.display = "inline-flex";
 
     // Disable submit until a selection is made
     if (mcSubmitBtn) mcSubmitBtn.disabled = true;
@@ -582,6 +577,7 @@ function renderCurrentQuestion() {
   } else {
     if (modeHint) modeHint.textContent = "Tap/click the card to flip";
     if (mcContainer) mcContainer.classList.add("hidden");
+    if (mcSubmitBtn) mcSubmitBtn.style.display = "none";
 
     // Free-response uses the stored answer
     if (answerText) answerText.textContent = safeText(q.answer);
