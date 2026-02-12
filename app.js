@@ -220,6 +220,14 @@ function safeText(s) {
 
 
 
+
+
+function normalizeMcSection(category) {
+  const c = safeText(category).toLowerCase();
+  if (c.includes("airdrop")) return "Airdrop";
+  if (c.includes("instructor")) return "Instructor";
+  return "General";
+}
 function isMobileUI() {
   return window.matchMedia && window.matchMedia("(max-width: 768px)").matches;
 }
@@ -227,26 +235,12 @@ function isMobileUI() {
 function setControlsCollapsed(collapsed) {
   controlsCollapsed = !!collapsed;
   if (controlsBody) controlsBody.classList.toggle("collapsed", controlsCollapsed);
-  try {
-    localStorage.setItem(
-      "c17_controls_collapsed",
-      controlsCollapsed ? "1" : "0"
-    );
-  } catch (_) {}
+  try { localStorage.setItem("c17_controls_collapsed", controlsCollapsed ? "1" : "0"); } catch (_) {}
 }
 
 function syncBottomBarPresence() {
   document.body.classList.toggle("has-bottom-bar", isMobileUI());
 }
-
-// Normalize MC category names so filters still work
-function normalizeMcSection(category) {
-  const c = safeText(category).toLowerCase();
-  if (c.includes("airdrop")) return "Airdrop";
-  if (c.includes("instructor")) return "Instructor";
-  return "General";
-}
-
 /* =========================
    MULTIPLE CHOICE (separate file)
    - questions_mc.json contains MC items with choices + correctKey
@@ -479,8 +473,6 @@ function populateModeAndSections() {
 
   let sections = [];
   if (selectedMode === "mc") {
-    // Always present the three standard MQF sections, even if your category strings are like:
-    // "MQF Oct 2025 - General" / "... - Airdrop" / "... - Instructor"
     sections = ["General", "Airdrop", "Instructor"];
   } else {
     sections = Array.from(
@@ -1019,7 +1011,7 @@ if (showRefToggle) {
       if (card) card.classList.toggle("flipped");
       requestAnimationFrame(syncCardHeight);
     }
-  }
+  });
 }
 
 // Prevent reference disclosure clicks from bubbling to the card
