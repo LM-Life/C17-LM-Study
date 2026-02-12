@@ -2,7 +2,7 @@
   {
     "id": "MQF_2025_001",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "To override the #2 or #3 hydraulic aux pumps for an auto shutdown due to low quantity or overheat, .",
     "choices": [
       {
@@ -29,7 +29,7 @@
   {
     "id": "MQF_2025_002",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "The APU starter operating limit is and any APU starter engagement is considered a start attempt.",
     "choices": [
       {
@@ -56,7 +56,7 @@
   {
     "id": "MQF_2025_003",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "When cycling a circuit breaker, pull the CB out, wait or as indicated, then push the CB in.",
     "choices": [
       {
@@ -83,7 +83,7 @@
   {
     "id": "MQF_2025_004",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "When the APU alert start feature is used, there will be no until the Battery Bus is powered.",
     "choices": [
       {
@@ -110,7 +110,7 @@
   {
     "id": "MQF_2025_005",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "When starting the APU, starts may be attempted per rolling hour cycle with a minimum delay of minutes between attempts.",
     "choices": [
       {
@@ -137,7 +137,7 @@
   {
     "id": "MQF_2025_006",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "The Battery Direct Bus, the Battery Bus, the AC and DC Emergency Buses, and the AC and DC Transfer Buses comprise the .",
     "choices": [
       {
@@ -164,7 +164,7 @@
   {
     "id": "MQF_2025_007",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "To preclude damage to the landing gear, accomplish no more than consecutive landings without a cooling period. A cooling period consists of, flying with the gear retracted for at least 20 minutes or with the gear extended for at least 10 minutes before the next landing.",
     "choices": [
       {
@@ -191,7 +191,7 @@
   {
     "id": "MQF_2025_008",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Without both air conditioning packs operating, the or must be open during operation of the cargo exhaust fans to ensure proper ventilation.",
     "choices": [
       {
@@ -218,7 +218,7 @@
   {
     "id": "MQF_2025_009",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Following an intentional cabin depressurization above 10,000 feet, the cabin must be repressurized to less than feet to reset the regulators. If the regulators are not reset, subsequent flight above 9,000 feet cabin altitude may deploy the passenger oxygen masks.",
     "choices": [
       {
@@ -245,7 +245,7 @@
   {
     "id": "MQF_2025_010",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Below feet cabin altitude, each emergency oxygen regulator SURGE MODE lever/three position toggle switch must be positioned to MAN ON/MANUAL ON position to ensure regulated oxygen is provided to passengers.",
     "choices": [
       {
@@ -272,7 +272,7 @@
   {
     "id": "MQF_2025_011",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "The passenger oxygen masks can be manually deployed at any altitude with the -1-emergency oxygen regulator by positioning the SURGE MODE lever to the MAN ON position, and rotating the spring loaded surge knob and holding momentarily (approximately seconds) to open the passenger oxygen containers and start the flow of oxygen.",
     "choices": [
       {
@@ -299,7 +299,7 @@
   {
     "id": "MQF_2025_012",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "If either the pilot’s or loadmaster’s FED ARM switch is in ARM, all four FEDS hatches can be deployed from either the initiator handles.",
     "choices": [
       {
@@ -326,7 +326,7 @@
   {
     "id": "MQF_2025_013",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Portable hand fire extinguishers are provided in the following areas: in the cockpit, in the crew rest area, and in the cargo compartment.",
     "choices": [
       {
@@ -353,7 +353,7 @@
   {
     "id": "MQF_2025_014",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "When a delay in a winching operation occurs on the cargo ramp or toes secure the item using",
     "choices": [
       {
@@ -380,7 +380,7 @@
   {
     "id": "MQF_2025_015",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "The EEBD is a -minute self-contained, disposable breathing unit. There are installed on the aircraft.",
     "choices": [
       {
@@ -407,7 +407,7 @@
   {
     "id": "MQF_2025_016",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "If the aircraft is powered by batteries alone and the pilot’s CNC indicates OFF, radio communication is possible using the radio with the VHF/UHF Backup Control panel.",
     "choices": [
       {
@@ -434,7 +434,7 @@
   {
     "id": "MQF_2025_017",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "During AE missions, the loadmaster advises the medical crew director that seat belts are required .",
     "choices": [
       {
@@ -461,7 +461,7 @@
   {
     "id": "MQF_2025_018",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "In the After Landing Checklist, Loadmasters may remove all tie down, except one fwd/one aft after clearing the active runway.",
     "choices": [
       {
@@ -480,7 +480,7 @@
   {
     "id": "MQF_2025_019",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "During in-flight operation of the troop doors, deploy the air deflector between and degrees before opening the first door.",
     "choices": [
       {
@@ -507,7 +507,7 @@
   {
     "id": "MQF_2025_020",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "When on/offloading vehicles, do not deflate vehicle pneumatic tires .",
     "choices": [
       {
@@ -534,7 +534,7 @@
   {
     "id": "MQF_2025_021",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Equipment mounted on a single axle loaded with its tongue resting on the aircraft floor or ramp .",
     "choices": [
       {
@@ -561,7 +561,7 @@
   {
     "id": "MQF_2025_022",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "When the vehicle is parked on the cargo floor and parking brakes are inoperative, .",
     "choices": [
       {
@@ -588,7 +588,7 @@
   {
     "id": "MQF_2025_023",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "When loading pallets with a bare tine forklift, one set of inner roller channels may be removed from the ramp toes if the pallet weight does not exceed pounds.",
     "choices": [
       {
@@ -615,7 +615,7 @@
   {
     "id": "MQF_2025_024",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Ramp Blowdown may not function if the weight on the ramp exceeds or, if the aircraft is on an uneven surface.",
     "choices": [
       {
@@ -642,7 +642,7 @@
   {
     "id": "MQF_2025_025",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "The signal to prepare for ditching or crash landing is .",
     "choices": [
       {
@@ -669,7 +669,7 @@
   {
     "id": "MQF_2025_026",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "All odors not identifiable by the flight crew shall be considered toxic. Refer immediately to .",
     "choices": [
       {
@@ -696,7 +696,7 @@
   {
     "id": "MQF_2025_027",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "When ditching is imminent, as a minimum, the loadmaster will provide .",
     "choices": [
       {
@@ -723,7 +723,7 @@
   {
     "id": "MQF_2025_028",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "If a fire is being fed by oxygen from an oxygen system, the system should be turned off with the until the fire is suppressed.",
     "choices": [
       {
@@ -750,7 +750,7 @@
   {
     "id": "MQF_2025_029",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Selective freefall of any landing gear can be accomplished by activating the release handles only for those gear that are not extended. When lowering both main gear on one side, lower .",
     "choices": [
       {
@@ -777,7 +777,7 @@
   {
     "id": "MQF_2025_030",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "The maximum vertical height of a load to be jettisoned is inches measured from the of the pallet/platform.",
     "choices": [
       {
@@ -804,7 +804,7 @@
   {
     "id": "MQF_2025_031",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "During cargo jettison, ensure all selected lock annunciators are before stating \"LOCKS RELEASED\".",
     "choices": [
       {
@@ -831,7 +831,7 @@
   {
     "id": "MQF_2025_032",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "If a vehicle is driven on the aircraft, shoring is limited to layer(s). This restriction does not apply to shoring placed .",
     "choices": [
       {
@@ -858,7 +858,7 @@
   {
     "id": "MQF_2025_033",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "When loaded for operational use, the ATGL is loaded ADS pallet position 1. When a Seat Pallet is loaded in ADS pallet position 2, the ATGL is loaded .",
     "choices": [
       {
@@ -885,7 +885,7 @@
   {
     "id": "MQF_2025_034",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "During a ditching, do not activate prior to the aircraft coming to a rest as life rafts may be lost.",
     "choices": [
       {
@@ -912,7 +912,7 @@
   {
     "id": "MQF_2025_035",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "The maximum cargo weight that can be loaded left or right of aircraft centerline is pounds, provided all aircraft limitations are complied with.",
     "choices": [
       {
@@ -939,7 +939,7 @@
   {
     "id": "MQF_2025_036",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Do not use SECURE cargo compartment lighting in flight. PA system speakers/volume will be deactivated during any condition that activates the cargo compartment lights because of sidewall oxygen system deployment. The speakers/volume .",
     "choices": [
       {
@@ -966,7 +966,7 @@
   {
     "id": "MQF_2025_037",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "With ambient temperatures are at or below -9 °C (15 °F), the AUX pumps may not initially generate full pressure. If system pressure does not rise to at least 3500 psi within 30 seconds of selecting the pump to AUTO, select the pump to off, wait 30 seconds and proceed as follows.1. Select the AUX pump to AUTO for 30 seconds, then off for 30 seconds.2. Repeat or until system pressure indicates at least 3500 psi.",
     "choices": [
       {
@@ -993,7 +993,7 @@
   {
     "id": "MQF_2025_038",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "If the prime mover is not assigned specifically for the intended unit and additional braking is not available, i.e., airbrakes, the prime mover total gross weight should be the unit to be loaded/offloaded.",
     "choices": [
       {
@@ -1020,7 +1020,7 @@
   {
     "id": "MQF_2025_039",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "A vehicle with a transmission that is not equipped with a neutral position shall be loaded/offloaded under its own power. When more than one layer of shoring is required, the shoring prefabricated or joined together.",
     "choices": [
       {
@@ -1047,7 +1047,7 @@
   {
     "id": "MQF_2025_040",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "When using the struts to change the offload clearance hold the STAB STRUTS control handle to until the struts stop lifting the aircraft or there is no less than inch of chrome showing on the nose gear strut.",
     "choices": [
       {
@@ -1074,7 +1074,7 @@
   {
     "id": "MQF_2025_041",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Chain bridles installed as the sole means of attaining forward, aft, and vertical restraint requirements also meet lateral restraint requirements if both the forward and aft restraint bridles utilize the same type of tiedown chains.",
     "choices": [
       {
@@ -1093,7 +1093,7 @@
   {
     "id": "MQF_2025_042",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "When loading pallets with ramp toes installed, at what weight are struts required?",
     "choices": [
       {
@@ -1120,7 +1120,7 @@
   {
     "id": "MQF_2025_043",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "highlight essential operating procedures, practice, condition or statement, etc. which if not strictly observed could result in damage to, or destruction of equipment or loss if mission effectiveness",
     "choices": [
       {
@@ -1147,7 +1147,7 @@
   {
     "id": "MQF_2025_044",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "When using the ramp as a lifting/lowering aid, the stabilizer struts shall be deployed when weight exceeds pounds.",
     "choices": [
       {
@@ -1174,7 +1174,7 @@
   {
     "id": "MQF_2025_045",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "If nonstandard cargo/equipment is presented for airlift and an air transportability certification from AFLCMC/EZFC (ATTLA) does not accompany the load, these items .",
     "choices": [
       {
@@ -1201,7 +1201,7 @@
   {
     "id": "MQF_2025_046",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Vehicle single axle weights equal to or greater than pounds must be loaded within 8 inches of the aircraft centerline in compartments D, F and G.",
     "choices": [
       {
@@ -1228,7 +1228,7 @@
   {
     "id": "MQF_2025_047",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Vehicle single axle weights equal to or greater than pounds must be loaded within 8 inches of the aircraft centerline in compartment E.",
     "choices": [
       {
@@ -1255,7 +1255,7 @@
   {
     "id": "MQF_2025_048",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "The maximum vehicle weight of a tracked vehicle with articulated suspension loaded in E compartment is .",
     "choices": [
       {
@@ -1282,7 +1282,7 @@
   {
     "id": "MQF_2025_049",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Tracked vehicles with articulated suspension and with wheel weights exceeding lbs (average) must be loaded within 8 inches of aircraft centerline.",
     "choices": [
       {
@@ -1309,7 +1309,7 @@
   {
     "id": "MQF_2025_050",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Tunner loader furnished bridge plates shall not be used when loading/offloading rolling stock from a K-loader with the ramp toes installed.",
     "choices": [
       {
@@ -1328,7 +1328,7 @@
   {
     "id": "MQF_2025_051",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Hazardous cargo considered jettisonable be positioned forward of non-jettisonable cargo, except when its size, weight, and location will permit jettison by hand.",
     "choices": [
       {
@@ -1355,7 +1355,7 @@
   {
     "id": "MQF_2025_052",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "When cargo projects aft of the end of the logistics rails (FS ), ensure the ramp toes do not contact the cargo while being raised to the vertical position.",
     "choices": [
       {
@@ -1382,7 +1382,7 @@
   {
     "id": "MQF_2025_053",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "When pedestal shoring is used under the Ramp Ground Support Pad for special loads, the shoring shall be a minimum of inches long and inches wide.",
     "choices": [
       {
@@ -1409,7 +1409,7 @@
   {
     "id": "MQF_2025_054",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "The aft end of the ramp toes shall not be supported when in the position.",
     "choices": [
       {
@@ -1436,7 +1436,7 @@
   {
     "id": "MQF_2025_055",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Replace winch cable if or more broken wires per strand inch or or more broken wires per cable inch are found. The maximum number of broken wires shall not occur in any two consecutive inches of cable.",
     "choices": [
       {
@@ -1463,7 +1463,7 @@
   {
     "id": "MQF_2025_056",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "When winching and the direction of pull is changed, the sheave .",
     "choices": [
       {
@@ -1490,7 +1490,7 @@
   {
     "id": "MQF_2025_057",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "In flight, the ramp toes will be .",
     "choices": [
       {
@@ -1517,7 +1517,7 @@
   {
     "id": "MQF_2025_058",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Palletized seat assemblies may be loaded in the logistic rails when transported as cargo. Passengers will not occupy palletized seats in the logistic rails.",
     "choices": [
       {
@@ -1536,7 +1536,7 @@
   {
     "id": "MQF_2025_059",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "On aeromedical evacuation missions with litter or ambulatory patients, the ramp is restricted .",
     "choices": [
       {
@@ -1563,7 +1563,7 @@
   {
     "id": "MQF_2025_060",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Pallets or pallet trains up to pounds per pallet may be loaded into the logistics rail/lock systems provided at least one lock left and one right are engaged in each pallet.",
     "choices": [
       {
@@ -1590,7 +1590,7 @@
   {
     "id": "MQF_2025_061",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "The ramp loadable height capability varies between inches at the ramp hinge to inches at the end of the ramp.",
     "choices": [
       {
@@ -1617,7 +1617,7 @@
   {
     "id": "MQF_2025_062",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Spotters are required to observe clearances and to prevent contact with the wing box structure when loading cargo higher than inches forward of FS .",
     "choices": [
       {
@@ -1644,7 +1644,7 @@
   {
     "id": "MQF_2025_063",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Maximum useable surface area for netted cargo is by and shall not be exceeded.",
     "choices": [
       {
@@ -1671,7 +1671,7 @@
   {
     "id": "MQF_2025_064",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "The primary method of loading pallets into the ADS and logistic rail system is using the ramp toes.",
     "choices": [
       {
@@ -1690,7 +1690,7 @@
   {
     "id": "MQF_2025_065",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "If are not used, Ramirez 40K and Emerson 25K-loaders must be backed-in when preparing to load/unload cargo into the logistic rail system.",
     "choices": [
       {
@@ -1717,7 +1717,7 @@
   {
     "id": "MQF_2025_066",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Required restraint for cargo on the pallet/pallet train shall be provided using nets, tiedown straps, or chains. When supplemental restraint is required, additional tiedowns may be attached to the pallet or cargo floor.",
     "choices": [
       {
@@ -1736,7 +1736,7 @@
   {
     "id": "MQF_2025_067",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Straps and chains shall not be mixed to restrain cargo in the same direction. However, 10K and 25K devices with the appropriate chains may be used for a given direction of restraint.",
     "choices": [
       {
@@ -1755,7 +1755,7 @@
   {
     "id": "MQF_2025_068",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Netted two pallet trains that exceed shall be restrained to the cargo floor.",
     "choices": [
       {
@@ -1782,7 +1782,7 @@
   {
     "id": "MQF_2025_069",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Pallets or pallet trains up to 7,800 pounds per pallet may be loaded into the ADS rail/lock system when .",
     "choices": [
       {
@@ -1809,7 +1809,7 @@
   {
     "id": "MQF_2025_070",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Ensure cargo is restrained for prior to raising and closing the ramp when cargo is positioned on the ramp for flight.",
     "choices": [
       {
@@ -1836,7 +1836,7 @@
   {
     "id": "MQF_2025_071",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "When properly installed on a single pallet, the nets provide all the necessary restraint for cargo loads up to pounds when the height of stacked cargo does not exceed 96 inches.",
     "choices": [
       {
@@ -1863,7 +1863,7 @@
   {
     "id": "MQF_2025_072",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "When pallets with lateral overhang are loaded and locked in the ADS rails, sufficient space is required to access the ADS locks for manual release.",
     "choices": [
       {
@@ -1882,7 +1882,7 @@
   {
     "id": "MQF_2025_073",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "The maximum pallet/platform weight on two ramp toes is pounds except for 18-foot DRAS platforms which may be increased to 14,500 pounds.",
     "choices": [
       {
@@ -1909,7 +1909,7 @@
   {
     "id": "MQF_2025_074",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "The maximum single axle load on the toes in the low position is pounds.",
     "choices": [
       {
@@ -1936,7 +1936,7 @@
   {
     "id": "MQF_2025_075",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Vehicles with transmissions that are not equipped with a neutral position may be loaded/offloaded using the cargo winch.",
     "choices": [
       {
@@ -1955,7 +1955,7 @@
   {
     "id": "MQF_2025_076",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Two or three pallet train weight for cargo secured with nets and stacked to 96 inches shall not exceed pounds.",
     "choices": [
       {
@@ -1982,7 +1982,7 @@
   {
     "id": "MQF_2025_077",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Two or three pallet train weight for cargo secured with nets and stacked above 96 inches (not to exceed 100 inches) shall not exceed pounds.",
     "choices": [
       {
@@ -2009,7 +2009,7 @@
   {
     "id": "MQF_2025_078",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "All vehicle winching must be closely monitored by a crew of at least personnel.",
     "choices": [
       {
@@ -2036,7 +2036,7 @@
   {
     "id": "MQF_2025_079",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "When low profile cargo does not permit the use of side nets, the top net may be used by for all restraint provided the cargo weight does not exceed pounds and cargo height does not exceed inches from the pallet surface.",
     "choices": [
       {
@@ -2063,7 +2063,7 @@
   {
     "id": "MQF_2025_080",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "When plywood barriers and chain bridles are installed for forward restraint on palletized cargo, pallets that exceed inches in height will have a minimum of bridle(s) installed and the minimum thickness for the barrier will be inches.",
     "choices": [
       {
@@ -2090,7 +2090,7 @@
   {
     "id": "MQF_2025_081",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "If stowage pins are not engaged on side of each toe stowed on the cargo door, that toe may come loose during flight.",
     "choices": [
       {
@@ -2117,7 +2117,7 @@
   {
     "id": "MQF_2025_082",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "If not carefully monitored, MHE may contact the aircraft while positioning pallets/platforms for loading into the logistic rail system.",
     "choices": [
       {
@@ -2144,7 +2144,7 @@
   {
     "id": "MQF_2025_083",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "To maintain continuous cable tension while winching, it may be necessary to physically the vehicle/item aft when traversing the main floor/ramp hinge while the loadmaster gradually unwinds the cable.",
     "choices": [
       {
@@ -2171,7 +2171,7 @@
   {
     "id": "MQF_2025_084",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Empty 463L pallets may be stacked for airlift up to a maximum of pallets, excluding the base support pallet.",
     "choices": [
       {
@@ -2198,7 +2198,7 @@
   {
     "id": "MQF_2025_085",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "During palletized cargo loading (non-winching), the minimum distance between the aircraft ramp/toes and K-loader is inches.",
     "choices": [
       {
@@ -2225,7 +2225,7 @@
   {
     "id": "MQF_2025_086",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Damage may occur if cargo tiedown that spans from the main floor to the ramp is not or sufficiently slackened before lowering the ramp.",
     "choices": [
       {
@@ -2252,7 +2252,7 @@
   {
     "id": "MQF_2025_087",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "The minimum thickness of rolling shoring shall be .",
     "choices": [
       {
@@ -2279,7 +2279,7 @@
   {
     "id": "MQF_2025_088",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "With the ramp toes in the high position, the required overlap between the ramp toe contact pads and the floor of the loader is inches.",
     "choices": [
       {
@@ -2306,7 +2306,7 @@
   {
     "id": "MQF_2025_089",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "In the high position the ramp toes may be at an angle which causes the aft end of the toe to be above coplanar position with the ramp floor.",
     "choices": [
       {
@@ -2325,7 +2325,7 @@
   {
     "id": "MQF_2025_090",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Each tiedown ring can accommodate up to CGU-1/B tiedown straps for any directional pull calculations.",
     "choices": [
       {
@@ -2352,7 +2352,7 @@
   {
     "id": "MQF_2025_091",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "When attaching multiple devices to one tiedown ring, the ring .",
     "choices": [
       {
@@ -2379,7 +2379,7 @@
   {
     "id": "MQF_2025_092",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "When using CGU-1/B tiedown devices, ensure that a minimum of turns of strap is wound around the ratchet spool to prevent slippage of strap.",
     "choices": [
       {
@@ -2406,7 +2406,7 @@
   {
     "id": "MQF_2025_093",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "When the Engines are at IDLE, maintain a foot radius distance.",
     "choices": [
       {
@@ -2433,7 +2433,7 @@
   {
     "id": "MQF_2025_094",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "When considering an ATTLA certification, minor deviations to dimensions, weights, etc., are not permitted provided the item does not exceed the limitations/procedures listed in 1C-17A-9.",
     "choices": [
       {
@@ -2452,7 +2452,7 @@
   {
     "id": "MQF_2025_095",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "To ensure good CRM when there is a multiple loadmaster requirement, the loadmaster assumes overall responsibility for completion of all checklists.",
     "choices": [
       {
@@ -2465,7 +2465,7 @@
       },
       {
         "key": "C",
-        "text": "instructor"
+        "text": "MQF Oct 2025 - Instructor"
       },
       {
         "key": "D",
@@ -2479,7 +2479,7 @@
   {
     "id": "MQF_2025_096",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "or will be worn at all times while crewmembers are operating at their primary duty station.",
     "choices": [
       {
@@ -2506,7 +2506,7 @@
   {
     "id": "MQF_2025_097",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Misson with or more passengers should be planned with a pallet position available for baggage.",
     "choices": [
       {
@@ -2533,7 +2533,7 @@
   {
     "id": "MQF_2025_098",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "During ERO, do not on-load or offload through the crew entrance door and the cargo ramp/door at the same time unless both doors are directly supervised by a .",
     "choices": [
       {
@@ -2560,7 +2560,7 @@
   {
     "id": "MQF_2025_099",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Emergency airlift of personnel: For planning purposes, an estimate of personnel can be seated on the main floor, and on the ramp. The actual number of personnel may exceed this depending their size, amount of baggage/equipment carried, and the number of tiedown straps onboard the aircraft.",
     "choices": [
       {
@@ -2587,7 +2587,7 @@
   {
     "id": "MQF_2025_100",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "The maximum altitude for emergency airlift of personnel will not exceed flight level .",
     "choices": [
       {
@@ -2614,7 +2614,7 @@
   {
     "id": "MQF_2025_101",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "The following smoke detectors are required for home station/main operating base departures: One AV, all 4 IRU, plus two others in the cargo compartment.",
     "choices": [
       {
@@ -2641,7 +2641,7 @@
   {
     "id": "MQF_2025_102",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Maintenance personnel or a crew member should be used to act as “ground” during engine starts. The engines may be started without someone outside the aircraft. If this option is used, ensure all crewmembers are thoroughly briefed.",
     "choices": [
       {
@@ -2660,7 +2660,7 @@
   {
     "id": "MQF_2025_103",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "is the waiver authority for locally tasked missions (regarding the Minimum Equipment List).",
     "choices": [
       {
@@ -2687,7 +2687,7 @@
   {
     "id": "MQF_2025_104",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Do not taxi an aircraft within of obstructions without wing walkers monitoring the clearance between aircraft and obstructions. With wing walkers, avoid taxi obstructions by at least .",
     "choices": [
       {
@@ -2714,7 +2714,7 @@
   {
     "id": "MQF_2025_105",
     "type": "mc",
-    "category": "General",
+    "category": "MQF Oct 2025 - General",
     "prompt": "Personnel performing duties requiring them to be mobile in the cargo compartment during airdrop, low level operations, or threat environments will wear .",
     "choices": [
       {
@@ -2741,7 +2741,7 @@
   {
     "id": "MQF_2025_106",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "The loadmaster will not disconnect the restraint harness or lengthen it to the point that would allow the crewmember to fall outside the aircraft except for a towed trooper, or an emergency that threatens the survivability of the aircraft.",
     "choices": [
       {
@@ -2760,7 +2760,7 @@
   {
     "id": "MQF_2025_107",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "In an emergency parachutist bailout situation, the static line drop altitude is ft AGL and the free fall altitude is ft AGL.",
     "choices": [
       {
@@ -2787,7 +2787,7 @@
   {
     "id": "MQF_2025_108",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "When utilizing the long anchor cable for personnel airdrop, a maximum of static lines can be attached to the long anchor cable.",
     "choices": [
       {
@@ -2814,7 +2814,7 @@
   {
     "id": "MQF_2025_109",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "Airland cargo/baggage loaded on the cargo floor must not obstruct the path of the paratrooper exit, interfere with the installed anchor cables, or exceed a maximum width of inches with both doors or inches if only one door is used.",
     "choices": [
       {
@@ -2841,7 +2841,7 @@
   {
     "id": "MQF_2025_110",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "If ADS Rail Locks are before lock force pounds are set, FALSE/inaccurate force pounds settings may result.",
     "choices": [
       {
@@ -2868,7 +2868,7 @@
   {
     "id": "MQF_2025_111",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "The Depressurization Checklist will be run prior to the .",
     "choices": [
       {
@@ -2895,7 +2895,7 @@
   {
     "id": "MQF_2025_112",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "Accomplish the Cabin Altitude Checklist before .",
     "choices": [
       {
@@ -2922,7 +2922,7 @@
   {
     "id": "MQF_2025_113",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "If the drogue chute does not deploy with the manual backup switch, the loadmaster will state and complete the Heavy Equipment Malfunction Checklist.",
     "choices": [
       {
@@ -2949,7 +2949,7 @@
   {
     "id": "MQF_2025_114",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "If the Tow Release Mechanism fails to release the extraction link with the manual backup switch, the loadmaster will state “MALFUNCTION” and .",
     "choices": [
       {
@@ -2976,7 +2976,7 @@
   {
     "id": "MQF_2025_115",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "If the extraction parachutes have exited the aircraft and the platform fails to move, ensure the rotary switch is set to the lowest lock number setting that is engaged in the platform that failed to move and activate the .",
     "choices": [
       {
@@ -3003,7 +3003,7 @@
   {
     "id": "MQF_2025_116",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "After a Heavy Equipment Platform is loaded, the load equalization valves are opened between the platform’s ADS right locks used in order to .",
     "choices": [
       {
@@ -3030,7 +3030,7 @@
   {
     "id": "MQF_2025_117",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "The BSA is required for CDS loads exceeding lbs per side. When the first bundle against the BSA exceeds inches in height, three horizontal beams are required.",
     "choices": [
       {
@@ -3057,7 +3057,7 @@
   {
     "id": "MQF_2025_118",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "When additional personnel airdrops are conducted after the initial airdrop sortie, loadmasters shall reinspect the troop doors before takeoff IAW the Personnel Airdrop Preparation and Loading Checklist. For subsequent personnel airdrops, a tactile-only check is required between drops.",
     "choices": [
       {
@@ -3076,7 +3076,7 @@
   {
     "id": "MQF_2025_119",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "During a towed parachutist condition, the PF will as the parachutist may start swinging violently, which will increase the possibility of injury.",
     "choices": [
       {
@@ -3103,7 +3103,7 @@
   {
     "id": "MQF_2025_120",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "During a towed parachutist condition, the first priority is to retrieve the parachutist, regardless of whether the parachutist is conscious or unconscious. If the decision to cut the parachutist free, the will cut the static line on the aircraft commander’s command.",
     "choices": [
       {
@@ -3130,7 +3130,7 @@
   {
     "id": "MQF_2025_121",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "During Fouled Parachutist Retrieval do not attempt to pull the through the spool assembly.",
     "choices": [
       {
@@ -3157,7 +3157,7 @@
   {
     "id": "MQF_2025_122",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "During the CDS Airdrop Slowdown Checklist, visually inspect each Type XXVI nylon release gate to ensure it is positioned on the GRM release roller and .",
     "choices": [
       {
@@ -3184,7 +3184,7 @@
   {
     "id": "MQF_2025_123",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "The cam followers of the TRM shall be over the extraction link shoulder and be . Failure to comply may result in the inability to arm the TRM.",
     "choices": [
       {
@@ -3211,7 +3211,7 @@
   {
     "id": "MQF_2025_124",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "Loadmasters requiring mobility in the cargo compartment while using a restraint harness can be unattached as long as they remain forward of with the cargo door and ramp open or with the paratroop door(s) open.",
     "choices": [
       {
@@ -3238,7 +3238,7 @@
   {
     "id": "MQF_2025_125",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "For static line jumps, static lines are attached to anchor cables before troop door(s) are opened. Jumpers exiting on subsequent passes may stand and hook up with door(s) opened if they are forward of .",
     "choices": [
       {
@@ -3265,7 +3265,7 @@
   {
     "id": "MQF_2025_126",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "When in-flight rigging is required, the loadmaster will use the applicable as a checklist to ensure all items are completed.",
     "choices": [
       {
@@ -3292,7 +3292,7 @@
   {
     "id": "MQF_2025_127",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "A \"No Drop\" will be called if Slowdown or Quick Drop Checklist items are not completed prior to the initiation of the Checklist.",
     "choices": [
       {
@@ -3319,7 +3319,7 @@
   {
     "id": "MQF_2025_128",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "Loadmasters may attempt to regain ADS logic up to initiation of the Checklist.",
     "choices": [
       {
@@ -3346,7 +3346,7 @@
   {
     "id": "MQF_2025_129",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "When preflighting the retriever winch cable for personnel airdrops, up to broken wires are allowed per inch. The maximum number of broken wires shall not occur in any two consecutive inches of cable.",
     "choices": [
       {
@@ -3373,7 +3373,7 @@
   {
     "id": "MQF_2025_130",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "In the event that a lock is engaged in a platform and the second lock on the same panel is engaged between, adjacent or aft of the platform, use the INC/DECR toggle switch and decrease the setting .",
     "choices": [
       {
@@ -3400,7 +3400,7 @@
   {
     "id": "MQF_2025_131",
     "type": "mc",
-    "category": "Airdrop",
+    "category": "MQF Oct 2025 - Airdrop",
     "prompt": "The required number of left-hand locks engaged in each platform must be equal to or greater than the number of right-hand locks engaged in that platform.",
     "choices": [
       {
@@ -3419,7 +3419,7 @@
   {
     "id": "MQF_2025_132",
     "type": "mc",
-    "category": "Instructor",
+    "category": "MQF Oct 2025 - Instructor",
     "prompt": "At Sq/CC’s discretion, a Non-Mission Ready loadmaster and an instructor loadmaster may fulfill an augmented crew complement.",
     "choices": [
       {
@@ -3438,7 +3438,7 @@
   {
     "id": "MQF_2025_133",
     "type": "mc",
-    "category": "Instructor",
+    "category": "MQF Oct 2025 - Instructor",
     "prompt": "Instructors are responsible to provide students with .",
     "choices": [
       {
@@ -3465,7 +3465,7 @@
   {
     "id": "MQF_2025_134",
     "type": "mc",
-    "category": "Instructor",
+    "category": "MQF Oct 2025 - Instructor",
     "prompt": "Should the judgement or proficiency of the trainee raise a question in the instructor’s mind as to the trainee’s ability to safely execute the duties of the aircrew position at any time during the flight, the instructor will immediately .",
     "choices": [
       {
@@ -3492,7 +3492,7 @@
   {
     "id": "MQF_2025_135",
     "type": "mc",
-    "category": "Instructor",
+    "category": "MQF Oct 2025 - Instructor",
     "prompt": "An aircrew member is unqualified upon expiration of .",
     "choices": [
       {
@@ -3519,7 +3519,7 @@
   {
     "id": "MQF_2025_136",
     "type": "mc",
-    "category": "Instructor",
+    "category": "MQF Oct 2025 - Instructor",
     "prompt": "Individuals who complete the applicable instructor course are qualified instructors .",
     "choices": [
       {
@@ -3546,7 +3546,7 @@
   {
     "id": "MQF_2025_137",
     "type": "mc",
-    "category": "Instructor",
+    "category": "MQF Oct 2025 - Instructor",
     "prompt": "Instructors will review each student’s training record .",
     "choices": [
       {
@@ -3573,7 +3573,7 @@
   {
     "id": "MQF_2025_138",
     "type": "mc",
-    "category": "Instructor",
+    "category": "MQF Oct 2025 - Instructor",
     "prompt": "When performing crewmember duties, the following personnel will be under direct supervision of an instructor of like specialty:",
     "choices": [
       {
@@ -3600,7 +3600,7 @@
   {
     "id": "MQF_2025_139",
     "type": "mc",
-    "category": "Instructor",
+    "category": "MQF Oct 2025 - Instructor",
     "prompt": "Instructors shall be current and qualified in any event they instruct.",
     "choices": [
       {
@@ -3619,7 +3619,7 @@
   {
     "id": "MQF_2025_140",
     "type": "mc",
-    "category": "Instructor",
+    "category": "MQF Oct 2025 - Instructor",
     "prompt": "A non-current or unqualified loadmaster may serve as a primary aircrew member on any mission when supervised by a qualified instructor or flight examiner (direct supervision for critical phases of flight).",
     "choices": [
       {
