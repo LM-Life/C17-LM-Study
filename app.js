@@ -1019,7 +1019,7 @@ if (showRefToggle) {
       if (card) card.classList.toggle("flipped");
       requestAnimationFrame(syncCardHeight);
     }
-  });
+  }
 }
 
 // Prevent reference disclosure clicks from bubbling to the card
