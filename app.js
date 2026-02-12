@@ -227,20 +227,26 @@ function isMobileUI() {
 function setControlsCollapsed(collapsed) {
   controlsCollapsed = !!collapsed;
   if (controlsBody) controlsBody.classList.toggle("collapsed", controlsCollapsed);
-  try { localStorage.setItem("c17_controls_collapsed", controlsCollapsed ? "1" : "0"); } catch (_) {}
+  try {
+    localStorage.setItem(
+      "c17_controls_collapsed",
+      controlsCollapsed ? "1" : "0"
+    );
+  } catch (_) {}
 }
 
 function syncBottomBarPresence() {
   document.body.classList.toggle("has-bottom-bar", isMobileUI());
 }
 
-
+// Normalize MC category names so filters still work
 function normalizeMcSection(category) {
   const c = safeText(category).toLowerCase();
   if (c.includes("airdrop")) return "Airdrop";
   if (c.includes("instructor")) return "Instructor";
   return "General";
 }
+
 /* =========================
    MULTIPLE CHOICE (separate file)
    - questions_mc.json contains MC items with choices + correctKey
