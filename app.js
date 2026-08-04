@@ -14,7 +14,7 @@
 ========================= */
 
 // Update this when you release
-const APP_VERSION = "v1.2.1";
+const APP_VERSION = "v1.2.2";
 
 // Your Google Apps Script Web App URL (must end with /exec)
 const FLAG_API_URL = window.FLAGS_ENDPOINT || ""; // optional: define in index.html
