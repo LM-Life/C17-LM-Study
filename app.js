@@ -824,11 +824,19 @@ function currentQuestion() {
 function setupEvents() {
   if (!card) return;
 
-  // Flip on card tap (except when interacting with controls)
+  // Flip on card tap, except when interacting with controls
   card.addEventListener("click", (e) => {
-    // Disable tap-to-flip for multiple choice (prevents reference/choice taps from flipping)
     const q = currentQuestion();
+
+    // Disable tap-to-flip for multiple choice
     if (q && q.type === "mc") return;
+
+    // Do not flip when tapping flag controls or other interactive elements
+    const interactive = e.target.closest(
+      "button, input, textarea, select, label, a, .flag-panel"
+    );
+
+    if (interactive) return;
 
     card.classList.toggle("flipped");
     requestAnimationFrame(syncCardHeight);
