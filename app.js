@@ -1,5 +1,7 @@
-/* C-17 LM Study — Flashcard-only app.js (drop-in)
-   - Flashcard flip only (no MC / short answer)
+/* C-17 LM Study — app.js
+   - Flashcards + dedicated multiple choice
+   - Google Sheets / Apps Script cloud question bank
+   - Cached cloud bank + bundled JSON fallback for offline use
    - Flagging w/ Google Apps Script backend (form-encoded POST)
    - Export flags (JSON)
    - Cache + app version display
@@ -14,10 +16,20 @@
 ========================= */
 
 // Update this when you release
-const APP_VERSION = "v1.2.2";
+const APP_VERSION = "v1.3.0";
 
 // Your Google Apps Script Web App URL (must end with /exec)
 const FLAG_API_URL = window.FLAGS_ENDPOINT || ""; // optional: define in index.html
+
+// Uses the same Apps Script deployment as flags unless a separate endpoint is provided.
+const QUESTIONS_API_URL =
+  window.QUESTIONS_ENDPOINT ||
+  (FLAG_API_URL ? `${FLAG_API_URL}?action=questions` : "");
+
+// Last known-good cloud bank. This gives the installed PWA an offline fallback
+// that can be newer than the bundled questions.json/questions_mc.json files.
+const QUESTION_CACHE_KEY = "c17_question_bank_cache_v1";
+let questionBankSource = "unknown";
 
 /* =========================
    DOM
@@ -242,8 +254,10 @@ function syncBottomBarPresence() {
   document.body.classList.toggle("has-bottom-bar", isMobileUI());
 }
 /* =========================
-   MULTIPLE CHOICE (separate file)
-   - questions_mc.json contains MC items with choices + correctKey
+   QUESTION BANK
+   - Primary: Google Sheets -> Apps Script (?action=questions)
+   - Secondary: last known-good cloud bank in localStorage
+   - Final fallback: bundled questions.json + questions_mc.json
 ========================= */
 
 const QUESTIONS_FREE_RESPONSE_URL = "questions.json";
@@ -266,23 +280,159 @@ function normalizeFreeResponseQuestions(raw) {
 
 function normalizeMultipleChoiceQuestions(raw) {
   if (!Array.isArray(raw)) return [];
+
   return raw
     .filter(Boolean)
-    .map((q, idx) => ({
-      id: q.id || `MC_${idx}`,
-      type: "mc",
-      category: safeText(q.category || q.Category),
-      question: safeText(q.prompt || q.question || ""),
-      choices: Array.isArray(q.choices) ? q.choices : [],
-      correctKey: safeText(q.correctKey).trim(),
-      answer: safeText(q.correctKey).trim(),
-      explanation: safeText(q.explanation),
-      reference: safeText(q.reference),
-    }))
+    .map((q, idx) => {
+      const rawChoices = Array.isArray(q.choices) ? q.choices : [];
+
+      // Support both formats:
+      //   Local JSON: [{ key: "A", text: "..." }, ...]
+      //   Google Sheet API: ["...", "...", "...", "..."]
+      const choices = rawChoices
+        .map((choice, choiceIndex) => {
+          if (choice && typeof choice === "object" && !Array.isArray(choice)) {
+            return {
+              key: safeText(choice.key || String.fromCharCode(65 + choiceIndex)).trim().toUpperCase(),
+              text: safeText(choice.text ?? choice.value ?? choice.answer),
+            };
+          }
+
+          return {
+            key: String.fromCharCode(65 + choiceIndex),
+            text: safeText(choice),
+          };
+        })
+        .filter(choice => choice.text.trim().length > 0);
+
+      let correctKey = safeText(q.correctKey || q.CorrectChoice).trim().toUpperCase();
+
+      // Apps Script returns correctIndex for Sheet-backed MC items.
+      // Convert the original A/B/C/D position to a key instead of indexing
+      // the filtered choices array, so an accidentally blank choice cannot
+      // shift the correct answer.
+      if (
+        !correctKey &&
+        q.correctIndex !== undefined &&
+        q.correctIndex !== null &&
+        Number.isInteger(Number(q.correctIndex))
+      ) {
+        const index = Number(q.correctIndex);
+        const indexKey = index >= 0 && index <= 25
+          ? String.fromCharCode(65 + index)
+          : "";
+
+        if (indexKey && choices.some(choice => choice.key === indexKey)) {
+          correctKey = indexKey;
+        }
+      }
+
+      const correctChoice = choices.find(
+        choice => safeText(choice.key).trim().toUpperCase() === correctKey
+      );
+
+      return {
+        id: q.id || q.ID || `MC_${idx}`,
+        type: "mc",
+        category: safeText(q.category || q.Category),
+        question: safeText(q.prompt || q.question || q.Question),
+        choices,
+        correctKey,
+        answer: safeText(q.answer || q.Answer || correctChoice?.text || correctKey),
+        explanation: safeText(q.explanation || q.Explanation),
+        reference: safeText(q.reference || q.Reference || q.ref),
+      };
+    })
     .filter(q => q.question.trim().length > 0 && q.choices.length >= 2 && q.correctKey);
 }
 
-async function loadQuestionsMerged() {
+function normalizeQuestionBank(raw) {
+  if (!Array.isArray(raw)) return [];
+
+  const freeRaw = [];
+  const mcRaw = [];
+
+  raw.filter(Boolean).forEach((q) => {
+    const rawType = safeText(q.type || q.Type || "flashcard").trim().toLowerCase();
+    const isMc = ["mc", "multiple choice", "multiple-choice", "multiple_choice"].includes(rawType);
+
+    if (isMc) mcRaw.push(q);
+    else freeRaw.push(q);
+  });
+
+  return [
+    ...normalizeFreeResponseQuestions(freeRaw),
+    ...normalizeMultipleChoiceQuestions(mcRaw),
+  ];
+}
+
+function setQuestionBankSource(source, count) {
+  questionBankSource = source;
+  console.info(`Question bank: ${source} (${count} questions)`);
+  document.documentElement.dataset.questionBankSource = source;
+}
+
+function saveCloudQuestionCache(normalizedQuestions) {
+  try {
+    localStorage.setItem(
+      QUESTION_CACHE_KEY,
+      JSON.stringify({
+        savedAt: new Date().toISOString(),
+        questions: normalizedQuestions,
+      })
+    );
+  } catch (err) {
+    console.warn("Unable to cache cloud question bank:", err);
+  }
+}
+
+function loadCloudQuestionCache() {
+  try {
+    const raw = localStorage.getItem(QUESTION_CACHE_KEY);
+    if (!raw) return [];
+
+    const cached = JSON.parse(raw);
+    if (!cached || !Array.isArray(cached.questions)) return [];
+
+    return cached.questions.filter(q => q && q.question && (q.type === "fr" || q.type === "mc"));
+  } catch (err) {
+    console.warn("Cached question bank unavailable:", err);
+    return [];
+  }
+}
+
+async function fetchCloudQuestionBank() {
+  if (!QUESTIONS_API_URL) return [];
+
+  const controller = typeof AbortController !== "undefined" ? new AbortController() : null;
+  const timeoutId = controller ? window.setTimeout(() => controller.abort(), 8000) : null;
+
+  try {
+    const separator = QUESTIONS_API_URL.includes("?") ? "&" : "?";
+    const url = `${QUESTIONS_API_URL}${separator}_=${Date.now()}`;
+    const response = await fetch(url, {
+      cache: "no-store",
+      signal: controller?.signal,
+    });
+
+    if (!response.ok) {
+      throw new Error(`Question API returned HTTP ${response.status}`);
+    }
+
+    const raw = await response.json();
+    const normalized = normalizeQuestionBank(raw);
+
+    if (!normalized.length) {
+      throw new Error("Question API returned no usable active questions");
+    }
+
+    return normalized;
+  } finally {
+    if (timeoutId) window.clearTimeout(timeoutId);
+  }
+}
+
+async function loadBundledQuestions() {
   const [freeRaw, mcRaw] = await Promise.all([
     fetch(`${QUESTIONS_FREE_RESPONSE_URL}?v=${encodeURIComponent(APP_VERSION)}`, { cache: "no-store" })
       .then(r => (r.ok ? r.json() : []))
@@ -292,9 +442,42 @@ async function loadQuestionsMerged() {
       .catch(() => []),
   ]);
 
-  const free = normalizeFreeResponseQuestions(freeRaw);
-  const mc = normalizeMultipleChoiceQuestions(mcRaw);
-  return [...free, ...mc];
+  return [
+    ...normalizeFreeResponseQuestions(freeRaw),
+    ...normalizeMultipleChoiceQuestions(mcRaw),
+  ];
+}
+
+async function loadQuestionsMerged() {
+  // 1) Fresh cloud bank from Google Sheets / Apps Script
+  if (QUESTIONS_API_URL) {
+    try {
+      const cloud = await fetchCloudQuestionBank();
+      saveCloudQuestionCache(cloud);
+      setQuestionBankSource("cloud", cloud.length);
+      return cloud;
+    } catch (err) {
+      console.warn("Cloud question bank unavailable; trying offline cache:", err);
+    }
+  } else {
+    console.warn("QUESTIONS_API_URL is not configured; using offline sources.");
+  }
+
+  // 2) Most recent successful cloud bank
+  const cached = loadCloudQuestionCache();
+  if (cached.length) {
+    setQuestionBankSource("offline-cache", cached.length);
+    return cached;
+  }
+
+  // 3) Bundled repo files — permanent emergency fallback
+  const bundled = await loadBundledQuestions();
+  if (bundled.length) {
+    setQuestionBankSource("bundled-json", bundled.length);
+    return bundled;
+  }
+
+  throw new Error("No usable questions were available from cloud, cache, or bundled JSON files.");
 }
 
 function escapeHtml(str) {
@@ -443,10 +626,8 @@ async function submitFlagToServer(question, flagTextValue) {
     throw new Error(`HTTP ${res.status}`);
   }
 
-  // We don't require JSON, but try to parse if available
-  let parsed = null;
-  try { parsed = JSON.parse(text); } catch (_) {}
-  return { ok: true, text, parsed };
+  // Reuse the parsed response when JSON was returned.
+  return { ok: true, text, parsed: json };
 }
 
 /* =========================
@@ -454,9 +635,10 @@ async function submitFlagToServer(question, flagTextValue) {
 ========================= */
 
 async function loadQuestions() {
-  // Loads BOTH questions.json (free-response flashcards) and questions_mc.json (multiple choice)
   const merged = await loadQuestionsMerged();
-  if (!Array.isArray(merged)) throw new Error("Questions must be an array");
+  if (!Array.isArray(merged) || merged.length === 0) {
+    throw new Error("Questions must be a non-empty array");
+  }
   return merged;
 }
 
@@ -1027,11 +1209,6 @@ if (refDetails) {
   refDetails.addEventListener("click", (e) => e.stopPropagation());
 }
 
- else {
-        if (card) card.classList.toggle("flipped");
-        requestAnimationFrame(syncCardHeight);
-      }
-
   // Resize should re-sync
   window.addEventListener("resize", () => { syncBottomBarPresence(); requestAnimationFrame(syncCardHeight); });
 }
@@ -1065,8 +1242,8 @@ async function init() {
     questions = await loadQuestions();
   } catch (e) {
     console.error(e);
-    if (questionText) questionText.textContent = "Error loading questions.json. Check console.";
-    showToast("❌ Failed to load questions.json");
+    if (questionText) questionText.textContent = "Error loading question bank. Check console.";
+    showToast("❌ Failed to load question bank");
     return;
   }
 
